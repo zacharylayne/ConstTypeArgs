@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <SignAssembly>False</SignAssembly>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Const Type Arguments Core</Title>
+    <Description>Provides a simple framework for defining types that can be used to pass constant &amp; static values as generic type arguments. These can be used in static contexts (such as static constructors &amp; static methods), reduce the need to pass arguments through instance constructors, bypass restrictions on types of arguments that can be passed to a generic attribute, and more.
+
+Uses include scenarios such as array initialization, fixed-size buffers, compile-time configuration, type-safe enum-like values, compile-time validation, algorithm configuration, implementation of design patterns such as ECS, command, &amp; strategy, and more.
+
+Creating a new const type argument is as simple as:
+
+public readonly struct BufferSize : IConstTypeArg&lt;int, BufferSize&gt;
+{  public static int Value =&gt; 1024;  }
+
+Here's a very simple example of how this could be used:
+public class FixedSizeBuffer
+{
+    private byte[] buffer = new byte[BufferSize.Value];
+    // Buffer operations...
+}</Description>
+    <PackageTags>constants; const-type-args; generics; static-abstract-interface-members</PackageTags>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0</FileVersion>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Authors>Zachary Layne</Authors>
+    <Company>Entry Point Software</Company>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>Untitled (128 x 128 px).png</PackageIcon>
+    <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs/t</RepositoryUrl>
+    <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <IsTrimmable>True</IsTrimmable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsTrimmable>True</IsTrimmable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="C:\Users\zacha\Downloads\Untitled (128 x 128 px).png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="System.ComponentModel" />
+    <Using Include="System.ComponentModel.EditorBrowsableState">
+      <Static>True</Static>
+    </Using>
+    <Using Include="System.Diagnostics.CodeAnalysis" />
+    <Using Include="System.Numerics" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

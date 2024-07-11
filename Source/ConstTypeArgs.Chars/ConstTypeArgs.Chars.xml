@@ -1,0 +1,783 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Chars</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Chars.K_Char">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Chars.K_Char"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;char&gt;</c> derived type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.char">
+            System.Char</seealso>
+            <seealso cref="T:ConstTypeArgs.Chars.Char`1"/>
+            <seealso cref="T:ConstTypeArgs.Chars.K_CharArray"/>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.K_Char`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Chars.K_Char`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;char, K_Char&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.char">
+            System.Char</seealso>
+            <seealso cref="T:ConstTypeArgs.Chars.Char`1"/>
+            <seealso cref="T:ConstTypeArgs.Chars.K_CharArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.K_CharArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Chars.K_CharArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;char[]&gt;</c> type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.char">
+            System.Char</seealso>
+            <seealso cref="T:ConstTypeArgs.Chars.CharArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Chars.K_Char"/>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.K_CharArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Chars.K_CharArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;char[], K_CharArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.char">
+            System.Char</seealso>
+            <seealso cref="T:ConstTypeArgs.Chars.CharArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Chars.K_Char`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Char`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Chars.Char`1"/> class provides a const argument provider that
+            wraps the <see langword="char"/> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Chars.CharArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Chars.K_Char"/>
+            <seealso cref="T:ConstTypeArgs.Chars.K_Char`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.CharArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Chars.CharArray`1"/> class provides a const argument provider that
+            wraps the <see langword="char"/> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Chars.Char`1"/>
+            <seealso cref="T:ConstTypeArgs.Chars.K_Char"/>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.NullChar">
+            <summary>
+            Represents the ASCII character for Null (NUL). Integer value: 0, Hex: 0x00.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.StartOfHeader">
+            <summary>
+            Represents the ASCII character for Start of Header (SOH). Integer value: 1, Hex: 0x01.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.StartOfText">
+            <summary>
+            Represents the ASCII character for Start of Text (STX). Integer value: 2, Hex: 0x02.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.EndOfText">
+            <summary>
+            Represents the ASCII character for End of Text (ETX). Integer value: 3, Hex: 0x03.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.EndOfTransmission">
+            <summary>
+            Represents the ASCII character for End of Transmission (EOT). Integer value: 4, Hex: 0x04.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.Enquiry">
+            <summary>
+            Represents the ASCII character for Enquiry (ENQ). Integer value: 5, Hex: 0x05.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.Acknowledge">
+            <summary>
+            Represents the ASCII character for Acknowledge (ACK). Integer value: 6, Hex: 0x06.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.Bell">
+            <summary>
+            Represents the ASCII character for Bell (BEL). Integer value: 7, Hex: 0x07.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.Backspace">
+            <summary>
+            Represents the ASCII character for Backspace (BS). Integer value: 8, Hex: 0x08.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.HorizontalTab">
+            <summary>
+            Represents the ASCII character for Horizontal Tab (HT). Integer value: 9, Hex: 0x09.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.LineFeed">
+            <summary>
+            Represents the ASCII character for Line Feed (LF). Integer value: 10, Hex: 0x0A.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.VerticalTab">
+            <summary>
+            Represents the ASCII character for Vertical Tab (VT). Integer value: 11, Hex: 0x0B.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.FormFeed">
+            <summary>
+            Represents the ASCII character for Form Feed (FF). Integer value: 12, Hex: 0x0C.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.CarriageReturn">
+            <summary>
+            Represents the ASCII character for Carriage Return (CR). Integer value: 13, Hex: 0x0D.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.ShiftOut">
+            <summary>
+            Represents the ASCII character for Shift Out / X-On (SO). Integer value: 14, Hex: 0x0E.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.ShiftIn">
+            <summary>
+            Represents the ASCII character for Shift In / X-Off (SI). Integer value: 15, Hex: 0x0F.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.DataLinkEscape">
+            <summary>
+            Represents the ASCII character for Data Link Escape (DLE). Integer value: 16, Hex: 0x10.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.Delete">
+            <summary>
+            Represents the ASCII character for Delete (DEL). Integer value: 127, Hex: 0x7F.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.DeviceControl1">
+            <summary>
+            Represents the ASCII character for Device Control 1 (DC1). Integer value: 17, Hex: 0x11.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.DeviceControl2">
+            <summary>
+            Represents the ASCII character for Device Control 2 (DC2). Integer value: 18, Hex: 0x12.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.DeviceControl3">
+            <summary>
+            Represents the ASCII character for Device Control 3 (DC3). Integer value: 19, Hex: 0x13.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.DeviceControl4">
+            <summary>
+            Represents the ASCII character for Device Control 4 (DC4). Integer value: 20, Hex: 0x14.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.NegativeAcknowledgment">
+            <summary>
+            Represents the ASCII character for Negative Acknowledgement (NAK). Integer value: 21, Hex: 0x15.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.SynchronousIdle">
+            <summary>
+            Represents the ASCII character for Synchronous Idle (SYN). Integer value: 22, Hex: 0x16.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.EndOfTransmissionBlock">
+            <summary>
+            Represents the ASCII character for End of Transmission Block (ETB). Integer value: 23, Hex: 0x17.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.Cancel">
+            <summary>
+            Represents the ASCII character for Cancel (CAN). Integer value: 24, Hex: 0x18.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.EndOfMedium">
+            <summary>
+            Represents the ASCII character for End of Medium (EM). Integer value: 25, Hex: 0x19.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.Substitute">
+            <summary>
+            Represents the ASCII character for Substitute (SUB). Integer value: 26, Hex: 0x1A.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.Escape">
+            <summary>
+            Represents the ASCII character for Escape (ESC). Integer value: 27, Hex: 0x1B.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.FileSeparator">
+            <summary>
+            Represents the ASCII character for File Separator (FS). Integer value: 28, Hex: 0x1C.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.GroupSeparator">
+            <summary>
+            Represents the ASCII character for Group Separator (GS). Integer value: 29, Hex: 0x1D.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.RecordSeparator">
+            <summary>
+            Represents the ASCII character for Record Separator (RS). Integer value: 30, Hex: 0x1E.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Control.UnitSeparator">
+            <summary>
+            Represents the ASCII character for Unit Separator (US). Integer value: 31, Hex: 0x1F.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Default">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Chars.Default"/> readonly struct provides a const type argument equal to the
+            <see langword="default"/> of <see langword="char"/> (<c>/0</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.MinValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Chars.MinValue"/> readonly struct provides a const type argument equal to
+            <see href="https://learn.microsoft.com/dotnet/api/system.char.minvalue">
+            char.MinValue</see> (<c>/0</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.MaxValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Chars.MaxValue"/> readonly struct provides a const type argument equal to
+            <see href="https://learn.microsoft.com/dotnet/api/system.char.maxvalue">
+            char.MaxValue</see> (<c>\uffff</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Digits">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Chars.Digits"/> static class encapsulates char const type arguments for
+            ASCII digits.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Chars.Lower"/>
+            <seealso cref="T:ConstTypeArgs.Chars.Upper"/>
+            <seealso cref="T:ConstTypeArgs.Chars.SymbolsPunctuation"/>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Digits._0">
+            <summary>
+            Represents the ASCII character for Digit Zero (0). Integer value: 48, Hex: 0x30.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Digits._1">
+            <summary>
+            Represents the ASCII character for Digit One (1). Integer value: 49, Hex: 0x31.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Digits._2">
+            <summary>
+            Represents the ASCII character for Digit Two (2). Integer value: 50, Hex: 0x32.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Digits._3">
+            <summary>
+            Represents the ASCII character for Digit Three (3). Integer value: 51, Hex: 0x33.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Digits._4">
+            <summary>
+            Represents the ASCII character for Digit Four (4). Integer value: 52, Hex: 0x34.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Digits._5">
+            <summary>
+            Represents the ASCII character for Digit Five (5). Integer value: 53, Hex: 0x35.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Digits._6">
+            <summary>
+            Represents the ASCII character for Digit Six (6). Integer value: 54, Hex: 0x36.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Digits._7">
+            <summary>
+            Represents the ASCII character for Digit Seven (7). Integer value: 55, Hex: 0x37.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Digits._8">
+            <summary>
+            Represents the ASCII character for Digit Eight (8). Integer value: 56, Hex: 0x38.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Digits._9">
+            <summary>
+            Represents the ASCII character for Digit Nine (9). Integer value: 57, Hex: 0x39.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Chars.Lower"/> static class encapsulates char const type arguments for
+            basic ASCII lowercase letters.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Chars.Upper"/>
+            <seealso cref="T:ConstTypeArgs.Chars.Digits"/>
+            <seealso cref="T:ConstTypeArgs.Chars.SymbolsPunctuation"/>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._a">
+            <summary>
+            Represents the ASCII character for the letter <c>a</c>. Integer value: 97, Hex: 0x61.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._b">
+            <summary>
+            Represents the ASCII character for the letter <c>b</c>. Integer value: 98, Hex: 0x62.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._c">
+            <summary>
+            Represents the ASCII character for the letter <c>c</c>. Integer value: 99, Hex: 0x63.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._d">
+            <summary>
+            Represents the ASCII character for the letter <c>d</c>. Integer value: 100, Hex: 0x64.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._e">
+            <summary>
+            Represents the ASCII character for the letter <c>e</c>. Integer value: 101, Hex: 0x65.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._f">
+            <summary>
+            Represents the ASCII character for the letter <c>f</c>. Integer value: 102, Hex: 0x66.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._g">
+            <summary>
+            Represents the ASCII character for the letter <c>g</c>. Integer value: 103, Hex: 0x67.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._h">
+            <summary>
+            Represents the ASCII character for the letter <c>h</c>. Integer value: 104, Hex: 0x68.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._i">
+            <summary>
+            Represents the ASCII character for the letter <c>i</c>. Integer value: 105, Hex: 0x69.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._j">
+            <summary>
+            Represents the ASCII character for the letter <c>j</c>. Integer value: 106, Hex: 0x6A.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._k">
+            <summary>
+            Represents the ASCII character for the letter <c>k</c>. Integer value: 107, Hex: 0x6B.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._l">
+            <summary>
+            Represents the ASCII character for the letter <c>l</c>. Integer value: 108, Hex: 0x6C.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._m">
+            <summary>
+            Represents the ASCII character for the letter <c>m</c>. Integer value: 109, Hex: 0x6D.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._n">
+            <summary>
+            Represents the ASCII character for the letter <c>n</c>. Integer value: 110, Hex: 0x6E.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._o">
+            <summary>
+            Represents the ASCII character for the letter <c>o</c>. Integer value: 111, Hex: 0x6F.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._p">
+            <summary>
+            Represents the ASCII character for the letter <c>p</c>. Integer value: 112, Hex: 0x70.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._q">
+            <summary>
+            Represents the ASCII character for the letter <c>q</c>. Integer value: 113, Hex: 0x71.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._r">
+            <summary>
+            Represents the ASCII character for the letter <c>r</c>. Integer value: 114, Hex: 0x72.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._s">
+            <summary>
+            Represents the ASCII character for the letter <c>s</c>. Integer value: 115, Hex: 0x73.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._t">
+            <summary>
+            Represents the ASCII character for the letter <c>t</c>. Integer value: 116, Hex: 0x74.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._u">
+            <summary>
+            Represents the ASCII character for the letter <c>u</c>. Integer value: 117, Hex: 0x75.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._v">
+            <summary>
+            Represents the ASCII character for the letter <c>v</c>. Integer value: 118, Hex: 0x76.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._w">
+            <summary>
+            Represents the ASCII character for the letter <c>w</c>. Integer value: 119, Hex: 0x77.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._x">
+            <summary>
+            Represents the ASCII character for the letter <c>x</c>. Integer value: 120, Hex: 0x78.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._y">
+            <summary>
+            Represents the ASCII character for the letter <c>y</c>. Integer value: 121, Hex: 0x79.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Lower._z">
+            <summary>
+            Represents the ASCII character for the letter <c>z</c>. Integer value: 122, Hex: 0x7A.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Chars.SymbolsPunctuation"/> static class encapsulate char const type arguments
+            for ASCII symbols &amp; punctuation.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Chars.Lower"/>
+            <seealso cref="T:ConstTypeArgs.Chars.Upper"/>
+            <seealso cref="T:ConstTypeArgs.Chars.Digits"/>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Space">
+            <summary>
+            Represents the ASCII character for Space. Integer value: 32, Hex: 0x20.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.ExclamationMark">
+            <summary>
+            Represents the ASCII character for Exclamation Mark (!). Integer value: 33, Hex: 0x21.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.DoubleQuote">
+            <summary>
+            Represents the ASCII character for Double Quote ("). Integer value: 34, Hex: 0x22.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.NumberSign">
+            <summary>
+            Represents the ASCII character for Number Sign (#). Integer value: 35, Hex: 0x23.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.DollarSign">
+            <summary>
+            Represents the ASCII character for Dollar Sign ($). Integer value: 36, Hex: 0x24.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.PercentSign">
+            <summary>
+            Represents the ASCII character for Percent Sign (%). Integer value: 37, Hex: 0x25.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Ampersand">
+            <summary>
+            Represents the ASCII character for Ampersand (&amp;). Integer value: 38, Hex: 0x26.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Apostrophe">
+            <summary>
+            Represents the ASCII character for Apostrophe ('). Integer value: 39, Hex: 0x27.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.ParenthesisOpening">
+            <summary>
+            Represents the ASCII character for Left Parenthesis ((). Integer value: 40, Hex: 0x28.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.ParenthesisClosing">
+            <summary>
+            Represents the ASCII character for Right Parenthesis ()). Integer value: 41, Hex: 0x29.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Asterisk">
+            <summary>
+            Represents the ASCII character for Asterisk (*). Integer value: 42, Hex: 0x2A.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.PlusSign">
+            <summary>
+            Represents the ASCII character for Plus Sign (+). Integer value: 43, Hex: 0x2B.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Comma">
+            <summary>
+            Represents the ASCII character for Comma (,). Integer value: 44, Hex: 0x2C.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Hyphen">
+            <summary>
+            Represents the ASCII character for Hyphen (-). Integer value: 45, Hex: 0x2D.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Period">
+            <summary>
+            Represents the ASCII character for Period (.). Integer value: 46, Hex: 0x2E.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Slash">
+            <summary>
+            Represents the ASCII character for Slash (/). Integer value: 47, Hex: 0x2F.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Colon">
+            <summary>
+            Represents the ASCII character for Colon (:). Integer value: 58, Hex: 0x3A.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Semicolon">
+            <summary>
+            Represents the ASCII character for Semicolon (;). Integer value: 59, Hex: 0x3B.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.LessThanSign">
+            <summary>
+            Represents the ASCII character for Less Than Sign (&lt;). Integer value: 60, Hex: 0x3C.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.EqualsSign">
+            <summary>
+            Represents the ASCII character for Equals Sign (=). Integer value: 61, Hex: 0x3D.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.GreaterThanSign">
+            <summary>
+            Represents the ASCII character for Greater Than Sign (&gt;). Integer value: 62, Hex: 0x3E.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.QuestionMark">
+            <summary>
+            Represents the ASCII character for Question Mark (?). Integer value: 63, Hex: 0x3F.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.AtSign">
+            <summary>
+            Represents the ASCII character for At Symbol (@). Integer value: 64, Hex: 0x40.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.BracketOpening">
+            <summary>
+            Represents the ASCII character for Opening Bracket ([). Integer value: 91, Hex: 0x5B.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Backslash">
+            <summary>
+            Represents the ASCII character for Backslash (\). Integer value: 92, Hex: 0x5C.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.BracketClosing">
+            <summary>
+            Represents the ASCII character for Closing Bracket (]). Integer value: 93, Hex: 0x5D.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Caret">
+            <summary>
+            Represents the ASCII character for Caret (^). Integer value: 94, Hex: 0x5E.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Underscore">
+            <summary>
+            Represents the ASCII character for Underscore (_). Integer value: 95, Hex: 0x5F.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.GraveAccent">
+            <summary>
+            Represents the ASCII character for Grave Accent (`). Integer value: 96, Hex: 0x60.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.BraceOpening">
+            <summary>
+            Represents the ASCII character for Opening Brace ({). Integer value: 123, Hex: 0x7B.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.VerticalBar">
+            <summary>
+            Represents the ASCII character for Vertical Bar (|). Integer value: 124, Hex: 0x7C.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.BraceClosing">
+            <summary>
+            Represents the ASCII character for Closing Brace (}). Integer value: 125, Hex: 0x7D.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.SymbolsPunctuation.Tilde">
+            <summary>
+            Represents the ASCII character for Tilde (~). Integer value: 126, Hex: 0x7E.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Chars.Upper"/> static class encapsulates char const type arguments for
+            basic ASCII uppercase letters.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Chars.Lower"/>
+            <seealso cref="T:ConstTypeArgs.Chars.Digits"/>
+            <seealso cref="T:ConstTypeArgs.Chars.SymbolsPunctuation"/>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._A">
+            <summary>
+            Represents the ASCII character for the letter <c>A</c>. Integer value: 65, Hex: 0x41.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._B">
+            <summary>
+            Represents the ASCII character for the letter <c>B</c>. Integer value: 66, Hex: 0x42.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._C">
+            <summary>
+            Represents the ASCII character for the letter <c>C</c>. Integer value: 67, Hex: 0x43.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._D">
+            <summary>
+            Represents the ASCII character for the letter <c>D</c>. Integer value: 68, Hex: 0x44.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._E">
+            <summary>
+            Represents the ASCII character for the letter <c>E</c>. Integer value: 69, Hex: 0x45.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._F">
+            <summary>
+            Represents the ASCII character for the letter <c>F</c>. Integer value: 70, Hex: 0x46.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._G">
+            <summary>
+            Represents the ASCII character for the letter <c>G</c>. Integer value: 71, Hex: 0x47.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._H">
+            <summary>
+            Represents the ASCII character for the letter <c>H</c>. Integer value: 72, Hex: 0x48.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._I">
+            <summary>
+            Represents the ASCII character for the letter <c>I</c>. Integer value: 73, Hex: 0x49.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._J">
+            <summary>
+            Represents the ASCII character for the letter <c>J</c>. Integer value: 74, Hex: 0x4A.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._K">
+            <summary>
+            Represents the ASCII character for the letter <c>K</c>. Integer value: 75, Hex: 0x4B.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._L">
+            <summary>
+            Represents the ASCII character for the letter <c>L</c>. Integer value: 76, Hex: 0x4C.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._M">
+            <summary>
+            Represents the ASCII character for the letter <c>M</c>. Integer value: 77, Hex: 0x4D.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._N">
+            <summary>
+            Represents the ASCII character for the letter <c>N</c>. Integer value: 78, Hex: 0x4E.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._O">
+            <summary>
+            Represents the ASCII character for the letter <c>O</c>. Integer value: 79, Hex: 0x4F.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._P">
+            <summary>
+            Represents the ASCII character for the letter <c>P</c>. Integer value: 80, Hex: 0x50.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._Q">
+            <summary>
+            Represents the ASCII character for the letter <c>Q</c>. Integer value: 81, Hex: 0x51.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._R">
+            <summary>
+            Represents the ASCII character for the letter <c>R</c>. Integer value: 82, Hex: 0x52.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._S">
+            <summary>
+            Represents the ASCII character for the letter <c>S</c>. Integer value: 83, Hex: 0x53.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._T">
+            <summary>
+            Represents the ASCII character for the letter <c>T</c>. Integer value: 84, Hex: 0x54.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._U">
+            <summary>
+            Represents the ASCII character for the letter <c>U</c>. Integer value: 85, Hex: 0x55.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._V">
+            <summary>
+            Represents the ASCII character for the letter <c>V</c>. Integer value: 86, Hex: 0x56.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._W">
+            <summary>
+            Represents the ASCII character for the letter <c>W</c>. Integer value: 87, Hex: 0x57.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._X">
+            <summary>
+            Represents the ASCII character for the letter <c>X</c>. Integer value: 88, Hex: 0x58.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._Y">
+            <summary>
+            Represents the ASCII character for the letter <c>Y</c>. Integer value: 89, Hex: 0x59.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Chars.Upper._Z">
+            <summary>
+            Represents the ASCII character for the letter <c>Z</c>. Integer value: 90, Hex: 0x5A.
+            </summary>
+        </member>
+    </members>
+</doc>

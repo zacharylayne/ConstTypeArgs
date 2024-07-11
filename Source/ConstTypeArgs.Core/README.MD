@@ -20,6 +20,9 @@ public class Array<T, TSize>
     public T[] Data = new T[TSize.Value];
 }
 
-var array = new Array<int, Pos_32>();
-// array.Data.Length == 32
+var smallArray = new Array<int, Pos_32>();
+// smallArray.Data.Length == 32
+
+var bigArray = new Array<int, Pos_1024>();
+// bigArray.Data.Length == 1024
 ```

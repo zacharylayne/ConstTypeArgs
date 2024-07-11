@@ -1,0 +1,78 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Company>Entry Point Software</Company>
+    <Authors>Zachary Layne</Authors>
+    <Title>Const Type Arguments - Booleans</Title>
+    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass boolean values to generics at compile-time. This provides an analog to type specialization in C++, and can be used for scenarios such as:
+
+* Static configuration,
+* Eliminating unnecessary instance constructors,
+* "Passing" values to type initializers,
+
+Const type arguments are provided for true, false, &amp; default values of bool, as well as types for defining bool array const type arguments and domain-specific const type arguments.
+
+Here's a Hello World example:
+```
+using ConstTypeArgs.Bools;
+
+public class Foo&lt;TToConsole&gt;
+    where TToConsole: K_Bool
+{
+    static Foo()
+    {        
+        if (TToConsole.Value)
+            Console.WriteLine("Hello, world!");
+    }
+}
+
+// Elsewhere
+var foo = new Foo&lt;True&gt;();  // Console outputs: Hello, world!
+foo       = new Foo&lt;False&gt;(); // No output.
+```</Description>
+    <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
+    <PackageReadmeFile>README.MD</PackageReadmeFile>
+    <PackageIcon>K Bool.png</PackageIcon>
+    <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
+    <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; bools</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+    <IsTrimmable>True</IsTrimmable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsTrimmable>True</IsTrimmable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Icons\K Bool.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\ConstTypeArgs.Core\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConstTypeArgs.Core\ConstTypeArgs.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.MD">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -37,9 +37,10 @@ public class FixedSizeBuffer
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageIcon>Untitled (128 x 128 px).png</PackageIcon>
+    <PackageIcon>Core.png</PackageIcon>
     <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs/t</RepositoryUrl>
     <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
+    <DocumentationFile>ConstTypeArgs.Core.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -51,11 +52,17 @@ public class FixedSizeBuffer
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\README.md">
+    <Compile Remove="Reflection\**" />
+    <EmbeddedResource Remove="Reflection\**" />
+    <None Remove="Reflection\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Icons\Core.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="C:\Users\zacha\Downloads\Untitled (128 x 128 px).png">
+    <None Include="..\..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

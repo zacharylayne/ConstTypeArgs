@@ -88,5 +88,5 @@ public interface IConstTypeArg<out T, TSelf>
     /// <strong><em>IMMUTABILITY IS HOWEVER STRONGLY RECOMMENDED.</em></strong>
     /// </remarks>
     /// <seealso cref="IConstTypeArg{T}.Value"/>
-    T GetValue() => TSelf.Value;
+    public T GetValue() => TSelf.Value;
 }

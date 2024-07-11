@@ -1,0 +1,522 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Core</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Core.K_Array">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Array"/> interface provides a base interface for identifying
+            const type argument arrays.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Array`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Array`1"/> interface provides a base type
+            for all interfaces used to constrain const type argument values to
+            types of arrays.
+            </summary>
+            <typeparam name="T">
+            The type of array of the const type argument's value.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Core.K_Class`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_MulticastDelegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Enum`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_FloatingPoint`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Integer`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Number`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_SignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_UnsignedNumber`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Class">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Class"/> interface provides a base interface for identifying
+            const type arguments whose value is a type of class.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Class`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Class`1"/> interface provides a base type
+            for all interfaces used to constrain const type argument values to
+            types of classes.
+            </summary>
+            <typeparam name="T">
+            The <see langword="class"/> of the const type argument's value.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_MulticastDelegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Enum`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_FloatingPoint`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Integer`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Number`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_SignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_UnsignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Array`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Delegate">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Delegate"/> interface provides a base interface for identifying
+            const type argument delegates
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Delegate`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Delegate`1"/> interface provides a base type
+            for all interfaces used to constrain const type argument values
+            to <see langword="delegate"/> types.
+            </summary>
+            <typeparam name="T">
+            The <see langword="delegate"/> type of the const type argument's value.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Core.K_MulticastDelegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Class`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Enum`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Number`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Array`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Enum">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Enum"/> interface provides a base interface for identifying
+            const type argument with values that are a type of enum.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Enum`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Enum`1"/> interface provides a base type
+            for all interfaces used to constrain const type argument values
+            to <see langword="enum"/> types.
+            </summary>
+            <typeparam name="T">
+            The <see langword="enum"/> type of the const type argument's value.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Core.K_Class`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_MulticastDelegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Array`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_FloatingPoint">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_FloatingPoint"/> interface provides a base interface for identifying
+            const type argument floating point values.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_FloatingPoint`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_FloatingPoint`1"/> interface provides a base type
+            for all interfaces used to constrain const type argument values
+            to
+            <see href="https://learn.microsoft.com/dotnet/api/system.numerics.ifloatingpoint-1">
+            K_FloatingPoint&lt;T&gt;</see>
+            types.
+            </summary>
+            <typeparam name="T">
+            The <see cref="T:System.Numerics.IFloatingPoint`1"/> type of the const type argument's value.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Core.K_Integer`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Number`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_SignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_UnsignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Array`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_MulticastDelegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Enum`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Integer">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Integer"/> interface provides a base interface for identifying
+            const type argument whose values are a type of
+            <see href="https://learn.microsoft.com/dotnet/api/system.numerics.ibinaryinteger-1">
+            IBinaryInteger&lt;T&gt;</see>.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Integer`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Integer`1"/> interface provides a base type
+            for all interfaces used to constrain const type argument values
+            to
+            <see href="https://learn.microsoft.com/dotnet/api/system.numerics.ibinaryinteger-1">
+            IBinaryInteger&lt;T&gt;</see>
+            types.
+            </summary>
+            <typeparam name="T">
+            The <see cref="T:System.Numerics.IBinaryInteger`1"/> type of the const type argument's value.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Core.K_FloatingPoint`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Number`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_SignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_UnsignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Array`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_MulticastDelegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Enum`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_MulticastDelegate">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_MulticastDelegate"/> interface provides a base interface for identifying
+            const type argument that are multicast delegates.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_MulticastDelegate`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_MulticastDelegate`1"/> interface provides a base type
+            for all interfaces used to constrain const type argument values
+            to <see langword="delegate"/> types of type
+            <see href="https://learn.microsoft.com/dotnet/api/system.multicastdelegate">
+            MulticastDelegate</see>.
+            </summary>
+            <typeparam name="T">
+            The <see langword="delegate"/> type of the const type argument's value.
+            </typeparam>
+            <remarks>
+            Implement this for const type arguments when delegate chaining is desired.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Class`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Enum`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Number`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Array`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Number">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Number"/> interface provides a base interface for identifying
+            const type argument with values that are a type of
+            <see href="https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1">
+            INumber&lt;T&gt;</see>.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Number`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Number`1"/> interface provides a base type
+            for all interfaces used to constrain const type argument values
+            to
+            <see href="https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1">
+            INumber&lt;T&gt;</see>
+            types.
+            </summary>
+            <typeparam name="T">
+            The <see cref="T:System.Numerics.INumber`1"/> type of the const type argument's value.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Core.K_Number`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_FloatingPoint`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_SignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_UnsignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Array`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Enum`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_SignedNumber">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_SignedNumber"/> interface provides a base interface for identifying
+            const type argument with values that implement
+            <see href="https://learn.microsoft.com/dotnet/api/system.numerics.isignednumber-1">
+            ISignedNumber&lt;T&gt;</see>.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_SignedNumber`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_SignedNumber`1"/> interface provides a base type
+            for all interfaces used to constrain generic const type argument values
+            to
+            <see href="https://learn.microsoft.com/dotnet/api/system.numerics.isignednumber-1">
+            ISignedNumber&lt;T&gt;</see>
+            types.
+            </summary>
+            <typeparam name="T">
+            The <see cref="T:System.Numerics.ISignedNumber`1"/> type of the const type argument's value.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Core.K_FloatingPoint`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Integer`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Number`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_UnsignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Array`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_MulticastDelegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Enum`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Struct">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Struct"/> interface provides a base interface for identifying
+            const type argument with values that are a type of struct.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Struct`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Struct`1"/> interface provides a base type
+            for all interfaces used to constrain const type argument values
+            to <see langword="struct"/> types.
+            </summary>
+            <typeparam name="T">
+            The <see langword="struct"/> type of the const type argument's value.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Core.K_Class`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Array`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_MulticastDelegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Enum`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_FloatingPoint`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Integer`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Number`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_SignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_UnsignedNumber`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Unmanaged">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Unmanaged"/> interface provides a base interface for identifying
+            const type argument with values that are an unmanaged type.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_Unmanaged`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/> interface provides a base type
+            for all interfaces used to constrain const type argument values
+            to <see langword="unmanaged"/> types.
+            </summary>
+            <typeparam name="T">
+            The <see langword="unmanaged"/> type of the const type argument's value.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Core.K_Class`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Array`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_MulticastDelegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Enum`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_FloatingPoint`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Integer`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Number`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_SignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_UnsignedNumber`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_UnsignedNumber">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_UnsignedNumber"/> interface provides a base interface for identifying
+            const type argument with values that implement
+            <see href="https://learn.microsoft.com/dotnet/api/system.numerics.iunsignednumber-1">
+            ISignedNumber&lt;T&gt;</see>.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_UnsignedNumber`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_UnsignedNumber`1"/> interface provides a base type
+            for all interfaces used to constrain const type argument values
+            to
+            <see href="https://learn.microsoft.com/dotnet/api/system.numerics.iunsignednumber-1">
+            IUnsignedNumber&lt;T&gt;</see>
+            types.
+            </summary>
+            <typeparam name="T">
+            The <see cref="T:System.Numerics.IUnsignedNumber`1"/> type of the const type argument's value.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Core.K_FloatingPoint`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Integer`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Number`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_SignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Array`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_MulticastDelegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Enum`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.__"/> interface is a special type of marker interface
+            meant to identify const type args that are used as discards in type parameter
+            list with union-like behavior.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.IConstTypeArg">
+            <summary>
+            The <see cref="T:ConstTypeArgs.IConstTypeArg"/> interface provides a base interface for identifying
+            const type argument providers, which are used to pass static read-only &amp; constant
+            values to generic types, delegates, &amp; methods.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.IConstTypeArg`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.IConstTypeArg`1"/> interface uses static abstract interface methods
+            to provide the means to "pass" values to generic types, delegates, and methods. These
+            values are then directly accessible from within a static context, such as type initializers
+            and static methods &amp; fields. This mimics the behavior of C++'s template specialization (go to
+            <a href="https://en.cppreference.com/w/cpp/language/template_specialization">
+            Template Specialization</a> for more information).
+            </summary>
+            <typeparam name="T">
+            The type of the values to be passed as const type arguments.
+            </typeparam>
+            <remarks>
+              <note type="important">
+              Because <see cref="T:ConstTypeArgs.IConstTypeArg`1"/> type definitions are <em>argument providers</em>,
+              they are intended to be used as type parameters or as a means to access readonly static values
+              <em>(recommended)</em> or constants. There are few reasons to instantiate them, pass them as
+              arguments to a method, or use them as a return type. There is a very low risk of their usage
+              causing unintended side-effects without a deliberate misuse of reflection.
+              <para>
+              For more information, see the developer documentation.
+              </para>
+              </note>
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.IConstTypeArg`1.Value">
+            <summary>
+            Gets a const type argument's value.
+            </summary>
+            <value>
+            The const type argument's value.
+            </value>
+            <remarks>
+            This is intended to provide access to values that are, but not limited to,
+            static readonly values.
+            <strong><em>IMMUTABILITY IS HOWEVER STRONGLY RECOMMENDED.</em></strong>
+            </remarks>
+            <seealso cref="M:ConstTypeArgs.IConstTypeArg`2.GetValue"/>
+        </member>
+        <member name="T:ConstTypeArgs.IConstTypeArg`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.IConstTypeArg`2"/> interface is used to complement
+            <em>argument providers</em> where, in certain cases, it may not be possible to determine
+            an argument provider's type at compile-time
+            </summary>
+            <typeparam name="T">
+            The type of values to be passed as const type arguments.
+            </typeparam>
+            <typeparam name="TSelf">
+            The implementing type itself.
+            </typeparam>
+            <remarks>
+            In rare use cases, an argument provider's type might need to be known but cannot be determined
+            at runtime. In such situations, <see cref="T:ConstTypeArgs.IConstTypeArg`2"/> can prove helpful,
+            though types implementing this interface are still const type arguments and generally should
+            not be instantiated, passed as arguments to a method, or used as a return type.
+            This maintains a very low risk of their usage causing unintended side-effects
+            without a deliberate misuse of reflection.
+            </remarks>
+        </member>
+        <member name="M:ConstTypeArgs.IConstTypeArg`2.GetValue">
+            <summary>
+            Returns a const type argument's value.
+            </summary>
+            <returns>
+            The const type argument's value.
+            </returns>
+            <remarks>
+            This is intended to provide access to values that are, but not limited to,
+            static readonly values.
+            <strong><em>IMMUTABILITY IS HOWEVER STRONGLY RECOMMENDED.</em></strong>
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.IConstTypeArg`1.Value"/>
+        </member>
+        <member name="T:ConstTypeArgs.K">
+            <summary>
+            The <see cref="T:ConstTypeArgs.K"/> interface provides a base interface for identifying
+            const type argument holders, which are types of const type argument providers
+            that wrap <em>(i.e. hold)</em> the values of other const type argument providers.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.K`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.K`1"/> interface provides a base interface for identifying
+            const type argument holders, which are types of const type argument providers
+            that wrap <em>(i.e. hold)</em> the values of other const type argument providers.
+            </summary>
+            <typeparam name="TArg">
+            The const type argument provider containing the value to be held.
+            </typeparam>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.K`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.K`2"/> interface provides the means to implement an argument provider
+            that wraps the value from another argument provider specified in <typeparamref name="TArg"/>.
+            </summary>
+            <typeparam name="T">
+            The wrapped value's type.
+            </typeparam>
+            <typeparam name="TArg">
+            The argument provider containing the value to be wrapped.
+            </typeparam>
+            <remarks>
+            Use <see cref="T:ConstTypeArgs.K`2"/> to reuse values from other argument providers to provide
+            domain-specific constants, such as minimum, maximum, &amp; default values.
+            </remarks>
+        </member>
+    </members>
+</doc>

@@ -14,26 +14,33 @@ Uses include scenarios such as array initialization, fixed-size buffers, compile
 
 Creating a new const type argument is as simple as:
 
-public readonly struct BufferSize : IConstTypeArg&lt;int, BufferSize&gt;
+public readonly struct Pos_1024: IConstTypeArg&lt;int&gt;
 {  public static int Value =&gt; 1024;  }
 
 Here's a very simple example of how this could be used:
-public class FixedSizeBuffer
+
+public class FixedSizeBuffer&lt;TSize&gt;
+    where TSize : IConstTypeArg&lt;int&gt;
 {
-    private byte[] buffer = new byte[BufferSize.Value];
+    private byte[] buffer = new byte[TSize.Value];
+
     // Buffer operations...
-}</Description>
+}
+
+// Elsewhere in code:
+var largeBuffer = new FixedSizeBuffer&lt;Pos_1024&gt;();
+var smallBuffer = new FixedSizeBuffer&lt;Pos_32&gt;();</Description>
     <PackageTags>constants; const-type-args; generics; static-abstract-interface-members</PackageTags>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
     <Version>1.0.0</Version>
-    <FileVersion>1.0.0</FileVersion>
+    <FileVersion>1.0.1</FileVersion>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Authors>Zachary Layne</Authors>
     <Company>Entry Point Software</Company>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
-    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageReleaseNotes>Very minor changes.</PackageReleaseNotes>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageReadmeFile>README.md</PackageReadmeFile>

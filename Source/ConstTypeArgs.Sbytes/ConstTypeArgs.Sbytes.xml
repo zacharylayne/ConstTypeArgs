@@ -1,0 +1,344 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Sbytes</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Sbytes.K_Sbyte">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.K_Sbyte"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;sbyte&gt;</c> derived type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.sbyte">
+            System.SByte</seealso>
+            <seealso cref="T:ConstTypeArgs.Sbytes.Sbyte`1"/>
+            <seealso cref="T:ConstTypeArgs.Sbytes.K_SbyteArray"/>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.K_Sbyte`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.K_Sbyte`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;sbyte, K_Sbyte&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.sbyte">
+            System.SByte</seealso>
+            <seealso cref="T:ConstTypeArgs.Sbytes.Sbyte`1"/>
+            <seealso cref="T:ConstTypeArgs.Sbytes.K_SbyteArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.K_SbyteArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.K_SbyteArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;sbyte[]&gt;</c> type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.sbyte">
+            System.SByte</seealso>
+            <seealso cref="T:ConstTypeArgs.Sbytes.SbyteArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Sbytes.K_Sbyte"/>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.K_SbyteArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.K_SbyteArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;sbyte[], K_SbyteArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.sbyte">
+            System.SByte</seealso>
+            <seealso cref="T:ConstTypeArgs.Sbytes.SbyteArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Sbytes.K_Sbyte`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Sbyte`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Sbyte`1"/> class provides a const argument provider that
+            wraps the <see langword="sbyte"/> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Sbytes.SbyteArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Sbytes.K_Sbyte"/>
+            <seealso cref="T:ConstTypeArgs.Sbytes.K_Sbyte`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.SbyteArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.SbyteArray`1"/> class provides a const argument provider that
+            wraps the <see langword="sbyte"/> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Sbytes.Sbyte`1"/>
+            <seealso cref="T:ConstTypeArgs.Sbytes.K_Sbyte"/>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Default">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Default"/> readonly struct provides a const type argument equal to the
+            <see langword="default"/> of <see langword="sbyte"/>
+            (<c>0</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.MinValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.MinValue"/> readonly struct provides a const type argument
+            equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.sbyte.minvalue">
+            SByte.MinValue</see> (<c>-128</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.MaxValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.MaxValue"/> readonly struct provides a const type argument
+            equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.sbyte.maxvalue">
+            SByte.MaxValue</see> (<c>127</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.MaxDigits">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.MaxDigits"/> readonly struct provides a const type argument equal to
+            the maximum number of digits in a <see langword="sbyte"/> (<c>3</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.MaxHexDigits">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.MaxHexDigits"/> readonly struct provides a const type argument equal to
+            the maximum number of hex digits in a <see langword="sbyte"/> (<c>2</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._0">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._0"/> readonly struct provides a const type argument equal to
+            <c>0</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_1"/> readonly struct provides a const type argument equal to
+            <c>-1</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_2"/> readonly struct provides a const type argument equal to
+            <c>-2</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_3"/> readonly struct provides a const type argument equal to
+            <c>-3</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_4"/> readonly struct provides a const type argument equal to
+            <c>-4</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_5"/> readonly struct provides a const type argument equal to
+            <c>-5</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_6"/> readonly struct provides a const type argument equal to
+            <c>-6</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_7"/> readonly struct provides a const type argument equal to
+            <c>-7</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_8"/> readonly struct provides a const type argument equal to
+            <c>-8</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_9">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_9"/> readonly struct provides a const type argument equal to
+            <c>-9</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_10">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_10"/> readonly struct provides a const type argument equal to
+            <c>-10</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_11">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_11"/> readonly struct provides a const type argument equal to
+            <c>-11</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_12">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_12"/> readonly struct provides a const type argument equal to
+            <c>-12</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_13">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_13"/> readonly struct provides a const type argument equal to
+            <c>-13</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_14">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_14"/> readonly struct provides a const type argument equal to
+            <c>-14</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes.Neg_15">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes.Neg_15"/> readonly struct provides a const type argument equal to
+            <c>-15</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._1"/> readonly struct provides a const type argument equal to
+            <c>1</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._2"/> readonly struct provides a const type argument equal to
+            <c>2</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._3"/> readonly struct provides a const type argument equal to
+            <c>3</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._4"/> readonly struct provides a const type argument equal to
+            <c>4</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._5"/> readonly struct provides a const type argument equal to
+            <c>5</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._6"/> readonly struct provides a const type argument equal to
+            <c>6</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._7"/> readonly struct provides a const type argument equal to
+            <c>7</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._8"/> readonly struct provides a const type argument equal to
+            <c>8</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._9">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._9"/> readonly struct provides a const type argument equal to
+            <c>9</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._10">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._10"/> readonly struct provides a const type argument equal to
+            <c>10</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._11">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._11"/> readonly struct provides a const type argument equal to
+            <c>11</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._12">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._12"/> readonly struct provides a const type argument equal to
+            <c>12</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._13">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._13"/> readonly struct provides a const type argument equal to
+            <c>13</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._14">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._14"/> readonly struct provides a const type argument equal to
+            <c>14</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._15">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._15"/> readonly struct provides a const type argument equal to
+            <c>15</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._16">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._16"/> readonly struct provides a const type argument equal to
+            <c>16</c> (<c>2^4</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._31">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._31"/> readonly struct provides a const type argument equal to
+            <c>31</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._32">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._32"/> readonly struct provides a const type argument equal to
+            <c>32</c> (<c>2^5</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._63">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._63"/> readonly struct provides a const type argument equal to
+            <c>63</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._64">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._64"/> readonly struct provides a const type argument equal to
+            <c>64</c> (<c>2^6</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Sbytes._127">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Sbytes._127"/> readonly struct provides a const type argument equal to
+            <c>127</c> (<c>2^7 - 1</c>).
+            </summary>
+        </member>
+    </members>
+</doc>

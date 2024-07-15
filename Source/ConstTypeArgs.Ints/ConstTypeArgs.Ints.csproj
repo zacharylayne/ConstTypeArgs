@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>ConstTypeArgs.Ints.xml</DocumentationFile>
+    <PackageIcon>Int.png</PackageIcon>
+    <PackageReadmeFile>README.MD</PackageReadmeFile>
+    <Company>Entry Point Software</Company>
+    <Authors>Zachary Layne</Authors>
+    <Title>Const Type Arguments - Ints</Title>
+    <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
+    <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
+    <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; int</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>ConstTypeArgs.Ints.xml</DocumentationFile>
+    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass int values to generics at compile-time. This provides an analog to type specialization in C++.
+
+Here's a simple demonstration:
+
+ ```csharp
+ using ConstTypeArgs.Ints;
+
+public class Foo&lt;TSize&gt;
+    where TSize : K_Int
+{
+    public static readonly int[] FooArray = new int[TSize.Value];
+
+    static Foo()
+    {
+        Console.WriteLine($"Array size is {FooArray.Length}");
+    }
+}
+
+// Elsewhere
+var foo = new Foo&lt;_3&gt;();  // Outputs "Array size is 3"
+foo     = new Foo&lt;_16&gt;(); // Outputs "Array size is 16"
+```</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+    <IsTrimmable>True</IsTrimmable>
+    <IsAotCompatible>False</IsAotCompatible>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsTrimmable>True</IsTrimmable>
+    <IsAotCompatible>False</IsAotCompatible>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Icons\Int.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\ConstTypeArgs.Int\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.MD">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,463 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Ints</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Ints.K_Int">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.K_Int"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;int&gt;</c> derived type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.int32">
+            System.Int32</seealso>
+            <seealso cref="T:ConstTypeArgs.Ints.Int`1"/>
+            <seealso cref="T:ConstTypeArgs.Ints.K_IntArray"/>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.K_Int`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.K_Int`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;int, K_Int&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.int32">
+            System.Int32</seealso>
+            <seealso cref="T:ConstTypeArgs.Ints.Int`1"/>
+            <seealso cref="T:ConstTypeArgs.Ints.K_IntArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.K_IntArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.K_IntArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;int[]&gt;</c> type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.int32">
+            System.Int32</seealso>
+            <seealso cref="T:ConstTypeArgs.Ints.IntArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Ints.K_Int"/>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.K_IntArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.K_IntArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;int[], K_IntArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.int32">
+            System.Int32</seealso>
+            <seealso cref="T:ConstTypeArgs.Ints.IntArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Ints.K_Int`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Int`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Int`1"/> class provides a const argument provider that
+            wraps the <see langword="int"/> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Ints.IntArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Ints.K_Int"/>
+            <seealso cref="T:ConstTypeArgs.Ints.K_Int`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.IntArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.IntArray`1"/> class provides a const argument provider that
+            wraps the <see langword="int"/> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Ints.Int`1"/>
+            <seealso cref="T:ConstTypeArgs.Ints.K_Int"/>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_1"/> readonly struct provides a const type argument equal to
+            <c>-1</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_2"/> readonly struct provides a const type argument equal to
+            <c>-2</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_3"/> readonly struct provides a const type argument equal to
+            <c>-3</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_4"/> readonly struct provides a const type argument equal to
+            <c>-4</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_5"/> readonly struct provides a const type argument equal to
+            <c>-5</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_6"/> readonly struct provides a const type argument equal to
+            <c>-6</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_7"/> readonly struct provides a const type argument equal to
+            <c>-7</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_8"/> readonly struct provides a const type argument equal to
+            <c>-8</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_9">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_9"/> readonly struct provides a const type argument equal to
+            <c>-9</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_10">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_10"/> readonly struct provides a const type argument equal to
+            <c>-10</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_11">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_11"/> readonly struct provides a const type argument equal to
+            <c>-11</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_12">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_12"/> readonly struct provides a const type argument equal to
+            <c>-12</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_13">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_13"/> readonly struct provides a const type argument equal to
+            <c>-13</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_14">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_14"/> readonly struct provides a const type argument equal to
+            <c>-14</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Neg_15">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Neg_15"/> readonly struct provides a const type argument equal to
+            <c>-15</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._1"/> readonly struct provides a const type argument equal to
+            <c>1</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._2"/> readonly struct provides a const type argument equal to
+            <c>2</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._3"/> readonly struct provides a const type argument equal to
+            <c>3</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._4"/> readonly struct provides a const type argument equal to
+            <c>4</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._5"/> readonly struct provides a const type argument equal to
+            <c>5</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._6"/> readonly struct provides a const type argument equal to
+            <c>6</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._7"/> readonly struct provides a const type argument equal to
+            <c>7</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._8"/> readonly struct provides a const type argument equal to
+            <c>8</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._9">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._9"/> readonly struct provides a const type argument equal to
+            <c>9</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._10">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._10"/> readonly struct provides a const type argument equal to
+            <c>10</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._11">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._11"/> readonly struct provides a const type argument equal to
+            <c>11</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._12">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._12"/> readonly struct provides a const type argument equal to
+            <c>12</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._13">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._13"/> readonly struct provides a const type argument equal to
+            <c>13</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._14">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._14"/> readonly struct provides a const type argument equal to
+            <c>14</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._15">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._15"/> readonly struct provides a const type argument equal to
+            <c>15</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._16">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._16"/> readonly struct provides a const type argument equal to
+            <c>16</c> (<c>2^4</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._25">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._25"/> readonly struct provides a const type argument equal to
+            <c>25</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._31">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._31"/> readonly struct provides a const type argument equal to
+            <c>31</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._32">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._32"/> readonly struct provides a const type argument equal to
+            <c>32</c> (<c>2^5</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._50">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._50"/> readonly struct provides a const type argument equal to
+            <c>50</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._63">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._63"/> readonly struct provides a const type argument equal to
+            <c>63</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._64">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._64"/> readonly struct provides a const type argument equal to
+            <c>64</c> (<c>2^6</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._100">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._100"/> readonly struct provides a const type argument equal to
+            <c>100</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._127">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._127"/> readonly struct provides a const type argument equal to
+            <c>127</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._128">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._128"/> readonly struct provides a const type argument equal to
+            <c>128</c> (<c>2^7</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._200">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._200"/> readonly struct provides a const type argument equal to
+            <c>200</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._255">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._255"/> readonly struct provides a const type argument equal to
+            <c>255</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._256">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._256"/> readonly struct provides a const type argument equal to
+            <c>256</c> (<c>2^8</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._511">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._511"/> readonly struct provides a const type argument equal to
+            <c>_511</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._512">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._512"/> readonly struct provides a const type argument equal to
+            <c>512</c> (<c>2^9</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._1023">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._1023"/> readonly struct provides a const type argument equal to
+            <c>1023</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._1024">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._1024"/> readonly struct provides a const type argument equal to
+            <c>1024</c> (<c>2^10</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._2047">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._2047"/> readonly struct provides a const type argument equal to
+            <c>2047</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._2048">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._2048"/> readonly struct provides a const type argument equal to
+            <c>2048</c> (<c>2^11</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._4095">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._4095"/> readonly struct provides a const type argument equal to
+            <c>4095</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._4096">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._4096"/> readonly struct provides a const type argument equal to
+            <c>4096</c> (<c>2^12</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._8191">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._8191"/> readonly struct provides a const type argument equal to
+            <c>8191</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._8192">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._8192"/> readonly struct provides a const type argument equal to
+            <c>8192</c> (<c>2^13</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._16384">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._16384"/> readonly struct provides a const type argument equal to
+            <c>16384</c> (<c>2^14</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._32768">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._32768"/> readonly struct provides a const type argument equal to
+            <c>32768</c> (<c>2^15</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._65536">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._65536"/> readonly struct provides a const type argument equal to
+            <c>65536</c> (<c>2^16</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.Default">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.Default"/> readonly struct provides a const type argument equal to the
+            <see langword="default"/> of <see langword="int"/> (<c>0</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.MinValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.MinValue"/> readonly struct provides a const type argument
+            equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.int32.minvalue">
+            Int32.MinValue</see> (<c>-2147483648</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.MaxValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.MaxValue"/> readonly struct provides a const type argument
+            equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.int32.maxvalue">
+            Int32.MaxValue</see> (<c>2147483647</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints._0">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints._0"/> readonly struct provides a const type argument equal to
+            <c>0</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.MaxDigits">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.MaxDigits"/> readonly struct provides a const type argument equal to
+            the maximum number of digits in an <see langword="int"/> (<c>10</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ints.MaxHexDigits">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ints.MaxHexDigits"/> readonly struct provides a const type argument equal to
+            the maximum number of hex digits in an <see langword="int"/> (<c>10</c>).
+            </summary>
+        </member>
+    </members>
+</doc>

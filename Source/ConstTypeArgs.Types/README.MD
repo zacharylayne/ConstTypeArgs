@@ -28,7 +28,7 @@ public class Foo<TType>
      || TType.Value == typeof(char)
      || TType.Value == typeof(char[])
      || TType.Value == typeof(ReadOnlyMemory<char>)
-     || TType.Value == typeof(ReadOnlySpan<char>))\
+     || TType.Value == typeof(ReadOnlySpan<char>))
     {
       Console.WriteLine($"{TType.Value} values usually represent text!");
     }

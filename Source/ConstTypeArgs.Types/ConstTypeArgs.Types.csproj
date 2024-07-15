@@ -10,7 +10,7 @@
     <PackageReadmeFile>README.MD</PackageReadmeFile>
     <Company>Entry Point Software</Company>
     <Authors>Zachary Layne</Authors>
-    <Title>Const Type Arguments - Doubles</Title>
+    <Title>Const Type Arguments - Types</Title>
     <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
     <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
     <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; Type</PackageTags>
@@ -35,7 +35,7 @@ public class Foo&lt;TType&gt;
      || TType.Value == typeof(char)
      || TType.Value == typeof(char[])
      || TType.Value == typeof(ReadOnlyMemory&lt;char&gt;)
-     || TType.Value == typeof(ReadOnlySpan&lt;char&gt;))\
+     || TType.Value == typeof(ReadOnlySpan&lt;char&gt;))
     {
       Console.WriteLine($"{TType.Value} values usually represent text!");
     }

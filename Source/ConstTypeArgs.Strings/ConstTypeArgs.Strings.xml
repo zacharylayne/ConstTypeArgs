@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Strings</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Strings.K_String">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.K_String"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;string&gt;</c> derived type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.string">
+            System.String</seealso>
+            <seealso cref="T:ConstTypeArgs.Strings.String`1"/>
+            <seealso cref="T:ConstTypeArgs.Strings.K_StringArray"/>
+        </member>
+        <member name="T:ConstTypeArgs.Strings.K_String`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.K_String`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;string, K_String&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.string">
+            System.String</seealso>
+            <seealso cref="T:ConstTypeArgs.Strings.String`1"/>
+            <seealso cref="T:ConstTypeArgs.Strings.K_StringArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Strings.K_StringArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.K_StringArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;string[]&gt;</c> type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.string">
+            System.String</seealso>
+            <seealso cref="T:ConstTypeArgs.Strings.StringArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Strings.K_String"/>
+        </member>
+        <member name="T:ConstTypeArgs.Strings.K_StringArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.K_StringArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;string[], K_StringArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.string">
+            System.String</seealso>
+            <seealso cref="T:ConstTypeArgs.Strings.StringArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Strings.K_String`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Strings.String`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.String`1"/> class provides a const argument provider that
+            wraps the <see langword="string"/> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Strings.StringArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Strings.K_String"/>
+            <seealso cref="T:ConstTypeArgs.Strings.K_String`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Strings.StringArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.StringArray`1"/> class provides a const argument provider that
+            wraps the <see langword="string"/> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Strings.String`1"/>
+            <seealso cref="T:ConstTypeArgs.Strings.K_String"/>
+        </member>
+        <member name="T:ConstTypeArgs.Strings.Empty">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.Empty"/> readonly struct provides a const type argument
+            equal to <see cref="F:System.String.Empty"/>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Strings.False">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.False"/> readonly struct provides a const type argument
+            equal to <c>False</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Strings.True">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.True"/> readonly struct provides a const type argument
+            equal to <c>True</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Strings.NewLine">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.NewLine"/> readonly struct provides a const type argument
+            equal to
+            <see href="https://learn.microsoft.com/dotnet/api/system.environment.newline">
+            Environment.NewLine</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Strings.WindowsNewLine">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.WindowsNewLine"/> readonly struct provides a const type argument
+            equal to <c>\r\n</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Strings.UnixNewLine">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.UnixNewLine"/> readonly struct provides a const type argument
+            equal to <c>\n</c>.
+            </summary>
+        </member>
+    </members>
+</doc>

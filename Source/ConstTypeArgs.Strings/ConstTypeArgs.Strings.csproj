@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>ConstTypeArgs.Strings.xml</DocumentationFile>
+    <PackageIcon>String.png</PackageIcon>
+    <PackageReadmeFile>README.MD</PackageReadmeFile>
+    <Company>Entry Point Software</Company>
+    <Authors>Zachary Layne</Authors>
+    <Title>Const Type Arguments - Strings</Title>
+    <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
+    <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
+    <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; string</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>ConstTypeArgs.Strings.xml</DocumentationFile>
+    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass string values to generics at compile-time. This provides an analog to type specialization in C++.
+
+Here's a simple demonstration:
+
+ ```csharp
+ using ConstTypeArgs.Strings;
+
+public class Foo&lt;THello, TWorld&gt;
+    where THello : K_String
+ where TWorld : K_String
+{
+    static Foo()
+    {
+        Console.WriteLine($"{THello.Value} {TWorld.Value}!");
+    }
+}
+
+// Elsewhere, assuming the value of _hola is "hola"
+// and _world is "world"
+var foo = new Foo&lt;_hola, _world&gt;();  // Outputs "hola world!"
+```
+
+Here's how you could create a new string const type argument:
+
+```csharp
+public readonly struct _hola : K_String&lt;_hola&gt;
+{ public static string Value =&gt; "hola"; }
+```</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+    <IsTrimmable>True</IsTrimmable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsTrimmable>True</IsTrimmable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Icons\String.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\ConstTypeArgs.String\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.MD">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>

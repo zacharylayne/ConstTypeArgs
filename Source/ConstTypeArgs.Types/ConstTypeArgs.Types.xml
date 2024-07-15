@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Types</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Types.K_Type">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.K_Type"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Type&gt;</c> derived type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.type">
+            System.Type</seealso>
+            <seealso cref="T:ConstTypeArgs.Types.Type`1"/>
+            <seealso cref="T:ConstTypeArgs.Types.K_TypeArray"/>
+        </member>
+        <member name="T:ConstTypeArgs.Types.K_Type`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.K_Type`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Type, K_Type&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.type">
+            System.Type</seealso>
+            <seealso cref="T:ConstTypeArgs.Types.Type`1"/>
+            <seealso cref="T:ConstTypeArgs.Types.K_TypeArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Types.K_TypeArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.K_TypeArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Type[]&gt;</c> type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.type">
+            System.Type</seealso>
+            <seealso cref="T:ConstTypeArgs.Types.TypeArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Types.K_Type"/>
+        </member>
+        <member name="T:ConstTypeArgs.Types.K_TypeArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.K_TypeArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Type[], K_TypeArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.type">
+            System.Type</seealso>
+            <seealso cref="T:ConstTypeArgs.Types.TypeArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Types.K_Type`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Types.Type`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.Type`1"/> class provides a const argument provider that
+            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.Type">
+            System.Type</see> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Types.K_Type"/>
+            <seealso cref="T:ConstTypeArgs.Types.K_Type`1"/>
+            <seealso cref="T:ConstTypeArgs.Types.TypeArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeArray`1"/> class provides a const argument provider that
+            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.Type">
+            System.Type</see> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Types.K_Type"/>
+            <seealso cref="T:ConstTypeArgs.Types.Type`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfBool">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfBool"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="bool"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfByte">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfByte"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="byte"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfChar">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfChar"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="char"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfDecimal">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfDecimal"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="decimal"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfDouble">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfDouble"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="double"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfFloat">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfFloat"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="float"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfHalf">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfHalf"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see cref="T:System.Half"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfInt">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfInt"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="int"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfInt128">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfInt128"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see cref="T:System.Int128"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfLong">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfLong"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="long"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfNint">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfNint"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="IntPtr"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfNuint">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfNuint"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="UIntPtr"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfSbyte">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfSbyte"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="sbyte"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfShort">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfShort"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="short"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfString">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfString"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="string"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfType">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfType"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="string"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfUint">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfUint"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="uint"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfUInt128">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfUInt128"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see cref="T:System.UInt128"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfUlong">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfUlong"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="ulong"/>)</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Types.TypeOfUshort">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.TypeOfUshort"/> readonly struct provides a const type argument
+            equal to <c><see langword="typeof"/>(<see langword="ushort"/>)</c>.
+            </summary>
+        </member>
+    </members>
+</doc>

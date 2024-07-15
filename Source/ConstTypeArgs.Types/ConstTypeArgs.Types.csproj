@@ -1,0 +1,104 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>ConstTypeArgs.Doubles.xml</DocumentationFile>
+    <PackageIcon>Type.png</PackageIcon>
+    <PackageReadmeFile>README.MD</PackageReadmeFile>
+    <Company>Entry Point Software</Company>
+    <Authors>Zachary Layne</Authors>
+    <Title>Const Type Arguments - Doubles</Title>
+    <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
+    <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
+    <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; Type</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>ConstTypeArgs.Types.xml</DocumentationFile>
+    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass Type values to generics at compile-time. This provides an analog to type specialization in C++.
+
+Here's a simple demonstration:
+
+ ```csharp
+ using ConstTypeArgs.Types;
+
+public class Foo&lt;TType&gt;
+{    
+  static Foo()
+  {
+    if (TType.Value == typeof(string)
+     || TType.Value == typeof(char)
+     || TType.Value == typeof(char[])
+     || TType.Value == typeof(ReadOnlyMemory&lt;char&gt;)
+     || TType.Value == typeof(ReadOnlySpan&lt;char&gt;))\
+    {
+      Console.WriteLine($"{TType.Value} values usually represent text!");
+    }
+  
+    if (TType.Value == typeof(byte)
+     || TType.Value == typeof(sbyte)
+     || TType.Value == typeof(short)
+     || TType.Value == typeof(ushort)
+     || TType.Value == typeof(int)
+     || TType.Value == typeof(uint)
+     || TType.Value == typeof(long)
+     || TType.Value == typeof(ulong)
+     || TType.Value == typeof(nint)
+     || TType.Value == typeof(nuint))
+    {
+      Console.WriteLine($"{TType.Value} values usually represent numbers!");
+    }
+  }
+}
+
+// Elsewhere, assuming the value of StringType is typeof(string)
+var foo = new Foo&lt;StringType&gt;();  // Outputs: StringType values usually represent text!
+
+// Assuming that the value of IntType is typeof(int)
+foo     = new Foo&lt;IntType&gt;();     // Outputs: TType values usually represent numbers!
+```
+
+Here's how you could create a new Type const type argument:
+
+```csharp
+public readonly struct StringType : K_Type&lt;StringType&gt;
+{ public static Type Value =&gt; typeof(string); }
+```</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+    <IsTrimmable>True</IsTrimmable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsTrimmable>True</IsTrimmable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Icons\Type.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\ConstTypeArgs.Type\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.MD">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>

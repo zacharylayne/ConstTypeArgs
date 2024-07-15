@@ -20,6 +20,34 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Chars.xml</DocumentationFile>
+    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass byte values to generics at compile-time. This provides an analog to type specialization in C++.
+
+Here's a simple demonstration:
+
+ ```csharp
+
+ using ConstTypeArgs.Chars;
+
+public static class Foo&lt;TChar&gt;
+    where TChar: K_Char
+{
+    private static readonly char Separator = TChar.Value;
+
+    public static void Output(string[] items)
+    {
+        foreach (var item in items)
+            Console.Write($"{item}{Separator}");
+    }
+}
+
+// Elsewhere
+var helloWorld = new string[] { "Hello", "World!" };
+
+Foo&lt;Comma&gt;.Output(helloWorld); // Output: Hello,World!
+Foo&lt;Slash&gt;.Output(helloWorld); // Output: Hello/World!
+Foo&lt;Semicolon&gt;.Output(helloWorld); // Output: Hello;World!
+Foo&lt;VerticalBar&gt;.Output(helloWorld); // Output: Hello|World!
+```</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -39,7 +39,7 @@ public readonly struct MaxDigits : K_Sbyte<MaxDigits>
 /// The <see cref="MaxHexDigits"/> readonly struct provides a const type argument equal to
 /// the maximum number of hex digits in a <see langword="sbyte"/> (<c>2</c>).
 /// </summary>
-public readonly struct MaxHexDigits : K_Sbyte<MaxDigits>
+public readonly struct MaxHexDigits : K_Sbyte<MaxHexDigits>
 { public static sbyte Value => 2; } // 0x7F
 
 /// <summary>

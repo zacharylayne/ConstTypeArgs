@@ -38,7 +38,7 @@ public readonly struct MaxDigits : K_Uint<MaxDigits>
 /// The <see cref="MaxHexDigits"/> readonly struct provides a const type argument equal to
 /// the maximum number of hex digits in a <see langword="uint"/> (<c>8</c>).
 /// </summary>
-public readonly struct MaxHexDigits : K_Uint<MaxDigits>
+public readonly struct MaxHexDigits : K_Uint<MaxHexDigits>
 { public static uint Value => 8; } // 0xFFFF_FFFF
 
 /// <summary>

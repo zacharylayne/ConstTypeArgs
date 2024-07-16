@@ -38,5 +38,5 @@ public interface K_Unmanaged
 /// <seealso cref="K_SignedNumber{T}"/>
 /// <seealso cref="K_UnsignedNumber{T}"/>
 public interface K_Unmanaged<out T>
-    :  K_Struct<T>, K_Unmanaged
+    : K_Struct<T>, K_Unmanaged
     where T : unmanaged;

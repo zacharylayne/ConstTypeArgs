@@ -41,6 +41,19 @@ public class Foo&lt;TSize&gt;
 // Elsewhere
 var foo = new Foo&lt;_3&gt;();  // Outputs "Array size is 3"
 foo     = new Foo&lt;_16&gt;(); // Outputs "Array size is 16"
+```
+
+The following shows how a new `int` const type argument could be defined.
+
+```csharp
+public readonly struct _77 : K_Int&lt;_77&gt;
+{ public static int Value =&gt; 77; }
+```
+
+You can also create new domain-specific `int` const type arguments like so:
+
+```csharp
+public sealed class DefaultInitialCollectionSize : Int&lt;_32&gt;;
 ```</Description>
   </PropertyGroup>
 

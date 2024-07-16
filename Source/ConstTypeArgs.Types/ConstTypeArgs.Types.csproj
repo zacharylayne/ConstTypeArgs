@@ -85,10 +85,6 @@ public readonly struct StringType : K_Type&lt;StringType&gt;
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="..\ConstTypeArgs.Type\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -96,6 +92,10 @@ public readonly struct StringType : K_Type&lt;StringType&gt;
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="README.MD">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

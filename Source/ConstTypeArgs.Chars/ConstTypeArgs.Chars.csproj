@@ -64,10 +64,6 @@ Foo&lt;VerticalBar&gt;.Output(helloWorld); // Output: Hello|World!
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="..\ConstTypeArgs.Chars\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -75,6 +71,10 @@ Foo&lt;VerticalBar&gt;.Output(helloWorld); // Output: Hello|World!
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="README.MD">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

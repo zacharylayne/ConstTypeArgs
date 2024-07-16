@@ -75,10 +75,6 @@ public sealed class DefaultInitialCollectionSize : Sbyte&lt;_32&gt;;
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="..\ConstTypeArgs.Sbyte\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -86,6 +82,10 @@ public sealed class DefaultInitialCollectionSize : Sbyte&lt;_32&gt;;
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="README.MD">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

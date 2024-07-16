@@ -20,6 +20,41 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Ulongs.xml</DocumentationFile>
+    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass ulong values to generics at compile-time. This provides an analog to type specialization in C++.
+
+Here's a simple demonstration:
+
+ ```csharp
+ using ConstTypeArgs.Ulongs;
+
+public class Foo&lt;TSize&gt;
+    where TSize : K_Ulong
+{
+  public static readonly int[] FooArray = new int[TSize.Value];
+
+  static Foo()
+  {
+    Console.WriteLine($"Integer array size is {FooArray.Length}");
+  }
+}
+
+// Elsewhere
+var foo = new Foo&lt;_3&gt;();  // Outputs "Integer array size is 3"
+foo     = new Foo&lt;_16&gt;(); // Outputs "Integer array size is 16"
+```
+
+The following shows how a new `ulong` const type argument could be defined.
+
+```csharp
+public readonly struct _32 : K_Ulong&lt;_32&gt;
+{ public static long Value =&gt; 32; }
+```
+
+You can also create new domain-specific `ulong` const type arguments like so:
+
+```csharp
+public sealed class DefaultInitialCollectionSize : Ulong&lt;_32&gt;;
+```</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -36,10 +71,6 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="..\ConstTypeArgs.Ulong\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -47,6 +78,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="README.MD">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

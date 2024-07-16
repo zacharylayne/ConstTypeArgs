@@ -62,10 +62,6 @@ foo     = new Foo&lt;_16&gt;(); // Outputs "Array size is 16"
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="..\ConstTypeArgs.Bytes\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -73,6 +69,10 @@ foo     = new Foo&lt;_16&gt;(); // Outputs "Array size is 16"
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="README.MD">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

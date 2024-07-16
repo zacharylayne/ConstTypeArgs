@@ -4,84 +4,2288 @@
         <name>ConstTypeArgs.Delegates</name>
     </assembly>
     <members>
-        <member name="T:ConstTypeArgs.Bools.K_Bool">
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_ActionArray">
             <summary>
-            The <see cref="T:ConstTypeArgs.Bools.K_Bool"/> interface provides a more explicit
-            <c>IConstTypeArg&lt;bool&gt;</c> derived type.
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_ActionArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;System.Action[]&gt;</c> derived type.
             </summary>
-            <seealso href="https://learn.microsoft.com/dotnet/api/system.boolean">
-            System.Boolean</seealso>
-            <seealso cref="T:ConstTypeArgs.Bools.Bool`1"/>
-            <seealso cref="T:ConstTypeArgs.Bools.K_BoolArray"/>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action">
+            Action</seealso>
         </member>
-        <member name="T:ConstTypeArgs.Bools.K_Bool`1">
+        <member name="T:ConstTypeArgs.Delegates.Actions.ActionArray`1">
             <summary>
-            The <see cref="T:ConstTypeArgs.Bools.K_Bool`1"/> interface provides a more explicit
-            <c>IConstTypeArg&lt;bool, K_Bool&lt;TSelf&gt;&gt;</c> derived type.
-            </summary>
-            <typeparam name="TSelf">
-            The implementing type.
-            </typeparam>
-            <seealso href="https://learn.microsoft.com/dotnet/api/system.boolean">
-            System.Boolean</seealso>
-            <seealso cref="T:ConstTypeArgs.Bools.Bool`1"/>
-            <seealso cref="T:ConstTypeArgs.Bools.K_BoolArray`1"/>
-        </member>
-        <member name="T:ConstTypeArgs.Bools.K_BoolArray">
-            <summary>
-            The <see cref="T:ConstTypeArgs.Bools.K_BoolArray"/> interface provides a more explicit
-            <c>IConstTypeArg&lt;bool[]&gt;</c> type.
-            </summary>
-            <seealso href="https://learn.microsoft.com/dotnet/api/system.boolean">
-            System.Boolean</seealso>
-            <seealso cref="T:ConstTypeArgs.Bools.Bool`1"/>
-            <seealso cref="T:ConstTypeArgs.Bools.K_Bool"/>
-        </member>
-        <member name="T:ConstTypeArgs.Bools.K_BoolArray`1">
-            <summary>
-            The <see cref="T:ConstTypeArgs.Bools.K_BoolArray`1"/> interface provides a more explicit
-            <c>IConstTypeArg&lt;bool[], K_BoolArray&lt;TSelf&gt;&gt;</c> derived type.
-            </summary>
-            <typeparam name="TSelf">
-            The implementing type.
-            </typeparam>
-            <seealso href="https://learn.microsoft.com/dotnet/api/system.boolean">
-            System.Boolean</seealso>
-            <seealso cref="T:ConstTypeArgs.Bools.BoolArray`1"/>
-            <seealso cref="T:ConstTypeArgs.Bools.K_Bool`1"/>
-        </member>
-        <member name="T:ConstTypeArgs.Bools.Bool`1">
-            <summary>
-            The <see cref="T:ConstTypeArgs.Bools.Bool`1"/> class provides a const argument provider that
-            wraps the <see langword="bool"/> value from another const argument provider.
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.ActionArray`1"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.action">
+            System.Action</see> array from another argument provider.
             </summary>
             <typeparam name="K">
-            The const argument provider type containing the value to wrap.
+            The type of argument provider containing the value to wrap.
             </typeparam>
             <remarks>
-            This class can be useful when creating domain-specific const argument providers,
-            such as default values, when a const argument provider's value needs to be
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
             wrapped for use in a different context.
             </remarks>
-            <seealso cref="T:ConstTypeArgs.Bools.BoolArray`1"/>
-            <seealso cref="T:ConstTypeArgs.Bools.K_Bool"/>
-            <seealso cref="T:ConstTypeArgs.Bools.K_Bool`1"/>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action">
+            System.Action</seealso>
         </member>
-        <member name="T:ConstTypeArgs.Bools.BoolArray`1">
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_ActionArray`1">
             <summary>
-            The <see cref="T:ConstTypeArgs.Bools.BoolArray`1"/> class provides a const argument provider that
-            wraps the <see langword="bool"/> array from another const argument provider.
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_ActionArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;System.Action&lt;T&gt;[]&gt;</c> derived type.
+            </summary>
+            <typeparam name="T">
+            The type of input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-1">
+            System.Action&lt;T&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.ActionArray`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.ActionArray`2"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.action-1">
+            System.Action&lt;T&gt;</see> array from another argument provider.
+            </summary>
+            <typeparam name="T">
+            The type of input parameter.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-1">
+            System.Action&lt;T&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_ActionArray`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_ActionArray`2"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;System.Action&lt;T1, T2&gt;[]&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-2">
+            System.Action&lt;T1, T2&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.ActionArray`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.ActionArray`3"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.action-2">
+            System.Action&lt;T1, T2, T3&gt;</see> array from another argument provider.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-2">
+            System.Action&lt;T1, T2&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_ActionArray`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_ActionArray`3"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;System.Action&lt;T1, T2, T3&gt;[]&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-3">
+            System.Action&lt;T1, T2, T3&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.ActionArray`4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.ActionArray`4"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.action-3">
+            System.Action&lt;T1, T2, T3&gt;</see> array from another argument provider.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-3">
+            System.Action&lt;T1, T2, T3&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_ActionArray`4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_ActionArray`4"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;System.Action&lt;T1,T2,T3,T4&gt;[]&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-4">
+            System.Action&lt;T1, T2, T3, T4&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.ActionArray`5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.ActionArray`5"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.action-4">
+            System.Action&lt;T1, T2, T3, T4&gt;</see> array from another argument provider.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-4">
+            System.Action&lt;T1, T2, T3, T4&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&gt;</c> derived type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`1"/>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action">
+            System.Action</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-1">
+            Action&lt;T&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`2"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`2"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-2">
+            Action&lt;T1,T2&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`3"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`3"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-3">
+            Action&lt;T1,T2,T3&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`4"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`4"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3,T4&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-4">
+            Action&lt;T1,T2,T3,T4&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`5"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`5"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3,T4,T5&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-5">
+            Action&lt;T1,T2,T3,T4,T5&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`6"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`6"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3,T4,T5,T6&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-6">
+            Action&lt;T1,T2,T3,T4,T5,T6&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`7"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`7"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3,T4,T5,T6,T7&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-7">
+            Action&lt;T1,T2,T3,T4,T5,T6,T7&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`8"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`8"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3,T4,T5,T6,T7,T8&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-8">
+            Action&lt;T1,T2,T3,T4,T5,T6,T7,T8&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`9"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`9">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`9"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-9">
+            Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`10"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`10">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`10"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-10">
+            Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`11"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`11">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`11"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <typeparam name="T11">
+            The type of the eleventh input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-11">
+            Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`12"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`12">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`12"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <typeparam name="T11">
+            The type of the eleventh input parameter.
+            </typeparam>
+            <typeparam name="T12">
+            The type of the twelfth input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-12">
+            Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`13"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`13">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`13"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <typeparam name="T11">
+            The type of the eleventh input parameter.
+            </typeparam>
+            <typeparam name="T12">
+            The type of the twelfth input parameter.
+            </typeparam>
+            <typeparam name="T13">
+            The type of the thirteenth input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-13">
+            Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`14"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`14">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`14"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <typeparam name="T11">
+            The type of the eleventh input parameter.
+            </typeparam>
+            <typeparam name="T12">
+            The type of the twelfth input parameter.
+            </typeparam>
+            <typeparam name="T13">
+            The type of the thirteenth input parameter.
+            </typeparam>
+            <typeparam name="T14">
+            The type of the fourteenth input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-14">
+            Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`15"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`15">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`15"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <typeparam name="T11">
+            The type of the eleventh input parameter.
+            </typeparam>
+            <typeparam name="T12">
+            The type of the twelfth input parameter.
+            </typeparam>
+            <typeparam name="T13">
+            The type of the thirteenth input parameter.
+            </typeparam>
+            <typeparam name="T14">
+            The type of the fourteenth input parameter.
+            </typeparam>
+            <typeparam name="T15">
+            The type of the fifteenth input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-15">
+            Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`16"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Predicates.K_Predicate`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_Procedure`16">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`16"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15,T16&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <typeparam name="T11">
+            The type of the eleventh input parameter.
+            </typeparam>
+            <typeparam name="T12">
+            The type of the twelfth input parameter.
+            </typeparam>
+            <typeparam name="T13">
+            The type of the thirteenth input parameter.
+            </typeparam>
+            <typeparam name="T14">
+            The type of the fourteenth input parameter.
+            </typeparam>
+            <typeparam name="T15">
+            The type of the fifteenth input parameter.
+            </typeparam>
+            <typeparam name="T16">
+            The type of the sixteenth input parameter.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.action-16">
+            Action&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15,T16&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`17"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Predicates.K_Predicate`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.Procedure`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.Procedure`1"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.action">
+            System.Action</see> value from another argument provider.
             </summary>
             <typeparam name="K">
-            The const argument provider type containing the array to wrap.
+            The type of argument provider containing the value to wrap.
             </typeparam>
             <remarks>
-            This class can be useful when creating domain-specific const argument providers,
-            such as default values, when a const argument provider's value needs to be
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
             wrapped for use in a different context.
             </remarks>
-            <seealso cref="T:ConstTypeArgs.Bools.Bool`1"/>
-            <seealso cref="T:ConstTypeArgs.Bools.K_Bool"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.Procedure`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.Procedure`2"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.action-1">
+            System.Action&lt;T&gt;</see> value from another argument provider.
+            </summary>
+            <typeparam name="T">
+            The type of the input parameter.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.Procedure`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.Procedure`3"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.action-2">
+            System.Action&lt;T1, T2&gt;</see> value from another argument provider.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.Procedure`4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.Procedure`4"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.action-3">
+            System.Action&lt;T1, T2, T3&gt;</see> value from another argument provider.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.Procedure`5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.Procedure`5"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.action-4">
+            System.Action&lt;T1, T2, T3, T4&gt;</see> value from another argument provider.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.ReadOnlySpanProcedure`2">
+            <summary>
+            Encapsulates a method that receives a read-only span of objects
+            of type <typeparamref name="T"/> and a state object
+            of type <typeparamref name="TArg"/>.
+            </summary>
+            <typeparam name="T">
+            The type of the objects in the read-only span.
+            </typeparam>
+            <typeparam name="TArg">
+            The type of the object that represents the state.
+            </typeparam>
+            <param name="span">
+            A read-only span of objects of type <typeparamref name="T"/>.
+            </param>
+            <param name="arg">
+            A state object of type <typeparamref name="TArg"/>.
+            </param>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_ReadOnlySpanProcedure`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.ReadOnlySpanProcedure`3"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.SpanProcedure`2"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_ReadOnlySpanProcedure`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_ReadOnlySpanProcedure`2"/> interface provides a more explicit
+            IConstTypeArgs&lt;ReadOnlySpanAction&lt;T, TArg&gt;&gt; derived type.
+            </summary>
+            <typeparam name="T">
+            The type of the objects in the read-only span.
+            </typeparam>
+            <typeparam name="TArg">
+            The type of the object that represents the state.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.ReadOnlySpanProcedure`3"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_SpanProcedure`2"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.ReadOnlySpanProcedure`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.ReadOnlySpanProcedure`3"/> class provides an argument provider that
+            wraps the <see cref="T:ConstTypeArgs.Delegates.Actions.ReadOnlySpanProcedure`2"/> from another argument provider.
+            </summary>
+            <typeparam name="T">
+            The type of the objects in the read-only span.
+            </typeparam>
+            <typeparam name="TArg">
+            The type of the object that represents the state.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.SpanProcedure`3"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.RefProcedure`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.RefProcedure`1"/> delegate is an action that
+            takes a reference to a value of type <typeparamref name="T"/>.
+            </summary>
+            <typeparam name="T">
+            The type of the value to be passed by reference.
+            </typeparam>
+            <param name="reference">
+            The reference to the value of type <typeparamref name="T"/>.
+            </param>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.RefProcedure`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.RefFunction`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.RefFunction`3"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.RefProcedure`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.RefProcedure`1"/> delegate is an action that
+            takes a reference to a value of type <typeparamref name="T"/>
+            and additional arguments of type <typeparamref name="TArgs"/>.
+            </summary>
+            <typeparam name="T">
+            The type of the value to be passed by reference.
+            </typeparam>
+            <typeparam name="TArgs">
+            The type encapsulating the remaining arguments to be passed in.
+            </typeparam>
+            <param name="reference">
+            The reference to the value of type <typeparamref name="T"/>.
+            </param>
+            <param name="arguments">
+            The remaining arguments to be passed in.
+            </param>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.RefProcedure`1"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.RefFunction`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.RefFunction`3"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_RefProcedure`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_RefProcedure`1"/> interface provides a more explicit
+            IConstTypeArgs&lt;RefProcedure&lt;T&gt;&gt; derived type.
+            </summary>
+            <typeparam name="T">
+            The type of the value to be passed by reference.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_RefProcedure`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`3"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_RefProcedure`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_RefProcedure`2"/> interface provides a more explicit
+            IConstTypeArgs&lt;RefProcedure&lt;T, TArgs&gt;&gt; derived type.
+            </summary>
+            <typeparam name="T">
+            The type of the value to be passed by reference.
+            </typeparam>
+            <typeparam name="TArgs">
+            The type encapsulating the remaining arguments to be passed in.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_RefProcedure`1"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`3"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.SpanProcedure`2">
+            <summary>
+            Encapsulates a method that receives a span of objects
+            of type <typeparamref name="T"/> and a state object
+            of type <typeparamref name="TArg"/>.
+            </summary>
+            <typeparam name="T">
+            The type of the objects in the span.
+            </typeparam>
+            <typeparam name="TArg">
+            The type of the object that represents the state.
+            </typeparam>
+            <param name="span">
+            A span of objects of type <typeparamref name="T"/>.
+            </param>
+            <param name="arg">
+            A state object of type <typeparamref name="TArg"/>.
+            </param>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_SpanProcedure`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.SpanProcedure`3"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.ReadOnlySpanProcedure`2"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.K_SpanProcedure`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.K_SpanProcedure`2"/> interface provides a more explicit
+            IConstTypeArgs&lt;SpanProcedure&lt;T, TArg&gt;&gt; derived type.
+            </summary>
+            <typeparam name="T">
+            The type of the objects in the span.
+            </typeparam>
+            <typeparam name="TArg">
+            The type of the object that represents the state.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.SpanProcedure`3"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_ReadOnlySpanProcedure`2"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Actions.SpanProcedure`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Actions.SpanProcedure`3"/> class provides an argument provider that
+            wraps the <see cref="T:ConstTypeArgs.Delegates.Actions.SpanProcedure`2"/> from another argument provider.
+            </summary>
+            <typeparam name="T">
+            The type of the objects in the span.
+            </typeparam>
+            <typeparam name="TArg">
+            The type of the object that represents the state.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.ReadOnlySpanProcedure`3"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Comparisons.K_Comparison`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Comparisons.K_Comparison`1"/> interface  provides a more explicit
+            <c>IConstTypeArg&lt;Comparison&lt;T&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T">
+            The type of objects to compare.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.comparison-1">
+            System.Comparison&lt;T&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Comparisons.K_ComparisonArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Comparisons.K_ComparisonArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Comparison&lt;T&gt;[]&gt;</c> type.
+            </summary>
+            <typeparam name="T">
+            The type of objects to compare.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.comparison-1">
+            System.Comparison&lt;T&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Comparisons.K_Comparison`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Comparisons.Comparison`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Comparisons.Comparison`2"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.comparison-1">
+            System.Comparison&lt;T&gt;</see> value from another argument provider.
+            </summary>
+            <typeparam name="T">
+            The type of objects to compare.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Comparisons.ComparisonArray`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Comparisons.ComparisonArray`2"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.comparison-1">
+            System.Comparison&lt;T&gt;</see> array from another argument provider.
+            </summary>
+            <typeparam name="T">
+            The type of objects to compare.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Converters.K_Converter`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Converters.K_Converter`2"/> interface  provides a more explicit
+            <c>IConstTypeArg&lt;Converter&lt;TInput, TOutput&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TInput">
+            The type of object that is to be converted.
+            </typeparam>
+            <typeparam name="TOutput">
+            The type the input object is to be converted to.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.converter-2">
+            System.Converter&lt;TInput, TOutput&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Converters.K_ConverterArray`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Converters.K_ConverterArray`2"/> interface  provides a more explicit
+            <c>IConstTypeArg&lt;Converter&lt;TInput, TOutput&gt;[]&gt;</c> derived type.
+            </summary>
+            <typeparam name="TInput">
+            The type of object that is to be converted.
+            </typeparam>
+            <typeparam name="TOutput">
+            The type the input object is to be converted to.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.converter-2">
+            System.Converter&lt;TInput, TOutput&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Converters.Converter`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Converters.Converter`3"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.converter-2">
+            System.Converter&lt;TInput, TOutput&gt;</see> value from another argument provider.
+            </summary>
+            <typeparam name="TInput">
+            The type of object that is to be converted.
+            </typeparam>
+            <typeparam name="TOutput">
+            The type the input object is to be converted to.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Converters.ConverterArray`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Converters.Converter`3"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.converter-2">
+            System.Converter&lt;TInput, TOutput&gt;</see> array from another argument provider.
+            </summary>
+            <typeparam name="TInput">
+            The type of object that is to be converted.
+            </typeparam>
+            <typeparam name="TOutput">
+            The type the input object is to be converted to.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_FuncArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_FuncArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;System.Func&lt;TResult&gt;[]&gt;</c> derived type.
+            </summary>
+            <typeparam name="TResult">
+            The type of the result.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-1">
+            System.Func&lt;TResult&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.FuncArray`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.FuncArray`2"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.func-1">
+            System.Func&lt;TResult&gt;</see> array from another argument provider.
+            </summary>
+            <typeparam name="TResult">
+            The type of the result.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-1">
+            System.Func&lt;TResult&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_FuncArray`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_FuncArray`2"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;System.Func&lt;T, TResult&gt;[]&gt;</c> derived type.
+            </summary>
+            <typeparam name="T">
+            The type of input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the result.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-2">
+            System.Func&lt;T, TResult&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.FuncArray`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.FuncArray`3"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.func-2">
+            System.Func&lt;T, TResult&gt;</see> array from another argument provider.
+            </summary>
+            <typeparam name="T">
+            The type of input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the result.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-2">
+            System.Func&lt;T1, TResult&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_FuncArray`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_FuncArray`3"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;System.Func&lt;T1, T2, TResult&gt;[]&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the result.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-3">
+            System.Func&lt;T1, T2, TResult&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.FuncArray`4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.FuncArray`4"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.func-3">
+            System.Func&lt;T1, T2, TResult&gt;</see> array from another argument provider.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the result.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-3">
+            System.Func&lt;T1, T2, TResult&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_FuncArray`4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_FuncArray`4"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;System.Func&lt;T1, T2, T3, TResult&gt;[]&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the result.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-4">
+            System.Func&lt;T1, T2, T3, TResult&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.FuncArray`5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.FuncArray`5"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.func-4">
+            System.Func&lt;T1, T2, T3, TResult&gt;</see> array from another argument provider.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the result.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-4">
+            System.Func&lt;T1, T2, T3, TResult&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_FuncArray`5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_FuncArray`5"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;System.Func&lt;T1, T2, T3, T4, TResult&gt;[]&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the result.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-5">
+            System.Func&lt;T1, T2, T3, T4, TResult&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.FuncArray`6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.FuncArray`6"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.func-5">
+            System.Func&lt;T1, T2, T3, T4, TResult&gt;</see> array from another argument provider.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the result.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-5">
+            System.Func&lt;T1, T2, T3, T4, TResult&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-1">
+            System.Func&lt;TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`2"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T">
+            The type of input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-2">
+            System.Func&lt;T, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`3"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-3">
+            System.Func&lt;T1, T2, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`2"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`4"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, T3, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-4">
+            System.Func&lt;T1, T2, T3, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`3"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`5"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, T3, T4, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-5">
+            System.Func&lt;T1, T2, T3, T4, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`4"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`6"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, T3, T4, T5, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-6">
+            System.Func&lt;T1, T2, T3, T4, T5, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`5"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`7"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, T3, T4, T5, T6, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-7">
+            System.Func&lt;T1, T2, T3, T4, T5, T6, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`6"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`8"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-8">
+            System.Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`7"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`9">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`9"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-9">
+            System.Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`8"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`10">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`10"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-10">
+            System.Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`9"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`11">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`11"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-11">
+            System.Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`10"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`12">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`12"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <typeparam name="T11">
+            The type of the eleventh input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-12">
+            System.Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`11"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`13">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`13"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <typeparam name="T11">
+            The type of the eleventh input parameter.
+            </typeparam>
+            <typeparam name="T12">
+            The type of the twelfth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-13">
+            System.Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`12"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`14">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`14"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <typeparam name="T11">
+            The type of the eleventh input parameter.
+            </typeparam>
+            <typeparam name="T12">
+            The type of the twelfth input parameter.
+            </typeparam>
+            <typeparam name="T13">
+            The type of the thirteenth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-14">
+            System.Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`13"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`15">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`15"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <typeparam name="T11">
+            The type of the eleventh input parameter.
+            </typeparam>
+            <typeparam name="T12">
+            The type of the twelfth input parameter.
+            </typeparam>
+            <typeparam name="T13">
+            The type of the thirteenth input parameter.
+            </typeparam>
+            <typeparam name="T14">
+            The type of the fourteenth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-15">
+            System.Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`14"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`16">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`16"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <typeparam name="T11">
+            The type of the eleventh input parameter.
+            </typeparam>
+            <typeparam name="T12">
+            The type of the twelfth input parameter.
+            </typeparam>
+            <typeparam name="T13">
+            The type of the thirteenth input parameter.
+            </typeparam>
+            <typeparam name="T14">
+            The type of the fourteenth input parameter.
+            </typeparam>
+            <typeparam name="T15">
+            The type of the fifteenth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-16">
+            System.Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`15"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_Function`17">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_Function`17"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Func&lt;T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15,T16,TResult&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="T5">
+            The type of the fifth input parameter.
+            </typeparam>
+            <typeparam name="T6">
+            The type of the sixth input parameter.
+            </typeparam>
+            <typeparam name="T7">
+            The type of the seventh input parameter.
+            </typeparam>
+            <typeparam name="T8">
+            The type of the eighth input parameter.
+            </typeparam>
+            <typeparam name="T9">
+            The type of the ninth input parameter.
+            </typeparam>
+            <typeparam name="T10">
+            The type of the tenth input parameter.
+            </typeparam>
+            <typeparam name="T11">
+            The type of the eleventh input parameter.
+            </typeparam>
+            <typeparam name="T12">
+            The type of the twelfth input parameter.
+            </typeparam>
+            <typeparam name="T13">
+            The type of the thirteenth input parameter.
+            </typeparam>
+            <typeparam name="T14">
+            The type of the fourteenth input parameter.
+            </typeparam>
+            <typeparam name="T15">
+            The type of the fifteenth input parameter.
+            </typeparam>
+            <typeparam name="T16">
+            The type of the sixteenth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The return type of the function.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.func-17">
+            System.Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, 16, TResult&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_Procedure`16"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.Function`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.Function`2"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.func-1">
+            System.Func&lt;TResult&gt;</see> value from another argument provider.
+            </summary>
+            <typeparam name="TResult">
+            The type of output.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.Function`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.Function`3"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.func-2">
+            System.Func&lt;T, TResult&gt;</see> value from another argument provider.
+            </summary>
+            <typeparam name="T">
+            The type of input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of output.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.Function`4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.Function`4"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.func-3">
+            System.Func&lt;T1, T2, TResult&gt;</see> value from another argument provider.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of output.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.Function`5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.Function`5"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.func-4">
+            System.Func&lt;T1, T2, T3, TResult&gt;</see> value from another argument provider.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of output.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.Function`6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.Function`6"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.func-5">
+            System.Func&lt;T1, T2, T3, T4, TResult&gt;</see> value from another argument provider.
+            </summary>
+            <typeparam name="T1">
+            The type of the first input parameter.
+            </typeparam>
+            <typeparam name="T2">
+            The type of the second input parameter.
+            </typeparam>
+            <typeparam name="T3">
+            The type of the third input parameter.
+            </typeparam>
+            <typeparam name="T4">
+            The type of the fourth input parameter.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of output.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.RefFunction`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.RefFunction`2"/> delegate is a function that
+            takes a reference to a value of type <typeparamref name="T"/>
+            </summary>
+            <typeparam name="T">
+            The type of the value to be passed by reference.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the value to be returned.
+            </typeparam>
+            <param name="reference">
+            The reference to the value of type <typeparamref name="T"/>.
+            </param>
+            <returns>
+            A value of type <typeparamref name="TResult"/>.
+            </returns>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.RefFunction`3"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.RefProcedure`1"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.RefProcedure`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`3"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.RefFunction`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.RefFunction`3"/> delegate is a function that
+            takes a reference to a value of type <typeparamref name="T"/>
+            and additional arguments of type <typeparamref name="TArgs"/>.
+            </summary>
+            <typeparam name="T">
+            The type of the value to be passed by reference.
+            </typeparam>
+            <typeparam name="TArgs">
+            The type encapsulating the remaining arguments to be passed in.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the value to be returned.
+            </typeparam>
+            <param name="reference">
+            The reference to the value of type <typeparamref name="T"/>.
+            </param>
+            <param name="arguments">
+            The remaining arguments to be passed in.
+            </param>
+            <returns>
+            A value of type <typeparamref name="TResult"/>.
+            </returns>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.RefFunction`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.RefProcedure`1"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.RefProcedure`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`3"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`2"/> interface provides a more explicit
+            IConstTypeArg&lt;RefFunc&lt;T, TResult&gt;&gt; derived type.
+            </summary>
+            <typeparam name="T">
+            The type of the value to be passed by reference.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the value to be returned.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`3"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_RefProcedure`1"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_RefProcedure`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.RefFunction`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.RefFunction`3"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`3"/> interface provides a more explicit
+            IConstTypeArg&lt;RefFunc&lt;T, TArgs, TResult&gt;&gt; derived type.
+            </summary>
+            <typeparam name="T">
+            The type of the value to be passed by reference.
+            </typeparam>
+            <typeparam name="TArgs">
+            The type encapsulating the remaining arguments to be passed in.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the value to be returned.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.K_RefFunction`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_RefProcedure`1"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Actions.K_RefProcedure`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.RefFunction`2"/>
+            <seealso cref="T:ConstTypeArgs.Delegates.Funcs.RefFunction`3"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Predicates.K_Predicate`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Predicates.K_Predicate`1"/> interface  provides a more explicit
+            <c>IConstTypeArg&lt;Predicate&lt;T&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="T">
+            The type of the input parameter of the predicate.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.predicate-1">
+            System.Predicate&lt;T&gt;</seealso>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Predicates.K_PredicateArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Predicates.K_PredicateArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Predicate&lt;T&gt;[]&gt;</c> type.
+            </summary>
+            <typeparam name="T">
+            The type of the predicate's input.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.predicate">
+            System.Predicate</seealso>
+            <seealso cref="T:ConstTypeArgs.Delegates.Predicates.K_Predicate`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Predicates.Predicate`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Predicates.Predicate`2"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.predicate">
+            System.Predicate</see> value from another argument provider.
+            </summary>
+            <typeparam name="T">
+            The type of the predicate's input.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Delegates.Predicates.PredicateArray`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Delegates.Predicates.PredicateArray`2"/> class provides an argument provider that
+            wraps the
+            <see href="https://learn.microsoft.com/dotnet/api/system.predicate">
+            System.Predicate</see> array from another argument provider.
+            </summary>
+            <typeparam name="T">
+            The type of the predicate's input.
+            </typeparam>
+            <typeparam name="K">
+            The type of argument provider containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific argument providers,
+            such as default values, when an argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
         </member>
     </members>
 </doc>

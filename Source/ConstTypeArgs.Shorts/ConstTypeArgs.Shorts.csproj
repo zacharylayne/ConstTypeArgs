@@ -82,10 +82,6 @@ public sealed class DefaultInitialCollectionSize : Short&lt;_32&gt;;
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConstTypeArgs.Sbytes\ConstTypeArgs.Sbytes.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

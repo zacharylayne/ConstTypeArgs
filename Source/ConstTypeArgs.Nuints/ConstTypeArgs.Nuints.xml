@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Nuints</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Nuints.K_Nuint">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Nuints.K_Nuint"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;nuint&gt;</c> derived type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.uintptr">
+            System.UIntPtr</seealso>
+            <seealso cref="T:ConstTypeArgs.Nuints.Nuint`1"/>
+            <seealso cref="T:ConstTypeArgs.Nuints.K_NuintArray"/>
+        </member>
+        <member name="T:ConstTypeArgs.Nuints.K_Nuint`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Nuints.K_Nuint`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;nuint, KNuint&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.uintptr">
+            System.UIntPtr</seealso>
+            <seealso cref="T:ConstTypeArgs.Nuints.Nuint`1"/>
+            <seealso cref="T:ConstTypeArgs.Nuints.K_NuintArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Nuints.K_NuintArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Nuints.K_NuintArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;nuint[]&gt;</c> type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.uintptr">
+            System.UIntPtr</seealso>
+            <seealso cref="T:ConstTypeArgs.Nuints.NuintArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Nuints.K_Nuint"/>
+        </member>
+        <member name="T:ConstTypeArgs.Nuints.K_NuintArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Nuints.K_NuintArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;nuint[], K_NuintArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.uintptr">
+            System.UIntPtr</seealso>
+            <seealso cref="T:ConstTypeArgs.Nuints.NuintArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Nuints.K_Nuint`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Nuints.Nuint`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Nuints.Nuint`1"/> class provides a const argument provider that
+            wraps the <see langword="nuint"/> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Nuints.NuintArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Nuints.K_Nuint"/>
+            <seealso cref="T:ConstTypeArgs.Nuints.K_Nuint`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Nuints.NuintArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Nuints.NuintArray`1"/> class provides a const argument provider that
+            wraps the <see langword="nuint"/> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Nuints.Nuint`1"/>
+            <seealso cref="T:ConstTypeArgs.Nuints.K_Nuint"/>
+        </member>
+    </members>
+</doc>

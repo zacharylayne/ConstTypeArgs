@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Longs</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Longs.K_Long">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.K_Long"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;long&gt;</c> derived type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.int64">
+            System.Int64</seealso>
+            <seealso cref="T:ConstTypeArgs.Longs.K_LongArray"/>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.K_Long`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.K_Long`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;long, K_Long&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.int64">
+            System.Int64</seealso>
+            <seealso cref="T:ConstTypeArgs.Longs.K_LongArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.K_LongArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.K_LongArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;long[]&gt;</c> type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.int64">
+            System.Int64</seealso>
+            <seealso cref="T:ConstTypeArgs.Longs.K_Long"/>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.K_LongArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.K_LongArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;long[], K_LongArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.int64">
+            System.Int64</seealso>
+            <seealso cref="T:ConstTypeArgs.Longs.K_Long`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Long`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Long`1"/> class provides a const argument provider that
+            wraps the <see langword="long"/> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Longs.K_Long"/>
+            <seealso cref="T:ConstTypeArgs.Longs.K_Long`1"/>
+            <seealso cref="T:ConstTypeArgs.Longs.LongArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.LongArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.LongArray`1"/> class provides a const argument provider that
+            wraps the <see langword="Long"/> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Longs.K_Long"/>
+            <seealso cref="T:ConstTypeArgs.Longs.Long`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Default">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Default"/> readonly struct provides a const type argument equal to the
+            <see langword="default"/> of <see langword="long"/> (<c>0</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.MinValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.MinValue"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.int64.minvalue">
+            Int64.MinValue</see> (<c>-9223372036854775808</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.MaxValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.MaxValue"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.int64.maxvalue">
+            Int64.MaxValue</see> (<c>9223372036854775807</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Zero">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Zero"/> readonly struct provides a const type argument equal to
+            <c>0</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.MaxDigits">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.MaxDigits"/> readonly struct provides a const type argument equal to
+            the maximum number of digits in a <see langword="long"/> (<c>19</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.MaxHexDigits">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.MaxHexDigits"/> readonly struct provides a const type argument equal to
+            the maximum number of hex digits in a <see langword="long"/> (<c>4</c>).
+            </summary>
+        </member>
+    </members>
+</doc>

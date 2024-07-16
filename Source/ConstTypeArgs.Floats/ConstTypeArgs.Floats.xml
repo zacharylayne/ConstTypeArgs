@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Floats</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Floats.K_Float">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.K_Float"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;float&gt;</c> derived type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.single">
+            System.Single</seealso>
+            <seealso cref="T:ConstTypeArgs.Floats.Float`1"/>
+            <seealso cref="T:ConstTypeArgs.Floats.K_FloatArray"/>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.K_Float`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.K_Float`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;float, K_Float&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.single">
+            System.Single</seealso>
+            <seealso cref="T:ConstTypeArgs.Floats.Float`1"/>
+            <seealso cref="T:ConstTypeArgs.Floats.K_FloatArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.K_FloatArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.K_FloatArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;float[]&gt;</c> type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.single">
+            System.Single</seealso>
+            <seealso cref="T:ConstTypeArgs.Floats.FloatArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Floats.K_Float"/>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.K_FloatArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.K_FloatArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;float[], K_FloatArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.single">
+            System.Single</seealso>
+            <seealso cref="T:ConstTypeArgs.Floats.FloatArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Floats.K_Float`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.Float`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.Float`1"/> class provides a const argument provider that
+            wraps the <see langword="float"/> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Floats.FloatArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Floats.K_Float"/>
+            <seealso cref="T:ConstTypeArgs.Floats.K_Float`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.FloatArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.FloatArray`1"/> class provides a const argument provider that
+            wraps the <see langword="float"/> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Floats.Float`1"/>
+            <seealso cref="T:ConstTypeArgs.Floats.K_Float"/>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.Default">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.Default"/> struct provides a const type argument equal to the
+            <see langword="default"/> of <see langword="float"/>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.MinValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.MinValue"/> struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.single.minvalue">
+            Single.MinValue</see> (<c>-3.40282347E+38</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.MaxValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.MaxValue"/> struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.single.maxvalue">
+            Single.MaxValue</see> (<c>3.40282347E+38</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.E">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.E"/> struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.single.e">
+            Single.E</see> (<c>ℯ</c>: <c>2.71828175</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.Epsilon">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.E"/> struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.single.epsilon">
+            Single.Epsilon</see> (<c>ℯ</c>: <c>1.401298E-45</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.Pi">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.Pi"/> struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.single.pi">
+            Single.Pi</see> (<c>π</c>: <c>3.14159274</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.Phi">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.Phi"/> struct provides a const type argument equal to
+            <c>φ</c> (<c>1.61803398</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.Tau">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.Tau"/> struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.single.tau">
+            Single.Tau</see> (<c>6.28318548</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.NaN">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.NaN"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.single.nan">
+            Single.NaN</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.PositiveInfinity">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.PositiveInfinity"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.single.positiveinfinity">
+            Single.PositiveInfinity</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Floats.NegativeInfinity">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats.NegativeInfinity"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.single.negativeinfinity">
+            Single.NegativeInfinity</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Floats._0">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Floats._0"/> readonly struct provides a const type argument equal to
+            <c>0.0f</c>.
+            </summary>
+        </member>
+    </members>
+</doc>

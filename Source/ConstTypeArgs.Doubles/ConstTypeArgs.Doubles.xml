@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Doubles</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Doubles.K_Double">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.K_Double"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;double&gt;</c> derived type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Doubles.Double`1"/>
+            <seealso cref="T:ConstTypeArgs.Doubles.K_DoubleArray"/>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.K_Double`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.K_Double`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;double, K_Double&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Doubles.Double`1"/>
+            <seealso cref="T:ConstTypeArgs.Doubles.K_DoubleArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.K_DoubleArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.K_DoubleArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;double[]&gt;</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Doubles.DoubleArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Doubles.K_Double"/>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.K_DoubleArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.K_DoubleArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;double[], K_DoubleArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Doubles.DoubleArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Doubles.K_Double`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.Double`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.Double`1"/> class provides a const argument provider that
+            wraps the <see langword="double"/> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Doubles.DoubleArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Doubles.K_Double"/>
+            <seealso cref="T:ConstTypeArgs.Doubles.K_Double`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.DoubleArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.DoubleArray`1"/> class provides a const argument provider that
+            wraps the <see langword="Double"/> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Doubles.Double`1"/>
+            <seealso cref="T:ConstTypeArgs.Doubles.K_Double"/>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.Default">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.Default"/> readonly struct provides a const type argument equal to the
+            <see langword="default"/> of <see langword="double"/> (<c>0</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.MinValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.MinValue"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.double.minvalue">
+            Double.MinValue</see> (<c>-1.7976931348623157E+308</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.MaxValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.MaxValue"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.double.maxvalue">
+            Double.MaxValue</see> (<c>1.7976931348623157E+308</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.E">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.E"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.double.e">
+            Double.E</see> (<c>2.7182818284590452354</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.Epsilon">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.Tau"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.double.epsilon">
+            Double.Epsilon</see> (<c>4.94065645841247E-324</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.Pi">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.Pi"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.double.pi">
+            Double.Pi</see> (<c>3.14159265358979323846</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.Phi">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.Phi"/> readonly struct provides a const type argument equal to
+            <c>φ</c> (<c>1.6180339887498948</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.Tau">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.Tau"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.double.tau">
+            Double.Tau</see> (<c>6.283185307179586476925</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.NaN">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.NaN"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.double.nan">
+            Double.NaN</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.PositiveInfinity">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.PositiveInfinity"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.double.positiveinfinity">
+            Double.PositiveInfinity</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.NegativeInfinity">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.NegativeInfinity"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.double.negativeinfinity">
+            Double.NegativeInfinity</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles._0">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles._0"/> readonly struct provides a const type argument equal to
+            <c>0.0</c>.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -99,12 +99,6 @@
             Int64.MaxValue</see> (<c>9223372036854775807</c>).
             </summary>
         </member>
-        <member name="T:ConstTypeArgs.Longs.Zero">
-            <summary>
-            The <see cref="T:ConstTypeArgs.Longs.Zero"/> readonly struct provides a const type argument equal to
-            <c>0</c>.
-            </summary>
-        </member>
         <member name="T:ConstTypeArgs.Longs.MaxDigits">
             <summary>
             The <see cref="T:ConstTypeArgs.Longs.MaxDigits"/> readonly struct provides a const type argument equal to
@@ -115,6 +109,348 @@
             <summary>
             The <see cref="T:ConstTypeArgs.Longs.MaxHexDigits"/> readonly struct provides a const type argument equal to
             the maximum number of hex digits in a <see langword="long"/> (<c>4</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._0">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._0"/> readonly struct provides a const type argument equal to
+            <c>0</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_1"/> readonly struct provides a const type argument equal to
+            <c>-1</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_2"/> readonly struct provides a const type argument equal to
+            <c>-2</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_3"/> readonly struct provides a const type argument equal to
+            <c>-3</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_4"/> readonly struct provides a const type argument equal to
+            <c>-4</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_5"/> readonly struct provides a const type argument equal to
+            <c>-5</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_6"/> readonly struct provides a const type argument equal to
+            <c>-6</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_7"/> readonly struct provides a const type argument equal to
+            <c>-7</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_8"/> readonly struct provides a const type argument equal to
+            <c>-8</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_9">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_9"/> readonly struct provides a const type argument equal to
+            <c>-9</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_10">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_10"/> readonly struct provides a const type argument equal to
+            <c>-10</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_11">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_11"/> readonly struct provides a const type argument equal to
+            <c>-11</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_12">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_12"/> readonly struct provides a const type argument equal to
+            <c>-12</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_13">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_13"/> readonly struct provides a const type argument equal to
+            <c>-13</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_14">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_14"/> readonly struct provides a const type argument equal to
+            <c>-14</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs.Neg_15">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs.Neg_15"/> readonly struct provides a const type argument equal to
+            <c>-15</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._1"/> readonly struct provides a const type argument equal to
+            <c>1</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._2"/> readonly struct provides a const type argument equal to
+            <c>2</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._3"/> readonly struct provides a const type argument equal to
+            <c>3</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._4"/> readonly struct provides a const type argument equal to
+            <c>4</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._5"/> readonly struct provides a const type argument equal to
+            <c>5</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._6"/> readonly struct provides a const type argument equal to
+            <c>6</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._7"/> readonly struct provides a const type argument equal to
+            <c>7</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._8"/> readonly struct provides a const type argument equal to
+            <c>8</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._9">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._9"/> readonly struct provides a const type argument equal to
+            <c>9</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._10">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._10"/> readonly struct provides a const type argument equal to
+            <c>10</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._11">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._11"/> readonly struct provides a const type argument equal to
+            <c>11</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._12">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._12"/> readonly struct provides a const type argument equal to
+            <c>12</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._13">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._13"/> readonly struct provides a const type argument equal to
+            <c>13</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._14">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._14"/> readonly struct provides a const type argument equal to
+            <c>14</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._15">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._15"/> readonly struct provides a const type argument equal to
+            <c>15</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._16">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._16"/> readonly struct provides a const type argument equal to
+            <c>16</c> (<c>2^4</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._25">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._25"/> readonly struct provides a const type argument equal to
+            <c>25</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._31">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._31"/> readonly struct provides a const type argument equal to
+            <c>31</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._32">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._32"/> readonly struct provides a const type argument equal to
+            <c>32</c> (<c>2^5</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._50">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._50"/> readonly struct provides a const type argument equal to
+            <c>50</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._63">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._63"/> readonly struct provides a const type argument equal to
+            <c>63</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._64">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._64"/> readonly struct provides a const type argument equal to
+            <c>64</c> (<c>2^6</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._100">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._100"/> readonly struct provides a const type argument equal to
+            <c>100</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._127">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._127"/> readonly struct provides a const type argument equal to
+            <c>127</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._128">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._128"/> readonly struct provides a const type argument equal to
+            <c>128</c> (<c>2^7</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._200">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._200"/> readonly struct provides a const type argument equal to
+            <c>200</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._255">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._255"/> readonly struct provides a const type argument equal to
+            <c>255</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._256">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._256"/> readonly struct provides a const type argument equal to
+            <c>256</c> (<c>2^8</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._511">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._511"/> readonly struct provides a const type argument equal to
+            <c>_511</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._512">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._512"/> readonly struct provides a const type argument equal to
+            <c>512</c> (<c>2^9</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._1023">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._1023"/> readonly struct provides a const type argument equal to
+            <c>1023</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._1024">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._1024"/> readonly struct provides a const type argument equal to
+            <c>1024</c> (<c>2^10</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._2047">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._2047"/> readonly struct provides a const type argument equal to
+            <c>2047</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._2048">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._2048"/> readonly struct provides a const type argument equal to
+            <c>2048</c> (<c>2^11</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._4095">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._4095"/> readonly struct provides a const type argument equal to
+            <c>4095</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._4096">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._4096"/> readonly struct provides a const type argument equal to
+            <c>4096</c> (<c>2^12</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._8191">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._8191"/> readonly struct provides a const type argument equal to
+            <c>8191</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._8192">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._8192"/> readonly struct provides a const type argument equal to
+            <c>8192</c> (<c>2^13</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._16384">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._16384"/> readonly struct provides a const type argument equal to
+            <c>16384</c> (<c>2^14</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._32768">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._32768"/> readonly struct provides a const type argument equal to
+            <c>32768</c> (<c>2^15</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Longs._65536">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Longs._65536"/> readonly struct provides a const type argument equal to
+            <c>65536</c> (<c>2^16</c>).
             </summary>
         </member>
     </members>

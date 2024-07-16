@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Decimals</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Decimals.K_Decimal">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.K_Decimal"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;decimal&gt;</c> derived type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Decimals.Decimal`1"/>
+            <seealso cref="T:ConstTypeArgs.Decimals.K_DecimalArray"/>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals.K_Decimal`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.K_Decimal`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;decimal, K_Decimal&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Decimals.Decimal`1"/>
+            <seealso cref="T:ConstTypeArgs.Decimals.K_DecimalArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals.K_DecimalArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.K_DecimalArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;decimal[]&gt;</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Decimals.DecimalArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Decimals.K_Decimal"/>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals.K_DecimalArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.K_DecimalArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;decimal[], K_DecimalArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Decimals.DecimalArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Decimals.K_Decimal`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals.Decimal`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.Decimal`1"/> class provides a const argument provider that
+            wraps the <see langword="decimal"/> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Decimals.DecimalArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Decimals.K_Decimal"/>
+            <seealso cref="T:ConstTypeArgs.Decimals.K_Decimal`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals.DecimalArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.DecimalArray`1"/> class provides a const argument provider that
+            wraps the <see langword="decimal"/> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Decimals.Decimal`1"/>
+            <seealso cref="T:ConstTypeArgs.Decimals.K_Decimal"/>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals.Default">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.Default"/> readonly struct provides a const type argument equal to the
+            <see langword="default"/> of <see langword="decimal"/>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals.MinValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.MinValue"/> readonly struct provides a const type argument equal to
+            <see href="https://learn.microsoft.com/dotnet/api/system.decimal.minvalue">
+            Decimal.MinValue</see> (<c>-79228162514264337593543950335m</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals.MaxValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.MaxValue"/> readonly struct provides a const type argument equal to
+            <see href="https://learn.microsoft.com/dotnet/api/system.decimal.maxvalue">
+            Decimal.MaxValue</see> (<c>79228162514264337593543950335m</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals.E">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.E"/> readonly struct provides a const type argument equal to
+            <see href="https://learn.microsoft.com/dotnet/api/system.decimal.system-numerics-K_FloatingPointconstants-system-decimal--e">
+            Decimal.K_FloatingPointConstants&lt;Decimal&gt;.E</see>
+            (<c>2.7182818284590452353602874714m</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals.Pi">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.Pi"/> readonly struct provides a const type argument equal to
+            <see href="https://learn.microsoft.com/dotnet/api/system.decimal.system-numerics-K_FloatingPointconstants-system-decimal--pi">
+            Decimal.K_FloatingPointConstants&lt;Decimal&gt;.Pi</see>.
+            (<c>3.3.1415926535897932384626433833m</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals.Phi">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.Phi"/> readonly struct provides a const type argument equal to
+            <c>φ</c> (<c>1.6180339887498948482045868343</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals.Tau">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.Tau"/> readonly struct provides a const type argument equal to
+            <see href="https://learn.microsoft.com/dotnet/api/system.decimal.system-numerics-K_FloatingPointconstants-system-decimal--tau">
+            Decimal.K_FloatingPointConstants&lt;Decimal&gt;.Tau</see>
+            (<c>6.2831853071795864769252867666m</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals._0">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals._0"/> readonly struct provides a const type argument equal to
+            <c>0m</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals._1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals._1"/> readonly struct provides a const type argument equal to
+            <c>1</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Decimals.Neg_1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Decimals.Neg_1"/> readonly struct provides a const type argument equal to
+            <c>-1</c>.
+            </summary>
+        </member>
+    </members>
+</doc>

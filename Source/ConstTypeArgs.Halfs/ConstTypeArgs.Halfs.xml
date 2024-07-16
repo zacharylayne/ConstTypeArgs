@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Halfs</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Halfs.K_Half">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.K_Half"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Half&gt;</c> derived type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.half">
+            System.Half</seealso>
+            <seealso cref="T:ConstTypeArgs.Halfs.Half`1"/>
+            <seealso cref="T:ConstTypeArgs.Halfs.K_HalfArray"/>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.K_Half`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.K_Half`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Half, K_Half&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.half">
+            System.Half</seealso>
+            <seealso cref="T:ConstTypeArgs.Halfs.Half`1"/>
+            <seealso cref="T:ConstTypeArgs.Halfs.K_HalfArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.K_HalfArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.K_HalfArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Half[]&gt;</c> type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.half">
+            System.Half</seealso>
+            <seealso cref="T:ConstTypeArgs.Halfs.HalfArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Halfs.K_Half"/>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.K_HalfArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.K_HalfArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;Half[], K_HalfArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.half">
+            System.Half</seealso>
+            <seealso cref="T:ConstTypeArgs.Halfs.HalfArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Halfs.K_Half`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.Half`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.Half`1"/> class provides a const argument provider that
+            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.half">
+            System.Half</see> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Halfs.K_Half"/>
+            <seealso cref="T:ConstTypeArgs.Halfs.K_Half`1"/>
+            <seealso cref="T:ConstTypeArgs.Halfs.HalfArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.HalfArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.HalfArray`1"/> class provides a const argument provider that
+            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.half">
+            System.Half</see> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Halfs.K_Half"/>
+            <seealso cref="T:ConstTypeArgs.Halfs.Half`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.Default">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.Default"/> struct provides a const type argument equal to the
+            <see langword="default"/> of
+            <see href="https://learn.microsoft.com/dotnet/api/system.half">
+            Half</see> (<c>0</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.MinValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.MinValue"/> struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.half.minvalue">
+            Half.MinValue</see> (<c>-65504</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.MaxValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.MaxValue"/> struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.half.maxvalue">
+            Half.MaxValue</see> (<c>65504</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.NaN">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.NaN"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.half.nan">
+            Half.NaN</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.PositiveInfinity">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.PositiveInfinity"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.half.positiveinfinity">
+            Half.PositiveInfinity</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.NegativeInfinity">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.NegativeInfinity"/> readonly struct provides a const type argument equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.half.negativeinfinity">
+            Half.NegativeInfinity</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs._0">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs._0"/> readonly struct provides a const type argument equal to
+            <c>0</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs._1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs._1"/> readonly struct provides a const type argument equal to
+            <c>1</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.Neg_1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.Neg_1"/> readonly struct provides a const type argument equal to
+            <c>-1</c>.
+            </summary>
+        </member>
+    </members>
+</doc>

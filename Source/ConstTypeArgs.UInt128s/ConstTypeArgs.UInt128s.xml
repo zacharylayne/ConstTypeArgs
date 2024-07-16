@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.UInt128s</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.UInt128s.K_UInt128">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s.K_UInt128"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;UInt128&gt;</c> derived type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.uint128">
+            System.UInt128</seealso>
+            <seealso cref="T:ConstTypeArgs.UInt128s.UInt128`1"/>
+            <seealso cref="T:ConstTypeArgs.UInt128s.K_UInt128Array"/>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s.K_UInt128`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s.K_UInt128`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;UInt128, K_UInt128&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.uint128">
+            System.UInt128</seealso>
+            <seealso cref="T:ConstTypeArgs.UInt128s.UInt128`1"/>
+            <seealso cref="T:ConstTypeArgs.UInt128s.K_UInt128Array`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s.K_UInt128Array">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s.K_UInt128Array"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;UInt128[]&gt;</c> type.
+            </summary>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.uint128">
+            System.UInt128</seealso>
+            <seealso cref="T:ConstTypeArgs.UInt128s.UInt128Array`1"/>
+            <seealso cref="T:ConstTypeArgs.UInt128s.K_UInt128"/>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s.K_UInt128Array`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s.K_UInt128Array`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;K_Uint128[], K_Uint128Array&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.uint128">
+            System.UInt128</seealso>
+            <seealso cref="T:ConstTypeArgs.UInt128s.UInt128Array`1"/>
+            <seealso cref="T:ConstTypeArgs.UInt128s.K_UInt128`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s.UInt128`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s.UInt128`1"/> class provides a const argument provider that
+            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.UInt128">
+            System.UInt128</see> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.UInt128s.K_UInt128"/>
+            <seealso cref="T:ConstTypeArgs.UInt128s.K_UInt128`1"/>
+            <seealso cref="T:ConstTypeArgs.UInt128s.UInt128Array`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s.UInt128Array`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s.UInt128Array`1"/> class provides a const argument provider that
+            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.UInt128">
+            System.UInt128</see> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be useful when creating domain-specific const argument providers,
+            such as default values, when a const argument provider's value needs to be
+            wrapped for use in a different context.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.UInt128s.K_UInt128"/>
+            <seealso cref="T:ConstTypeArgs.UInt128s.UInt128`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s.Default">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s.Default"/> readonly struct provides a const type argument equal to the
+            <see langword="default"/> of
+            <see href="https://docs.microsoft.com/dotnet/api/system.uint128">
+            UInt128</see> (<c>0</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s.MinValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s.MinValue"/> readonly struct provides a const type argument
+            equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.uint128.minvalue">
+            UInt128.MinValue</see> (<c>0</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s.MaxValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s.MaxValue"/> readonly struct provides a const type argument
+            equal to
+            <see href="https://docs.microsoft.com/dotnet/api/system.uint128.maxvalue">
+            UInt128.MaxValue</see> (<c>340282366920938463463374607431768211455</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s.MaxDigits">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s.MaxDigits"/> readonly struct provides a const type argument equal to
+            the maximum number of digits in an
+            <see href="https://docs.microsoft.com/dotnet/api/system.uint128">
+            UInt128</see> (<c>39</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s.MaxHexDigits">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s.MaxHexDigits"/> readonly struct provides a const type argument equal to
+            the maximum number of hex digits in an
+            <see href="https://docs.microsoft.com/dotnet/api/system.uint128">
+            UInt128</see>(<c>32</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._0">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._0"/> readonly struct provides a const type argument equal to
+            <c>0</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._1"/> readonly struct provides a const type argument equal to
+            <c>1</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._2"/> readonly struct provides a const type argument equal to
+            <c>2</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._3"/> readonly struct provides a const type argument equal to
+            <c>3</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._4"/> readonly struct provides a const type argument equal to
+            <c>4</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._5"/> readonly struct provides a const type argument equal to
+            <c>5</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._6"/> readonly struct provides a const type argument equal to
+            <c>6</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._7"/> readonly struct provides a const type argument equal to
+            <c>7</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._8"/> readonly struct provides a const type argument equal to
+            <c>8</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._9">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._9"/> readonly struct provides a const type argument equal to
+            <c>9</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._10">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._10"/> readonly struct provides a const type argument equal to
+            <c>10</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._11">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._11"/> readonly struct provides a const type argument equal to
+            <c>11</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._12">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._12"/> readonly struct provides a const type argument equal to
+            <c>12</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._13">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._13"/> readonly struct provides a const type argument equal to
+            <c>13</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._14">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._14"/> readonly struct provides a const type argument equal to
+            <c>14</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.UInt128s._15">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._15"/> readonly struct provides a const type argument equal to
+            <c>15</c>.
+            </summary>
+        </member>
+    </members>
+</doc>

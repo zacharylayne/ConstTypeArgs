@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Core", "Sourc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Bools", "Source\ConstTypeArgs.Bools\ConstTypeArgs.Bools.csproj", "{F9F672E2-9F35-40B8-9133-2AE28851A761}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstTypeArgs.Bytes", "Source\ConstTypeArgs.Bytes\ConstTypeArgs.Bytes.csproj", "{C9B7AA5D-06DE-4C0D-AE0A-F1BAE17168F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Bytes", "Source\ConstTypeArgs.Bytes\ConstTypeArgs.Bytes.csproj", "{C9B7AA5D-06DE-4C0D-AE0A-F1BAE17168F7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Chars", "Source\ConstTypeArgs.Chars\ConstTypeArgs.Chars.csproj", "{3F041387-FFB2-4DF7-9CDC-33C6F37460B6}"
 EndProject

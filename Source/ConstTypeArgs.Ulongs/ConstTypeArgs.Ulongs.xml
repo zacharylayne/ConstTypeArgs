@@ -83,5 +83,289 @@
             <seealso cref="T:ConstTypeArgs.Ulongs.Ulong`1"/>
             <seealso cref="T:ConstTypeArgs.Ulongs.K_Ulong"/>
         </member>
+        <member name="T:ConstTypeArgs.Ulongs.Default">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs.Default"/> readonly struct provides a const type argument equal to the
+            <see langword="default"/> of <see langword="ulong"/> (<c>0</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs.MinValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs.MinValue"/> readonly struct provides a const type argument equal to
+            <see href="https://learn.microsoft.com/dotnet/api/system.uint64.minvalue">
+            UInt64.MinValue</see> (<c>0</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs.MaxValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs.MaxValue"/> readonly struct provides a const type argument equal to
+            <see href="https://learn.microsoft.com/dotnet/api/system.uint64.maxvalue">
+            UInt64.MaxValue</see>(<c>18446744073709551615</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs.MaxDigits">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs.MaxDigits"/> readonly struct provides a const type argument equal to
+            the maximum number of digits in a <see langword="ulong"/> (<c>20</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs.MaxHexDigits">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs.MaxHexDigits"/> readonly struct provides a const type argument equal to
+            the maximum number of hex digits in a <see langword="ulong"/> (<c>16</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._0">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._0"/> readonly struct provides a const type argument equal to
+            <c>0</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._1"/> readonly struct provides a const type argument equal to
+            <c>1</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._2"/> readonly struct provides a const type argument equal to
+            <c>2</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._3"/> readonly struct provides a const type argument equal to
+            <c>3</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._4"/> readonly struct provides a const type argument equal to
+            <c>4</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._5"/> readonly struct provides a const type argument equal to
+            <c>5</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._6"/> readonly struct provides a const type argument equal to
+            <c>6</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._7"/> readonly struct provides a const type argument equal to
+            <c>7</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._8"/> readonly struct provides a const type argument equal to
+            <c>8</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._9">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._9"/> readonly struct provides a const type argument equal to
+            <c>9</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._10">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._10"/> readonly struct provides a const type argument equal to
+            <c>10</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._11">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._11"/> readonly struct provides a const type argument equal to
+            <c>11</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._12">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._12"/> readonly struct provides a const type argument equal to
+            <c>12</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._13">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._13"/> readonly struct provides a const type argument equal to
+            <c>13</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._14">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._14"/> readonly struct provides a const type argument equal to
+            <c>14</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._15">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._15"/> readonly struct provides a const type argument equal to
+            <c>15</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._16">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._16"/> readonly struct provides a const type argument equal to
+            <c>16</c> (<c>2^4</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._25">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._25"/> readonly struct provides a const type argument equal to
+            <c>25</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._31">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._31"/> readonly struct provides a const type argument equal to
+            <c>31</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._32">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._32"/> readonly struct provides a const type argument equal to
+            <c>32</c> (<c>2^5</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._50">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._50"/> readonly struct provides a const type argument equal to
+            <c>50</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._63">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._63"/> readonly struct provides a const type argument equal to
+            <c>63</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._64">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._64"/> readonly struct provides a const type argument equal to
+            <c>64</c> (<c>2^6</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._100">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._100"/> readonly struct provides a const type argument equal to
+            <c>100</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._127">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._127"/> readonly struct provides a const type argument equal to
+            <c>127</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._128">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._128"/> readonly struct provides a const type argument equal to
+            <c>128</c> (<c>2^7</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._200">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._200"/> readonly struct provides a const type argument equal to
+            <c>200</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._255">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._255"/> readonly struct provides a const type argument equal to
+            <c>255</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._256">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._256"/> readonly struct provides a const type argument equal to
+            <c>256</c> (<c>2^8</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._511">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._511"/> readonly struct provides a const type argument equal to
+            <c>_511</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._512">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._512"/> readonly struct provides a const type argument equal to
+            <c>512</c> (<c>2^9</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._1023">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._1023"/> readonly struct provides a const type argument equal to
+            <c>1023</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._1024">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._1024"/> readonly struct provides a const type argument equal to
+            <c>1024</c> (<c>2^10</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._2047">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._2047"/> readonly struct provides a const type argument equal to
+            <c>2047</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._2048">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._2048"/> readonly struct provides a const type argument equal to
+            <c>2048</c> (<c>2^11</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._4095">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._4095"/> readonly struct provides a const type argument equal to
+            <c>4095</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._4096">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._4096"/> readonly struct provides a const type argument equal to
+            <c>4096</c> (<c>2^12</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._8191">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._8191"/> readonly struct provides a const type argument equal to
+            <c>8191</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._8192">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._8192"/> readonly struct provides a const type argument equal to
+            <c>8192</c> (<c>2^13</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._16384">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._16384"/> readonly struct provides a const type argument equal to
+            <c>16384</c> (<c>2^14</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._32768">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._32768"/> readonly struct provides a const type argument equal to
+            <c>32768</c> (<c>2^15</c>).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Ulongs._65536">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Ulongs._65536"/> readonly struct provides a const type argument equal to
+            <c>65536</c> (<c>2^16</c>).
+            </summary>
+        </member>
     </members>
 </doc>

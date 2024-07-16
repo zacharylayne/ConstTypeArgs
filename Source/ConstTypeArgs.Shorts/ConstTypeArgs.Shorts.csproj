@@ -1,0 +1,98 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>ConstTypeArgs.Shorts.xml</DocumentationFile>
+    <PackageIcon>Short.png</PackageIcon>
+    <PackageReadmeFile>README.MD</PackageReadmeFile>
+    <Company>Entry Point Software</Company>
+    <Authors>Zachary Layne</Authors>
+    <Title>Const Type Arguments - Shorts</Title>
+    <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
+    <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
+    <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; short</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>ConstTypeArgs.Shorts.xml</DocumentationFile>
+    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass `short` values to generics at compile-time. This provides an analog to type specialization in C++.
+
+Here's a simple demonstration:
+ 
+```csharp
+ using ConstTypeArgs.Shorts;
+
+public class Foo&lt;TSize&gt;
+    where TSize : K_Short
+{
+  public static readonly int[] FooArray = new int[TSize.Value];
+
+  static Foo()
+  {
+    Console.WriteLine($"Integer array size is {FooArray.Length}");
+  }
+}
+
+// Elsewhere, assuming _3 has a value of 3 and _16 has a value of 16.
+var foo = new Foo&lt;_3&gt;();  // Outputs "Integer array size is 3"
+foo     = new Foo&lt;_16&gt;(); // Outputs "Integer array size is 16"
+```
+
+&amp;nbsp;
+
+The following shows how a new `short` const type argument could be defined.
+
+```csharp
+public readonly struct _32 : K_Short&lt;_32&gt;
+{ public static short Value =&gt; 32; }
+```
+
+&amp;nbsp;
+
+You can also create new domain-specific `short` const type arguments like so:
+
+```csharp
+public sealed class DefaultInitialCollectionSize : Short&lt;_32&gt;;
+```</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+    <IsTrimmable>True</IsTrimmable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsTrimmable>True</IsTrimmable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Icons\Short.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConstTypeArgs.Sbytes\ConstTypeArgs.Sbytes.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.MD">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>

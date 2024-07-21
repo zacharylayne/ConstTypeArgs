@@ -36,7 +36,6 @@ foo       = new Foo&lt;False&gt;(); // No output.
     <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
     <PackageReadmeFile>README.MD</PackageReadmeFile>
     <PackageIcon>Bool.png</PackageIcon>
-    <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
     <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; bools</PackageTags>
     <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
@@ -48,21 +47,18 @@ foo       = new Foo&lt;False&gt;(); // No output.
     <IncludeSource>true</IncludeSource>
     <EnableSourceLink>true</EnableSourceLink>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
-  </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>False</Optimize>
     <IsTrimmable>True</IsTrimmable>
-    <DebugType>embedded</DebugType>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <IsTrimmable>True</IsTrimmable>
-    <DebugType>embedded</DebugType>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -74,6 +70,7 @@ foo       = new Foo&lt;False&gt;(); // No output.
 
   <ItemGroup>
     <PackageReference Include="ConstTypeArgs.Core" Version="1.0.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>

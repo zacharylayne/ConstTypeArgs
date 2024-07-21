@@ -31,7 +31,7 @@ var bigBuffer = new Buffer<int, _1024>();
 
 &nbsp;
 
-All const type arguments implement [`IConstTypeArg<T>`](/Source/ConstTypeArgs.Core/IConstTypeArg.cs) which contains a single member: the get-only static abstract `Value` get-only property. From `IConstTypeArg<T>`, a foundation is built out for making it easier to define const type arguments, strengthen type safety, and provide additional functionality such as domain-specific argument providers and union-like behavior.
+All const type arguments implement [`IConstTypeArg<T>`](/Source/ConstTypeArgs.Core/IConstTypeArg.cs) which contains a single member: the static abstract `Value` get-only property. From `IConstTypeArg<T>`, a foundation is built to make it easier to define const type arguments, strengthen type safety, and provide additional functionality such as domain-specific argument providers and union-like behavior.
 
 Base interfaces include [`K_Array<out T>`](/Source/ConstTypeArgs.Core/Core/K_Array.cs), [`K_Class<out T>`](/Source/ConstTypeArgs.Core/Core/K_Class.cs), [`K_Delegate<out T>`](/Source/ConstTypeArgs.Core/Core/K_Delegate.cs), [`K_MulticastDelegate<out T>`](/Source/ConstTypeArgs.Core/Core/K_MulticastDelegate.cs), [`K_Enum<out T>`](/Source/ConstTypeArgs.Core/Core/K_Enum.cs), [`K_FloatingPoint<out T>`](/Source/ConstTypeArgs.Core/Core/K_FloatingPoint.cs), [`K_Integer<out T>`](/Source/ConstTypeArgs.Core/Core/K_Integer.cs), [`K_Number<out T>`](/Source/ConstTypeArgs.Core/Core/K_Number.cs), [`K_SignedNumber<out T>`](/Source/ConstTypeArgs.Core/Core/K_SignedNumber.cs), [`K_Struct<out T>`](/Source/ConstTypeArgs.Core/Core/K_Struct.cs), [`K_Unmanaged<out T>`](/Source/ConstTypeArgs.Core/Core/K_Unmanaged.cs), [`K_UnsignedNumber<out T>`](/Source/ConstTypeArgs.Core/Core/K_UnsignedNumber.cs), and [`K`](/Source/ConstTypeArgs.Core/K.cs).
 
@@ -47,7 +47,7 @@ Base interfaces include [`K_Array<out T>`](/Source/ConstTypeArgs.Core/Core/K_Arr
 |:-------------------|-|
 | `K_` Prefix | Argument type interfaces *(i.e. interfaces deriving from `IConstTypeArg<T>`)* are prefixed with `K_` to indicate that they, rather than define a contract, are the means to "pass" values via generic type parameters. The prefix refers to how `K` is used in mathematic formulas to denote an unknown constant value. |
 | `_` Prefix | Many argument providers *(i.e. concrete types that implement `IConstTypeArg<T>`)* in ConstTypeArg libraries have the prefix `_` followed by a representation of their value *(e.g. _1024, _A, _Blue)*.
-| [`__`](#__) Types| Argument types *(i.e. types deriving from or implementing `IConstTypeArg<T>`)* that implement [`__`](/Source/ConstTypeArgs.Core/Core/__.cs) are used as "discards" to indicate they lack a value. They can be used for union-like behavior. These types usually explicitly implement multiple arg type interfaces, allowing union-like functionality, and provide either `default` or `null` values. These types are simply named `__`. |
+| [`__`](#__) Types| Argument types *(i.e. types deriving from or implementing `IConstTypeArg<T>`)* that implement [`__`](/Source/ConstTypeArgs.Core/Core/__.cs) are used as "discards" to indicate they lack a value. These types are simply named `__` and usually explicitly implement multiple arg type interfaces, allowing union-like functionality, and provide either `default` or `null` values. |
 
 </details>
 
@@ -55,7 +55,7 @@ Base interfaces include [`K_Array<out T>`](/Source/ConstTypeArgs.Core/Core/K_Arr
 
 ----
 
-## [`K`](/Source/ConstTypeArgs.Core/K.cs) & Domain-Specific Argument Providers
+## [`K`](/Source/ConstTypeArgs.Core/K.cs) & Domain-Specific Values
 
 [`K<out T, TArg>`](/Source/ConstTypeArgs.Core/K.cs) is a special interface used to define *argument holders*, const type arguments that wrap other const type arguments. This allows domain-specific const type arguments for providing minimums, maximums, defaults, and other domain-specific values.
 
@@ -174,12 +174,16 @@ The [`__`](/Source/ConstTypeArgs.Core/Core/__.cs) interface is a marker interfac
 
 # Available Libraries
 
+## Core
+
 [**ConstTypeArgs.Core**](/Source/ConstTypeArgs.Core)
 
 **Installation:**
 ```
 dotnet add package ConstTypeArgs.Core
 ```
+
+## Additional
 
 [**ConstTypeArgs.Bools**](/Source/ConstTypeArgs.Bools)
 
@@ -225,7 +229,7 @@ dotnet add package ConstTypeArgs.Core
 
 # Documentation
 
-* [**Glossary**](Documentation/Glossary.md)
+* [**Glossary**](/Documentation/Glossary.md)
 
 # License
 The ConstTypeArgs libraries are licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for more details.

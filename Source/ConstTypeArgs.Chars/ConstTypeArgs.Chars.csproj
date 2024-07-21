@@ -53,10 +53,12 @@ Foo&lt;VerticalBar&gt;.Output(helloWorld); // Output: Hello|World!
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>False</Optimize>
     <IsTrimmable>True</IsTrimmable>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <IsTrimmable>True</IsTrimmable>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <ItemGroup>

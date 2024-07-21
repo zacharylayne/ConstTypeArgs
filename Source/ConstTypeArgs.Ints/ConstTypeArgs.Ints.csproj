@@ -61,11 +61,13 @@ public sealed class DefaultInitialCollectionSize : Int&lt;_32&gt;;
     <Optimize>False</Optimize>
     <IsTrimmable>True</IsTrimmable>
     <IsAotCompatible>False</IsAotCompatible>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <IsTrimmable>True</IsTrimmable>
     <IsAotCompatible>False</IsAotCompatible>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <ItemGroup>

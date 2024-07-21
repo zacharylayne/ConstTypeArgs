@@ -51,10 +51,19 @@ foo     = new Foo&lt;_16&gt;(); // Outputs "Array size is 16"
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>False</Optimize>
     <IsTrimmable>True</IsTrimmable>
+    <DebugType>portable</DebugType>
+    <IncludeSource>true</IncludeSource>
+    <EnableSourceLink>true</EnableSourceLink>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+  </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <IsTrimmable>True</IsTrimmable>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <ItemGroup>

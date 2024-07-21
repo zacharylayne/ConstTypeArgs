@@ -74,10 +74,12 @@ public readonly struct StringType : K_Type&lt;StringType&gt;
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>False</Optimize>
     <IsTrimmable>True</IsTrimmable>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <IsTrimmable>True</IsTrimmable>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <ItemGroup>

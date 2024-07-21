@@ -49,6 +49,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Uints", "Sour
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Types", "Source\ConstTypeArgs.Types\ConstTypeArgs.Types.csproj", "{D66A22B2-77A6-4533-A70F-80E78AE180A4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Glossary.md = Documentation\Glossary.md
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -146,6 +152,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C} = {B126AD85-980C-4790-A213-D0790AE9BA8A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {266F50E7-B8BB-4CFD-BC01-66FC3E001666}

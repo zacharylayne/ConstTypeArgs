@@ -55,10 +55,12 @@ public readonly struct Pos_2 : K_Uint&lt;Pos_2&gt;
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>False</Optimize>
     <IsTrimmable>True</IsTrimmable>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <IsTrimmable>True</IsTrimmable>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <ItemGroup>

@@ -13,6 +13,8 @@
     <Title>Const Type Arguments - Nuints</Title>
     <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
     <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
+    <IncludeSource>true</IncludeSource>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; nuint</PackageTags>
     <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>

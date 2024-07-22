@@ -9,8 +9,28 @@
             The <see cref="T:ConstTypeArgs.Doubles.K_Double"/> interface provides a more explicit
             <c>IConstTypeArg&lt;double&gt;</c> derived type.
             </summary>
+            <remarks>
+            Implement this interface when defining <see langword="double"/> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Unmanaged`1">K_Unmanaged&lt;double&gt;</see>,
+            <see cref="T:ConstTypeArgs.Core.K_FloatingPoint`1">K_FloatingPoint&lt;double&gt;</see>,
+            <see cref="T:ConstTypeArgs.Core.K_SignedNumber`1">K_SignedNumber&lt;double&gt;</see>,
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;double&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Doubles.K_Double`1"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.double">
+            System.Double</seealso>
             <seealso cref="T:ConstTypeArgs.Doubles.Double`1"/>
             <seealso cref="T:ConstTypeArgs.Doubles.K_DoubleArray"/>
+            <seealso cref="T:ConstTypeArgs.Doubles.K_Double.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.K_Double.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.K_Double.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
         </member>
         <member name="T:ConstTypeArgs.Doubles.K_Double`1">
             <summary>
@@ -20,6 +40,12 @@
             <typeparam name="TSelf">
             The implementing type.
             </typeparam>
+            <remarks>
+            Implement this interface for <see langword="double"/> const type arguments in uncommon
+            scenarios where they need to be instantiated. Otherwise, use <see cref="T:ConstTypeArgs.Doubles.K_Double"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.double">
+            System.Double</seealso>
             <seealso cref="T:ConstTypeArgs.Doubles.Double`1"/>
             <seealso cref="T:ConstTypeArgs.Doubles.K_DoubleArray`1"/>
         </member>
@@ -28,8 +54,26 @@
             The <see cref="T:ConstTypeArgs.Doubles.K_DoubleArray"/> interface provides a more explicit
             <c>IConstTypeArg&lt;double[]&gt;</c> type.
             </summary>
+            <remarks>
+            Implement this interface when defining <see langword="double[]"/> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Array`1">K_Array&lt;double&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;double[]&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Doubles.K_DoubleArray`1"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.double">
+            System.Double</seealso>
             <seealso cref="T:ConstTypeArgs.Doubles.DoubleArray`1"/>
             <seealso cref="T:ConstTypeArgs.Doubles.K_Double"/>
+            <seealso cref="T:ConstTypeArgs.Doubles.K_DoubleArray.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Doubles.K_DoubleArray.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Doubles.K_DoubleArray.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
         </member>
         <member name="T:ConstTypeArgs.Doubles.K_DoubleArray`1">
             <summary>
@@ -39,6 +83,13 @@
             <typeparam name="TSelf">
             The implementing type.
             </typeparam>
+            <remarks>
+            Implement this interface for <see langword="double[]"/> const type arguments in uncommon
+            scenarios where they need to be instantiated.
+            Otherwise, use <see cref="T:ConstTypeArgs.Doubles.K_DoubleArray"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.double">
+            System.Double</seealso>
             <seealso cref="T:ConstTypeArgs.Doubles.DoubleArray`1"/>
             <seealso cref="T:ConstTypeArgs.Doubles.K_Double`1"/>
         </member>
@@ -51,29 +102,26 @@
             The const argument provider type containing the value to wrap.
             </typeparam>
             <remarks>
-            This class can be useful when creating domain-specific const argument providers,
-            such as default values, when a const argument provider's value needs to be
-            wrapped for use in a different context.
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
             </remarks>
-            <seealso cref="T:ConstTypeArgs.Doubles.DoubleArray`1"/>
             <seealso cref="T:ConstTypeArgs.Doubles.K_Double"/>
-            <seealso cref="T:ConstTypeArgs.Doubles.K_Double`1"/>
+            <seealso cref="T:ConstTypeArgs.Doubles.DoubleArray`1"/>
         </member>
         <member name="T:ConstTypeArgs.Doubles.DoubleArray`1">
             <summary>
             The <see cref="T:ConstTypeArgs.Doubles.DoubleArray`1"/> class provides a const argument provider that
-            wraps the <see langword="Double"/> array from another const argument provider.
+            wraps the <see langword="double"/> array from another const argument provider.
             </summary>
             <typeparam name="K">
             The const argument provider type containing the array to wrap.
             </typeparam>
             <remarks>
-            This class can be useful when creating domain-specific const argument providers,
-            such as default values, when a const argument provider's value needs to be
-            wrapped for use in a different context.
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
             </remarks>
+            <seealso cref="T:ConstTypeArgs.Doubles.K_DoubleArray"/>
             <seealso cref="T:ConstTypeArgs.Doubles.Double`1"/>
-            <seealso cref="T:ConstTypeArgs.Doubles.K_Double"/>
         </member>
         <member name="T:ConstTypeArgs.Doubles.Default">
             <summary>

@@ -9,10 +9,26 @@
             The <see cref="T:ConstTypeArgs.Types.K_Type"/> interface provides a more explicit
             <c>IConstTypeArg&lt;Type&gt;</c> derived type.
             </summary>
+            <remarks>
+            Implement this interface when defining <see langword="Type"/> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Class`1">K_Class&lt;Type&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;Type&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Types.K_Type`1"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.type">
             System.Type</seealso>
-            <seealso cref="T:ConstTypeArgs.Types.Type`1"/>
+            <seealso cref="T:ConstTypeArgs.Types.TypeArg`1"/>
             <seealso cref="T:ConstTypeArgs.Types.K_TypeArray"/>
+            <seealso cref="T:ConstTypeArgs.Types.K_Type.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Types.K_Type.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.K_Type.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
         </member>
         <member name="T:ConstTypeArgs.Types.K_Type`1">
             <summary>
@@ -22,9 +38,13 @@
             <typeparam name="TSelf">
             The implementing type.
             </typeparam>
+            <remarks>
+            Implement this interface for <see langword="Type"/> const type arguments in uncommon
+            scenarios where they need to be instantiated. Otherwise, use <see cref="T:ConstTypeArgs.Types.K_Type"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.type">
             System.Type</seealso>
-            <seealso cref="T:ConstTypeArgs.Types.Type`1"/>
+            <seealso cref="T:ConstTypeArgs.Types.TypeArg`1"/>
             <seealso cref="T:ConstTypeArgs.Types.K_TypeArray`1"/>
         </member>
         <member name="T:ConstTypeArgs.Types.K_TypeArray">
@@ -32,10 +52,26 @@
             The <see cref="T:ConstTypeArgs.Types.K_TypeArray"/> interface provides a more explicit
             <c>IConstTypeArg&lt;Type[]&gt;</c> type.
             </summary>
+            <remarks>
+            Implement this interface when defining <see langword="Type[]"/> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Array`1">K_Array&lt;Type&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;Type[]&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Types.K_TypeArray`1"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.type">
             System.Type</seealso>
             <seealso cref="T:ConstTypeArgs.Types.TypeArray`1"/>
             <seealso cref="T:ConstTypeArgs.Types.K_Type"/>
+            <seealso cref="T:ConstTypeArgs.Types.K_TypeArray.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Types.K_TypeArray.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Types.K_TypeArray.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
         </member>
         <member name="T:ConstTypeArgs.Types.K_TypeArray`1">
             <summary>
@@ -45,45 +81,45 @@
             <typeparam name="TSelf">
             The implementing type.
             </typeparam>
+            <remarks>
+            Implement this interface for <see langword="Type[]"/> const type arguments in uncommon
+            scenarios where they need to be instantiated.
+            Otherwise, use <see cref="T:ConstTypeArgs.Types.K_TypeArray"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.type">
             System.Type</seealso>
             <seealso cref="T:ConstTypeArgs.Types.TypeArray`1"/>
             <seealso cref="T:ConstTypeArgs.Types.K_Type`1"/>
         </member>
-        <member name="T:ConstTypeArgs.Types.Type`1">
+        <member name="T:ConstTypeArgs.Types.TypeArg`1">
             <summary>
-            The <see cref="T:ConstTypeArgs.Types.Type`1"/> class provides a const argument provider that
-            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.Type">
-            System.Type</see> value from another const argument provider.
+            The <see cref="T:ConstTypeArgs.Types.TypeArg`1"/> class provides a const argument provider that
+            wraps the <see langword="Type"/> value from another const argument provider.
             </summary>
             <typeparam name="K">
             The const argument provider type containing the value to wrap.
             </typeparam>
             <remarks>
-            This class can be useful when creating domain-specific const argument providers,
-            such as default values, when a const argument provider's value needs to be
-            wrapped for use in a different context.
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
             </remarks>
             <seealso cref="T:ConstTypeArgs.Types.K_Type"/>
-            <seealso cref="T:ConstTypeArgs.Types.K_Type`1"/>
             <seealso cref="T:ConstTypeArgs.Types.TypeArray`1"/>
         </member>
         <member name="T:ConstTypeArgs.Types.TypeArray`1">
             <summary>
             The <see cref="T:ConstTypeArgs.Types.TypeArray`1"/> class provides a const argument provider that
-            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.Type">
-            System.Type</see> array from another const argument provider.
+            wraps the <see langword="Type"/> array from another const argument provider.
             </summary>
             <typeparam name="K">
             The const argument provider type containing the array to wrap.
             </typeparam>
             <remarks>
-            This class can be useful when creating domain-specific const argument providers,
-            such as default values, when a const argument provider's value needs to be
-            wrapped for use in a different context.
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
             </remarks>
-            <seealso cref="T:ConstTypeArgs.Types.K_Type"/>
-            <seealso cref="T:ConstTypeArgs.Types.Type`1"/>
+            <seealso cref="T:ConstTypeArgs.Types.K_TypeArray"/>
+            <seealso cref="T:ConstTypeArgs.Types.TypeArg`1"/>
         </member>
         <member name="T:ConstTypeArgs.Types.TypeOfBool">
             <summary>

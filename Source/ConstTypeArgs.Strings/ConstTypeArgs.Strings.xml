@@ -9,10 +9,26 @@
             The <see cref="T:ConstTypeArgs.Strings.K_String"/> interface provides a more explicit
             <c>IConstTypeArg&lt;string&gt;</c> derived type.
             </summary>
+            <remarks>
+            Implement this interface when defining <see langword="string"/> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Class`1">K_Class&lt;string&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;string&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Strings.K_String`1"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.string">
             System.String</seealso>
             <seealso cref="T:ConstTypeArgs.Strings.String`1"/>
             <seealso cref="T:ConstTypeArgs.Strings.K_StringArray"/>
+            <seealso cref="T:ConstTypeArgs.Strings.K_String.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Strings.K_String.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.K_String.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
         </member>
         <member name="T:ConstTypeArgs.Strings.K_String`1">
             <summary>
@@ -22,6 +38,10 @@
             <typeparam name="TSelf">
             The implementing type.
             </typeparam>
+            <remarks>
+            Implement this interface for <see langword="string"/> const type arguments in uncommon
+            scenarios where they need to be instantiated. Otherwise, use <see cref="T:ConstTypeArgs.Strings.K_String"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.string">
             System.String</seealso>
             <seealso cref="T:ConstTypeArgs.Strings.String`1"/>
@@ -32,10 +52,26 @@
             The <see cref="T:ConstTypeArgs.Strings.K_StringArray"/> interface provides a more explicit
             <c>IConstTypeArg&lt;string[]&gt;</c> type.
             </summary>
+            <remarks>
+            Implement this interface when defining <see langword="string[]"/> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Array`1">K_Array&lt;string&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;string[]&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Strings.K_StringArray`1"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.string">
             System.String</seealso>
             <seealso cref="T:ConstTypeArgs.Strings.StringArray`1"/>
             <seealso cref="T:ConstTypeArgs.Strings.K_String"/>
+            <seealso cref="T:ConstTypeArgs.Strings.K_StringArray.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Strings.K_StringArray.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Strings.K_StringArray.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
         </member>
         <member name="T:ConstTypeArgs.Strings.K_StringArray`1">
             <summary>
@@ -45,6 +81,11 @@
             <typeparam name="TSelf">
             The implementing type.
             </typeparam>
+            <remarks>
+            Implement this interface for <see langword="string[]"/> const type arguments in uncommon
+            scenarios where they need to be instantiated.
+            Otherwise, use <see cref="T:ConstTypeArgs.Strings.K_StringArray"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.string">
             System.String</seealso>
             <seealso cref="T:ConstTypeArgs.Strings.StringArray`1"/>
@@ -59,13 +100,11 @@
             The const argument provider type containing the value to wrap.
             </typeparam>
             <remarks>
-            This class can be useful when creating domain-specific const argument providers,
-            such as default values, when a const argument provider's value needs to be
-            wrapped for use in a different context.
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
             </remarks>
-            <seealso cref="T:ConstTypeArgs.Strings.StringArray`1"/>
             <seealso cref="T:ConstTypeArgs.Strings.K_String"/>
-            <seealso cref="T:ConstTypeArgs.Strings.K_String`1"/>
+            <seealso cref="T:ConstTypeArgs.Strings.StringArray`1"/>
         </member>
         <member name="T:ConstTypeArgs.Strings.StringArray`1">
             <summary>
@@ -76,12 +115,11 @@
             The const argument provider type containing the array to wrap.
             </typeparam>
             <remarks>
-            This class can be useful when creating domain-specific const argument providers,
-            such as default values, when a const argument provider's value needs to be
-            wrapped for use in a different context.
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
             </remarks>
+            <seealso cref="T:ConstTypeArgs.Strings.K_StringArray"/>
             <seealso cref="T:ConstTypeArgs.Strings.String`1"/>
-            <seealso cref="T:ConstTypeArgs.Strings.K_String"/>
         </member>
         <member name="T:ConstTypeArgs.Strings.Empty">
             <summary>

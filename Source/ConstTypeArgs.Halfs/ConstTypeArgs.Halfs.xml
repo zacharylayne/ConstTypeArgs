@@ -9,10 +9,31 @@
             The <see cref="T:ConstTypeArgs.Halfs.K_Half"/> interface provides a more explicit
             <c>IConstTypeArg&lt;Half&gt;</c> derived type.
             </summary>
+            <remarks>
+            Implement this interface when defining
+            <see href="https://learn.microsoft.com/dotnet/api/system.half">
+            Half</see>
+            const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Unmanaged`1">K_Unmanaged&lt;Half&gt;</see>,
+            <see cref="T:ConstTypeArgs.Core.K_FloatingPoint`1">K_FloatingPoint&lt;Half&gt;</see>,
+            <see cref="T:ConstTypeArgs.Core.K_SignedNumber`1">K_SignedNumber&lt;Half&gt;</see>,
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;Half&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Halfs.K_Half`1"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.half">
             System.Half</seealso>
             <seealso cref="T:ConstTypeArgs.Halfs.Half`1"/>
             <seealso cref="T:ConstTypeArgs.Halfs.K_HalfArray"/>
+            <seealso cref="T:ConstTypeArgs.Halfs.K_Half.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.K_Half.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.K_Half.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
         </member>
         <member name="T:ConstTypeArgs.Halfs.K_Half`1">
             <summary>
@@ -22,6 +43,10 @@
             <typeparam name="TSelf">
             The implementing type.
             </typeparam>
+            <remarks>
+            Implement this interface for <see langword="Half"/> const type arguments in uncommon
+            scenarios where they need to be instantiated. Otherwise, use <see cref="T:ConstTypeArgs.Halfs.K_Half"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.half">
             System.Half</seealso>
             <seealso cref="T:ConstTypeArgs.Halfs.Half`1"/>
@@ -32,10 +57,26 @@
             The <see cref="T:ConstTypeArgs.Halfs.K_HalfArray"/> interface provides a more explicit
             <c>IConstTypeArg&lt;Half[]&gt;</c> type.
             </summary>
+            <remarks>
+            Implement this interface when defining <see langword="Half[]"/> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Array`1">K_Array&lt;Half&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;Half[]&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Halfs.K_HalfArray`1"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.half">
             System.Half</seealso>
             <seealso cref="T:ConstTypeArgs.Halfs.HalfArray`1"/>
             <seealso cref="T:ConstTypeArgs.Halfs.K_Half"/>
+            <seealso cref="T:ConstTypeArgs.Halfs.K_HalfArray.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Halfs.K_HalfArray.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Halfs.K_HalfArray.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
         </member>
         <member name="T:ConstTypeArgs.Halfs.K_HalfArray`1">
             <summary>
@@ -45,6 +86,11 @@
             <typeparam name="TSelf">
             The implementing type.
             </typeparam>
+            <remarks>
+            Implement this interface for <see langword="Half[]"/> const type arguments in uncommon
+            scenarios where they need to be instantiated.
+            Otherwise, use <see cref="T:ConstTypeArgs.Halfs.K_HalfArray"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.half">
             System.Half</seealso>
             <seealso cref="T:ConstTypeArgs.Halfs.HalfArray`1"/>
@@ -53,36 +99,31 @@
         <member name="T:ConstTypeArgs.Halfs.Half`1">
             <summary>
             The <see cref="T:ConstTypeArgs.Halfs.Half`1"/> class provides a const argument provider that
-            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.half">
-            System.Half</see> value from another const argument provider.
+            wraps the <see langword="Half"/> value from another const argument provider.
             </summary>
             <typeparam name="K">
             The const argument provider type containing the value to wrap.
             </typeparam>
             <remarks>
-            This class can be useful when creating domain-specific const argument providers,
-            such as default values, when a const argument provider's value needs to be
-            wrapped for use in a different context.
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
             </remarks>
             <seealso cref="T:ConstTypeArgs.Halfs.K_Half"/>
-            <seealso cref="T:ConstTypeArgs.Halfs.K_Half`1"/>
             <seealso cref="T:ConstTypeArgs.Halfs.HalfArray`1"/>
         </member>
         <member name="T:ConstTypeArgs.Halfs.HalfArray`1">
             <summary>
             The <see cref="T:ConstTypeArgs.Halfs.HalfArray`1"/> class provides a const argument provider that
-            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.half">
-            System.Half</see> array from another const argument provider.
+            wraps the <see langword="Half"/> array from another const argument provider.
             </summary>
             <typeparam name="K">
             The const argument provider type containing the array to wrap.
             </typeparam>
             <remarks>
-            This class can be useful when creating domain-specific const argument providers,
-            such as default values, when a const argument provider's value needs to be
-            wrapped for use in a different context.
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
             </remarks>
-            <seealso cref="T:ConstTypeArgs.Halfs.K_Half"/>
+            <seealso cref="T:ConstTypeArgs.Halfs.K_HalfArray"/>
             <seealso cref="T:ConstTypeArgs.Halfs.Half`1"/>
         </member>
         <member name="T:ConstTypeArgs.Halfs.Default">

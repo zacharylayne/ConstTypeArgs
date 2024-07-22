@@ -9,10 +9,28 @@
             The <see cref="T:ConstTypeArgs.Uints.K_Uint"/> interface provides a more explicit
             <c>IConstTypeArg&lt;uint&gt;</c> derived type.
             </summary>
+            <remarks>
+            Implement this interface when defining <see langword="uint"/> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Unmanaged`1">K_Unmanaged&lt;uint&gt;</see>,
+            <see cref="T:ConstTypeArgs.Core.K_Integer`1">K_Integer&lt;uint&gt;</see>,
+            <see cref="T:ConstTypeArgs.Core.K_UnsignedNumber`1">K_UnsignedNumber&lt;uint&gt;</see>, or
+            <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;uint&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Uints.K_Uint`1"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.uint32">
             System.UInt32</seealso>
             <seealso cref="T:ConstTypeArgs.Uints.Uint`1"/>
             <seealso cref="T:ConstTypeArgs.Uints.K_UintArray"/>
+            <seealso cref="T:ConstTypeArgs.Uints.K_Uint.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Uints.K_Uint.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Uints.K_Uint.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
         </member>
         <member name="T:ConstTypeArgs.Uints.K_Uint`1">
             <summary>
@@ -22,20 +40,40 @@
             <typeparam name="TSelf">
             The implementing type.
             </typeparam>
+            <remarks>
+            Implement this interface for <see langword="uint"/> const type arguments in uncommon
+            scenarios where they need to be instantiated. Otherwise, use <see cref="T:ConstTypeArgs.Uints.K_Uint"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.uint32">
             System.UInt32</seealso>
             <seealso cref="T:ConstTypeArgs.Uints.Uint`1"/>
-            <seealso cref="T:ConstTypeArgs.Uints.K_UintArray"/>
+            <seealso cref="T:ConstTypeArgs.Uints.K_UintArray`1"/>
         </member>
         <member name="T:ConstTypeArgs.Uints.K_UintArray">
             <summary>
             The <see cref="T:ConstTypeArgs.Uints.K_UintArray"/> interface provides a more explicit
             <c>IConstTypeArg&lt;uint[]&gt;</c> type.
             </summary>
+            <remarks>
+            Implement this interface when defining <see langword="uint[]"/> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Array`1">K_Array&lt;uint&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;uint[]&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Uints.K_UintArray`1"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.uint32">
             System.UInt32</seealso>
             <seealso cref="T:ConstTypeArgs.Uints.UintArray`1"/>
             <seealso cref="T:ConstTypeArgs.Uints.K_Uint"/>
+            <seealso cref="T:ConstTypeArgs.Uints.K_UintArray.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Uints.K_UintArray.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Uints.K_UintArray.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
         </member>
         <member name="T:ConstTypeArgs.Uints.K_UintArray`1">
             <summary>
@@ -45,6 +83,11 @@
             <typeparam name="TSelf">
             The implementing type.
             </typeparam>
+            <remarks>
+            Implement this interface for <see langword="uint[]"/> const type arguments in uncommon
+            scenarios where they need to be instantiated.
+            Otherwise, use <see cref="T:ConstTypeArgs.Uints.K_UintArray"/> instead.
+            </remarks>
             <seealso href="https://learn.microsoft.com/dotnet/api/system.uint32">
             System.UInt32</seealso>
             <seealso cref="T:ConstTypeArgs.Uints.UintArray`1"/>
@@ -59,13 +102,11 @@
             The const argument provider type containing the value to wrap.
             </typeparam>
             <remarks>
-            This class can be useful when creating domain-specific const argument providers,
-            such as default values, when a const argument provider's value needs to be
-            wrapped for use in a different context.
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
             </remarks>
-            <seealso cref="T:ConstTypeArgs.Uints.UintArray`1"/>
             <seealso cref="T:ConstTypeArgs.Uints.K_Uint"/>
-            <seealso cref="T:ConstTypeArgs.Uints.K_Uint`1"/>
+            <seealso cref="T:ConstTypeArgs.Uints.UintArray`1"/>
         </member>
         <member name="T:ConstTypeArgs.Uints.UintArray`1">
             <summary>
@@ -76,12 +117,11 @@
             The const argument provider type containing the array to wrap.
             </typeparam>
             <remarks>
-            This class can be useful when creating domain-specific const argument providers,
-            such as default values, when a const argument provider's value needs to be
-            wrapped for use in a different context.
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
             </remarks>
+            <seealso cref="T:ConstTypeArgs.Uints.K_UintArray"/>
             <seealso cref="T:ConstTypeArgs.Uints.Uint`1"/>
-            <seealso cref="T:ConstTypeArgs.Uints.K_Uint"/>
         </member>
         <member name="T:ConstTypeArgs.Uints.Default">
             <summary>

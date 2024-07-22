@@ -13,6 +13,15 @@
             System.Int16</seealso>
             <seealso cref="T:ConstTypeArgs.Shorts.Short`1"/>
             <seealso cref="T:ConstTypeArgs.Shorts.K_ShortArray"/>
+            <seealso cref="T:ConstTypeArgs.Shorts.K_Short.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Shorts.K_Short.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Shorts.K_Short.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
         </member>
         <member name="T:ConstTypeArgs.Shorts.K_Short`1">
             <summary>
@@ -36,6 +45,15 @@
             System.Int16</seealso>
             <seealso cref="T:ConstTypeArgs.Shorts.ShortArray`1"/>
             <seealso cref="T:ConstTypeArgs.Shorts.K_Short"/>
+            <seealso cref="T:ConstTypeArgs.Shorts.K_ShortArray.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Shorts.K_ShortArray.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Shorts.K_ShortArray.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
         </member>
         <member name="T:ConstTypeArgs.Shorts.K_ShortArray`1">
             <summary>

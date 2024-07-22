@@ -24,6 +24,8 @@ public interface IConstTypeArg;
 /// The type of the values to be passed as const type arguments.
 /// </typeparam>
 /// <remarks>
+/// This is intended to provide access to values that are, but not limited to,
+/// static readonly values. <strong><em>IMMUTABILITY IS HOWEVER STRONGLY RECOMMENDED.</em></strong>
 ///   <note type="important">
 ///   Because <see cref="IConstTypeArg{T}"/> type definitions are <em>argument providers</em>,
 ///   they are intended to be used as type parameters or as a means to access readonly static values
@@ -44,11 +46,6 @@ public interface IConstTypeArg<out T>
     /// <value>
     /// The const type argument's value.
     /// </value>
-    /// <remarks>
-    /// This is intended to provide access to values that are, but not limited to,
-    /// static readonly values.
-    /// <strong><em>IMMUTABILITY IS HOWEVER STRONGLY RECOMMENDED.</em></strong>
-    /// </remarks>
     /// <seealso cref="IConstTypeArg{T, TSelf}.GetValue()"/>
     static abstract T Value { get; }
 }
@@ -82,11 +79,6 @@ public interface IConstTypeArg<out T, TSelf>
     /// <returns>
     /// The const type argument's value.
     /// </returns>
-    /// <remarks>
-    /// This is intended to provide access to values that are, but not limited to,
-    /// static readonly values.
-    /// <strong><em>IMMUTABILITY IS HOWEVER STRONGLY RECOMMENDED.</em></strong>
-    /// </remarks>
     /// <seealso cref="IConstTypeArg{T}.Value"/>
     public T GetValue() => TSelf.Value;
 }

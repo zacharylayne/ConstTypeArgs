@@ -14,8 +14,18 @@ namespace ConstTypeArgs.Shorts;
 /// System.Int16</seealso>
 /// <seealso cref="Short{K}"/>
 /// <seealso cref="K_ShortArray"/>
+/// <seealso cref="__"/>
 public interface K_Short
-    : K_Unmanaged<short>, K_Integer<short>, K_SignedNumber<short>;
+    : K_Unmanaged<short>, K_Integer<short>, K_SignedNumber<short>
+{
+    /// <summary>
+    /// The <see cref="__"/> interface is a <em>discard argument</em> meant to signify
+    /// a lack of value and is used as a placeholder in type parameter lists.
+    /// When combined with other discard arguments of other types, it can be used to create
+    /// union-like behavior.
+    /// </summary>
+    public interface __ : Core.__, K_Short, IConstTypeArg<short?>;
+}
 
 /// <summary>
 /// The <see cref="K_Short{TSelf}"/> interface provides a more explicit
@@ -40,8 +50,18 @@ public interface K_Short<TSelf>
 /// System.Int16</seealso>
 /// <seealso cref="ShortArray{K}"/>
 /// <seealso cref="K_Short"/>
+/// <seealso cref="__"/>
 public interface K_ShortArray
-    : K_Array<short>;
+    : K_Array<short>
+{
+    /// <summary>
+    /// The <see cref="__"/> interface is a <em>discard argument</em> meant to signify
+    /// a lack of value and is used as a placeholder in type parameter lists.
+    /// When combined with other discard arguments of other types, it can be used to create
+    /// union-like behavior.
+    /// </summary>
+    public interface __ : Core.__, K_ShortArray, IConstTypeArg<short[]>;
+}
 
 /// <summary>
 /// The <see cref="K_ShortArray{TSelf}"/> interface provides a more explicit

@@ -1,0 +1,1506 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Console</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Console.Color.K_ConsoleColor">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.K_ConsoleColor"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleColor&gt;</c> derived type.
+            </summary>
+            <remarks>
+            Implement this interface when defining
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor</see> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Enum`1">K_Enum&lt;ConsoleColor&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;ConsoleColor&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Console.Color.K_ConsoleColor`1"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor</seealso>
+            <seealso cref="T:ConstTypeArgs.Console.Color.ConsoleColor`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Color.K_ConsoleColorArray"/>
+            <seealso cref="T:ConstTypeArgs.Console.Color.K_ConsoleColor.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.K_ConsoleColor.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.K_ConsoleColor.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.K_ConsoleColor`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.K_ConsoleColor`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleColor, K_ConsoleColor&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <remarks>
+            Implement this interface for
+            /// <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor</see> const type arguments in uncommon
+            scenarios where they need to be instantiated. Otherwise, use <see cref="T:ConstTypeArgs.Console.Color.K_ConsoleColor"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor</seealso>
+            <seealso cref="T:ConstTypeArgs.Console.Color.ConsoleColor`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Color.K_ConsoleColorArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.K_ConsoleColorArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.K_ConsoleColorArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleColor[]&gt;</c> type.
+            </summary>
+            <remarks>
+            Implement this interface when defining
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor[]</see> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Array`1">K_Array&lt;ConsoleColor&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;ConsoleColor[]&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Console.Color.K_ConsoleColorArray`1"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor</seealso>
+            <seealso cref="T:ConstTypeArgs.Console.Color.ConsoleColorArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Color.K_ConsoleColor"/>
+            <seealso cref="T:ConstTypeArgs.Console.Color.K_ConsoleColorArray.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.K_ConsoleColorArray.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.K_ConsoleColorArray.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.K_ConsoleColorArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.K_ConsoleColorArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleColor[], K_ConsoleColorArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <remarks>
+            Implement this interface for
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor[]</see> const type arguments in uncommon
+            scenarios where they need to be instantiated. Otherwise, use <see cref="T:ConstTypeArgs.Console.Color.K_ConsoleColorArray"/> instead.
+            </remarks>
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor</see>
+            <seealso cref="T:ConstTypeArgs.Console.Color.ConsoleColorArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Color.K_ConsoleColor`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.ConsoleColor`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.ConsoleColor`1"/> class provides a const argument provider that
+            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor</see> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Console.Color.K_ConsoleColor"/>
+            <seealso cref="T:ConstTypeArgs.Console.Color.ConsoleColorArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.ConsoleColorArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.ConsoleColorArray`1"/> class provides a const argument provider that
+            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor</see> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Console.Color.K_ConsoleColorArray"/>
+            <seealso cref="T:ConstTypeArgs.Console.Color.ConsoleColor`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors"/> static class encapsulates const type arguments for
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">System.ConsoleColor</see> values.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Console.Color.ConsoleColor`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Color.ConsoleColorArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.Black">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.Black"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.Black</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.Blue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.Blue"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.Blue</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.Cyan">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.Cyan"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.Cyan</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.DarkBlue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.DarkBlue"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.DarkBlue</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.DarkCyan">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.DarkCyan"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.DarkCyan</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.DarkGray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.DarkGray"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.DarkGray</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.DarkGreen">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.DarkGreen"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.DarkGreen</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.DarkMagenta">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.DarkMagenta"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.DarkMagenta</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.DarkRed">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.DarkRed"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.DarkRed</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.DarkYellow">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.DarkYellow"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.DarkYellow</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.Gray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.Gray"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.Gray</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.Green">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.Green"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.Green</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.Magenta">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.Magenta"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.Magenta</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.Red">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.Red"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.Red</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.White">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.White"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.White</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Color.Colors.Yellow">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Color.Colors.Yellow"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolecolor">
+            System.ConsoleColor.Yellow</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_Key">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_Key"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleKey&gt;</c> derived type.
+            </summary>
+            <remarks>
+            Implement this interface when defining
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">
+            System.ConsoleKey</see> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Enum`1">K_Enum&lt;ConsoleKey&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;ConsoleKey&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Console.Key.K_Key`1"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.consolekey">
+            System.ConsoleKey</seealso>
+            <seealso cref="T:ConstTypeArgs.Console.Key.Keys"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.Key`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_KeyArray"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_Key.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_Key.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_Key.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_Key`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_Key`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleKey, K_ConsoleKey&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <remarks>
+            Implement this interface for
+            /// <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">
+            System.ConsoleKey</see> const type arguments in uncommon
+            scenarios where they need to be instantiated. Otherwise, use <see cref="T:ConstTypeArgs.Console.Key.K_Key"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.consolekey">
+            System.ConsoleKey</seealso>
+            <seealso cref="T:ConstTypeArgs.Console.Key.Keys"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.Key`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_KeyArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_KeyArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_KeyArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleKey[]&gt;</c> type.
+            </summary>
+            <remarks>
+            Implement this interface when defining
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">
+            System.ConsoleKey[]</see> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Array`1">K_Array&lt;ConsoleKey&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;ConsoleKey[]&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Console.Key.K_KeyArray`1"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.consolekey">
+            System.ConsoleKey</seealso>
+            <seealso cref="T:ConstTypeArgs.Console.Key.Keys"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_Key"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_KeyArray.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_KeyArray.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_KeyArray.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_KeyArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_KeyArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleKey[], K_ConsoleKeyArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <remarks>
+            Implement this interface for
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">
+            System.ConsoleKey[]</see> const type arguments in uncommon
+            scenarios where they need to be instantiated. Otherwise, use <see cref="T:ConstTypeArgs.Console.Key.K_KeyArray"/> instead.
+            </remarks>
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">
+            System.ConsoleKey</see>
+            <seealso cref="T:ConstTypeArgs.Console.Key.Keys"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_Key`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Key`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Key`1"/> class provides a const argument provider that
+            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">
+            System.ConsoleKey</see> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Console.Key.Keys"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_Key"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.KeyArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.KeyArray`1"/> class provides a const argument provider that
+            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">
+            System.ConsoleKey</see> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Console.Key.Keys"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_KeyArray"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.Key`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_KeyModifier">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_KeyModifier"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleModifiers&gt;</c> derived type.
+            </summary>
+            <remarks>
+            Implement this interface when defining
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers</see> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Enum`1">K_Enum&lt;ConsoleModifiers&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;ConsoleModifiers&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Console.Key.K_KeyModifier`1"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers</seealso>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifiers"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifier`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_KeyModifierArray"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_KeyModifier.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_KeyModifier.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_KeyModifier.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_KeyModifier`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_KeyModifier`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleModifiers, K_ConsoleModifiers&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <remarks>
+            Implement this interface for
+            /// <see href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers</see> const type arguments in uncommon
+            scenarios where they need to be instantiated. Otherwise, use <see cref="T:ConstTypeArgs.Console.Key.K_KeyModifier"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers</seealso>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifiers"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifier`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_KeyModifierArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_KeyModifierArray">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_KeyModifierArray"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleModifiers[]&gt;</c> type.
+            </summary>
+            <remarks>
+            Implement this interface when defining
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers[]</see> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Array`1">K_Array&lt;ConsoleModifiers&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;ConsoleModifiers[]&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Console.Key.K_KeyModifierArray`1"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers</seealso>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifierArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_KeyModifier"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_KeyModifierArray.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_KeyModifierArray.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_KeyModifierArray.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_KeyModifierArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_KeyModifierArray`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleModifiers[], K_ConsoleModifiersArray&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <remarks>
+            Implement this interface for
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers[]</see> const type arguments in uncommon
+            scenarios where they need to be instantiated. Otherwise, use <see cref="T:ConstTypeArgs.Console.Key.K_KeyModifierArray"/> instead.
+            </remarks>
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers</see>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifiers"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifierArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_KeyModifier`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.KeyModifier`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.KeyModifier`1"/> class provides a const argument provider that
+            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers</see> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifiers"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_KeyModifier"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifierArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.KeyModifierArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.KeyModifierArray`1"/> class provides a const argument provider that
+            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers</see> array from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the array to wrap.
+            </typeparam>
+            <remarks>
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifiers"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_KeyModifierArray"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifier`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.KeyModifiers">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.KeyModifiers"/> static class encapsulates const type arguments for
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers</see> fields.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifier`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_KeyModifier"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.Keys"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.SpecialKeys"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.KeyModifiers.Alt">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.KeyModifiers.Alt"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers.Alt</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.KeyModifiers.Control">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.KeyModifiers.Control"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers.Control</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.KeyModifiers.NoKeyModifier">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.KeyModifiers.NoKeyModifier"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers.None</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.KeyModifiers.Shift">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.KeyModifiers.Shift"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolemodifiers">
+            System.ConsoleModifiers.Shift</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys"/> static class encapsulates const type arguments for
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey</see> values.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Console.Key.Key`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifiers"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.SpecialKeys"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.NoKey">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.NoKey"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.None</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.NumPad0">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.NumPad0"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.NumPad0</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.NumPad1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.NumPad1"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.NumPad1</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.NumPad2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.NumPad2"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.NumPad2</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.NumPad3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.NumPad3"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.NumPad3</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.NumPad4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.NumPad4"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.NumPad4</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.NumPad5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.NumPad5"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.NumPad5</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.NumPad6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.NumPad6"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.NumPad6</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.NumPad7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.NumPad7"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.NumPad7</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.NumPad8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.NumPad8"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.NumPad8</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.NumPad9">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.NumPad9"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.NumPad9</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys._0">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys._0"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.D0</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys._1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys._1"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.D1</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys._2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys._2"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.D2</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys._3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys._3"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.D3</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys._4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys._4"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.D4</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys._5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys._5"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.D5</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys._6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys._6"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.D6</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys._7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys._7"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.D7</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys._8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys._8"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.D8</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys._9">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys._9"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.D9</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Decimal">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Decimal"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Decimal</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.A">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.A"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.A</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.B">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.B"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.B</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.C">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.C"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.C</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.D">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.D"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.D</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.E">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.E"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.E</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.G">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.G"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.G</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.H">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.H"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.H</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.I">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.I"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.I</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.J">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.J"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.J</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.K">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.K"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.K</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.L">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.L"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.L</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.M">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.M"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.M</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.N">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.N"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.N</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.O">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.O"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.O</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.P">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.P"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.P</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Q">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Q"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Q</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.R">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.R"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.R</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.S">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.S"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.S</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.T">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.T"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.T</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.U">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.U"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.U</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.V">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.V"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.V</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.W">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.W"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.W</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.X">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.X"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.X</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Y">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Y"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Y</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Z">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Z"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Z</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Backspace">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Backspace"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Backspace</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Enter">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Enter"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Enter</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Escape">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Escape"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Escape</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Spacebar">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Spacebar"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Spacebar</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Tab">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Tab"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Tab</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.PrintScreen">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.PrintScreen"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.PrintScreen</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Pause">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Pause"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Pause</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Insert">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Insert"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Insert</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Delete">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Delete"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Delete</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Home">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Home"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Home</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.End">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.End"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.End</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.PageUp">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.PageUp"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.PageUp</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.PageDown">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.PageDown"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.PageDown</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Add">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Add"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Add</see> (numpad).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Subtract">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Subtract"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Subtract</see> (numpad).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Multiply">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Multiply"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Multiply</see> (numpad).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Divide">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Divide"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Divide</see> (numpad).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.LeftArrow">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.LeftArrow"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.LeftArrow</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.UpArrow">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.UpArrow"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.UpArrow</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.RightArrow">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.RightArrow"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.RightArrow</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.DownArrow">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.DownArrow"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.DownArrow</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Separator">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Separator"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Separator</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Sleep">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Sleep"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Sleep</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Clear">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Clear"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Clear</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Select">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Select"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Select</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Print">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Print"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Print</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Execute">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Execute"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Execute</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Help">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Help"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Help</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Pa1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Pa1"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Pa1</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Packet">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Packet"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Packet</see>
+            (used to pass Unicode characters with keystrokes).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Process">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Process"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Process</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Attention">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Attention"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Attention</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.CrSel">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.CrSel"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.CrSel</see> (CURSOR SELECT).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.ExSel">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.ExSel"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.ExSel</see> (EXTEND SELECTION).
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.EraseEndOfFile">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.EraseEndOfFile"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.EraseEndOfFile</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Zoom">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Zoom"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Zoom</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.NoName">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.NoName"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.NoName</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F1"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F1</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F2"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F2</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F3"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F3</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F4"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F4</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F5"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F5</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F6"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F6</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F7"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F7</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F8"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F8</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F9">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F9"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F9</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F10">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F10"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F10</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F11">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F11"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F11</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F12">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F12"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F12</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F13">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F13"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F13</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F14">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F14"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F14</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F15">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F15"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F15</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F16">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F16"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F16</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F17">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F17"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F17</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F18">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F18"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F18</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F19">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F19"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F19</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F20">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F20"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F20</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F21">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F21"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F21</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F22">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F22"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F22</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F23">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F23"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F23</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.F24">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.F24"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.F24</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.BrowserBack">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.BrowserBack"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.BrowserBack</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.BrowserForward">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.BrowserForward"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.BrowserForward</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.BrowserRefresh">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.BrowserRefresh"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.BrowserRefresh</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.BrowserStop">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.BrowserStop"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.BrowserStop</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.BrowserSearch">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.BrowserSearch"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.BrowserSearch</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.BrowserFavorites">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.BrowserFavorites"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.BrowserFavorites</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.BrowserHome">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.BrowserHome"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.BrowserHome</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.VolumeMute">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.VolumeMute"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.VolumeMute</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.VolumeDown">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.VolumeDown"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.VolumeDown</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.VolumeUp">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.VolumeUp"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.VolumeUp</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.LaunchMediaSelect">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.LaunchMediaSelect"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.LaunchMediaSelect</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.MediaNext">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.MediaNext"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.MediaNext</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.MediaPrevious">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.MediaPrevious"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.MediaPrevious</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.MediaStop">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.MediaStop"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.MediaStop</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.MediaPlay">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.MediaPlay"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.MediaPlay</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.SelectMedia">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Select"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.SelectMedia</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Play">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Play"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Play</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.LaunchMail">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.LaunchMail"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.LaunchMail</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.LaunchApp1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.LaunchApp1"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.LaunchApp1</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.LaunchApp2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.LaunchApp2"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.LaunchApp2</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Oem1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Oem1"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Oem1</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Oem2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Oem2"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Oem2</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Oem3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Oem3"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Oem3</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Oem4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Oem4"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Oem4</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Oem5">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Oem5"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Oem5</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Oem6">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Oem6"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Oem6</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Oem7">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Oem7"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Oem7</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.Oem8">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.Oem8"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.Oem8</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.OemPlus">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.OemPlus"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.OemPlus</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.OemMinus">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.OemMinus"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.OemMinus</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.OemClear">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.OemClear"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.OemClear</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.OemComma">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.OemComma"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.OemComma</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.Keys.OemPeriod">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.Keys.OemPeriod"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolekey">System.ConsoleKey.OemPeriod</see>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_SpecialKey">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_SpecialKey"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleSpecialKey&gt;</c> derived type.
+            </summary>
+            <remarks>
+            Implement this interface when defining
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolespecialkey">
+            System.ConsoleSpecialKey</see> const type arguments
+            rather than <see cref="T:ConstTypeArgs.Core.K_Enum`1">K_Enum&lt;ConsoleSpecialKey&gt;</see>
+            or <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;ConsoleSpecialKey&gt;</see>.
+            In uncommon scenarios where they need to be instantiated,
+            use <see cref="T:ConstTypeArgs.Console.Key.K_SpecialKey`1"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.consolespecialkey">
+            System.ConsoleSpecialKey</seealso>
+            <seealso cref="T:ConstTypeArgs.Console.Key.SpecialKey`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_SpecialKey.__"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_SpecialKey.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_SpecialKey.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.K_SpecialKey`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.K_SpecialKey`1"/> interface provides a more explicit
+            <c>IConstTypeArg&lt;ConsoleSpecialKey, K_ConsoleSpecialKey&lt;TSelf&gt;&gt;</c> derived type.
+            </summary>
+            <typeparam name="TSelf">
+            The implementing type.
+            </typeparam>
+            <remarks>
+            Implement this interface for
+            /// <see href="https://learn.microsoft.com/dotnet/api/system.consolespecialkey">
+            System.ConsoleSpecialKey</see> const type arguments in uncommon
+            scenarios where they need to be instantiated. Otherwise, use <see cref="T:ConstTypeArgs.Console.Key.K_SpecialKey"/> instead.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.consolespecialkey">
+            System.ConsoleSpecialKey</seealso>
+            <seealso cref="T:ConstTypeArgs.Console.Key.SpecialKey`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.SpecialKey`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.SpecialKey`1"/> class provides a const argument provider that
+            wraps the <see href="https://learn.microsoft.com/dotnet/api/system.consolespecialkey">
+            System.ConsoleSpecialKey</see> value from another const argument provider.
+            </summary>
+            <typeparam name="K">
+            The const argument provider type containing the value to wrap.
+            </typeparam>
+            <remarks>
+            This class can be used to create domain-specific const type arguments or
+            to wrap const type arguments for reuse in other contexts.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_SpecialKey"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.SpecialKeys">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.SpecialKeys"/> static class encapsulates const type arguments
+            for <see href="https://learn.microsoft.com/dotnet/api/system.consolespecialkey">ConsoleSpecialKey.ControlBreak</see>
+            and <see href="https://learn.microsoft.com/dotnet/api/system.consolespecialkey">ConsoleSpecialKey.ControlC</see>.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Console.Key.SpecialKey`1"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.K_SpecialKey"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.Keys"/>
+            <seealso cref="T:ConstTypeArgs.Console.Key.KeyModifiers"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.SpecialKeys.ControlBreak">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.SpecialKeys.ControlBreak"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolespecialkey">
+            System.ConsoleSpecialKey.ControlBreak</see>.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Console.Key.SpecialKeys.ControlC"/>
+        </member>
+        <member name="T:ConstTypeArgs.Console.Key.SpecialKeys.ControlC">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Console.Key.SpecialKeys.ControlC"/> readonly struct provides a const type argument equal to the enumeration value
+            <see href="https://learn.microsoft.com/dotnet/api/system.consolespecialkey">
+            System.ConsoleSpecialKey.ControlC</see>.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Console.Key.SpecialKeys.ControlBreak"/>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,78 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "Source/ConstTypeArgs.Bools/ConstTypeArgs.Bools.csproj",
+            "Source/ConstTypeArgs.Bytes/ConstTypeArgs.Bytes.csproj",
+            "Source/ConstTypeArgs.Chars/ConstTypeArgs.Chars.csproj",
+            "Source/ConstTypeArgs.Console/ConstTypeArgs.Console.csproj",
+            "Source/ConstTypeArgs.Core/ConstTypeArgs.Core.csproj",
+            "Source/ConstTypeArgs.Decimals/ConstTypeArgs.Decimals.csproj",
+            "Source/ConstTypeArgs.Delegates/ConstTypeArgs.Delegates.csproj",
+            "Source/ConstTypeArgs.Doubles/ConstTypeArgs.Doubles.csproj",
+            "Source/ConstTypeArgs.Floats/ConstTypeArgs.Floats.csproj",
+            "Source/ConstTypeArgs.Halfs/ConstTypeArgs.Halfs.csproj",
+            "Source/ConstTypeArgs.Int128s/ConstTypeArgs.Int128s.csproj",
+            "Source/ConstTypeArgs.Ints/ConstTypeArgs.Ints.csproj",
+            "Source/ConstTypeArgs.Longs/ConstTypeArgs.Longs.csproj",
+            "Source/ConstTypeArgs.Nints/ConstTypeArgs.Nints.csproj",
+            "Source/ConstTypeArgs.Nuints/ConstTypeArgs.Nuints.csproj",
+            "Source/ConstTypeArgs.Sbytes/ConstTypeArgs.Sbytes.csproj",
+            "Source/ConstTypeArgs.Shorts/ConstTypeArgs.Shorts.csproj",
+            "Source/ConstTypeArgs.Strings/ConstTypeArgs.Strings.csproj",
+            "Source/ConstTypeArgs.Types/ConstTypeArgs.Types.csproj",
+            "Source/ConstTypeArgs.UInt128s/ConstTypeArgs.UInt128s.csproj",
+            "Source/ConstTypeArgs.Uints/ConstTypeArgs.Uints.csproj",
+            "Source/ConstTypeArgs.Ulongs/ConstTypeArgs.Ulongs.csproj",
+            "Source/ConstTypeArgs.Ushorts/ConstTypeArgs.Ushorts.csproj"
+          ],
+		  "src": "../"
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**", "README.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**", "code-snippets/**"
+        ]
+      }
+    ],
+    "template": [
+      "default",
+      "templates/singulinkfx"
+    ],
+    "globalMetadata": {
+      "_appName": "ConstTypeArgs",
+      "_appTitle": "ConstTypeArgs",
+	    "_appLogoPath": "images/Core.png",
+      "_enableSearch": true,
+      "pdf": false
+    },
+    "markdownEngineProperties": {
+      "markdigExtensions": [
+        "definitionlists",
+        "autoidentifiers",
+        "tasklists",
+        "abbreviations"
+      ]
+    }
+  },
+  "namespaceLayout": "nested",
+  "includeExplicitInterfaceImplementations": true,
+  "includePrivateMembers": true
+}

@@ -57,6 +57,7 @@ You can also create new domain-specific `ulong` const type arguments like so:
 ```csharp
 public sealed class DefaultInitialCollectionSize : Ulong&lt;_32&gt;;
 ```</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

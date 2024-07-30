@@ -23,6 +23,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Int128s.xml</DocumentationFile>
     <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass `Int128` values to generics at compile-time. This provides an analog to type specialization in C++.</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -23,6 +23,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Floats.xml</DocumentationFile>
     <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass float values to generics at compile-time. This provides an analog to type specialization in C++.</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -50,6 +50,7 @@ Foo&lt;Slash&gt;.Output(helloWorld); // Output: Hello/World!
 Foo&lt;Semicolon&gt;.Output(helloWorld); // Output: Hello;World!
 Foo&lt;VerticalBar&gt;.Output(helloWorld); // Output: Hello|World!
 ```</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.9.34414.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B126AD85-980C-4790-A213-D0790AE9BA8A}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\zacha\.dotnet\tools\.store\docfx\2.77.0\docfx\2.77.0\README.md = C:\Users\zacha\.dotnet\tools\.store\docfx\2.77.0\docfx\2.77.0\README.md
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Core", "Source\ConstTypeArgs.Core\ConstTypeArgs.Core.csproj", "{3F1F8AD0-32D5-4CB7-BF95-FEF4CDCFA9AE}"
 EndProject
@@ -52,8 +55,29 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C}"
 	ProjectSection(SolutionItems) = preProject
 		Documentation\Glossary.md = Documentation\Glossary.md
+		Documentation\Overview.md = Documentation\Overview.md
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Site", "Site", "{ABCABE07-0140-432A-A7EC-BEF0CA0AE884}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\docfx.json = Documentation\docfx.json
+		Documentation\Index.md = Documentation\Index.md
+		Documentation\toc.yml = Documentation\toc.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Developer Guide", "Developer Guide", "{EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\dev-guide\Argument Providers.md = Documentation\dev-guide\Argument Providers.md
+		Documentation\dev-guide\K.md = Documentation\dev-guide\K.md
+		Documentation\dev-guide\__.md = Documentation\dev-guide\__.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Console", "Source\ConstTypeArgs.Console\ConstTypeArgs.Console.csproj", "{9A5B0C1A-EB5E-47A7-8679-B84DFBFEAEFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstTypeArgs.MathOps", "Source\ConstTypeArgs.MathOps\ConstTypeArgs.MathOps.csproj", "{61D764E2-5E33-4BB7-AEAB-8D18BCB031EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstTypeArgs.Delegates.Interlocked", "Source\ConstTypeArgs.Delegates.Interlocked\ConstTypeArgs.Delegates.Interlocked.csproj", "{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,12 +173,26 @@ Global
 		{D66A22B2-77A6-4533-A70F-80E78AE180A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D66A22B2-77A6-4533-A70F-80E78AE180A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D66A22B2-77A6-4533-A70F-80E78AE180A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A5B0C1A-EB5E-47A7-8679-B84DFBFEAEFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A5B0C1A-EB5E-47A7-8679-B84DFBFEAEFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A5B0C1A-EB5E-47A7-8679-B84DFBFEAEFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A5B0C1A-EB5E-47A7-8679-B84DFBFEAEFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61D764E2-5E33-4BB7-AEAB-8D18BCB031EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D764E2-5E33-4BB7-AEAB-8D18BCB031EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D764E2-5E33-4BB7-AEAB-8D18BCB031EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D764E2-5E33-4BB7-AEAB-8D18BCB031EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C} = {B126AD85-980C-4790-A213-D0790AE9BA8A}
+		{ABCABE07-0140-432A-A7EC-BEF0CA0AE884} = {B126AD85-980C-4790-A213-D0790AE9BA8A}
+		{EC7629A7-F94A-4F35-925A-11E6F5E0EA6C} = {D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {266F50E7-B8BB-4CFD-BC01-66FC3E001666}

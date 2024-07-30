@@ -1,4 +1,5 @@
-﻿using ConstTypeArgs.Core;
+﻿// Ignore Spelling: Pred
+using ConstTypeArgs.Core;
 
 #pragma warning disable IDE1006 // Naming Styles
 #pragma warning disable CS1591  // Missing XML comment for publicly visible type or member
@@ -14,8 +15,7 @@ namespace ConstTypeArgs.Delegates.Predicates;
 /// </typeparam>
 /// <seealso href="https://learn.microsoft.com/dotnet/api/system.predicate-1">
 /// System.Predicate&lt;T&gt;</seealso>
-public interface K_Predicate<in T>
-    : K_Delegate<Predicate<T>>;
+public interface K_Predicate<in T> : K_Delegate<Predicate<T>>;
 
 /// <summary>
 /// The <see cref="K_PredicateArray{T}"/> interface provides a more explicit
@@ -27,11 +27,10 @@ public interface K_Predicate<in T>
 /// <seealso href="https://learn.microsoft.com/dotnet/api/system.predicate">
 /// System.Predicate</seealso>
 /// <seealso cref="K_Predicate{T}"/>
-public interface K_PredicateArray<in T>
-    : K_Array<Predicate<T>>;
+public interface K_PredicateArray<in T> : K_Array<Predicate<T>>;
 
 /// <summary>
-/// The <see cref="Predicate{T, K}"/> class provides an argument provider that
+/// The <see cref="Predicate{T, KPred}"/> class provides an argument provider that
 /// wraps the
 /// <see href="https://learn.microsoft.com/dotnet/api/system.predicate">
 /// System.Predicate</see> value from another argument provider.
@@ -39,7 +38,7 @@ public interface K_PredicateArray<in T>
 /// <typeparam name="T">
 /// The type of the predicate's input.
 /// </typeparam>
-/// <typeparam name="K">
+/// <typeparam name="KPred">
 /// The type of argument provider containing the value to wrap.
 /// </typeparam>
 /// <remarks>
@@ -47,9 +46,9 @@ public interface K_PredicateArray<in T>
 /// such as default values, when an argument provider's value needs to be
 /// wrapped for use in a different context.
 /// </remarks>
-public abstract class Predicate<T, K> : K<Predicate<T>, K>, K_Predicate<T>
-    where K : K_Predicate<T>
-{ public static Predicate<T> Value => K.Value; }
+public abstract class Predicate<T, KPred> : K<Predicate<T>, KPred>, K_Predicate<T>
+    where KPred : K_Predicate<T>
+{ public static Predicate<T> Value => KPred.Value; }
 
 /// <summary>
 /// The <see cref="PredicateArray{T, K}"/> class provides an argument provider that
@@ -60,7 +59,7 @@ public abstract class Predicate<T, K> : K<Predicate<T>, K>, K_Predicate<T>
 /// <typeparam name="T">
 /// The type of the predicate's input.
 /// </typeparam>
-/// <typeparam name="K">
+/// <typeparam name="KPred">
 /// The type of argument provider containing the array to wrap.
 /// </typeparam>
 /// <remarks>
@@ -68,6 +67,6 @@ public abstract class Predicate<T, K> : K<Predicate<T>, K>, K_Predicate<T>
 /// such as default values, when an argument provider's value needs to be
 /// wrapped for use in a different context.
 /// </remarks>
-public abstract class PredicateArray<T, K> : K<Predicate<T>[], K>, K_PredicateArray<T>
-    where K : K_PredicateArray<T>
-{ public static Predicate<T>[] Value => K.Value; }
+public abstract class PredicateArray<T, KPred> : K<Predicate<T>[], KPred>, K_PredicateArray<T>
+    where KPred : K_PredicateArray<T>
+{ public static Predicate<T>[] Value => KPred.Value; }

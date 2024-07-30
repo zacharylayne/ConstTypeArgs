@@ -71,6 +71,7 @@ Here's how you could create a new Type const type argument:
 public readonly struct StringType : K_Type&lt;StringType&gt;
 { public static Type Value =&gt; typeof(string); }
 ```</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

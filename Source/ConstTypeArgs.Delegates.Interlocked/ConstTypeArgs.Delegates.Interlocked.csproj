@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Company>Entry Point Software</Company>
+    <Authors>Zachary Layne</Authors>
+    <Title>Const Type Arguments - Delegates: Interlocked</Title>
+    <Description>Builds on types of the ConstTypeArgs.Delegates library to provide const type arguments that allow you to use type parameters to pass System.Runtime.CompilerServices.Interocked delegates to generics at compile-time.</Description>
+    <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
+    <PackageReadmeFile>README.MD</PackageReadmeFile>
+    <PackageIcon>K_Delegate - Interlocked.png</PackageIcon>
+    <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
+    <IncludeSource>true</IncludeSource>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; delegate; interlocked; threading</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>ConstTypeArgs.Delegates.Interlocked.xml</DocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <IsTrimmable>True</IsTrimmable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsTrimmable>True</IsTrimmable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Icons\K_Delegate - Interlocked.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConstTypeArgs.Delegates\ConstTypeArgs.Delegates.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Doubles\ConstTypeArgs.Doubles.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Floats\ConstTypeArgs.Floats.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Ints\ConstTypeArgs.Ints.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Longs\ConstTypeArgs.Longs.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Nints\ConstTypeArgs.Nints.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Nuints\ConstTypeArgs.Nuints.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Uints\ConstTypeArgs.Uints.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Ulongs\ConstTypeArgs.Ulongs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE.txt">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+    <None Update="README.MD">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+  </ItemGroup>
+
+</Project>

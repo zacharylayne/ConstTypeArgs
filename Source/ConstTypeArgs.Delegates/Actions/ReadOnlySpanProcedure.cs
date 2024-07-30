@@ -61,7 +61,6 @@ public interface K_ReadOnlySpanProcedure<T, TArg>
 /// wrapped for use in a different context.
 /// </remarks>
 /// <seealso cref="SpanProcedure{T, TArg, K}"/>
-public abstract class ReadOnlySpanProcedure<T, TArg, K>
-    : K<ReadOnlySpanProcedure<T, TArg>, K>
+public abstract class ReadOnlySpanProcedure<T, TArg, K> : K<ReadOnlySpanProcedure<T, TArg>, K>
     where K : K_ReadOnlySpanProcedure<T, TArg>
 { public static ReadOnlySpanProcedure<T, TArg> Value => K.Value; }

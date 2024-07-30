@@ -52,6 +52,7 @@ Here's how you could define a uint const type argument:
 public readonly struct Pos_2 : K_Uint&lt;Pos_2&gt;
 { public static uint Value =&gt; 2; }
 ```</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

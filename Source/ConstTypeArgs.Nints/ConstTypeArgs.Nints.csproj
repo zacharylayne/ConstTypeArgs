@@ -57,6 +57,7 @@ You can also create new domain-specific `nint` const type arguments like so:
 ```csharp
 public sealed class DefaultInitialCollectionSize : K_Nint&lt;_32&gt;;
 ```</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

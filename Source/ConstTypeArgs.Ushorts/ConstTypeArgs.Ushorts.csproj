@@ -59,6 +59,7 @@ You can also create new domain-specific `ushort` const type arguments like so:
 ```csharp
 public sealed class DefaultInitialCollectionSize : Ushort&lt;_32&gt;;
 ```</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

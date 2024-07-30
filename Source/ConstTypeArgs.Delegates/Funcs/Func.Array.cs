@@ -14,8 +14,7 @@ namespace ConstTypeArgs.Delegates.Funcs;
 /// </typeparam>
 /// <seealso href="https://learn.microsoft.com/dotnet/api/system.func-1">
 /// System.Func&lt;TResult&gt;</seealso>
-public interface K_FuncArray<TResult>
-    : K_Array<Func<TResult>>;
+public interface K_FuncArray<TResult> : K_Array<Func<TResult>>;
 
 /// <summary>
 /// The <see cref="FuncArray{TResult, K}"/> class provides an argument provider that
@@ -36,8 +35,7 @@ public interface K_FuncArray<TResult>
 /// </remarks>
 /// <seealso href="https://learn.microsoft.com/dotnet/api/system.func-1">
 /// System.Func&lt;TResult&gt;</seealso>
-public abstract class FuncArray<TResult, K>
-    : K<Func<TResult>[], K>, K_FuncArray<TResult>
+public abstract class FuncArray<TResult, K> : K<Func<TResult>[], K>, K_FuncArray<TResult>
     where K : K_FuncArray<TResult>
 { public static Func<TResult>[] Value => K.Value; }
 

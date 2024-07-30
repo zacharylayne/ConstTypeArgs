@@ -21,6 +21,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Delegates.xml</DocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -36,12 +37,16 @@
 
   <ItemGroup>
     <Compile Remove="Args\**" />
+    <Compile Remove="Interlocked\**" />
     <EmbeddedResource Remove="Args\**" />
+    <EmbeddedResource Remove="Interlocked\**" />
     <None Remove="Args\**" />
+    <None Remove="Interlocked\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Base.cs" />
+    <Compile Remove="Predicates\Values.TypeTests.cs" />
     <Compile Remove="ReadOnlySpanAction.cs" />
   </ItemGroup>
 
@@ -55,6 +60,17 @@
 
   <ItemGroup>
     <PackageReference Include="ConstTypeArgs.Core" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConstTypeArgs.Doubles\ConstTypeArgs.Doubles.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Floats\ConstTypeArgs.Floats.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Ints\ConstTypeArgs.Ints.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Longs\ConstTypeArgs.Longs.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Nints\ConstTypeArgs.Nints.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Nuints\ConstTypeArgs.Nuints.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Uints\ConstTypeArgs.Uints.csproj" />
+    <ProjectReference Include="..\ConstTypeArgs.Ulongs\ConstTypeArgs.Ulongs.csproj" />
   </ItemGroup>
 
   <ItemGroup>

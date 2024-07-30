@@ -50,6 +50,7 @@ Here's how you could create a new string const type argument:
 public readonly struct _hola : K_String&lt;_hola&gt;
 { public static string Value =&gt; "hola"; }
 ```</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -37,7 +37,7 @@ foo       = new Foo&lt;False&gt;(); // No output.
     <PackageReadmeFile>README.MD</PackageReadmeFile>
     <PackageIcon>Bool.png</PackageIcon>
     <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; bools</PackageTags>
-    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added __ "discard" const arg type that inherits from K_Bool &amp; ConstTypeArgs.Core.__. Use this in conjunction with other "discard" types to provide amalgamations that satisfy constraints in type parameter lists providing union-like behavior. Its value should be ignored.</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -47,6 +47,7 @@ foo       = new Foo&lt;False&gt;(); // No output.
     <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
     <IncludeSource>true</IncludeSource>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <FileVersion>1.1.0.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

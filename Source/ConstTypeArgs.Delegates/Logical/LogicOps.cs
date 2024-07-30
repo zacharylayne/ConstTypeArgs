@@ -55,7 +55,7 @@ public readonly struct AND<T, KPred> : K_Predicate<T>
     where KPred : K_Predicate<T>
 {
     /// <summary>
-    /// Performs a bitwise AND operation evaluating <typeparamref name="KPred"/> with
+    /// Performs a logical AND operation evaluating <typeparamref name="KPred"/> with
     /// the value of the given const type argument <typeparamref name="K"/>.
     /// </summary>
     /// <typeparam name="K">
@@ -66,7 +66,7 @@ public readonly struct AND<T, KPred> : K_Predicate<T>
     /// </returns>
     public static bool Eval<K>() where K : IConstTypeArg<T> => Value(K.Value);
 
-    public static Predicate<T> Value => static (arg) => KPred.Value(arg);
+    public static Predicate<T> Value => static arg => KPred.Value(arg);
 }
 
 /// <summary>
@@ -113,7 +113,7 @@ public readonly struct AND<T, KPred1, KPred2> : K_Predicate<T>
     where KPred1 : K_Predicate<T> where KPred2 : K_Predicate<T>
 {
     /// <summary>
-    /// Performs a bitwise AND operation evaluating
+    /// Performs a logical AND operation evaluating
     /// <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
     /// with the value of the given const type argument <typeparamref name="K"/>.
     /// </summary>
@@ -125,7 +125,7 @@ public readonly struct AND<T, KPred1, KPred2> : K_Predicate<T>
     /// </returns>
     public static bool Eval<K>() where K : IConstTypeArg<T> => Value(K.Value);
 
-    public static Predicate<T> Value => static (arg) => KPred1.Value(arg) && KPred2.Value(arg);
+    public static Predicate<T> Value => static arg => KPred1.Value(arg) && KPred2.Value(arg);
 }
 
 #endregion AND
@@ -179,7 +179,7 @@ public readonly struct NAND<T, KPred> : K_Predicate<T>
     where KPred : K_Predicate<T>
 {
     /// <summary>
-    /// Performs a bitwise AND operation evaluating <typeparamref name="KPred"/> with
+    /// Performs a logical AND operation evaluating <typeparamref name="KPred"/> with
     /// the value of the given const type argument <typeparamref name="K"/>.
     /// </summary>
     /// <typeparam name="K">
@@ -190,7 +190,7 @@ public readonly struct NAND<T, KPred> : K_Predicate<T>
     /// </returns>
     public static bool Eval<K>() where K : IConstTypeArg<T> => Value(K.Value);
 
-    public static Predicate<T> Value => (arg) => !KPred.Value(arg);
+    public static Predicate<T> Value => static arg => !KPred.Value(arg);
 }
 
 /// <summary>
@@ -236,7 +236,7 @@ public readonly struct NAND<T, KPred1, KPred2> : K_Predicate<T>
     where KPred1 : K_Predicate<T> where KPred2 : K_Predicate<T>
 {
     /// <summary>
-    /// Performs a bitwise NAND operation evaluating
+    /// Performs a logical NAND operation evaluating
     /// <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
     /// with the value of the given const type argument <typeparamref name="K"/>.
     /// </summary>
@@ -248,7 +248,7 @@ public readonly struct NAND<T, KPred1, KPred2> : K_Predicate<T>
     /// </returns>
     public static bool Eval<K>() where K : IConstTypeArg<T> => Value(K.Value);
 
-    public static Predicate<T> Value => static (arg) => !(KPred1.Value(arg) && KPred2.Value(arg));
+    public static Predicate<T> Value => static arg => !(KPred1.Value(arg) && KPred2.Value(arg));
 }
 
 #endregion NAND
@@ -296,7 +296,7 @@ public readonly struct OR<T, KPred1, KPred2> : K_Predicate<T>
     where KPred1 : K_Predicate<T> where KPred2 : K_Predicate<T>
 {
     /// <summary>
-    /// Performs a bitwise OR operation evaluating
+    /// Performs a logical OR operation evaluating
     /// <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
     /// with the value of the given const type argument <typeparamref name="K"/>.
     /// </summary>
@@ -308,7 +308,7 @@ public readonly struct OR<T, KPred1, KPred2> : K_Predicate<T>
     /// </returns>
     public static bool Eval<K>() where K : IConstTypeArg<T> => Value(K.Value);
 
-    public static Predicate<T> Value => static (arg) => KPred1.Value(arg) || KPred2.Value(arg);
+    public static Predicate<T> Value => static arg => KPred1.Value(arg) || KPred2.Value(arg);
 }
 
 /**
@@ -363,7 +363,7 @@ public readonly struct XOR<T, KPred1, KPred2> : K_Predicate<T>
     where KPred1 : K_Predicate<T> where KPred2 : K_Predicate<T>
 {
     /// <summary>
-    /// Performs a bitwise XOR operation evaluating
+    /// Performs a logical XOR operation evaluating
     /// <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
     /// with the value of the given const type argument <typeparamref name="K"/>.
     /// </summary>
@@ -375,7 +375,7 @@ public readonly struct XOR<T, KPred1, KPred2> : K_Predicate<T>
     /// </returns>
     public static bool Eval<K>() where K : IConstTypeArg<T> => Value(K.Value);
 
-    public static Predicate<T> Value => static (arg) => KPred1.Value(arg) ^ KPred2.Value(arg);
+    public static Predicate<T> Value => static arg => KPred1.Value(arg) ^ KPred2.Value(arg);
 }
 
 /**
@@ -430,7 +430,7 @@ public readonly struct NOR<T, KPred1, KPred2> : K_Predicate<T>
     where KPred1 : K_Predicate<T> where KPred2 : K_Predicate<T>
 {
     /// <summary>
-    /// Performs a bitwise NOR operation evaluating
+    /// Performs a logical NOR operation evaluating
     /// <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
     /// with the value of the given const type argument <typeparamref name="K"/>.
     /// </summary>
@@ -442,7 +442,7 @@ public readonly struct NOR<T, KPred1, KPred2> : K_Predicate<T>
     /// </returns>
     public static bool Eval<K>() where K : IConstTypeArg<T> => Value(K.Value);
 
-    public static Predicate<T> Value => static (arg) => !(KPred1.Value(arg) || KPred2.Value(arg));
+    public static Predicate<T> Value => static arg => !(KPred1.Value(arg) || KPred2.Value(arg));
 }
 
 /**
@@ -497,7 +497,7 @@ public readonly struct XNOR<T, KPred1, KPred2> : K_Predicate<T>
     where KPred1 : K_Predicate<T> where KPred2 : K_Predicate<T>
 {
     /// <summary>
-    /// Performs a bitwise XNOR operation evaluating
+    /// Performs a logical XNOR operation evaluating
     /// <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
     /// with the value of the given const type argument <typeparamref name="K"/>.
     /// </summary>
@@ -509,7 +509,7 @@ public readonly struct XNOR<T, KPred1, KPred2> : K_Predicate<T>
     /// </returns>
     public static bool Eval<K>() where K : IConstTypeArg<T> => Value(K.Value);
 
-    public static Predicate<T> Value => static (arg) => KPred1.Value(arg) == KPred2.Value(arg);
+    public static Predicate<T> Value => static arg => KPred1.Value(arg) == KPred2.Value(arg);
 }
 
 /**
@@ -565,7 +565,7 @@ public readonly struct IMPLY<T, KPred1, KPred2> : K_Predicate<T>
     where KPred1 : K_Predicate<T> where KPred2 : K_Predicate<T>
 {
     /// <summary>
-    /// Performs a bitwise IMPLY operation evaluating
+    /// Performs a logical IMPLY operation evaluating
     /// <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
     /// with the value of the given const type argument <typeparamref name="K"/>.
     /// </summary>
@@ -577,7 +577,7 @@ public readonly struct IMPLY<T, KPred1, KPred2> : K_Predicate<T>
     /// </returns>
     public static bool Eval<K>() where K : IConstTypeArg<T> => Value(K.Value);
 
-    public static Predicate<T> Value => static (arg) => !KPred1.Value(arg) || KPred2.Value(arg);
+    public static Predicate<T> Value => static arg => !KPred1.Value(arg) || KPred2.Value(arg);
 }
 
 /**
@@ -632,7 +632,7 @@ public readonly struct NIMPLY<T, KPred1, KPred2> : K_Predicate<T>
     where KPred1 : K_Predicate<T> where KPred2 : K_Predicate<T>
 {
     /// <summary>
-    /// Performs a bitwise NIMPLY operation evaluating
+    /// Performs a logical NIMPLY operation evaluating
     /// <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
     /// with the value of the given const type argument <typeparamref name="K"/>.
     /// </summary>
@@ -644,5 +644,5 @@ public readonly struct NIMPLY<T, KPred1, KPred2> : K_Predicate<T>
     /// </returns>
     public static bool Eval<K>() where K : IConstTypeArg<T> => Value(K.Value);
 
-    public static Predicate<T> Value => static (arg) => KPred1.Value(arg) && !KPred2.Value(arg);
+    public static Predicate<T> Value => static arg => KPred1.Value(arg) && !KPred2.Value(arg);
 }

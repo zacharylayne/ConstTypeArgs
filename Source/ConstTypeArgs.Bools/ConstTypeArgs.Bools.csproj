@@ -47,7 +47,7 @@ foo       = new Foo&lt;False&gt;(); // No output.
     <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
     <IncludeSource>true</IncludeSource>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <FileVersion>1.1.0.0</FileVersion>
+    <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

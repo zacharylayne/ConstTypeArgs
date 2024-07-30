@@ -187,24 +187,44 @@ dotnet add package ConstTypeArgs.Core
 
 [**ConstTypeArgs.Bools**](/Source/ConstTypeArgs.Bools)
 
-**Installation:**
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Bools
 ```
 
+</details>
+
 [**ConstTypeArgs.Bytes**](/Source/ConstTypeArgs.Bytes)
 
-**Installation:**
+
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Bytes
 ```
 
+</details>
+
 [**ConstTypeArgs.Chars**](/Source/ConstTypeArgs.Chars)
 
-**Installation:**
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Chars
 ```
+
+</details>
 
 [**ConstTypeArgs.Decimals**](/Source/ConstTypeArgs.Decimals)
 

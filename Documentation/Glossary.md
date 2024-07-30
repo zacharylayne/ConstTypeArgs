@@ -13,6 +13,6 @@
 
 **Argument Types:** Types that inherit from a base interface, `IConstTypeArg<TValue>`, which has a static abstract property `Value`. Argument types are sometimes referred to as *arg types*. Concrete argument types are known as *argument providers*. 
 
-**Argument Holders:** Argument providers that wrap other argument providers. Argument holders can be used to create domain-specific const type arguments for minimums, maximums, defaults, and more. Also called *arg holders*.
+**Argument Holders:** Argument providers that wrap other argument providers. Argument holders can be used to create domain-specific const type arguments for minimums, maximums, defaults, and more. Also called *arg holders* and sometimes referred to as *domain-specific type arguments*.
 
 **Discard Argument:** A type that is used to signify the absence of a const type argument. These types implement a large number of const type interfaces to increase their versatility, and can be used to provide union-like functionality. Also called *discard arg* or *discard*.

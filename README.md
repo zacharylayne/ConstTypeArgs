@@ -183,49 +183,155 @@ The [`__`](/Source/ConstTypeArgs.Core/Core/__.cs) interface is a marker interfac
 dotnet add package ConstTypeArgs.Core
 ```
 
-## Additional
+## Data Types
 
 [**ConstTypeArgs.Bools**](/Source/ConstTypeArgs.Bools)
 
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Bools
+```
+
 [**ConstTypeArgs.Bytes**](/Source/ConstTypeArgs.Bytes)
+
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Bytes
+```
 
 [**ConstTypeArgs.Chars**](/Source/ConstTypeArgs.Chars)
 
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Chars
+```
+
 [**ConstTypeArgs.Decimals**](/Source/ConstTypeArgs.Decimals)
 
-[**ConstTypeArgs.Delegates**](/Source/ConstTypeArgs.Delegates)
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Decimals
+```
 
 [**ConstTypeArgs.Doubles**](/Source/ConstTypeArgs.Doubles)
 
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Doubles
+```
+
 [**ConstTypeArgs.Floats**](/Source/ConstTypeArgs.Floats)
+
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Floats
+```
 
 [**ConstTypeArgs.Halfs**](/Source/ConstTypeArgs.Halfs)
 
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Halfs
+```
+
 [**ConstTypeArgs.Int128s**](/Source/ConstTypeArgs.Int128s)
+
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Int128s
+```
 
 [**ConstTypeArgs.Ints**](/Source/ConstTypeArgs.Ints)
 
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Ints
+```
+
 [**ConstTypeArgs.Longs**](/Source/ConstTypeArgs.Longs)
+
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Longs
+```
 
 [**ConstTypeArgs.Nints**](/Source/ConstTypeArgs.Nints)
 
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Core
+```
+
 [**ConstTypeArgs.Nuints**](/Source/ConstTypeArgs.Nuints)
+
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Nuints
+```
 
 [**ConstTypeArgs.Sbytes**](/Source/ConstTypeArgs.Sbytes)
 
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Sbytes
+```
+
 [**ConstTypeArgs.Shorts**](/Source/ConstTypeArgs.Shorts)
+
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Shorts
+```
 
 [**ConstTypeArgs.Strings**](/Source/ConstTypeArgs.Strings)
 
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Strings
+```
+
 [**ConstTypeArgs.Types**](/Source/ConstTypeArgs.Types)
+
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Types
+```
 
 [**ConstTypeArgs.UInt128s**](/Source/ConstTypeArgs.UInt128s)
 
+**Installation:**
+```
+dotnet add package ConstTypeArgs.UInt128s
+```
+
 [**ConstTypeArgs.Uints**](/Source/ConstTypeArgs.Uints)
+
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Core
+```
 
 [**ConstTypeArgs.Ulongs**](/Source/ConstTypeArgs.Ulongs)
 
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Ulongs
+```
+
 [**ConstTypeArgs.Ushorts**](/Source/ConstTypeArgs.Ushorts)
+
+**Installation:**
+```
+dotnet add package ConstTypeArgs.Ushorts
+```
+
+## Additional
+
+[**ConstTypeArgs.Console**](/Source/ConstTypeArgs.Console)
+
+[**ConstTypeArgs.Delegates**](/Source/ConstTypeArgs.Delegates)
+
+[**ConstTypeArgs.Delegates.Interlocked**](/Source/ConstTypeArgs.Delegates.Interlocked)
 
 # Documentation
 

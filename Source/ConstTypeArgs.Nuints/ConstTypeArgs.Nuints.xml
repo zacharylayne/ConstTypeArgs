@@ -398,20 +398,5 @@
             <c>65536</c> (<c>2^16</c>).
             </summary>
         </member>
-        <member name="T:ConstTypeArgs.Nuints.__">
-            <summary>
-            The <see cref="T:ConstTypeArgs.Nuints.__"/> interface provides a const type argument that can be used as a value-less
-            "discard" in type parameter lists to provide union-like behavior. Its value should not be used.
-            </summary>
-            <remarks>
-            Types can implement this interface and other "discard" interfaces to satisfy constraints that can
-            be used as value-less discard types in type parameter lists.
-            </remarks>
-        </member>
-        <member name="P:ConstTypeArgs.Nuints.__.Value">
-            <summary>
-            A value equal to <see langword="default"/> that should that is not meant to be used.
-            </summary>
-        </member>
     </members>
 </doc>

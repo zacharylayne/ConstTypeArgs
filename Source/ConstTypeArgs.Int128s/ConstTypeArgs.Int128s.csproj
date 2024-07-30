@@ -22,8 +22,47 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Int128s.xml</DocumentationFile>
-    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass `Int128` values to generics at compile-time. This provides an analog to type specialization in C++.</Description>
+    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass Int128 values to generics at compile-time. This provides an analog to type specialization in C++, and can be used for scenarios such as:
+
+* Static configuration,
+* Eliminating unnecessary instance constructors,
+* "Passing" values to type initializers,
+* And more.
+
+Built-in const type arguments include values for 0 to 15, -1 to -15, and others.
+
+Here's a simple demonstration showing how to define and use const type arguments and domain-specific type arguments:
+
+using ConstTypeArgs.Int128s;
+
+// Const type arguments:
+public readonly struct _8 : K_Int128&lt;_8&gt;
+{ public static Int128 Value =&gt; 8; }
+
+public readonly struct _64_000 : K_Int128&lt;_64_000&gt;
+{ public static Int128 Value =&gt; 64000; }
+
+public abstract class DefaultSize : Int128&lt;_64_000&gt; { }
+
+// Usage:
+public class Foo&lt;TSize&gt;
+    where TSize : K_Int128
+{
+ public static readonly Int128 BigArraySize = TSize.Value;
+
+// Code to initialize very large arrays.
+
+    static Foo()
+    {
+        Console.WriteLine($"Big array size is {BigArraySize.Length}");
+    }
+}
+
+// Elsewhere
+var foo = new Foo&lt;_8&gt;();  // Outputs "Big array size is 8"
+foo = new Foo&lt;DefaultSize&gt;(); // Outputs "Big array size is 32"</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

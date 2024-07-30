@@ -22,8 +22,39 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Floats.xml</DocumentationFile>
-    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass float values to generics at compile-time. This provides an analog to type specialization in C++.</Description>
+    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass float values to generics at compile-time. This provides an analog to type specialization in C++, and can be used for scenarios such as:
+
+* Static configuration,
+* Eliminating unnecessary instance constructors,
+* "Passing" values to type initializers,
+* And more.
+
+Built-in const type arguments include Default, MinValue, MaxValue, E, Epsilon, Pi, Phi, Tau, NaN, PositiveInfinity, NegativeInfinity, and _0.
+
+Here's a simple demonstration showing how to define and use const type arguments and domain-specific type arguments:
+
+using ConstTypeArgs.Floats;
+
+// Const type arguments:
+public readonly struct _1_2345 : K_Float&lt;_1_2345&gt;
+{ public static float Value = 1.2345; }
+public readonly struct _6_789 : K_Float&lt;_6_789&gt;
+{ public static float Value = 6.789; }
+
+public abstract class DefaultValue : Float&lt;_1_2345&gt; { }
+
+// Usage:
+public static class Foo&lt;TFloat&gt;
+    where TFloat : K_Float
+{
+    private static readonly float Value = TFloat.Value;
+}
+
+// Elsewhere:
+Console.WriteLine($"Foo's value if default: {Foo&lt;DefaultValue&gt;.");
+Console.WriteLine($"Foo's non-default value: {Foo&lt;_6_789&gt;.Value}.");</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

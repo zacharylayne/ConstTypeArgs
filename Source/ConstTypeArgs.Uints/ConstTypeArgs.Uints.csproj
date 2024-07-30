@@ -22,37 +22,45 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Uints.xml</DocumentationFile>
-    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass uint values to generics at compile-time. This provides an analog to type specialization in C++.
+    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass uint values to generics at compile-time. This provides an analog to type specialization in C++, and can be used for scenarios such as:
 
-Here's a simple demonstration:
+* Static configuration,
+* Eliminating unnecessary instance constructors,
+* "Passing" values to type initializers,
+* And more.
 
- ```csharp
+Built-in const type arguments cover  0 to 15, powers of 2 up to 65536, and more.
+
+Here's a simple demonstration showing how to define and use const type arguments and domain-specific type arguments:
+
 using ConstTypeArgs.Uints;
 
-public class Foo&lt;TVal&gt;
-  where TVal : K_Uint
+// Const type arguments:
+public readonly struct _8 : K_Uint&lt;_8&gt;
+{ public static uint Value =&gt; 8; }
+
+public readonly struct _32 : K_Uint&lt;_32&gt;
+{ public static uint Value =&gt; 32; }
+
+public abstract class DefaultSize : Uint&lt;_32&gt; { }
+
+// Usage:
+public class Foo&lt;TSize&gt;
+    where TSize : K_Uint
 {
-  static Foo()
-  {        
-    if (TVal.Value &gt; 0)
-      Console.WriteLine("Value is positive! ");
-    if (TVal.Value &gt; (uint)int.MaxValue)
-      Console.Write($"{TVal.Value} &gt; integer max value!");
-  }
+ public static readonly int[] FooArray = new int[TSize.Value];
+
+    static Foo()
+    {
+        Console.WriteLine($"Array size is {FooArray.Length}");
+    }
 }
 
-// Elsewhere, assuming that _2147483648 is equal to 2,147,483,648
-var foo = new Foo&lt;_2147483648&gt;();
-// Output: "Value is positive! 2147483648 &gt; integer max value!");
-```
-
-Here's how you could define a uint const type argument:
-
-```csharp
-public readonly struct Pos_2 : K_Uint&lt;Pos_2&gt;
-{ public static uint Value =&gt; 2; }
-```</Description>
+// Elsewhere
+var foo = new Foo&lt;_8&gt;();  // Outputs "Array size is 8"
+foo = new Foo&lt;DefaultSize&gt;(); // Outputs "Array size is 32"</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

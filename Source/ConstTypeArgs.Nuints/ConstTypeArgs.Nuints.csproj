@@ -23,6 +23,41 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Nuints.xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass nuint (UIntPtr) values to generics at compile-time. This provides an analog to type specialization in C++, and can be used for scenarios such as:
+
+* Static configuration,
+* Eliminating unnecessary instance constructors,
+* "Passing" values to type initializers,
+* And more.
+
+Here's a simple demonstration:
+
+using ConstTypeArgs.Nuints;
+
+public class Foo&lt;TSize&gt;
+    where TSize : K_Nuint
+{
+  public static readonly int[] FooArray = new int[TSize.Value];
+
+  static Foo()
+  {
+    Console.WriteLine($"Integer array size is {FooArray.Length}");
+  }
+}
+
+// Elsewhere
+var foo = new Foo&lt;_3&gt;();  // Outputs "Integer array size is 3"
+foo = new Foo&lt;_16&gt;(); // Outputs "Integer array size is 16"
+
+The following shows how a new nuint const type argument could be defined.
+
+public readonly struct _32 : K_Nuint&lt;_32&gt;
+{ public static nuint Value =&gt; 32; }
+
+You can also create new domain-specific nuint const type arguments like so:
+
+public sealed class DefaultInitialCollectionSize : K_Nuint&lt;_32&gt;;</Description>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -26,8 +26,7 @@
 
 Here's a simple demonstration:
 
- ```csharp
- using ConstTypeArgs.Strings;
+using ConstTypeArgs.Strings;
 
 public class Foo&lt;THello, TWorld&gt;
     where THello : K_String
@@ -42,15 +41,13 @@ public class Foo&lt;THello, TWorld&gt;
 // Elsewhere, assuming the value of _hola is "hola"
 // and _world is "world"
 var foo = new Foo&lt;_hola, _world&gt;();  // Outputs "hola world!"
-```
 
 Here's how you could create a new string const type argument:
 
-```csharp
 public readonly struct _hola : K_String&lt;_hola&gt;
-{ public static string Value =&gt; "hola"; }
-```</Description>
+{ public static string Value =&gt; "hola"; }</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

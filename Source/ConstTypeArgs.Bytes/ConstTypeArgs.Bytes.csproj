@@ -27,12 +27,24 @@
 * Static configuration,
 * Eliminating unnecessary instance constructors,
 * "Passing" values to type initializers,
+* And more.
 
-Here's a simple example:
+Built-in const type arguments include values for 0 - 10, powers of 2, min &amp; max values, and others.
 
- ```csharp
- using ConstTypeArgs.Bytes;
+Here's a simple demonstration showing how to define and use const type arguments and domain-specific type arguments:
 
+using ConstTypeArgs.Bytes;
+
+// Const type arguments:
+public readonly struct _8 : K_Byte&lt;_8&gt;
+{ public static byte Value =&gt; 8; }
+
+public readonly struct _32 : K_Byte&lt;_32&gt;
+{ public static byte Value =&gt; 32; }
+
+public abstract class InitialValue : Byte&lt;_32&gt; { }
+
+// Usage:
 public class Foo&lt;TSize&gt;
     where TSize : K_Byte
 {
@@ -45,10 +57,11 @@ public class Foo&lt;TSize&gt;
 }
 
 // Elsewhere
-var foo = new Foo&lt;_3&gt;();  // Outputs "Array size is 3"
-foo     = new Foo&lt;_16&gt;(); // Outputs "Array size is 16"
-```</Description>
+var foo = new Foo&lt;_8&gt;();  // Outputs "Array size is 8"
+foo = new Foo&lt;InitialValue&gt;(); // Outputs "Array size is 32"
+</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

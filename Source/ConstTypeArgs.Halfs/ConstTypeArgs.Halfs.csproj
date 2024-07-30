@@ -22,8 +22,39 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Halfs.xml</DocumentationFile>
-    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass Half values to generics at compile-time. This provides an analog to type specialization in C++.</Description>
+    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass System.Half values to generics at compile-time. This provides an analog to type specialization in C++, and can be used for scenarios such as:
+
+* Static configuration,
+* Eliminating unnecessary instance constructors,
+* "Passing" values to type initializers,
+* And more.
+
+Built-in const type arguments include Default, MinValue, MaxValue, E, Epsilon, Pi, Phi, Tau, NaN, PositiveInfinity, NegativeInfinity, and _0.
+
+Here's a simple demonstration showing how to define and use const type arguments and domain-specific type arguments:
+
+using ConstTypeArgs.Halfs;
+
+// Const type arguments:
+public readonly struct _1_2345 : K_Half&lt;_1_2345&gt;
+{ public static Half Value = 1.2345; }
+public readonly struct _6_789 : K_Half&lt;_6_789&gt;
+{ public static Half Value = 6.789; }
+
+public abstract class DefaultValue : Half&lt;_1_2345&gt; { }
+
+// Usage:
+public static class Foo&lt;THalf&gt;
+    where THalf : K_Half
+{
+    private static readonly Half Value = THalf.Value;
+}
+
+// Elsewhere:
+Console.WriteLine($"Foo's value if default: {Foo&lt;DefaultValue&gt;.");
+Console.WriteLine($"Foo's non-default value: {Foo&lt;_6_789&gt;.Value}.");</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

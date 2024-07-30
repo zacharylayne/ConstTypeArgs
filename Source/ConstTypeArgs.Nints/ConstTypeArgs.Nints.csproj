@@ -22,12 +22,16 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Nints.xml</DocumentationFile>
-    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass nint (IntPtr) values to generics at compile-time. This provides an analog to type specialization in C++.
+    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass nint (IntPtr) values to generics at compile-time. This provides an analog to type specialization in C++, and can be used for scenarios such as:
+
+* Static configuration,
+* Eliminating unnecessary instance constructors,
+* "Passing" values to type initializers,
+* And more.
 
 Here's a simple demonstration:
 
- ```csharp
- using ConstTypeArgs.Nints;
+using ConstTypeArgs.Nints;
 
 public class Foo&lt;TSize&gt;
     where TSize : K_Nint
@@ -43,21 +47,17 @@ public class Foo&lt;TSize&gt;
 // Elsewhere
 var foo = new Foo&lt;_3&gt;();  // Outputs "Integer array size is 3"
 foo     = new Foo&lt;_16&gt;(); // Outputs "Integer array size is 16"
-```
 
-The following shows how a new `nint` const type argument could be defined.
+The following shows how a new nint const type argument could be defined.
 
-```csharp
 public readonly struct _32 : K_Nint&lt;_32&gt;
 { public static nint Value =&gt; 32; }
-```
 
-You can also create new domain-specific `nint` const type arguments like so:
+You can also create new domain-specific nint const type arguments like so:
 
-```csharp
-public sealed class DefaultInitialCollectionSize : K_Nint&lt;_32&gt;;
-```</Description>
+public sealed class DefaultInitialCollectionSize : K_Nint&lt;_32&gt;;</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

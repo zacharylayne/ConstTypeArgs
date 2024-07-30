@@ -7,7 +7,13 @@
     <Company>Entry Point Software</Company>
     <Authors>Zachary Layne</Authors>
     <Title>Const Type Arguments - Delegates</Title>
-    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass delegates to generics at compile-time. This provides an analog to type specialization in C++.</Description>
+    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass delegates to generics at compile-time. This provides an analog to type specialization in C++, and can be used for scenarios such as:
+
+* Static configuration,
+* Compile-time polymorphism,
+* Eliminating unnecessary instance constructors,
+* "Passing" values to type initializers,
+* And more.</Description>
     <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
     <PackageReadmeFile>README.MD</PackageReadmeFile>
     <PackageIcon>Delegate.png</PackageIcon>
@@ -22,6 +28,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Delegates.xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

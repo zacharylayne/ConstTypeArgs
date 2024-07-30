@@ -16,7 +16,7 @@
 Const type arguments are provided for true, false, &amp; default values of bool, as well as types for defining bool array const type arguments and domain-specific const type arguments.
 
 Here's a Hello World example:
-```
+
 using ConstTypeArgs.Bools;
 
 public class Foo&lt;TToConsole&gt;
@@ -31,13 +31,12 @@ public class Foo&lt;TToConsole&gt;
 
 // Elsewhere
 var foo = new Foo&lt;True&gt;();  // Console outputs: Hello, world!
-foo       = new Foo&lt;False&gt;(); // No output.
-```</Description>
+foo       = new Foo&lt;False&gt;(); // No output.</Description>
     <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
     <PackageReadmeFile>README.MD</PackageReadmeFile>
     <PackageIcon>Bool.png</PackageIcon>
     <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; bools</PackageTags>
-    <PackageReleaseNotes>Added __ "discard" const arg type that inherits from K_Bool &amp; ConstTypeArgs.Core.__. Use this in conjunction with other "discard" types to provide amalgamations that satisfy constraints in type parameter lists providing union-like behavior. Its value should be ignored.</PackageReleaseNotes>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -48,6 +47,7 @@ foo       = new Foo&lt;False&gt;(); // No output.
     <IncludeSource>true</IncludeSource>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <FileVersion>1.0.0.0</FileVersion>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

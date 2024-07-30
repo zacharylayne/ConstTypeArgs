@@ -2340,7 +2340,7 @@
         </member>
         <member name="M:ConstTypeArgs.Delegates.Logical.AND`2.Eval``1">
             <summary>
-            Performs a bitwise AND operation evaluating <typeparamref name="KPred"/> with
+            Performs a logical AND operation evaluating <typeparamref name="KPred"/> with
             the value of the given const type argument <typeparamref name="K"/>.
             </summary>
             <typeparam name="K">
@@ -2394,7 +2394,7 @@
         </member>
         <member name="M:ConstTypeArgs.Delegates.Logical.AND`3.Eval``1">
             <summary>
-            Performs a bitwise AND operation evaluating
+            Performs a logical AND operation evaluating
             <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
             with the value of the given const type argument <typeparamref name="K"/>.
             </summary>
@@ -2450,7 +2450,7 @@
         </member>
         <member name="M:ConstTypeArgs.Delegates.Logical.NAND`2.Eval``1">
             <summary>
-            Performs a bitwise AND operation evaluating <typeparamref name="KPred"/> with
+            Performs a logical AND operation evaluating <typeparamref name="KPred"/> with
             the value of the given const type argument <typeparamref name="K"/>.
             </summary>
             <typeparam name="K">
@@ -2503,7 +2503,7 @@
         </member>
         <member name="M:ConstTypeArgs.Delegates.Logical.NAND`3.Eval``1">
             <summary>
-            Performs a bitwise NAND operation evaluating
+            Performs a logical NAND operation evaluating
             <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
             with the value of the given const type argument <typeparamref name="K"/>.
             </summary>
@@ -2557,7 +2557,7 @@
         </member>
         <member name="M:ConstTypeArgs.Delegates.Logical.OR`3.Eval``1">
             <summary>
-            Performs a bitwise OR operation evaluating
+            Performs a logical OR operation evaluating
             <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
             with the value of the given const type argument <typeparamref name="K"/>.
             </summary>
@@ -2618,7 +2618,7 @@
         </member>
         <member name="M:ConstTypeArgs.Delegates.Logical.XOR`3.Eval``1">
             <summary>
-            Performs a bitwise XOR operation evaluating
+            Performs a logical XOR operation evaluating
             <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
             with the value of the given const type argument <typeparamref name="K"/>.
             </summary>
@@ -2679,7 +2679,7 @@
         </member>
         <member name="M:ConstTypeArgs.Delegates.Logical.NOR`3.Eval``1">
             <summary>
-            Performs a bitwise NOR operation evaluating
+            Performs a logical NOR operation evaluating
             <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
             with the value of the given const type argument <typeparamref name="K"/>.
             </summary>
@@ -2740,7 +2740,7 @@
         </member>
         <member name="M:ConstTypeArgs.Delegates.Logical.XNOR`3.Eval``1">
             <summary>
-            Performs a bitwise XNOR operation evaluating
+            Performs a logical XNOR operation evaluating
             <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
             with the value of the given const type argument <typeparamref name="K"/>.
             </summary>
@@ -2802,7 +2802,7 @@
         </member>
         <member name="M:ConstTypeArgs.Delegates.Logical.IMPLY`3.Eval``1">
             <summary>
-            Performs a bitwise IMPLY operation evaluating
+            Performs a logical IMPLY operation evaluating
             <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
             with the value of the given const type argument <typeparamref name="K"/>.
             </summary>
@@ -2863,7 +2863,7 @@
         </member>
         <member name="M:ConstTypeArgs.Delegates.Logical.NIMPLY`3.Eval``1">
             <summary>
-            Performs a bitwise NIMPLY operation evaluating
+            Performs a logical NIMPLY operation evaluating
             <typeparamref name="KPred1"/> &amp; <typeparamref name="KPred2"/>
             with the value of the given const type argument <typeparamref name="K"/>.
             </summary>

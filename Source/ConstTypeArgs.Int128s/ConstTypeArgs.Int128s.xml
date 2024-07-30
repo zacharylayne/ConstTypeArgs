@@ -259,6 +259,12 @@
             <c>-15</c>.
             </summary>
         </member>
+        <member name="T:ConstTypeArgs.Int128s.Neg_16">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Int128s.Neg_16"/> readonly struct provides a const type argument equal to
+            <c>-16</c>.
+            </summary>
+        </member>
         <member name="T:ConstTypeArgs.Int128s._1">
             <summary>
             The <see cref="T:ConstTypeArgs.Int128s._1"/> readonly struct provides a const type argument equal to
@@ -347,6 +353,12 @@
             <summary>
             The <see cref="T:ConstTypeArgs.Int128s._15"/> readonly struct provides a const type argument equal to
             <c>15</c>.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Int128s._16">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Int128s._16"/> readonly struct provides a const type argument equal to
+            <c>16</c>.
             </summary>
         </member>
     </members>

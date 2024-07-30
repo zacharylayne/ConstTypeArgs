@@ -106,3 +106,10 @@ public readonly struct _14 : K_Int128<_14>
 /// </summary>
 public readonly struct _15 : K_Int128<_15>
 { public static Int128 Value => 15; }
+
+/// <summary>
+/// The <see cref="_16"/> readonly struct provides a const type argument equal to
+/// <c>16</c>.
+/// </summary>
+public readonly struct _16 : K_Int128<_16>
+{ public static Int128 Value => 16; }

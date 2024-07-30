@@ -26,8 +26,7 @@
 
 Here's a simple demonstration:
 
- ```csharp
- using ConstTypeArgs.Types;
+using ConstTypeArgs.Types;
 
 public class Foo&lt;TType&gt;
 {    
@@ -63,15 +62,14 @@ var foo = new Foo&lt;StringType&gt;();  // Outputs: StringType values usually re
 
 // Assuming that the value of IntType is typeof(int)
 foo     = new Foo&lt;IntType&gt;();     // Outputs: TType values usually represent numbers!
-```
+
 
 Here's how you could create a new Type const type argument:
 
-```csharp
 public readonly struct StringType : K_Type&lt;StringType&gt;
-{ public static Type Value =&gt; typeof(string); }
-```</Description>
+{ public static Type Value =&gt; typeof(string); }</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -22,42 +22,45 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Ulongs.xml</DocumentationFile>
-    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass ulong values to generics at compile-time. This provides an analog to type specialization in C++.
+    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass ulong values to generics at compile-time. This provides an analog to type specialization in C++, and can be used for scenarios such as:
 
-Here's a simple demonstration:
+* Static configuration,
+* Eliminating unnecessary instance constructors,
+* "Passing" values to type initializers,
+* And more.
 
- ```csharp
- using ConstTypeArgs.Ulongs;
+Built-in const type arguments cover  0 to 15, powers of 2 up to 65536, and more.
 
+Here's a simple demonstration showing how to define and use const type arguments and domain-specific type arguments:
+
+using ConstTypeArgs.Ulongs;
+
+// Const type arguments:
+public readonly struct _8 : K_Ulong&lt;_8&gt;
+{ public static ulong Value =&gt; 8; }
+
+public readonly struct _32 : K_Ulong&lt;_32&gt;
+{ public static ulong Value =&gt; 32; }
+
+public abstract class DefaultSize : Ulong&lt;_32&gt; { }
+
+// Usage:
 public class Foo&lt;TSize&gt;
     where TSize : K_Ulong
 {
-  public static readonly int[] FooArray = new int[TSize.Value];
+ public static readonly int[] FooArray = new int[TSize.Value];
 
-  static Foo()
-  {
-    Console.WriteLine($"Integer array size is {FooArray.Length}");
-  }
+    static Foo()
+    {
+        Console.WriteLine($"Array size is {FooArray.Length}");
+    }
 }
 
 // Elsewhere
-var foo = new Foo&lt;_3&gt;();  // Outputs "Integer array size is 3"
-foo     = new Foo&lt;_16&gt;(); // Outputs "Integer array size is 16"
-```
-
-The following shows how a new `ulong` const type argument could be defined.
-
-```csharp
-public readonly struct _32 : K_Ulong&lt;_32&gt;
-{ public static long Value =&gt; 32; }
-```
-
-You can also create new domain-specific `ulong` const type arguments like so:
-
-```csharp
-public sealed class DefaultInitialCollectionSize : Ulong&lt;_32&gt;;
-```</Description>
+var foo = new Foo&lt;_8&gt;();  // Outputs "Array size is 8"
+foo = new Foo&lt;DefaultSize&gt;(); // Outputs "Array size is 32"</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

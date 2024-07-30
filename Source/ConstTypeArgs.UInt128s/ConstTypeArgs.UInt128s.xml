@@ -261,5 +261,11 @@
             <c>15</c>.
             </summary>
         </member>
+        <member name="T:ConstTypeArgs.UInt128s._16">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UInt128s._16"/> readonly struct provides a const type argument equal to
+            <c>16</c>.
+            </summary>
+        </member>
     </members>
 </doc>

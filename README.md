@@ -228,122 +228,236 @@ dotnet add package ConstTypeArgs.Chars
 
 [**ConstTypeArgs.Decimals**](/Source/ConstTypeArgs.Decimals)
 
-**Installation:**
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Decimals
 ```
 
+</details>
+
 [**ConstTypeArgs.Doubles**](/Source/ConstTypeArgs.Doubles)
 
-**Installation:**
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Doubles
 ```
 
+</details>
+
 [**ConstTypeArgs.Floats**](/Source/ConstTypeArgs.Floats)
 
-**Installation:**
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Floats
 ```
 
+</details>
+
 [**ConstTypeArgs.Halfs**](/Source/ConstTypeArgs.Halfs)
 
-**Installation:**
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Halfs
 ```
 
+</details>
+
 [**ConstTypeArgs.Int128s**](/Source/ConstTypeArgs.Int128s)
 
-**Installation:**
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Int128s
 ```
 
+</details>
+
 [**ConstTypeArgs.Ints**](/Source/ConstTypeArgs.Ints)
 
-**Installation:**
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Ints
 ```
 
+</details>
+
 [**ConstTypeArgs.Longs**](/Source/ConstTypeArgs.Longs)
 
-**Installation:**
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Longs
 ```
 
+</details>
+
 [**ConstTypeArgs.Nints**](/Source/ConstTypeArgs.Nints)
 
-**Installation:**
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
-dotnet add package ConstTypeArgs.Core
+dotnet add package ConstTypeArgs.Nints
 ```
+
+</details>
 
 [**ConstTypeArgs.Nuints**](/Source/ConstTypeArgs.Nuints)
 
-**Installation:**
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Nuints
 ```
 
+</details>
+
 [**ConstTypeArgs.Sbytes**](/Source/ConstTypeArgs.Sbytes)
 
-**Installation:**
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Sbytes
 ```
 
+</details>
+
 [**ConstTypeArgs.Shorts**](/Source/ConstTypeArgs.Shorts)
 
-**Installation:**
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Shorts
 ```
 
+</details>
+
 [**ConstTypeArgs.Strings**](/Source/ConstTypeArgs.Strings)
 
-**Installation:**
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Strings
 ```
 
+</details>
+
 [**ConstTypeArgs.Types**](/Source/ConstTypeArgs.Types)
 
-**Installation:**
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Types
 ```
 
+</details>
+
 [**ConstTypeArgs.UInt128s**](/Source/ConstTypeArgs.UInt128s)
 
-**Installation:**
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.UInt128s
 ```
 
+</details>
+
 [**ConstTypeArgs.Uints**](/Source/ConstTypeArgs.Uints)
 
-**Installation:**
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
-dotnet add package ConstTypeArgs.Core
+dotnet add package ConstTypeArgs.Uints
 ```
+
+</details>
 
 [**ConstTypeArgs.Ulongs**](/Source/ConstTypeArgs.Ulongs)
 
-**Installation:**
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Ulongs
 ```
 
+</details>
+
 [**ConstTypeArgs.Ushorts**](/Source/ConstTypeArgs.Ushorts)
 
-**Installation:**
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+</br>
+
 ```
 dotnet add package ConstTypeArgs.Ushorts
 ```
+
+</details>
 
 ## Additional
 

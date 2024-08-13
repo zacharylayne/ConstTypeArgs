@@ -15,8 +15,7 @@ namespace ConstTypeArgs.Core;
 /// type testing &amp; type parameter constraints.
 /// </remarks>
 [EditorBrowsable(Advanced)]
-public interface K_Struct
-    : IConstTypeArg;
+public interface K_Struct : IConstTypeArg;
 
 /// <summary>
 /// The <see cref="K_Struct{T}"/> interface provides a base type
@@ -37,6 +36,5 @@ public interface K_Struct
 /// <seealso cref="K_Number{T}"/>
 /// <seealso cref="K_SignedNumber{T}"/>
 /// <seealso cref="K_UnsignedNumber{T}"/>
-public interface K_Struct<out T>
-    : IConstTypeArg<T>, K_Struct
+public interface K_Struct<out T> : IConstTypeArg<T>, K_Struct
     where T : struct;

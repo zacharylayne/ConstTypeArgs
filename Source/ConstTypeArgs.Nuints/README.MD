@@ -4,7 +4,7 @@
 
 &nbsp;
 
- You can use types in the `ConstTypeArgs.Bools` namespace for passing boolean values as const type arguments.
+ You can use types in the `ConstTypeArgs.Nuints` namespace for passing `nuint` values as const type arguments.
 
  Usage scenarios include:
 
@@ -12,25 +12,42 @@
  * Eliminating unnecessary instance constructors,
  * "Passing" values to type initializers,
  * and more.
-
  &nbsp;
 
  The following is a simple Hello World example to demonstrate how this works:
 
  ```csharp
- using ConstTypeArgs.Bools;
+ using ConstTypeArgs.Nuints;
 
-public class Foo<TToConsole>
-    where TToConsole: K_Bool
+public class Foo<TSize>
+    where TSize : K_Nuint
 {
-    static Foo()
-    {        
-        if (TToConsole.Value)
-            Console.WriteLine("Hello, world!");
-    }
+  public static readonly int[] FooArray = new int[TSize.Value];
+
+  static Foo()
+  {
+    Console.WriteLine($"Integer array size is {FooArray.Length}");
+  }
 }
 
 // Elsewhere
-var foo = new Foo<True>();  // Console outputs: Hello, world!
-foo     = new Foo<False>(); // No output.
+var foo = new Foo<_3>();  // Outputs "Integer array size is 3"
+foo     = new Foo<_16>(); // Outputs "Integer array size is 16"
+```
+
+&nbsp;
+
+The following shows how a new `nuint` const type argument could be defined.
+
+```csharp
+public readonly struct _32 : K_Nuint<_32>
+{ public static nuint Value => 32; }
+```
+
+&nbsp;
+
+You can also create new domain-specific `nuint` const type arguments like so:
+
+```csharp
+public sealed class DefaultInitialCollectionSize : Nuint<_32>;
 ```

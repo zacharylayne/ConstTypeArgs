@@ -32,6 +32,5 @@ public interface K_Enum
 /// <seealso cref="K_Struct{T}"/>
 /// <seealso cref="K_Unmanaged{T}"/>
 /// <seealso cref="K_Array{T}"/>
-public interface K_Enum<out T>
-    : IConstTypeArg<T>, K_Enum
+public interface K_Enum<out T> : IConstTypeArg<T>, K_Enum
     where T : struct, Enum;

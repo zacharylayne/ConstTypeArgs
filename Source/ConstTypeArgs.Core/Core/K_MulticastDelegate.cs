@@ -15,8 +15,7 @@ namespace ConstTypeArgs.Core;
 /// type testing &amp; type parameter constraints.
 /// </remarks>
 [EditorBrowsable(Advanced)]
-public interface K_MulticastDelegate
-    : IConstTypeArg;
+public interface K_MulticastDelegate : IConstTypeArg;
 
 /// <summary>
 /// The <see cref="K_MulticastDelegate{T}"/> interface provides a base type
@@ -38,6 +37,5 @@ public interface K_MulticastDelegate
 /// <seealso cref="K_Unmanaged{T}"/>
 /// <seealso cref="K_Number{T}"/>
 /// <seealso cref="K_Array{T}"/>
-public interface K_MulticastDelegate<out T>
-    : IConstTypeArg<T>, K_MulticastDelegate
+public interface K_MulticastDelegate<out T> : IConstTypeArg<T>, K_MulticastDelegate
     where T : MulticastDelegate;

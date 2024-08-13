@@ -15,8 +15,7 @@ namespace ConstTypeArgs.Core;
 /// type testing &amp; type parameter constraints.
 /// </remarks>
 [EditorBrowsable(Advanced)]
-public interface K_FloatingPoint
-    : IConstTypeArg;
+public interface K_FloatingPoint : IConstTypeArg;
 
 /// <summary>
 /// The <see cref="K_FloatingPoint{T}"/> interface provides a base type
@@ -39,6 +38,5 @@ public interface K_FloatingPoint
 /// <seealso cref="K_Enum{T}"/>
 /// <seealso cref="K_Struct{T}"/>
 /// <seealso cref="K_Unmanaged{T}"/>
-public interface K_FloatingPoint<out T>
-    : K_Number<T>, K_FloatingPoint
+public interface K_FloatingPoint<out T> : K_Number<T>, K_FloatingPoint
     where T : IFloatingPoint<T>;

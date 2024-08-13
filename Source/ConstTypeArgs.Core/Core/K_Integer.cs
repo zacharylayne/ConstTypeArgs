@@ -17,8 +17,7 @@ namespace ConstTypeArgs.Core;
 /// type testing &amp; type parameter constraints.
 /// </remarks>
 [EditorBrowsable(Advanced)]
-public interface K_Integer
-    : IConstTypeArg;
+public interface K_Integer : IConstTypeArg;
 
 /// <summary>
 /// The <see cref="K_Integer{T}"/> interface provides a base type
@@ -41,6 +40,5 @@ public interface K_Integer
 /// <seealso cref="K_Enum{T}"/>
 /// <seealso cref="K_Struct{T}"/>
 /// <seealso cref="K_Unmanaged{T}"/>
-public interface K_Integer<out T>
-    : K_Number<T>, K_Integer
+public interface K_Integer<out T> : K_Number<T>, K_Integer
     where T : IBinaryNumber<T>, IBinaryInteger<T>;

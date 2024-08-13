@@ -54,9 +54,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Types", "Sour
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C}"
 	ProjectSection(SolutionItems) = preProject
+		Documentation\Benefits.md = Documentation\Benefits.md
 		Documentation\Glossary.md = Documentation\Glossary.md
+		Documentation\Naming Conventions.md = Documentation\Naming Conventions.md
 		Documentation\Overview.md = Documentation\Overview.md
 		README.md = README.md
+		Documentation\Use Cases.md = Documentation\Use Cases.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Site", "Site", "{ABCABE07-0140-432A-A7EC-BEF0CA0AE884}"
@@ -69,15 +72,42 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Developer Guide", "Developer Guide", "{EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}"
 	ProjectSection(SolutionItems) = preProject
 		Documentation\dev-guide\Argument Providers.md = Documentation\dev-guide\Argument Providers.md
-		Documentation\dev-guide\K.md = Documentation\dev-guide\K.md
-		Documentation\dev-guide\__.md = Documentation\dev-guide\__.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Console", "Source\ConstTypeArgs.Console\ConstTypeArgs.Console.csproj", "{9A5B0C1A-EB5E-47A7-8679-B84DFBFEAEFA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstTypeArgs.MathOps", "Source\ConstTypeArgs.MathOps\ConstTypeArgs.MathOps.csproj", "{61D764E2-5E33-4BB7-AEAB-8D18BCB031EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstTypeArgs.Delegates.Interlocked", "Source\ConstTypeArgs.Delegates.Interlocked\ConstTypeArgs.Delegates.Interlocked.csproj", "{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Delegates.Interlocked", "Source\ConstTypeArgs.Delegates.Interlocked\ConstTypeArgs.Delegates.Interlocked.csproj", "{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstTypeArgs.Memory", "Source\ConstTypeArgs.Memory\ConstTypeArgs.Memory.csproj", "{24E52E99-66F5-4EEC-8409-D8D338D73C16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tutorials", "Tutorials", "{69647E90-556D-4A53-9F24-7915827C0F7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discards", "Discards", "{BD3C6183-9A29-4AC4-874C-BA71255DE708}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\dev-guide\__.md = Documentation\dev-guide\__.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K", "K", "{C1DDDAB2-200A-417D-B93A-A09272A11902}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\dev-guide\K.md = Documentation\dev-guide\K.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enum-Like Types", "Enum-Like Types", "{D69C1C78-CD10-4300-8BA1-049D633F1D8B}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\dev-guide\Enum-Like Types.md = Documentation\dev-guide\Enum-Like Types.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Union-Like Types", "Union-Like Types", "{7FFC464C-9CF3-45F0-AB09-C9497F79638C}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\dev-guide\Union-Like Types.md = Documentation\dev-guide\Union-Like Types.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Validation", "Validation", "{E7C555C6-8732-4C17-9AA7-95CCCDD0B381}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\dev-guide\Validation.md = Documentation\dev-guide\Validation.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -185,6 +215,10 @@ Global
 		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24E52E99-66F5-4EEC-8409-D8D338D73C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24E52E99-66F5-4EEC-8409-D8D338D73C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24E52E99-66F5-4EEC-8409-D8D338D73C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24E52E99-66F5-4EEC-8409-D8D338D73C16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -193,6 +227,12 @@ Global
 		{D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C} = {B126AD85-980C-4790-A213-D0790AE9BA8A}
 		{ABCABE07-0140-432A-A7EC-BEF0CA0AE884} = {B126AD85-980C-4790-A213-D0790AE9BA8A}
 		{EC7629A7-F94A-4F35-925A-11E6F5E0EA6C} = {D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C}
+		{69647E90-556D-4A53-9F24-7915827C0F7B} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
+		{BD3C6183-9A29-4AC4-874C-BA71255DE708} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
+		{C1DDDAB2-200A-417D-B93A-A09272A11902} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
+		{D69C1C78-CD10-4300-8BA1-049D633F1D8B} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
+		{7FFC464C-9CF3-45F0-AB09-C9497F79638C} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
+		{E7C555C6-8732-4C17-9AA7-95CCCDD0B381} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {266F50E7-B8BB-4CFD-BC01-66FC3E001666}

@@ -37,8 +37,7 @@ public interface IConstTypeArg;
 ///   </para>
 ///   </note>
 /// </remarks>
-public interface IConstTypeArg<out T>
-    : IConstTypeArg
+public interface IConstTypeArg<out T> : IConstTypeArg
 {
     /// <summary>
     /// Gets a const type argument's value.
@@ -69,8 +68,7 @@ public interface IConstTypeArg<out T>
 /// This maintains a very low risk of their usage causing unintended side-effects
 /// without a deliberate misuse of reflection.
 /// </remarks>
-public interface IConstTypeArg<out T, TSelf>
-    : IConstTypeArg<T>
+public interface IConstTypeArg<out T, TSelf> : IConstTypeArg<T>
     where TSelf : IConstTypeArg<T, TSelf>, IConstTypeArg
 {
     /// <summary>

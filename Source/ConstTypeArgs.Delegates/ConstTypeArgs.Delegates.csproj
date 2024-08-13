@@ -67,17 +67,13 @@
 
   <ItemGroup>
     <PackageReference Include="ConstTypeArgs.Core" Version="1.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ConstTypeArgs.Doubles\ConstTypeArgs.Doubles.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Floats\ConstTypeArgs.Floats.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Ints\ConstTypeArgs.Ints.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Longs\ConstTypeArgs.Longs.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Nints\ConstTypeArgs.Nints.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Nuints\ConstTypeArgs.Nuints.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Uints\ConstTypeArgs.Uints.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Ulongs\ConstTypeArgs.Ulongs.csproj" />
+    <PackageReference Include="ConstTypeArgs.Floats" Version="1.0.0" />
+    <PackageReference Include="ConstTypeArgs.Ints" Version="1.0.0" />
+    <PackageReference Include="ConstTypeArgs.Longs" Version="1.0.0" />
+    <PackageReference Include="ConstTypeArgs.Nints" Version="1.0.0" />
+    <PackageReference Include="ConstTypeArgs.Nuints" Version="1.0.0" />
+    <PackageReference Include="ConstTypeArgs.Uints" Version="1.0.0" />
+    <PackageReference Include="ConstTypeArgs.Ulongs" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

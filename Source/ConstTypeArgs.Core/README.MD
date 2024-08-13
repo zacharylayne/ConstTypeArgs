@@ -1,8 +1,46 @@
 ﻿# ConstTypeArgs.Core
 
-The ConstTypeArgs.Core library provides a foundation for defining and using **const type arguments** (also called *const type args*), which are types used to pass constant & static values to generics through type parameters. These values are available at compile-time and can be used in static contexts, such as static constructors, static fields, and static methods. This can mimic C++ [template specialization](https://en.cppreference.com/w/cpp/language/template_specialization), provide enhanced type safety, compile-time polymorphism, performance improvements, and more.
+The ConstTypeArgs.Core framework provides the basic types needed to create *const type arguments*, which are types used to pass values to generics via their type parameters. These values can be used in static contexts, such as for static constructors, field initialization, and more.
 
-&nbsp;
+# The ConstTypeArgs Framework
+
+The ConstTypeArgs framework allows you to work with **const type arguments** (also called *const type args*), which use type parameters to "pass" constant-like values to generics. These values are can be used in static contexts, such as static constructors, static fields, and static methods. This can mimic C++ [template specialization](https://en.cppreference.com/w/cpp/language/template_specialization), provide enhanced type safety, static polymorphism, increased expressiveness, and more.
+
+## Benefits
+
+There are many benefits to using const type arguments, just some of which are listed below:
+
+* **Type Safety**
+* **Static Polymorphism**
+* **Flexible Validation**
+* **Domain Specific Types**
+* **Improved Readability & Expressiveness**
+* **Flexible & Reusable Components**
+* **Enhanced Debugging**
+* **Improved Unit Testing**
+
+These are just some of the benefits the ConstTypeArgs framework can provide.
+
+## Use Case Scenarios
+
+Const type arguments can be used in a variety of scenarios to provide enhanced type safety, static polymorphism, increased expressiveness, and more. Some ways const type arguments can be used include:
+
+* **Buffer Size Specification**
+* **Type Configuration** 
+* **Implementation Selection**
+* **Union-Like Types**
+* **Units of Measure**
+* **Type-Safe State Machines**
+* **Event Handlers as Types**
+* **RegEx Patterns as Types**
+* **Enum-Like Types**
+* **Design Pattern Enhancement**
+* **ECS (Entity-Component-System) Integration**
+* **Type Mapping**
+
+These are just some of the use cases where const type arguments can be used to provide enhanced type safety, static polymorphism, increased expressiveness, and more.
+
+## Defining & Using Const Type Arguments
 
 Defining a const type argument is as simple as:
 
@@ -29,146 +67,38 @@ var bigBuffer = new Buffer<int, _1024>();
 // bigBuffer.Data.Length == 1024
 ```
 
-&nbsp;
+## Glossary
 
-All const type arguments implement [`IConstTypeArg<T>`](/IConstTypeArg.cs) which contains a single member: the static abstract `Value` get-only property. From `IConstTypeArg<T>`, a foundation is built to make it easier to define const type arguments, strengthen type safety, and provide additional functionality such as domain-specific argument providers and union-like behavior.
+These are some of the common terms used throughout the ConstTypeArgs documentation:
 
-Base interfaces include [`K_Array<out T>`](/Core/K_Array.cs), [`K_Class<out T>`](/Core/K_Class.cs), [`K_Delegate<out T>`](/Core/K_Delegate.cs), [`K_MulticastDelegate<out T>`](/Core/K_MulticastDelegate.cs), [`K_Enum<out T>`](/Core/K_Enum.cs), [`K_FloatingPoint<out T>`](/Core/K_FloatingPoint.cs), [`K_Integer<out T>`](/Core/K_Integer.cs), [`K_Number<out T>`](/Core/K_Number.cs), [`K_SignedNumber<out T>`](/Core/K_SignedNumber.cs), [`K_Struct<out T>`](/Core/K_Struct.cs), [`K_Unmanaged<out T>`](/Core/K_Unmanaged.cs), [`K_UnsignedNumber<out T>`](/Core/K_UnsignedNumber.cs), and [`K`](/Source/ConstTypeArgs.Core/K.cs).
+* **Const Type Argument** - A type that uses type parameters to "pass" values to generics.  This term is interchangeable with the value they hold unless ambiguity arises, in which case *argument provider* and *argument value* are used.
+* **Const Type Parameter:** - A type parameter that const type arguments "pass" values through.
+* **Argument Holder** - A const type argument that wraps other const type arguments. These are useful for reusing domain-specific values.
 
-&nbsp;
+Go to [Glossary](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/Glossary.md) for more details and terminology.
 
-<details>
+## Types
 
-<summary><strong>Naming Conventions</strong></summary>
+At the ConstTypeArgs framework's very core is the interface `IConstTypeArg<T>`. This type only contains a single member: the static abstract property `Value`. This type isn't special by itself, however it is the foundational type which the framework is built upon.
 
-</br>
+> [!NOTE]
+> `IConstTypeArg<T>` implements the marker interface `IConstTypeArg` which in some cases can benefit type test.
+>
+> `IConstTypeArg<T, TSelf>` is a related type and inherits from `IConstTypeArg<T>`. This type allows const type argument instantiation in the rare cases this is needed.
 
-| Naming Convention | |
+This is used to create a set of core interfaces, such as [`K`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/K.cs), [`K_Array<T>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Array.cs), [`K_Class<T>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Class.cs), [`K_Integer`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Integer.cs), [`K_Delegate<T>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Delegate.cs), [`K_Unmanaged_<T>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Unmanaged.cs), and others that are used as constraints and are further built upon in other ConstTypeArgs libraries.
+
+For more information, go to [Types](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/dev-guide/Types.md).
+
+### Naming Conventions
+
+The ConstTypeFramework modifies standard naming conventions in order to provide a more expressive and readable codebase, outlined in the following table:
+
+| Convention | |
 |:-------------------|-|
-| `K_` Prefix | Argument type interfaces *(i.e. interfaces deriving from `IConstTypeArg<T>`)* are prefixed with `K_` to indicate that they, rather than define a contract, are the means to "pass" values via generic type parameters. The prefix refers to how `K` is used in mathematic formulas to denote an unknown constant value. |
-| `_` Prefix | Many argument providers *(i.e. concrete types that implement `IConstTypeArg<T>`)* in ConstTypeArg libraries have the prefix `_` followed by a representation of their value *(e.g. _1024, _A, _Blue)*.
-| [`__`](#__) Types| Argument types *(i.e. types deriving from or implementing `IConstTypeArg<T>`)* that implement [`__`](/Core/__.cs) are used as "discards" to indicate they lack a value. These types are simply named `__` and usually explicitly implement multiple arg type interfaces, allowing union-like functionality, and provide either `default` or `null` values. |
-
-</details>
-
-&nbsp;
-
-----
-
-## [`K`](K.cs) & Domain-Specific Values
-
-[`K<out T, TArg>`](K.cs) is a special interface used to define *argument holders*, const type arguments that wrap other const type arguments. This allows domain-specific const type arguments for providing minimums, maximums, defaults, and other domain-specific values.
-
-&nbsp;
-
-***NOTE:** The examples below are not production-level code and only meant for demonstration purposes.*
-
-<details>
-
-<summary><strong>Defining Argument Holders</strong></summary>
-
-Extending the previous examples, the following code demonstrates how to define argument holders. 
-
-```csharp
-using ConstTypeArgs;
-
-// Bool<K> and Int<K> exist respectively in the ConstTypeArgs.Bools & ConstTypeArgs.Ints libraries.
-public abstract class Bool<K> : K<bool, K>, IConstTypeArg<bool>
-    where K : IConstTypeArg<bool>
-{ public static bool Value => K.Value; }
-
-public abstract class Int<K> : K<int, K>, IConstTypeArg<int>
-    where K : IConstTypeArg<int>
-{ public static int Value => K.Value; }
-
-public abstract class DefaultResize : Bool<False>;
-public abstract class CanResize     : Bool<True>;
-public abstract class CannotResize  : Bool<False>;
-
-public abstract class DefaultSize : Int<_32>;
-public abstract class MinSize     : Int<_4>;
-public abstract class MaxSize     : Int<_4096>;
-```
-
-</details>
-
-<details>
-
-<summary><strong>Using Argument Holders</strong></summary>
-
-A modified `Buffer<T, TSize>` demonstrates how argument holders defined in the previous example could be used:
-
-```csharp
-public class Buffer<T, TSize, TCanResize>
-    where TSize      : IConstTypeArg<int>
-    where TCanResize : IConstTypeArg<bool>
-{
-    public T[] Data;
-
-    static Buffer()
-    {
-        if (ValidateSize())
-            Data = new T[TSize.Value];
-        else
-            Data = Array.Empty<T>();
-            
-        // Consider throwing an exception when validation fails.
-        // This prevents the constructed type from ever initializing,
-        // which might be desired behavior.
-    }
-
-    private static bool ValidateSize()
-    {
-        if (TSize.Value < MinSize.Value)
-            Console.WriteLine($"The initialized buffer is smaller than the minimum allowed.");
-            
-        if (TSize.Value > MaxSize.Value) 
-            Console.WriteLine($"The initialized buffer is larger than the maximum allowed.");
-    }
-
-    public void Resize<TNew>()
-    {
-        if (!TCanResize.Value || TNew.Value < MinSize.Value || TNew.Value > MaxSize.Value)
-        {
-            Console.WriteLine("The buffer cannot be resized!");
-            return;
-        }
-
-        var temp = Data;
-        Array.Resize(ref temp, TNew.Value);
-        Data = temp;
-    }
-}
-
-var verySmallBuffer = new Buffer<int, _2, DefaultResize>();
-// verySmallBuffer.Data.Length == 0
-// _2.Value is smaller than MinSize.Value (4).
-// Data initialized to an empty array.
-
-var smallBuffer = new Buffer<int, _32, CannotResize>();
-// smallBuffer.Data.Length = 32
-
-smallBuffer.Resize<_2048>();
-// No op. Cannot resize.
-
-var bigGrowableBuffer = new Buffer<int, _1024, CanResize>();
-// bigGrowableBuffer.Data.Length = 1024
-
-bigGrowableBuffer.Resize<_2048>();
-// bigGrowableBuffer.Data.Length = 2048
-// The Data array can be resized to a minimum of MinSize.Value (4)
-// and to a maximum of MaxSize.Value (4096).
-```
-
-</details>
-
-&nbsp;
-
-----
-
-## The [`__`](/Core/__.cs) Interface ("Discards")
-
-The [`__`](/Core/__.cs) interface is a marker interface, but is implemented by *discard arguments*, const type arguments meant to indicate they are "discards" that provide no value. These types can implement multiple const type argument interfaces in order to provide union-like functionality.
+| `K_` Prefix | The names of argument interfaces *(i.e. interfaces deriving from `IConstTypeArg<T>`)* use this prefix. This is meant to indicate that rather than define a contract, they are the means to "pass" values via generic type parameters. The prefix refers to how `K` is used in mathematic formulas to denote an unknown constant value. |
+| `_` Prefix | Many argument providers *(i.e. concrete types that implement `IConstTypeArg<T>`)* in ConstTypeArg libraries have the prefix `_` followed by a representation of their value *(e.g. _1024, _A, _Blue)*. This helps alphabetize and group similar types together. |
+| [`__`](#__) Types | Argument types *(i.e. types deriving from or implementing `IConstTypeArg<T>`)* that implement [`__`](/Core/__.cs) are used as "discards" to indicate they lack a value. These types are simply named `__` and usually explicitly implement multiple arg type interfaces and provide either `default` or `null` values. These can be used with argument consumers providing union-like behavior. |
 
 # Installation
 

@@ -15,8 +15,7 @@ namespace ConstTypeArgs.Core;
 /// type testing &amp; type parameter constraints.
 /// </remarks>
 [EditorBrowsable(Advanced)]
-public interface K_Unmanaged
-    : IConstTypeArg;
+public interface K_Unmanaged : IConstTypeArg;
 
 /// <summary>
 /// The <see cref="K_Unmanaged{T}"/> interface provides a base type
@@ -37,6 +36,5 @@ public interface K_Unmanaged
 /// <seealso cref="K_Number{T}"/>
 /// <seealso cref="K_SignedNumber{T}"/>
 /// <seealso cref="K_UnsignedNumber{T}"/>
-public interface K_Unmanaged<out T>
-    : K_Struct<T>, K_Unmanaged
+public interface K_Unmanaged<out T> : K_Struct<T>, K_Unmanaged
     where T : unmanaged;

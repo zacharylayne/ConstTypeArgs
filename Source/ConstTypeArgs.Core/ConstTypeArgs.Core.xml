@@ -253,6 +253,74 @@
             <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
             <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
         </member>
+        <member name="T:ConstTypeArgs.Core.K_ReadOnlyMemory`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_ReadOnlyMemory`1"/> interface provides a more explicit
+            <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;ReadOnlyMemory&lt;T&gt;&gt;</see> derived type.
+            </summary>
+            <typeparam name="T">
+            The type of items held in memory.
+            </typeparam>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory&lt;T&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Core.K_ReadOnlyMemoryArray`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_ReadOnlyMemoryT_Array`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_ReadOnlyMemory`1.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_ReadOnlyMemory`1.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_ReadOnlyMemoryArray`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_ReadOnlyMemoryArray`1"/> interface provides a more explicit
+            <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;ReadOnlyMemory&lt;T&gt;[]&gt;</see> derived type.
+            </summary>
+            <typeparam name="T">
+            The type of items held in memory.
+            </typeparam>
+            <remarks>
+            This type is used to provide arrays of <c>ReadOnlyMemory</c>, as opposed to an array inside <c>ReadOnlyMemory</c>.
+            See <see cref="T:ConstTypeArgs.Core.K_ReadOnlyMemoryT_Array`1"/> for more information.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory&lt;T&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Core.K_ReadOnlyMemory`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_ReadOnlyMemoryT_Array`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_ReadOnlyMemoryArray`1.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_ReadOnlyMemoryArray`1.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_ReadOnlyMemoryT_Array`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_ReadOnlyMemoryT_Array`1"/> interface provides a more explicit
+            <see cref="T:ConstTypeArgs.IConstTypeArg`1">IConstTypeArg&lt;ReadOnlyMemory&lt;T[]&gt;&gt;</see> derived type.
+            </summary>
+            <typeparam name="T">
+            The type of items held in memory.
+            </typeparam>
+            <remarks>
+            This type is used to provide an array inside <c>ReadOnlyMemory</c>, as opposed to arrays of <c>ReadOnlyMemory</c>.
+            See <see cref="T:ConstTypeArgs.Core.K_ReadOnlyMemoryArray`1"/> for more information.
+            </remarks>
+            <seealso href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory&lt;T&gt;</seealso>
+            <seealso cref="T:ConstTypeArgs.Core.K_ReadOnlyMemory`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_ReadOnlyMemoryArray`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.Core.K_ReadOnlyMemoryT_Array`1.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_ReadOnlyMemoryT_Array`1.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and is used as a placeholder in type parameter lists.
+            When combined with other discard arguments of other types, it can be used to create
+            union-like behavior.
+            </summary>
+        </member>
         <member name="T:ConstTypeArgs.Core.K_SignedNumber">
             <summary>
             The <see cref="T:ConstTypeArgs.Core.K_SignedNumber"/> interface provides a base interface for identifying
@@ -509,6 +577,13 @@
             Use <see cref="T:ConstTypeArgs.K`2"/> to reuse values from other argument providers to provide
             domain-specific constants, such as minimum, maximum, &amp; default values.
             </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.__"/> interface is a special type of marker interface
+            meant to identify const type args that are used as discards in type parameter
+            list with union-like behavior.
+            </summary>
         </member>
     </members>
 </doc>

@@ -17,8 +17,7 @@ namespace ConstTypeArgs.Core;
 /// type testing &amp; type parameter constraints.
 /// </remarks>
 [EditorBrowsable(Advanced)]
-public interface K_SignedNumber
-    : IConstTypeArg;
+public interface K_SignedNumber : IConstTypeArg;
 
 /// <summary>
 /// The <see cref="K_SignedNumber{T}"/> interface provides a base type
@@ -41,6 +40,5 @@ public interface K_SignedNumber
 /// <seealso cref="K_Enum{T}"/>
 /// <seealso cref="K_Struct{T}"/>
 /// <seealso cref="K_Unmanaged{T}"/>
-public interface K_SignedNumber<out T>
-    : K_Number<T>, K_SignedNumber
+public interface K_SignedNumber<out T> : K_Number<T>, K_SignedNumber
     where T : ISignedNumber<T>, INumber<T>;

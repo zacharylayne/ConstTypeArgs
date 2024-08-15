@@ -82,10 +82,6 @@ foo = new Foo&lt;DefaultSize&gt;(); // Outputs "Large array size is 32"</Descrip
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="..\ConstTypeArgs.Delegates\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 
   <ItemGroup>

@@ -4,6 +4,69 @@
         <name>ConstTypeArgs.Core</name>
     </assembly>
     <members>
+        <member name="T:ConstTypeArgs.ConstTypeArgException">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ConstTypeArgException"/> exception is thrown when an operation is attempted
+            on a const type argument and an error occurs.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.ConstTypeArgException.#ctor">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.ConstTypeArgException"/> instance.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.ConstTypeArgException.#ctor(System.String)">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.ConstTypeArgException"/> instance with the specified error message.
+            </summary>
+            <param name="message">
+            The message explaining the cause of the exception.
+            </param>
+        </member>
+        <member name="M:ConstTypeArgs.ConstTypeArgException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.ConstTypeArgException"/> instance with the specified error message
+            and a reference to the inner exception that caused this one to be thrown.
+            </summary>
+            <param name="message">
+            The message explaining the cause of the exception.
+            </param>
+            <param name="innerException">
+            The exception that is the cause of the current exception.
+            </param>
+        </member>
+        <member name="T:ConstTypeArgs.Core.ConstTypeException">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.ConstTypeException"/> class is the base ConstTypeArgs framework exception
+            for exceptions related to errors involving const types
+            <em>(const type arguments, const type interfaces, argument providers, etc.)</em>.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.Core.ConstTypeException.#ctor">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.Core.ConstTypeException"/> instance.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.Core.ConstTypeException.#ctor(System.String)">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.Core.ConstTypeException"/> instance with the specified error message.
+            </summary>
+            <param name="message">
+            The message explaining the cause of the exception.
+            </param>
+        </member>
+        <member name="M:ConstTypeArgs.Core.ConstTypeException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.Core.ConstTypeException"/> instance with the specified error message
+            and a reference to the inner exception that caused this one to be thrown.
+            </summary>
+            <param name="message">
+            The message explaining the cause of the exception.
+            </param>
+            <param name="innerException">
+            The exception that is the cause of the current exception.
+            </param>
+        </member>
         <member name="T:ConstTypeArgs.Core.K_Array">
             <summary>
             The <see cref="T:ConstTypeArgs.Core.K_Array"/> interface provides a base interface for identifying
@@ -253,6 +316,18 @@
             <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
             <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
         </member>
+        <member name="T:ConstTypeArgs.Core.K_ReadOnlyMemory">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Core.K_ReadOnlyMemory"/> interface provides a base interface for identifying
+            const type argument with values that are a type of
+            <see href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">
+            ReadOnlyMemory&lt;T&gt;</see>.
+            </summary>
+            <remarks>
+            This is a marker interface intended for very limited usage. It can be useful to simplify
+            type testing &amp; type parameter constraints.
+            </remarks>
+        </member>
         <member name="T:ConstTypeArgs.Core.K_ReadOnlyMemory`1">
             <summary>
             The <see cref="T:ConstTypeArgs.Core.K_ReadOnlyMemory`1"/> interface provides a more explicit
@@ -312,14 +387,6 @@
             <seealso href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory&lt;T&gt;</seealso>
             <seealso cref="T:ConstTypeArgs.Core.K_ReadOnlyMemory`1"/>
             <seealso cref="T:ConstTypeArgs.Core.K_ReadOnlyMemoryArray`1"/>
-        </member>
-        <member name="T:ConstTypeArgs.Core.K_ReadOnlyMemoryT_Array`1.__">
-            <summary>
-            The <see cref="T:ConstTypeArgs.Core.K_ReadOnlyMemoryT_Array`1.__"/> interface is a <em>discard argument</em> meant to signify
-            a lack of value and is used as a placeholder in type parameter lists.
-            When combined with other discard arguments of other types, it can be used to create
-            union-like behavior.
-            </summary>
         </member>
         <member name="T:ConstTypeArgs.Core.K_SignedNumber">
             <summary>
@@ -577,6 +644,38 @@
             Use <see cref="T:ConstTypeArgs.K`2"/> to reuse values from other argument providers to provide
             domain-specific constants, such as minimum, maximum, &amp; default values.
             </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.NotConstTypeArgException">
+            <summary>
+            The <see cref="T:ConstTypeArgs.NotConstTypeArgException"/> exception is thrown when an operation is attempted
+            with a type argument that is not a const type argument
+            <em>(i.e. does not inherit from <see cref="T:ConstTypeArgs.IConstTypeArg`1"/>)</em>.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.NotConstTypeArgException.#ctor">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.NotConstTypeArgException"/> instance.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.NotConstTypeArgException.#ctor(System.String)">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.NotConstTypeArgException"/> instance with the specified error message.
+            </summary>
+            <param name="message">
+            The message explaining the cause of the exception.
+            </param>
+        </member>
+        <member name="M:ConstTypeArgs.NotConstTypeArgException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.NotConstTypeArgException"/> instance with the specified error message
+            and a reference to the inner exception that caused this one to be thrown.
+            </summary>
+            <param name="message">
+            The message explaining the cause of the exception.
+            </param>
+            <param name="innerException">
+            The exception that is the cause of the current exception.
+            </param>
         </member>
         <member name="T:ConstTypeArgs.__">
             <summary>

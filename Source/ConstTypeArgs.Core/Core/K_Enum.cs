@@ -15,8 +15,7 @@ namespace ConstTypeArgs.Core;
 /// type testing &amp; type parameter constraints.
 /// </remarks>
 [EditorBrowsable(Advanced)]
-public interface K_Enum
-    : IConstTypeArg;
+public interface K_Enum : IConstTypeArg;
 
 /// <summary>
 /// The <see cref="K_Enum{T}"/> interface provides a base type

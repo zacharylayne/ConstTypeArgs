@@ -12,6 +12,19 @@ namespace ConstTypeArgs.Core;
 // argument provider.
 
 /// <summary>
+/// The <see cref="K_ReadOnlyMemory"/> interface provides a base interface for identifying
+/// const type argument with values that are a type of
+/// <see href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">
+/// ReadOnlyMemory&lt;T&gt;</see>.
+/// </summary>
+/// <remarks>
+/// This is a marker interface intended for very limited usage. It can be useful to simplify
+/// type testing &amp; type parameter constraints.
+/// </remarks>
+[EditorBrowsable(Advanced)]
+public interface K_ReadOnlyMemory : K_Struct;
+
+/// <summary>
 /// The <see cref="K_ReadOnlyMemory{T}"/> interface provides a more explicit
 /// <see cref="IConstTypeArg{T}">IConstTypeArg&lt;ReadOnlyMemory&lt;T&gt;&gt;</see> derived type.
 /// </summary>
@@ -21,7 +34,7 @@ namespace ConstTypeArgs.Core;
 /// <seealso href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory&lt;T&gt;</seealso>
 /// <seealso cref="K_ReadOnlyMemoryArray{T}"/>
 /// <seealso cref="K_ReadOnlyMemoryT_Array{T}"/>
-public interface K_ReadOnlyMemory<T> : K_Struct<ReadOnlyMemory<T>>
+public interface K_ReadOnlyMemory<T> : K_ReadOnlyMemory, K_Struct<ReadOnlyMemory<T>>
 {
     /// <summary>
     /// The <see cref="__"/> interface is a <em>discard argument</em> meant to signify
@@ -71,13 +84,4 @@ public interface K_ReadOnlyMemoryArray<T> : K_Array<ReadOnlyMemory<T>[]>
 /// <seealso href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory&lt;T&gt;</seealso>
 /// <seealso cref="K_ReadOnlyMemory{T}"/>
 /// <seealso cref="K_ReadOnlyMemoryArray{T}"/>
-public interface K_ReadOnlyMemoryT_Array<T> : K_Array<T>
-{
-    /// <summary>
-    /// The <see cref="__"/> interface is a <em>discard argument</em> meant to signify
-    /// a lack of value and is used as a placeholder in type parameter lists.
-    /// When combined with other discard arguments of other types, it can be used to create
-    /// union-like behavior.
-    /// </summary>
-    public interface __ : Core.__, K_ReadOnlyMemoryT_Array<T>, IConstTypeArg<ReadOnlyMemory<T[]>>;
-}
+public interface K_ReadOnlyMemoryT_Array<T> : K_ReadOnlyMemory<T[]>;

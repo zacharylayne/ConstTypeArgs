@@ -22,6 +22,7 @@ Const type arguments can be used in a variety of scenarios to provide enhanced t
 * **Buffer Size Specification**
 * **Type Configuration** 
 * **Implementation Selection**
+* **Dependency Injection**
 * **Union-Like Types**
 * **Units of Measure**
 * **Type-Safe State Machines**
@@ -69,7 +70,7 @@ These are some of the common terms used throughout the ConstTypeArgs documentati
 
 * **Const Type Parameter:** - A type parameter that const type arguments "pass" values through.
 
-* **Argument Holder** - A const type argument that wraps other const type arguments. These are useful for reusing domain-specific values.
+* **Const Type Holder** - A const type argument that wraps another const type argument. These are useful for creating reusable or domain-specific const type arguments.
 
 Go to the framework documentation [Glossary](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/Glossary.md) for more details and terminology.
 
@@ -92,9 +93,9 @@ The ConstTypeFramework modifies standard naming conventions in order to provide 
 
 | Convention | |
 |:-------------------|-|
-| `K_` Prefix | The names of argument interfaces *(i.e. interfaces deriving from `IConstTypeArg<T>`)* use this prefix. This is meant to indicate that rather than define a contract, they are the means to "pass" values via generic type parameters. The prefix refers to how `K` is used in mathematic formulas to denote an unknown constant value. |
-| `_` Prefix | Many argument providers *(i.e. concrete types that implement `IConstTypeArg<T>`)* in ConstTypeArg libraries have the prefix `_` followed by a representation of their value *(e.g. _1024, _A, _Blue)*. This helps alphabetize and group similar types together. |
-| [`__`](#__) Types | Argument types *(i.e. types deriving from or implementing `IConstTypeArg<T>`)* that implement [`__`](/Core/__.cs) are used as "discards" to indicate they lack a value. These types are simply named `__` and usually explicitly implement multiple arg type interfaces and provide either `default` or `null` values. These can be used with argument consumers providing union-like behavior. |
+| `K_` Prefix | The names of const type interfaces *(interfaces deriving from `IConstTypeArg<T>`)* use this prefix. This is meant to indicate that rather than define a contract, they are the means to "pass" values via generic type parameters. The prefix refers to how `K` is used in mathematic formulas to denote an unknown constant value. |
+| `_` Prefix | Many argument providers *(concrete types that implement `IConstTypeArg<T>`)* in ConstTypeArg libraries have the prefix `_` followed by a representation of their value *(e.g. _1024, _A, _Blue)*. This helps alphabetize and group similar types together. |
+| [`__`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/__.cs) Types | Const types *(types deriving from or implementing `IConstTypeArg<T>`)* that implement `__` are used as "discards" to indicate they lack a value. These types are simply named `__` and usually explicitly implement multiple arg type interfaces providing either `default` or `null` values. These can be used with argument consumers providing union-like behavior. |
 
 # Documentation
 

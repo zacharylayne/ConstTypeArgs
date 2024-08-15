@@ -1,14 +1,14 @@
 ﻿# ConstTypeArgs.Core
 
-The ConstTypeArgs.Core framework provides the basic types needed to create *const type arguments*, which are types used to pass values to generics via their type parameters. These values can be used in static contexts, such as for static constructors, field initialization, and more.
+The ConstTypeArgs.Core library provides the basic types needed to create *const type arguments*, which are types used to pass values to generics through their generic parameters. These values can be used in static contexts, such as for static constructors, field initialization, and more.
 
-# The ConstTypeArgs Framework
+# Framework Overview
 
-The ConstTypeArgs framework allows you to work with **const type arguments** (also called *const type args*), which use type parameters to "pass" constant-like values to generics. These values are can be used in static contexts, such as static constructors, static fields, and static methods. This can mimic C++ [template specialization](https://en.cppreference.com/w/cpp/language/template_specialization), provide enhanced type safety, static polymorphism, increased expressiveness, and more.
+The ConstTypeArgs framework allows you to work with **const type arguments** (also called *const type args*), which use generic parameters to "pass" constant-like values to generics. These values are can be used in static contexts, such as static constructors, static fields, and static methods. This can mimic C++ [template specialization](https://en.cppreference.com/w/cpp/language/template_specialization), provide enhanced type safety, static polymorphism, increased expressiveness, and more.
 
 ## Benefits
 
-There are many benefits to using const type arguments, just some of which are listed below:
+There are many benefits to using const type arguments, such as:
 
 * **Type Safety**
 * **Static Polymorphism**
@@ -19,7 +19,7 @@ There are many benefits to using const type arguments, just some of which are li
 * **Enhanced Debugging**
 * **Improved Unit Testing**
 
-These are just some of the benefits the ConstTypeArgs framework can provide.
+These are just some of the benefits the ConstTypeArgs framework can provide. For more information, go to [Benefits](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/Benefits.md) in the framework documentation.
 
 ## Use Case Scenarios
 
@@ -38,7 +38,7 @@ Const type arguments can be used in a variety of scenarios to provide enhanced t
 * **ECS (Entity-Component-System) Integration**
 * **Type Mapping**
 
-These are just some of the use cases where const type arguments can be used to provide enhanced type safety, static polymorphism, increased expressiveness, and more.
+These are just some of the use cases where const type arguments can be used to provide enhanced type safety, static polymorphism, increased expressiveness, and more. For more information, go to [Use Cases](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/Use%20Cases.md) in the framework documentation.
 
 ## Defining & Using Const Type Arguments
 
@@ -71,11 +71,13 @@ var bigBuffer = new Buffer<int, _1024>();
 
 These are some of the common terms used throughout the ConstTypeArgs documentation:
 
-* **Const Type Argument** - A type that uses type parameters to "pass" values to generics.  This term is interchangeable with the value they hold unless ambiguity arises, in which case *argument provider* and *argument value* are used.
-* **Const Type Parameter:** - A type parameter that const type arguments "pass" values through.
+* **Const Type Argument** - A type that uses generic parameters to "pass" values to generics.  This term is interchangeable with the value they hold unless ambiguity arises, in which case *argument provider* and *argument value* are used.
+
+* **Const Type Parameter:** - A generic parameter that const type arguments "pass" values through.
+
 * **Argument Holder** - A const type argument that wraps other const type arguments. These are useful for reusing domain-specific values.
 
-Go to [Glossary](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/Glossary.md) for more details and terminology.
+Go to the framework documentation [Glossary](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/Glossary.md) for more details and terminology.
 
 ## Types
 

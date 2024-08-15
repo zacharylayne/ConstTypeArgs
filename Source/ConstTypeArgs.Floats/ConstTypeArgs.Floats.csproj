@@ -55,6 +55,7 @@ Console.WriteLine($"Foo's value if default: {Foo&lt;DefaultValue&gt;.");
 Console.WriteLine($"Foo's non-default value: {Foo&lt;_6_789&gt;.Value}.");</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

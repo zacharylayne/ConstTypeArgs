@@ -61,6 +61,7 @@ var foo = new Foo&lt;_8&gt;();  // Outputs "Array size is 8"
 foo = new Foo&lt;DefaultSize&gt;(); // Outputs "Array size is 32"</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

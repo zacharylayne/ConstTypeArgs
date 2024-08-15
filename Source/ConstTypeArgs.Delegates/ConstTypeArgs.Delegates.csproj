@@ -29,6 +29,7 @@
     <DocumentationFile>ConstTypeArgs.Delegates.xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -43,26 +44,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Args\**" />
-    <Compile Remove="Interlocked\**" />
-    <EmbeddedResource Remove="Args\**" />
-    <EmbeddedResource Remove="Interlocked\**" />
-    <None Remove="Args\**" />
-    <None Remove="Interlocked\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Base.cs" />
-    <Compile Remove="Predicates\Values.TypeTests.cs" />
-    <Compile Remove="ReadOnlySpanAction.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="..\..\Icons\Delegate.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="Actions\ReadOnlySpanProcedure.cs" />
   </ItemGroup>
 
   <ItemGroup>

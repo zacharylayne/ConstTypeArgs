@@ -31,19 +31,21 @@ public class FixedSizeBuffer&lt;TSize&gt;
 var largeBuffer = new FixedSizeBuffer&lt;Pos_1024&gt;();
 var smallBuffer = new FixedSizeBuffer&lt;Pos_32&gt;();</Description>
     <PackageTags>constants; const-type-args; generics; static-abstract-interface-members</PackageTags>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
     <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
     <Version>1.0.1</Version>
-    <FileVersion>1.0.0</FileVersion>
+    <FileVersion>1.0.1</FileVersion>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <Authors>Zachary Layne</Authors>
     <Company>Entry Point Software</Company>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
-    <PackageReleaseNotes>Very minor changes.</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixed K_ReadOnlyMemoryT_Array&lt;T&gt; to implement K_ReadOnlyMemory&lt;T[]&gt; instead of K_Array&lt;T&gt;.
+
+Miscellaneous minor changes.</PackageReleaseNotes>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReadmeFile>README.MD</PackageReadmeFile>
     <PackageIcon>Core.png</PackageIcon>
     <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs/</RepositoryUrl>
     <IncludeSource>true</IncludeSource>
@@ -63,17 +65,7 @@ var smallBuffer = new FixedSizeBuffer&lt;Pos_32&gt;();</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Reflection\**" />
-    <EmbeddedResource Remove="Reflection\**" />
-    <None Remove="Reflection\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="..\..\Icons\Core.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -89,10 +81,18 @@ var smallBuffer = new FixedSizeBuffer&lt;Pos_32&gt;();</Description>
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="README.MD">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Exceptions\"/>
   </ItemGroup>
 
 </Project>

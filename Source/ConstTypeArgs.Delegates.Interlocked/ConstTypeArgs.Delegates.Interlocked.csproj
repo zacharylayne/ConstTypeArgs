@@ -10,7 +10,7 @@
     <Description>Builds on types of the ConstTypeArgs.Delegates library to provide const type arguments that allow you to use type parameters to pass System.Runtime.CompilerServices.Interocked delegates to generics at compile-time.</Description>
     <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
     <PackageReadmeFile>README.MD</PackageReadmeFile>
-    <PackageIcon>K_Delegate - Interlocked.png</PackageIcon>
+    <PackageIcon>Interlocked.png</PackageIcon>
     <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
     <IncludeSource>true</IncludeSource>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -23,6 +23,7 @@
     <DocumentationFile>ConstTypeArgs.Delegates.Interlocked.xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -34,7 +35,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\Icons\K_Delegate - Interlocked.png">
+    <None Include="..\..\Icons\Interlocked.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

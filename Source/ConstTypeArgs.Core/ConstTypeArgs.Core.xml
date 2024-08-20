@@ -6,8 +6,23 @@
     <members>
         <member name="T:ConstTypeArgs.ConstTypeArgException">
             <summary>
-            The <see cref="T:ConstTypeArgs.ConstTypeArgException"/> exception is thrown when an operation is attempted
-            on a const type argument and an error occurs.
+            The <see cref="T:ConstTypeArgs.ConstTypeArgException"/> class is used to throw exceptions when an operation is attempted
+            using a const type argument and unrecoverably fails.
+            </summary>
+            <remarks>
+            Use the <see cref="M:ConstTypeArgs.ConstTypeArgException.Throw(System.Type,System.Object,System.Boolean,System.String,System.Exception)"/> and <see cref="M:ConstTypeArgs.ConstTypeArgException.Throw``2(System.String,System.Exception)"/>
+            static methods to throw this exception.
+            </remarks>
+        </member>
+        <member name="F:ConstTypeArgs.ConstTypeArgException.DefaultDescriptionFormat">
+            <summary>
+            The default description format for the exception.
+            </summary>
+            <seealso cref="M:ConstTypeArgs.ConstTypeException.FormatDefaultMessage(System.Text.CompositeFormat,System.Object[])"/>
+        </member>
+        <member name="P:ConstTypeArgs.ConstTypeArgException.ArgValue">
+            <summary>
+            Required. Gets &amp; inits the value of the const type argument associated with this exception.
             </summary>
         </member>
         <member name="M:ConstTypeArgs.ConstTypeArgException.#ctor">
@@ -35,29 +50,95 @@
             The exception that is the cause of the current exception.
             </param>
         </member>
-        <member name="T:ConstTypeArgs.Core.ConstTypeException">
+        <member name="M:ConstTypeArgs.ConstTypeArgException.Throw(System.Type,System.Object,System.Boolean,System.String,System.Exception)">
             <summary>
-            The <see cref="T:ConstTypeArgs.Core.ConstTypeException"/> class is the base ConstTypeArgs framework exception
-            for exceptions related to errors involving const types
-            <em>(const type arguments, const type interfaces, argument providers, etc.)</em>.
+            Throws a new <see cref="T:ConstTypeArgs.ConstTypeArgException"/> with the specified parameters.
+            </summary>
+            <param name="type">
+            The const type arg causing the exception to be thrown.
+            </param>
+            <param name="value">
+            Optional. The const type argument's value.
+            </param>
+            <param name="isUndefined">
+            Optional. Indicates that the const type argument has no value. This value is only used if <paramref name="value"/>
+            is not provided or is <see langword="null"/>. If so, the displayed value is <c>UNDEFINED</c>.
+            The default is <see langword="false"/>.
+            </param>
+            <param name="message">
+            Optional. The message explaining the cause of the exception.
+            </param>
+            <param name="innerException">
+            Optional. The exception that is the cause of the current exception.
+            </param>
+            <exception cref="T:ConstTypeArgs.ConstTypeArgException"/>
+            <seealso cref="M:ConstTypeArgs.ConstTypeArgException.Throw``2(System.String,System.Exception)"/>
+        </member>
+        <member name="M:ConstTypeArgs.ConstTypeArgException.Throw``2(System.String,System.Exception)">
+            <summary>
+            Throws an exception for a const type argument <typeparamref name="K"/> with the specified parameters.
+            </summary>
+            <typeparam name="T">
+            The type of the value of the const type argument associated with the exception.
+            </typeparam>
+            <typeparam name="K">
+            The const type argument associated with the exception.
+            </typeparam>
+            <param name="message">
+            Optional. The message explaining the cause of the exception.
+            </param>
+            <param name="innerException">
+            Optional. The exception that is the cause of the current exception.
+            </param>
+            <remarks>
+            If the const type argument <typeparamref name="K"/> has no value, the displayed value is <c>UNDEFINED</c>.
+            </remarks>
+            <exception cref="T:ConstTypeArgs.ConstTypeArgException"/>
+            <seealso cref="M:ConstTypeArgs.ConstTypeArgException.Throw(System.Type,System.Object,System.Boolean,System.String,System.Exception)"/>
+        </member>
+        <member name="T:ConstTypeArgs.ConstTypeException">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ConstTypeException"/> class is the basic framework exception for exceptions
+            related to errors involving const types <em>(const type arguments, const type interfaces,
+            argument providers, etc.)</em>.
+            </summary>
+            <remarks>
+            Use the <see cref="M:ConstTypeArgs.ConstTypeException.Throw(System.Type,System.String,System.Exception)"/> and <see cref="M:ConstTypeArgs.ConstTypeException.Throw``1(System.String,System.Exception)"/>
+            static methods to throw this exception.
+            </remarks>
+        </member>
+        <member name="F:ConstTypeArgs.ConstTypeException.DefaultDescriptionFormat">
+            <summary>
+            The default description format for the exception.
+            </summary>
+            <seealso cref="M:ConstTypeArgs.ConstTypeException.FormatDefaultMessage(System.Text.CompositeFormat,System.Object[])"/>
+        </member>
+        <member name="P:ConstTypeArgs.ConstTypeException.Type">
+            <summary>
+            Required. Gets &amp; inits the const type that was the cause of the exception being thrown.
             </summary>
         </member>
-        <member name="M:ConstTypeArgs.Core.ConstTypeException.#ctor">
+        <member name="P:ConstTypeArgs.ConstTypeException.TypeName">
             <summary>
-            Initializes a new <see cref="T:ConstTypeArgs.Core.ConstTypeException"/> instance.
+            Gets the name of the const type that was the cause of the exception being thrown.
             </summary>
         </member>
-        <member name="M:ConstTypeArgs.Core.ConstTypeException.#ctor(System.String)">
+        <member name="M:ConstTypeArgs.ConstTypeException.#ctor">
             <summary>
-            Initializes a new <see cref="T:ConstTypeArgs.Core.ConstTypeException"/> instance with the specified error message.
+            Initializes a new <see cref="T:ConstTypeArgs.ConstTypeException"/> instance.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.ConstTypeException.#ctor(System.String)">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.ConstTypeException"/> instance with the specified error message.
             </summary>
             <param name="message">
             The message explaining the cause of the exception.
             </param>
         </member>
-        <member name="M:ConstTypeArgs.Core.ConstTypeException.#ctor(System.String,System.Exception)">
+        <member name="M:ConstTypeArgs.ConstTypeException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new <see cref="T:ConstTypeArgs.Core.ConstTypeException"/> instance with the specified error message
+            Initializes a new <see cref="T:ConstTypeArgs.ConstTypeException"/> instance with the specified error message
             and a reference to the inner exception that caused this one to be thrown.
             </summary>
             <param name="message">
@@ -66,6 +147,69 @@
             <param name="innerException">
             The exception that is the cause of the current exception.
             </param>
+        </member>
+        <member name="M:ConstTypeArgs.ConstTypeException.Throw(System.Type,System.String,System.Exception)">
+            <summary>
+            Throws a new <see cref="T:ConstTypeArgs.ConstTypeException"/> with the specified parameters.
+            </summary>
+            <param name="type">
+            The type causing the exception to be thrown.
+            </param>
+            <param name="message">
+            Optional. The message explaining the cause of the exception.
+            </param>
+            <param name="innerException">
+            Optional. The exception that is the cause of the current exception.
+            </param>
+            <exception cref="T:ConstTypeArgs.ConstTypeException"/>
+            <seealso cref="M:ConstTypeArgs.ConstTypeException.Throw``1(System.String,System.Exception)"/>
+        </member>
+        <member name="M:ConstTypeArgs.ConstTypeException.Throw``1(System.String,System.Exception)">
+            <summary>
+            Throws a new <see cref="T:ConstTypeArgs.ConstTypeException"/> with the specified parameters.
+            </summary>
+            <param name="message">
+            Optional. The message explaining the cause of the exception.
+            </param>
+            <param name="innerException">
+            Optional. The exception that is the cause of the current exception.
+            </param>
+            <typeparam name="T">
+            The const type causing the exception to be thrown.
+            </typeparam>
+            <exception cref="T:ConstTypeArgs.ConstTypeException"/>
+            <seealso cref="M:ConstTypeArgs.ConstTypeException.Throw(System.Type,System.String,System.Exception)"/>
+        </member>
+        <member name="M:ConstTypeArgs.ConstTypeException.FormatDefaultMessage(System.Text.CompositeFormat,System.Object[])">
+            <summary>
+            Returns a formatted message for the exception with the specified format and arguments.
+            </summary>
+            <param name="format">
+            The format to use for the message.
+            </param>
+            <param name="args">
+            The arguments to use for the message.
+            </param>
+            <returns>
+            A formatted message for the exception.
+            </returns>
+            <remarks>
+            The message is formatted using the
+            <see href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">
+            System.Globalization.CultureInfo.InvariantCulture</see>
+            to ensure that the message is formatted correctly. See the article
+            <see href="https://learn.microsoft.com/dotnet/fundamentals/runtime-libraries/system-globalization-cultureinfo-invariantculture">
+            System.Globalization.CultureInfo.InvariantCulture property</see> for more information about the invariant
+            culture.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown <paramref name="args"/> is <see langword="null"/>.
+            </exception>
+            <exception cref="T:System.FormatException">
+            Thrown <paramref name="args"/> has a length greater than or less than
+            <see href="https://learn.microsoft.com/dotnet/api/system.text.compositeformat.minimumargumentcount">
+            composite.MinimumArgumentCount</see>.
+            </exception>
         </member>
         <member name="T:ConstTypeArgs.Core.K_Array">
             <summary>
@@ -645,29 +789,58 @@
             domain-specific constants, such as minimum, maximum, &amp; default values.
             </remarks>
         </member>
-        <member name="T:ConstTypeArgs.NotConstTypeArgException">
+        <member name="T:ConstTypeArgs.MisleadingConstTypeException">
             <summary>
-            The <see cref="T:ConstTypeArgs.NotConstTypeArgException"/> exception is thrown when an operation is attempted
-            with a type argument that is not a const type argument
-            <em>(i.e. does not inherit from <see cref="T:ConstTypeArgs.IConstTypeArg`1"/>)</em>.
+            The <see cref="T:ConstTypeArgs.MisleadingConstTypeException"/> class provides an exception that is thrown when an operation is attempted
+            on a type that indicates it is a const type that it is not, causing an unrecoverable failure.
+            </summary>
+            <remarks>
+            Use the <see cref="M:ConstTypeArgs.MisleadingConstTypeException.Throw``3(System.String,System.Exception)"/>
+            and <see cref="M:ConstTypeArgs.MisleadingConstTypeException.ThrowIfMisleading``3(System.String)"/> static methods to throw this exception.
+              <para>
+              Many const types derive from marker interfaces, such as <see cref="T:ConstTypeArgs.IConstTypeArg"/> and <see cref="T:ConstTypeArgs.K"/>,
+              that occasionally have use in activities such as type testing. However, types implementing the marker interfaces
+              do not have to implement the const type itself <em>(e.g. the type implements <see cref="T:ConstTypeArgs.IConstTypeArg"/> but
+              not <see cref="T:ConstTypeArgs.IConstTypeArg`1"/>)</em>. In such cases where this can cause a failure that cannot be recovered from,
+              throw this exception.
+              </para>
+            </remarks>
+        </member>
+        <member name="F:ConstTypeArgs.MisleadingConstTypeException.DefaultDescriptionFormat">
+            <summary>
+            The default description format for the exception.
+            </summary>
+            <seealso cref="M:ConstTypeArgs.ConstTypeException.FormatDefaultMessage(System.Text.CompositeFormat,System.Object[])"/>
+        </member>
+        <member name="P:ConstTypeArgs.MisleadingConstTypeException.TypeMarked">
+            <summary>
+            Gets &amp; inits the type the const type <see cref="P:ConstTypeArgs.ConstTypeException.Type"/> is misleadingly marked as.
+            </summary>
+            <seealso cref="P:ConstTypeArgs.MisleadingConstTypeException.TypeNotImplemented"/>
+        </member>
+        <member name="P:ConstTypeArgs.MisleadingConstTypeException.TypeNotImplemented">
+            <summary>
+            Gets &amp; inits the type the const type <see cref="P:ConstTypeArgs.ConstTypeException.Type"/> is
+            misleadingly marked as implementing.
+            </summary>
+            <seealso cref="P:ConstTypeArgs.MisleadingConstTypeException.TypeMarked"/>
+        </member>
+        <member name="M:ConstTypeArgs.MisleadingConstTypeException.#ctor">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.MisleadingConstTypeException"/> instance.
             </summary>
         </member>
-        <member name="M:ConstTypeArgs.NotConstTypeArgException.#ctor">
+        <member name="M:ConstTypeArgs.MisleadingConstTypeException.#ctor(System.String)">
             <summary>
-            Initializes a new <see cref="T:ConstTypeArgs.NotConstTypeArgException"/> instance.
-            </summary>
-        </member>
-        <member name="M:ConstTypeArgs.NotConstTypeArgException.#ctor(System.String)">
-            <summary>
-            Initializes a new <see cref="T:ConstTypeArgs.NotConstTypeArgException"/> instance with the specified error message.
+            Initializes a new <see cref="T:ConstTypeArgs.MisleadingConstTypeException"/> instance with the specified error message.
             </summary>
             <param name="message">
             The message explaining the cause of the exception.
             </param>
         </member>
-        <member name="M:ConstTypeArgs.NotConstTypeArgException.#ctor(System.String,System.Exception)">
+        <member name="M:ConstTypeArgs.MisleadingConstTypeException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new <see cref="T:ConstTypeArgs.NotConstTypeArgException"/> instance with the specified error message
+            Initializes a new <see cref="T:ConstTypeArgs.MisleadingConstTypeException"/> instance with the specified error message
             and a reference to the inner exception that caused this one to be thrown.
             </summary>
             <param name="message">
@@ -676,6 +849,147 @@
             <param name="innerException">
             The exception that is the cause of the current exception.
             </param>
+        </member>
+        <member name="M:ConstTypeArgs.MisleadingConstTypeException.Throw``3(System.String,System.Exception)">
+            <summary>
+            Throws <see cref="T:ConstTypeArgs.MisleadingConstTypeException"/> to indicate that the const type <typeparamref name="K"/>
+            is marked as <typeparamref name="K_Marked"/> but does not implement <typeparamref name="K_Not"/> as expected.
+            </summary>
+            <typeparam name="K">
+            The const type that is the cause of the exception.
+            </typeparam>
+            <typeparam name="K_Marked">
+            A marker interface that <see cref="T:ConstTypeArgs.K"/> implements.
+            </typeparam>
+            <typeparam name="K_Not">
+            A const type that implements <typeparamref name="K_Marked"/>.
+            </typeparam>
+            <param name="message">
+            Optional. The message explaining the cause of the exception.
+            </param>
+            <param name="innerException">
+            Optional. The exception that is the cause of the current exception.
+            </param>
+            <remarks>
+            This method does not and is not intended to check if <typeparamref name="K"/> implements <typeparamref name="K_Not"/>.
+            </remarks>
+            <exception cref="T:ConstTypeArgs.MisleadingConstTypeException"/>
+        </member>
+        <member name="M:ConstTypeArgs.MisleadingConstTypeException.ThrowIfMisleading``3(System.String)">
+            <summary>
+            Throws <see cref="T:ConstTypeArgs.MisleadingConstTypeException"/> if the const type <typeparamref name="K"/> is marked as
+            <typeparamref name="K_Marked"/> but does not implement <typeparamref name="K_Check"/> as expected.
+            </summary>
+            <typeparam name="K">
+            The const type to check.
+            </typeparam>
+            <typeparam name="K_Marked">
+            The type <typeparamref name="K"/> is marked as.
+            </typeparam>
+            <typeparam name="K_Check">
+            The type to check whether or not <typeparamref name="K"/> implements.
+            </typeparam>
+            <param name="message">
+            Optional. The message explaining the cause of the exception.
+            </param>
+        </member>
+        <member name="T:ConstTypeArgs.UndefinedConstTypeArgException">
+            <summary>
+            The <see cref="T:ConstTypeArgs.UndefinedConstTypeArgException"/> class is thrown when an operation is expecting
+            a const type argument to have a value, but the value is undefined, causing an unrecoverable failure.
+            </summary>
+            <remarks>
+            Use the <see cref="M:ConstTypeArgs.UndefinedConstTypeArgException.Throw(System.Type,System.String,System.Exception)"/>, <see cref="M:ConstTypeArgs.UndefinedConstTypeArgException.Throw``1(System.String,System.Exception)"/>,
+            and <see cref="M:ConstTypeArgs.UndefinedConstTypeArgException.ThrowIfNoValue``2(System.String)"/> static methods to throw this exception.
+            </remarks>
+        </member>
+        <member name="F:ConstTypeArgs.UndefinedConstTypeArgException.DefaultDescriptionFormat">
+            <summary>
+            The default description format for the exception.
+            </summary>
+            <seealso cref="M:ConstTypeArgs.ConstTypeException.FormatDefaultMessage(System.Text.CompositeFormat,System.Object[])"/>
+        </member>
+        <member name="M:ConstTypeArgs.UndefinedConstTypeArgException.#ctor">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.UndefinedConstTypeArgException"/> instance.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.UndefinedConstTypeArgException.#ctor(System.String)">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.UndefinedConstTypeArgException"/> instance with the specified error message.
+            </summary>
+            <param name="message">
+            The message explaining the cause of the exception.
+            </param>
+        </member>
+        <member name="M:ConstTypeArgs.UndefinedConstTypeArgException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new <see cref="T:ConstTypeArgs.UndefinedConstTypeArgException"/> instance with the specified error message
+            and a reference to the inner exception that caused this one to be thrown.
+            </summary>
+            <param name="message">
+            The message explaining the cause of the exception.
+            </param>
+            <param name="innerException">
+            The exception that is the cause of the current exception.
+            </param>
+        </member>
+        <member name="M:ConstTypeArgs.UndefinedConstTypeArgException.Throw(System.Type,System.String,System.Exception)">
+            <summary>
+            Throws a new <see cref="T:ConstTypeArgs.UndefinedConstTypeArgException"/> with the specified parameters.
+            </summary>
+            <param name="type">
+            The type causing the exception to be thrown.
+            </param>
+            <param name="message">
+            Optional. The message explaining the cause of the exception.
+            </param>
+            <param name="innerException">
+            Optional. The exception that is the cause of the current exception.
+            </param>
+            <remarks>
+            This method does not and is not intended to check if <paramref name="type"/> is a const type itself.
+            </remarks>
+            <exception cref="T:ConstTypeArgs.UndefinedConstTypeArgException"/>
+            <seealso cref="M:ConstTypeArgs.UndefinedConstTypeArgException.Throw``1(System.String,System.Exception)"/>
+            <seealso cref="M:ConstTypeArgs.UndefinedConstTypeArgException.ThrowIfNoValue``2(System.String)"/>
+        </member>
+        <member name="M:ConstTypeArgs.UndefinedConstTypeArgException.Throw``1(System.String,System.Exception)">
+            <summary>
+            Throws a new <see cref="T:ConstTypeArgs.UndefinedConstTypeArgException"/> with the specified parameters.
+            </summary>
+            <param name="message">
+            Optional. The message explaining the cause of the exception.
+            </param>
+            <param name="innerException">
+            Optional. The exception that is the cause of the current exception.
+            </param>
+            <typeparam name="K">
+            The const type causing the exception to be thrown.
+            </typeparam>
+            <exception cref="T:ConstTypeArgs.UndefinedConstTypeArgException"/>
+            <seealso cref="M:ConstTypeArgs.UndefinedConstTypeArgException.Throw(System.Type,System.String,System.Exception)"/>
+            <seealso cref="M:ConstTypeArgs.UndefinedConstTypeArgException.ThrowIfNoValue``2(System.String)"/>
+        </member>
+        <member name="M:ConstTypeArgs.UndefinedConstTypeArgException.ThrowIfNoValue``2(System.String)">
+            <summary>
+            Throws a new <see cref="T:ConstTypeArgs.UndefinedConstTypeArgException"/> with the specified message if either
+            the const type argument <typeparamref name="K"/> has no value or <typeparamref name="K"/>
+            is a type of <em>discard</em> const type argument <em>(i.e. a const type argument implementing
+            <see cref="T:ConstTypeArgs.Core.__"/> to indicate it has no value)</em>.
+            </summary>
+            <typeparam name="T">
+            The type of the value of the const type argument <typeparamref name="K"/>.
+            </typeparam>
+            <typeparam name="K">
+            The const type argument.
+            </typeparam>
+            <param name="message">
+            Optional. The message explaining the cause of the exception.
+            </param>
+            <exception cref="T:ConstTypeArgs.UndefinedConstTypeArgException"/>
+            <seealso cref="M:ConstTypeArgs.UndefinedConstTypeArgException.Throw(System.Type,System.String,System.Exception)"/>
+            <seealso cref="M:ConstTypeArgs.UndefinedConstTypeArgException.Throw``1(System.String,System.Exception)"/>
         </member>
         <member name="T:ConstTypeArgs.__">
             <summary>

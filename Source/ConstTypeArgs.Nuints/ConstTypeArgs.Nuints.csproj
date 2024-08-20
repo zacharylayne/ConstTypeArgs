@@ -80,7 +80,7 @@ public sealed class DefaultInitialCollectionSize : K_Nuint&lt;_32&gt;;</Descript
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConstTypeArgs.Core" Version="1.0.0" />
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0-beta1" />
   </ItemGroup>
 
   <ItemGroup>

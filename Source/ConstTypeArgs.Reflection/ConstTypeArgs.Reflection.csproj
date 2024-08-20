@@ -5,56 +5,64 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>ConstTypeArgs.Console.xml</DocumentationFile>
-    <Title>Const Type Arguments - System Console</Title>
-    <Authors>Zachary Layne</Authors>
+    <DocumentationFile>ConstTypeArgs.Reflection.xml</DocumentationFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <Company>Entry Point Software</Company>
-    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass values to generics at compile-time for console colors, keys, and more.</Description>
+    <Authors>Zachary Layne</Authors>
+    <Title>Const Type Arguments - Reflection</Title>
     <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
-    <PackageIcon>Console.png</PackageIcon>
-    <PackageReadmeFile>README.MD</PackageReadmeFile>
     <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
     <IncludeSource>true</IncludeSource>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; console</PackageTags>
-    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; reflection</PackageTags>
+    <PackageReleaseNotes>Initial pre-release.</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>ConstTypeArgs.Reflection.xml</DocumentationFile>
+    <Description>Provides the ConstTypeArgs framework with reflection-based utilities.   </Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
+    <Version>1.0.0-alpha</Version>
+    <PackageIcon>Reflection.png</PackageIcon>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
     <IsTrimmable>True</IsTrimmable>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <IsTrimmable>True</IsTrimmable>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\Icons\Console.png">
+    <Compile Remove="_WellKnownConstTypes.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Icons\Reflection.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Diagnostics" Version="8.2.2" />
+    <PackageReference Include="CommunityToolkit.HighPerformance" Version="8.2.2" />
     <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0-beta1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConstTypeArgs.Delegates\ConstTypeArgs.Delegates.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="LICENSE.txt">
+    <None Update="README.MD">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Update="README.MD">
+    <None Update="LICENSE.txt">
       <PackagePath>\</PackagePath>
       <Pack>True</Pack>
     </None>

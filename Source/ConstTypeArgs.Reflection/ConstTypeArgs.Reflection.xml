@@ -1,0 +1,419 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.Reflection</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.Reflection.FrameworkKinds">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.FrameworkKinds"/> enumeration provides flags for specifying a framework kind,
+            such as const type argument, holder, or interface, const type parameter, argument consumer,
+            and other kinds.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.Undefined">
+            <summary>
+            The kind is not a defined kind of type, such as a const type argument, holder, interface,
+            argument consumer, const type parameter, or other defined kinds.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.CoreType">
+            <summary>
+            The type is a core type defined in the ConstTypeArgs.Core library.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.ConstTypeArg">
+            <summary>
+            The type is a const type argument.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.ConstTypeInterface">
+            <summary>
+            The type is a const type interface.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.ConstTypeHolder">
+            <summary>
+            The type is a const type holder <em>(i.e. a const type argument
+            wrapping another const type argument)</em>.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.ConstTypeDiscard">
+            <summary>
+            The type is a const type discard <em>(i.e. a const type argument
+            signifying it provides no value)</em>.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.ConstType">
+            <summary>
+            The type is a const type argument.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.ConsumerType">
+            <summary>
+            The type is an argument consumer.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.ConsumerMethod">
+            <summary>
+            The method is a argument consumer.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.OpenConsumer">
+            <summary>
+            The generic is an open argument consumer, meaning that const type arguments have not been supplied for
+            all of the generic's const type parameters.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.ClosedConsumer">
+            <summary>
+            The generic is a closed argument consumer, meaning that const type arguments have been supplied for
+            all of the generic's const type parameters.
+            </summary>
+            <remarks>
+            Closed argument consumers <em>MAY</em> still be open generics <em>IF</em> they have
+            non-const type generic parameters that have not been supplied with type arguments.
+            </remarks>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.OpenConsumerType">
+            <summary>
+            The generic type is an open argument consumer, meaning that const type arguments have not been supplied for
+            all of the type's const type parameters.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.ClosedConsumerType">
+            <summary>
+            The generic type is a closed argument consumer, meaning that const type arguments have been supplied for
+            all of the type's const type parameters.
+            </summary>
+            <remarks>
+            Types of closed argument consumers <em>MAY</em> still be open generic types <em>IF</em> they have
+            non-const type generic type parameters that have not been supplied with type arguments.
+            </remarks>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.OpenConsumerMethod">
+            <summary>
+            The generic method an open argument consumer, meaning that const type arguments have not been supplied for
+            all of the method's const type parameters.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.ClosedConsumerMethod">
+            <summary>
+            The generic method is a closed argument consumer, meaning that const type arguments have been supplied for
+            all of the method's const type parameters.
+            </summary>
+            <remarks>
+            Methods that are closed argument consumers <em>MAY</em> still be open generic methods <em>IF</em> they have
+            non-const type generic parameters that have not been supplied with type arguments.
+            </remarks>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.Consumer">
+            <summary>
+            The generic is an argument consumer <em>(i.e. a generic with one or more const type parameters)</em>.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.GenericParameter">
+            <summary>
+            The type is a generic parameter.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.Exception">
+            <summary>
+            The type is an exception.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.Attribute">
+            <summary>
+            The type is an attribute.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.NotConstType">
+            <summary>
+            The type is a kind of type that is integral to the ConstTypeArgs framework,
+            but is not a const type itself.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.All">
+            <summary>
+            Identifies all kinds of types that are integral concepts within the ConstTypeArgs framework.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.WellKnownConstTypes">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.WellKnownConstTypes"/> enumeration provides flags to identify what
+            kind of well-known const type a type may be.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.None">
+            <summary>
+            The type is not a well-known const type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Bool">
+            <summary>
+            The type is <c>K_Bool</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Byte">
+            <summary>
+            The type is <c>K_Byte</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Char">
+            <summary>
+            The type is <c>K_Char</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Decimal">
+            <summary>
+            The type is <c>K_Decimal</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Double">
+            <summary>
+            The type is <c>K_Double</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Float">
+            <summary>
+            The type is <c>K_Float</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Half">
+            <summary>
+            The type is <c>K_Half</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Int">
+            <summary>
+            The type is <c>K_Int</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Int128">
+            <summary>
+            The type is <c>K_Int128</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Long">
+            <summary>
+            The type is <c>K_Long</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Nint">
+            <summary>
+            The type is <c>K_Nint</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Nuint">
+            <summary>
+            The type is <c>K_Nuint</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Sbyte">
+            <summary>
+            The type is <c>K_Sbyte</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Short">
+            <summary>
+            The type is <c>K_Short</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_String">
+            <summary>
+            The type is <c>K_String</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Type">
+            <summary>
+            The type is <c>K_Type</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Uint">
+            <summary>
+            The type is <c>K_Uint</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_UInt128">
+            <summary>
+            The type is <c>K_UInt128</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Ulong">
+            <summary>
+            The type is <c>K_Ulong</c> type.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Ushort">
+            <summary>
+            The type is <c>K_Ushort</c>.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.IConstTypeArg">
+            <summary>
+            The type is a <c>IConstTypeArg</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.IConstTypeArg`1"/>
+            <seealso cref="T:ConstTypeArgs.IConstTypeArg`2"/>
+            <seealso cref="T:ConstTypeArgs.IConstTypeArg"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Array">
+            <summary>
+            The type is a <c>K_Array</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.K_Array`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Array"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Class">
+            <summary>
+            The type is a <c>K_Class</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.K_Class`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Class"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Delegate">
+            <summary>
+            The type is a <c>K_Delegate</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Enum">
+            <summary>
+            The type is a <c>K_Enum</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.K_Enum`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Enum"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_FloatingPoint">
+            <summary>
+            The type is a <c>K_FloatingPoint</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.K_FloatingPoint`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_FloatingPoint"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Integer">
+            <summary>
+            The type is a <c>K_Integer</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.K_Integer`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Integer"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_MulticastDelegate">
+            <summary>
+            The type is a <c>K_MulticastDelegate</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.K_MulticastDelegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_MulticastDelegate"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Number">
+            <summary>
+            The type is a <c>K_Number</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.K_Number`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Number"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_ReadOnlyMemory">
+            <summary>
+            The type is a <c>K_ReadOnlyMemory</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.K_ReadOnlyMemory`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_ReadOnlyMemory"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_SignedNumber">
+            <summary>
+            The type is a <c>K_SignedNumber</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.K_SignedNumber`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_SignedNumber"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Struct">
+            <summary>
+            The type is a <c>K_Struct</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.K_Struct`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Struct"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Unmanaged">
+            <summary>
+            The type is a <c>K_Array</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_Unmanaged"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K">
+            <summary>
+            The type is a <c>K</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.K`1"/>
+            <seealso cref="T:ConstTypeArgs.K`2"/>
+            <seealso cref="T:ConstTypeArgs.K"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.__">
+            <summary>
+            The type is a <c>__</c> type.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.__"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.Core">
+            <summary>
+            Identifies all well-known types that are part of the ConstTypeArgs.Core library.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.MostDerived">
+            <summary>
+            Identifies all interfaces that are the most-derived from <see cref="T:ConstTypeArgs.IConstTypeArg`1"/>.
+            These interfaces are directly implemented by const type arguments.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.Text">
+            <summary>
+            Identifies well-known types primarily used to provide text values.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.Delegate">
+            <summary>
+            Identifies well-known types with delegate values.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Core.K_Delegate`1"/>
+            <seealso cref="T:ConstTypeArgs.Core.K_MulticastDelegate`1"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.Collection">
+            <summary>
+            Identifies well-known types with collections of values, such as an array or
+            <see href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">
+            ReadOnlyMemory&lt;T&gt;</see>.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.Number">
+            <summary>
+            Identifies all well-known types that provide numeric values.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.IntegerNumber">
+            <summary>
+            Identifies all well-known types that provide integer values.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.FloatingPointNumber">
+            <summary>
+            Identifies all well-known types that provide floating-point values.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.SignedNumber">
+            <summary>
+            Identifies all well-known types that provide signed numeric values.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.UnsignedNumber">
+            <summary>
+            Identifies all types that provide unsigned numeric values.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.All">
+            <summary>
+            Identifies all well-known types.
+            </summary>
+        </member>
+    </members>
+</doc>

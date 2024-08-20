@@ -5,7 +5,9 @@ VisualStudioVersion = 17.9.34414.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B126AD85-980C-4790-A213-D0790AE9BA8A}"
 	ProjectSection(SolutionItems) = preProject
-		C:\Users\zacha\.dotnet\tools\.store\docfx\2.77.0\docfx\2.77.0\README.md = C:\Users\zacha\.dotnet\tools\.store\docfx\2.77.0\docfx\2.77.0\README.md
+		CHANGELOG.md = CHANGELOG.md
+		CONTRIBUTING.md = CONTRIBUTING.md
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Core", "Source\ConstTypeArgs.Core\ConstTypeArgs.Core.csproj", "{3F1F8AD0-32D5-4CB7-BF95-FEF4CDCFA9AE}"
@@ -58,7 +60,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		Documentation\Glossary.md = Documentation\Glossary.md
 		Documentation\Naming Conventions.md = Documentation\Naming Conventions.md
 		Documentation\Overview.md = Documentation\Overview.md
-		README.md = README.md
 		Documentation\Use Cases.md = Documentation\Use Cases.md
 	EndProjectSection
 EndProject
@@ -71,16 +72,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Site", "Site", "{ABCABE07-0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Developer Guide", "Developer Guide", "{EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}"
 	ProjectSection(SolutionItems) = preProject
-		Documentation\dev-guide\Argument Providers.md = Documentation\dev-guide\Argument Providers.md
+		Documentation\dev-guide\Utility Class.md = Documentation\dev-guide\Utility Class.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Console", "Source\ConstTypeArgs.Console\ConstTypeArgs.Console.csproj", "{9A5B0C1A-EB5E-47A7-8679-B84DFBFEAEFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstTypeArgs.MathOps", "Source\ConstTypeArgs.MathOps\ConstTypeArgs.MathOps.csproj", "{61D764E2-5E33-4BB7-AEAB-8D18BCB031EA}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Delegates.Interlocked", "Source\ConstTypeArgs.Delegates.Interlocked\ConstTypeArgs.Delegates.Interlocked.csproj", "{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstTypeArgs.Memory", "Source\ConstTypeArgs.Memory\ConstTypeArgs.Memory.csproj", "{24E52E99-66F5-4EEC-8409-D8D338D73C16}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tutorials", "Tutorials", "{69647E90-556D-4A53-9F24-7915827C0F7B}"
 EndProject
@@ -94,13 +91,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K", "K", "{C1DDDAB2-200A-41
 		Documentation\dev-guide\K.md = Documentation\dev-guide\K.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enum-Like Types", "Enum-Like Types", "{D69C1C78-CD10-4300-8BA1-049D633F1D8B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Types", "Types", "{7FFC464C-9CF3-45F0-AB09-C9497F79638C}"
 	ProjectSection(SolutionItems) = preProject
+		Documentation\dev-guide\Argument Providers.md = Documentation\dev-guide\Argument Providers.md
 		Documentation\dev-guide\Enum-Like Types.md = Documentation\dev-guide\Enum-Like Types.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Union-Like Types", "Union-Like Types", "{7FFC464C-9CF3-45F0-AB09-C9497F79638C}"
-	ProjectSection(SolutionItems) = preProject
+		Documentation\dev-guide\Types.md = Documentation\dev-guide\Types.md
 		Documentation\dev-guide\Union-Like Types.md = Documentation\dev-guide\Union-Like Types.md
 	EndProjectSection
 EndProject
@@ -108,6 +103,32 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Validation", "Validation", 
 	ProjectSection(SolutionItems) = preProject
 		Documentation\dev-guide\Validation.md = Documentation\dev-guide\Validation.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Use Cases", "Use Cases", "{106B25AB-91C7-4D6F-8686-19660B94DFEE}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Use Cases.md = Documentation\Use Cases.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Benefits", "Benefits", "{ED0F0318-26A2-41CD-8D57-C59CC0953F26}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Benefits.md = Documentation\Benefits.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{86BE8C7F-30C9-4F76-99A9-CED7A84AB070}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DocFX", "DocFX", "{742640B9-5412-4214-B2F9-D948E871B551}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\zacha\.dotnet\tools\.store\docfx\2.77.0\docfx\2.77.0\README.md = C:\Users\zacha\.dotnet\tools\.store\docfx\2.77.0\docfx\2.77.0\README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Reflection", "Source\ConstTypeArgs.Reflection\ConstTypeArgs.Reflection.csproj", "{78280BE3-2A20-4C42-90CA-99CF3206FA37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reflection", "Reflection", "{A6F06031-474C-49E9-84D8-04EA59AF1E31}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\dev-guide\Reflection.md = Documentation\dev-guide\Reflection.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Validation", "Source\ConstTypeArgs.Validation\ConstTypeArgs.Validation.csproj", "{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,18 +228,18 @@ Global
 		{9A5B0C1A-EB5E-47A7-8679-B84DFBFEAEFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A5B0C1A-EB5E-47A7-8679-B84DFBFEAEFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A5B0C1A-EB5E-47A7-8679-B84DFBFEAEFA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61D764E2-5E33-4BB7-AEAB-8D18BCB031EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61D764E2-5E33-4BB7-AEAB-8D18BCB031EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61D764E2-5E33-4BB7-AEAB-8D18BCB031EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61D764E2-5E33-4BB7-AEAB-8D18BCB031EA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24E52E99-66F5-4EEC-8409-D8D338D73C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24E52E99-66F5-4EEC-8409-D8D338D73C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24E52E99-66F5-4EEC-8409-D8D338D73C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24E52E99-66F5-4EEC-8409-D8D338D73C16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78280BE3-2A20-4C42-90CA-99CF3206FA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78280BE3-2A20-4C42-90CA-99CF3206FA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78280BE3-2A20-4C42-90CA-99CF3206FA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78280BE3-2A20-4C42-90CA-99CF3206FA37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -228,11 +249,15 @@ Global
 		{ABCABE07-0140-432A-A7EC-BEF0CA0AE884} = {B126AD85-980C-4790-A213-D0790AE9BA8A}
 		{EC7629A7-F94A-4F35-925A-11E6F5E0EA6C} = {D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C}
 		{69647E90-556D-4A53-9F24-7915827C0F7B} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
-		{BD3C6183-9A29-4AC4-874C-BA71255DE708} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
-		{C1DDDAB2-200A-417D-B93A-A09272A11902} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
-		{D69C1C78-CD10-4300-8BA1-049D633F1D8B} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
+		{BD3C6183-9A29-4AC4-874C-BA71255DE708} = {7FFC464C-9CF3-45F0-AB09-C9497F79638C}
+		{C1DDDAB2-200A-417D-B93A-A09272A11902} = {7FFC464C-9CF3-45F0-AB09-C9497F79638C}
 		{7FFC464C-9CF3-45F0-AB09-C9497F79638C} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
 		{E7C555C6-8732-4C17-9AA7-95CCCDD0B381} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
+		{106B25AB-91C7-4D6F-8686-19660B94DFEE} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
+		{ED0F0318-26A2-41CD-8D57-C59CC0953F26} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
+		{86BE8C7F-30C9-4F76-99A9-CED7A84AB070} = {D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C}
+		{742640B9-5412-4214-B2F9-D948E871B551} = {86BE8C7F-30C9-4F76-99A9-CED7A84AB070}
+		{A6F06031-474C-49E9-84D8-04EA59AF1E31} = {EC7629A7-F94A-4F35-925A-11E6F5E0EA6C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {266F50E7-B8BB-4CFD-BC01-66FC3E001666}

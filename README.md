@@ -1,8 +1,14 @@
-The ConstTypeArgs framework allows you to work with **const type arguments** (also called *const type args*), which use type parameters to "pass" constant-like values to generics. These values are can be used in static contexts, such as static constructors, static fields, and static methods. This can mimic C++ [template specialization](https://en.cppreference.com/w/cpp/language/template_specialization), provide enhanced type safety, static polymorphism, increased expressiveness, and more.
+# ConstTypeArgs.Core
+
+The ConstTypeArgs.Core library provides the basic types needed to create *const type arguments*, which are types used to pass values to generics through their generic parameters. These values can be used in static contexts, such as for static constructors, field initialization, and more.
+
+# Framework Overview
+
+The ConstTypeArgs framework allows you to work with **const type arguments** (also called *const type args*), which use generic parameters to "pass" constant-like values to generics. These values are can be used in static contexts, such as static constructors, static fields, and static methods. This can mimic C++ [template specialization](https://en.cppreference.com/w/cpp/language/template_specialization), provide enhanced type safety, static polymorphism, increased expressiveness, and more.
 
 ## Benefits
 
-There are many benefits to using const type arguments, just some of which are listed below:
+There are many benefits to using const type arguments, such as:
 
 * **Type Safety**
 * **Static Polymorphism**
@@ -13,7 +19,7 @@ There are many benefits to using const type arguments, just some of which are li
 * **Enhanced Debugging**
 * **Improved Unit Testing**
 
-These are just some of the benefits the ConstTypeArgs framework can provide.
+These are just some of the benefits the ConstTypeArgs framework can provide. For more information, go to [Benefits](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/Benefits.md) in the framework documentation.
 
 ## Use Case Scenarios
 
@@ -22,7 +28,6 @@ Const type arguments can be used in a variety of scenarios to provide enhanced t
 * **Buffer Size Specification**
 * **Type Configuration** 
 * **Implementation Selection**
-* **Dependency Injection**
 * **Union-Like Types**
 * **Units of Measure**
 * **Type-Safe State Machines**
@@ -33,7 +38,7 @@ Const type arguments can be used in a variety of scenarios to provide enhanced t
 * **ECS (Entity-Component-System) Integration**
 * **Type Mapping**
 
-These are just some of the use cases where const type arguments can be used to provide enhanced type safety, static polymorphism, increased expressiveness, and more.
+These are just some of the use cases where const type arguments can be used to provide enhanced type safety, static polymorphism, increased expressiveness, and more. For more information, go to [Use Cases](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/Use%20Cases.md) in the framework documentation.
 
 ## Defining & Using Const Type Arguments
 
@@ -66,11 +71,11 @@ var bigBuffer = new Buffer<int, _1024>();
 
 These are some of the common terms used throughout the ConstTypeArgs documentation:
 
-* **Const Type Argument** - A type that uses type parameters to "pass" values to generics.  This term is interchangeable with the value they hold unless ambiguity arises, in which case *argument provider* and *argument value* are used.
+* **Const Type Argument** - A type that uses generic parameters to "pass" values to generics.  This term is interchangeable with the value they hold unless ambiguity arises, in which case *argument provider* and *argument value* are used.
 
-* **Const Type Parameter:** - A type parameter that const type arguments "pass" values through.
+* **Const Type Parameter:** - A generic parameter that const type arguments "pass" values through.
 
-* **Const Type Holder** - A const type argument that wraps another const type argument. These are useful for creating reusable or domain-specific const type arguments.
+* **Argument Holder** - A const type argument that wraps other const type arguments. These are useful for reusing domain-specific values.
 
 Go to the framework documentation [Glossary](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/Glossary.md) for more details and terminology.
 
@@ -93,9 +98,9 @@ The ConstTypeFramework modifies standard naming conventions in order to provide 
 
 | Convention | |
 |:-------------------|-|
-| `K_` Prefix | The names of const type interfaces *(interfaces deriving from `IConstTypeArg<T>`)* use this prefix. This is meant to indicate that rather than define a contract, they are the means to "pass" values via generic type parameters. The prefix refers to how `K` is used in mathematic formulas to denote an unknown constant value. |
-| `_` Prefix | Many argument providers *(concrete types that implement `IConstTypeArg<T>`)* in ConstTypeArg libraries have the prefix `_` followed by a representation of their value *(e.g. _1024, _A, _Blue)*. This helps alphabetize and group similar types together. |
-| [`__`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/__.cs) Types | Const types *(types deriving from or implementing `IConstTypeArg<T>`)* that implement `__` are used as "discards" to indicate they lack a value. These types are simply named `__` and usually explicitly implement multiple arg type interfaces providing either `default` or `null` values. These can be used with argument consumers providing union-like behavior. |
+| `K_` Prefix | The names of argument interfaces *(i.e. interfaces deriving from `IConstTypeArg<T>`)* use this prefix. This is meant to indicate that rather than define a contract, they are the means to "pass" values via generic type parameters. The prefix refers to how `K` is used in mathematic formulas to denote an unknown constant value. |
+| `_` Prefix | Many argument providers *(i.e. concrete types that implement `IConstTypeArg<T>`)* in ConstTypeArg libraries have the prefix `_` followed by a representation of their value *(e.g. _1024, _A, _Blue)*. This helps alphabetize and group similar types together. |
+| [`__`](#__) Types | Argument types *(i.e. types deriving from or implementing `IConstTypeArg<T>`)* that implement [`__`](/Core/__.cs) are used as "discards" to indicate they lack a value. These types are simply named `__` and usually explicitly implement multiple arg type interfaces and provide either `default` or `null` values. These can be used with argument consumers providing union-like behavior. |
 
 # Documentation
 

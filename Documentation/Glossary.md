@@ -32,6 +32,10 @@ The terms in this section are used infrequently in ConstTypeArgs documentation.
 
 * **Const Type Enum** - An enum-like const type argument defining a set of const type arguments.
 
+* **Open Argument Consumer:** Also called *open arg consumer* or *open consumer*. ...
+
+* **Closed Argument Consumer:** Also called *closed arg consumer* or *closed consumer*. ...
+
 * **Const Type Union** - A const type argument that can represent multiple types.
 
 ## See Also

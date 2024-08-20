@@ -1,0 +1,1 @@
+﻿# Const Type Args - Validation

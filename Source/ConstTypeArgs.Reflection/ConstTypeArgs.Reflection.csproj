@@ -41,7 +41,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="_WellKnownConstTypes.cs" />
+    <Compile Remove="ArgumentConsumerInfo.cs" />
+    <Compile Remove="AttributeInfo.cs" />
+    <Compile Remove="ConstTypeArgDiscardInfo.cs" />
+    <Compile Remove="ConstTypeArgHolderInfo.cs" />
+    <Compile Remove="ConstTypeArgInfo.cs" />
+    <Compile Remove="ConstTypeInfo.cs" />
+    <Compile Remove="ConstTypeParamInfo.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -66,6 +72,14 @@
       <PackagePath>\</PackagePath>
       <Pack>True</Pack>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="System.ComponentModel" />
+    <Using Include="System.ComponentModel.EditorBrowsableState">
+      <Static>True</Static>
+    </Using>
+    <Using Include="System.Diagnostics.CodeAnalysis" />
   </ItemGroup>
 
 </Project>

@@ -9,7 +9,8 @@ namespace ConstTypeArgs.Reflection;
 /// kind of well-known const type a type may be.
 /// </summary>
 [Flags]
-public enum WellKnownConstTypes : long
+public enum WellKnownConstTypes
+    : long
 {
     /// <summary>
     /// The type is not a well-known const type.

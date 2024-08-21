@@ -17,6 +17,11 @@ public enum FrameworkKinds
     Undefined            = 0,
 
     /// <summary>
+    /// The code element is not relevant to framework mechanics and has no identifiable kind.
+    /// </summary>
+    None                 = int.MaxValue,
+
+    /// <summary>
     /// The type is a core type defined in the ConstTypeArgs.Core library.
     /// </summary>
     CoreType             = 1 << 0,

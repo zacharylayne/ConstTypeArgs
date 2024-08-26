@@ -5,7 +5,7 @@
 /// a framework-related code element that has a value.
 /// </summary>
 /// <seealso cref="IWithValue{T}"/>
-[EditorBrowsable(Advanced)]
+[EditorBrowsable(Never)]
 public interface IWithValue
 {
     /// <summary>
@@ -20,7 +20,7 @@ public interface IWithValue
     /// <summary>
     /// Gets the type of the code element's value.
     /// </summary>
-    Type Type { get; }
+    Type? TypeOfValue { get; }
 
     /// <summary>
     /// Gets whether or not the value of the code element is undefined.
@@ -34,7 +34,7 @@ public interface IWithValue
     /// then <see cref="Value"/> should be treated as undefined, regardless of the actual value returned.
     /// </remarks>
     /// <seealso cref="Value"/>
-    /// <seealso cref="Type"/>
+    /// <seealso cref="TypeOfValue"/>
     bool IsValueDefined { get; }
 }
 
@@ -46,7 +46,7 @@ public interface IWithValue
 /// The type of the code element's value.
 /// </typeparam>
 /// <seealso cref="IWithValue"/>
-[EditorBrowsable(Advanced)]
+[EditorBrowsable(Never)]
 public interface IWithValue<T>
 {
     /// <summary>

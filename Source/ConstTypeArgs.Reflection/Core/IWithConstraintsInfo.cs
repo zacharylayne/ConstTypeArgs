@@ -10,23 +10,15 @@
 /// </remarks>
 /// <seealso cref="IWithGenericParametersInfo"/>
 /// <seealso cref="IWithGenericArgumentsInfo"/>
-[EditorBrowsable(Advanced)]
+[EditorBrowsable(Never)]
 public interface IWithConstraintsInfo
 {
     /// <summary>
     /// Gets a collection of the type constraints that the generic parameter or argument has.
     /// </summary>
     /// <value>
+    /// Constraints can include one class and zero or more interfaces.
     /// If the generic parameter or argument does not have any type constraints, an empty collection is returned instead.
     /// </value>
-    /// <seealso cref="UntypedConstraints"/>
     IEnumerable<ITypeInfo> TypedConstraints { get; }
-
-    /// <summary>
-    /// Gets a collection of the untyped constraints that the generic parameter or argument has
-    /// <em>(i.e. <see langword="struct"/>, <see langword="class"/>, <see langword="notnull"/>,
-    /// <see langword="unmanaged"/>, <see langword="new"/>, etc.)</em>
-    /// </summary>
-    /// <seealso cref="TypedConstraints"/>
-    IEnumerable<string> UntypedConstraints { get; }
 }

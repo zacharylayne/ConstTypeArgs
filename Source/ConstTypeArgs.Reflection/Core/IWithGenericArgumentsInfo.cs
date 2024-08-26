@@ -6,7 +6,7 @@
 /// </summary>
 /// <seealso cref="IWithGenericParametersInfo"/>
 /// <seealso cref="IWithConstraintsInfo"/>
-[EditorBrowsable(Advanced)]
+[EditorBrowsable(Never)]
 public interface IWithGenericArgumentsInfo
 {
     /// <summary>

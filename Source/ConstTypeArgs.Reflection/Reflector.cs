@@ -22,4 +22,84 @@ public static partial class Reflector
     public static class Type<T>
     {
     }
+
+    /// <summary>
+    /// Returns reflection information about the specified type.
+    /// </summary>
+    /// <returns>
+    /// Reflection information about the specified type.
+    /// </returns>
+    public static ITypeInfo GetTypeInfo()
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// Returns reflection information about the specified const type argument.
+    /// </summary>
+    /// <returns>
+    /// Reflection information about the specified const type argument.
+    /// </returns>
+    public static IConstTypeArgInfo GetConstTypeArgInfo()
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// Returns reflection information about the specified generic parameter.
+    /// </summary>
+    /// <returns>
+    /// Reflection information about the specified generic parameter.
+    /// </returns>
+    public static IGenericParameterInfo GetGenericParameterInfo()
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// Returns reflection information about the specified attribute.
+    /// </summary>
+    /// <returns>
+    /// Reflection information about the specified attribute.
+    /// </returns>
+    public static IAttributeInfo GetAttributeInfo()
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// Returns the value of the specified const type argument.
+    /// </summary>
+    /// <returns>
+    /// The value of the specified const type argument as an object.
+    /// </returns>
+    public static object GetConstTypeArgValue()
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// Returns whether or not the specified type is a const type holder.
+    /// </summary>
+    /// <returns>
+    /// A value of <see langword="true"/> if the specified type is a const type holder;
+    /// otherwise, <see langword="false"/>.
+    /// </returns>
+    /// <exception cref="NotImplementedException"></exception>
+    public static bool IsConstTypeHolder()
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// Returns whether or not the specified type is a const type discard.
+    /// </summary>
+    /// <returns>
+    /// A value of <see langword="true"/> if the specified type is a const type discard;
+    /// otherwise, <see langword="false"/>.
+    /// </returns>
+    public static bool IsConstTypeDiscard()
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -3,7 +3,7 @@
 /// <summary>
 /// The <see cref="IWithPositionInfo"/> interface provides the position of an ordered code element.
 /// </summary>
-[EditorBrowsable(Advanced)]
+[EditorBrowsable(Never)]
 public interface IWithPositionInfo
 {
     /// <summary>

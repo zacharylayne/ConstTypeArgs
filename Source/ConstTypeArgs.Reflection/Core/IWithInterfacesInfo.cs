@@ -4,7 +4,7 @@
 /// The <see cref="IWithInterfacesInfo"/> interface is used to provide information about
 /// a framework-related code element that has interfaces implemented.
 /// </summary>
-[EditorBrowsable(Advanced)]
+[EditorBrowsable(Never)]
 public interface IWithInterfacesInfo
 {
     /// <summary>

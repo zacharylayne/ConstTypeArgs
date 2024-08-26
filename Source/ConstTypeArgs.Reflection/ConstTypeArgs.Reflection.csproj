@@ -48,6 +48,8 @@
     <Compile Remove="ConstTypeArgInfo.cs" />
     <Compile Remove="ConstTypeInfo.cs" />
     <Compile Remove="ConstTypeParamInfo.cs" />
+    <Compile Remove="Reflector.AttributeInfoImpl.cs" />
+    <Compile Remove="Reflector.GenericParameterInfoImpl.cs" />
   </ItemGroup>
 
   <ItemGroup>

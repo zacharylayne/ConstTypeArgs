@@ -8,7 +8,7 @@ namespace ConstTypeArgs.Reflection.Core;
 /// </summary>
 /// <seealso cref="IWithGenericArgumentsInfo"/>
 /// <seealso cref="IWithConstraintsInfo"/>
-[EditorBrowsable(Advanced)]
+[EditorBrowsable(Never)]
 public interface IWithGenericParametersInfo
 {
     /// <summary>

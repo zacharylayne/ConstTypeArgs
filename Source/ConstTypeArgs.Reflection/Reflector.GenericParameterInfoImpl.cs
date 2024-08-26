@@ -8,29 +8,41 @@ public static partial class Reflector
     public sealed class GenericParameterInfoImpl
         : IGenericParameterInfo
     {
-        /// <inheritdoc/>
-        public string Name => throw new NotImplementedException();
-
-        /// <inheritdoc/>
-        public FrameworkKinds Kind => throw new NotImplementedException();
-
-        /// <inheritdoc/>
-        public IEnumerable<IAttributeInfo> Attributes => throw new NotImplementedException();
-
-        /// <inheritdoc/>
-        public int Position => throw new NotImplementedException();
-
-        /// <inheritdoc/>
-        public IEnumerable<ITypeInfo> TypedConstraints => throw new NotImplementedException();
-
-        /// <inheritdoc/>
-        public IEnumerable<string> UntypedConstraints => throw new NotImplementedException();
+        /// <summary>
+        /// Required. Gets &amp; inits the name of the generic parameter this object represents.
+        /// </summary>
+        public required string Name { get; init; }
 
         /// <summary>
-        /// Creates a new instance of the <see cref="GenericParameterInfoImpl"/> class.
+        /// Required. Gets &amp; inits the framework kinds the generic parameter this object represents is.
         /// </summary>
-        public GenericParameterInfoImpl()
-        {
-        }
+        public required FrameworkKinds Kind { get; init; }
+
+        /// <summary>
+        /// Required. Gets &amp; inits the generic parameter list position of
+        /// the generic parameter this object represents.
+        /// </summary>
+        /// <value>
+        /// Position is 0-based.
+        /// </value>
+        public required int Position { get; init; }
+
+        /// <summary>
+        /// Required. Gets &amp; inits a collection of information about the constraints placed
+        /// on the generic parameter this object represents.
+        /// </summary>
+        /// <value>
+        /// If the generic parameter this object represents has no constraints, the value is an empty collection.
+        /// </value>
+        public required IEnumerable<ITypeInfo> TypedConstraints { get; init; } = [];
+
+        /// <summary>
+        /// Required. Gets &amp; inits a collection of information about the attributes
+        /// marking the generic parameter this object represents.
+        /// </summary>
+        /// <value>
+        /// If the generic parameter this object represents has no attributes, the value is an empty collection.
+        /// </value>
+        public required IEnumerable<IAttributeInfo> Attributes { get; init; } = [];
     }
 }

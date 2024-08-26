@@ -6,13 +6,9 @@ namespace ConstTypeArgs.Reflection;
 /// The <see cref="ITypeInfo"/> interface provides information about a framework-related type.
 /// </summary>
 public interface ITypeInfo
-    : IElementInfo, IWithInterfacesInfo
+    : IElementInfo, IWithType, IWithBaseTypesInfo,
+      IWithInterfacesInfo, IWithAttributesInfo
 {
-    /// <summary>
-    /// Gets the type this represents.
-    /// </summary>
-    Type Type { get; }
-
     /// <summary>
     /// Gets whether or not the type is a class.
     /// </summary>

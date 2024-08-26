@@ -4,7 +4,7 @@
 /// The <see cref="IWithBaseTypesInfo"/> interface provides information about a framework-related
 /// code element that has base types.
 /// </summary>
-[EditorBrowsable(Advanced)]
+[EditorBrowsable(Never)]
 public interface IWithBaseTypesInfo
 {
     /// <summary>

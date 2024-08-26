@@ -1,12 +1,12 @@
 ﻿namespace ConstTypeArgs.Reflection;
 
-public static partial class Reflector
+public partial class Reflector
 {
     /// <summary>
     /// Provides a private concrete implementation of the <see cref="IConstTypeArgInfo"/> interface.
     /// </summary>
     private sealed class ConstTypeArgInfoImpl
-        : TypeInfoImpl, IConstTypeArgInfo
+        : TypeInfo, IConstTypeArgInfo
     {
         /// <summary>
         /// Required. Gets &amp; inits the const type argument's value as an object.
@@ -41,7 +41,7 @@ public static partial class Reflector
         /// </summary>
         /// <seealso cref="IsWellKnownConstType"/>
         /// <seealso cref="ImplementsWellKnownConstType"/>
-        public required WellKnownConstTypes WellKnownConstTypes { get; init; } // #TODO
+        public required WellKnownConstTypes WellKnownConstTypes { get; init; }
 
         /// <summary>
         /// Required. Gets &amp; inits a value indicating whether or not the const type

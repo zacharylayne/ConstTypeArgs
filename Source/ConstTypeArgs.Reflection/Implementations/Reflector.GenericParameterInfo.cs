@@ -1,11 +1,11 @@
 ﻿namespace ConstTypeArgs.Reflection;
 
-public static partial class Reflector
+public partial class Reflector
 {
     /// <summary>
     /// Provides a private concrete implementation of the <see cref="IGenericParameterInfo"/> interface.
     /// </summary>
-    public sealed class GenericParameterInfoImpl
+    private sealed class GenericParameterInfo
         : IGenericParameterInfo
     {
         /// <summary>

@@ -41,18 +41,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ArgumentConsumerInfo.cs" />
-    <Compile Remove="AttributeInfo.cs" />
-    <Compile Remove="ConstTypeArgDiscardInfo.cs" />
-    <Compile Remove="ConstTypeArgHolderInfo.cs" />
-    <Compile Remove="ConstTypeArgInfo.cs" />
-    <Compile Remove="ConstTypeInfo.cs" />
-    <Compile Remove="ConstTypeParamInfo.cs" />
-    <Compile Remove="Reflector.AttributeInfoImpl.cs" />
-    <Compile Remove="Reflector.GenericParameterInfoImpl.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="..\..\Icons\Reflection.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

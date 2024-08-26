@@ -1,11 +1,11 @@
 ﻿namespace ConstTypeArgs.Reflection;
 
-public static partial class Reflector
+public partial class Reflector
 {
     /// <summary>
     /// Provides a private concrete implementation of the <see cref="ITypeInfo"/> interface.
     /// </summary>
-    private class TypeInfoImpl
+    private class TypeInfo
         : ITypeInfo
     {
         /// <summary>
@@ -35,7 +35,7 @@ public static partial class Reflector
         /// <value>
         /// If the type this object represents has no attributes, the value is an empty collection.
         /// </value>
-        public required IEnumerable<IAttributeInfo> Attributes { get; init; } = [];
+        public required IEnumerable<IAttributeInfo> Attributes { get; init; } = []; // #TODO
 
         /// <summary>
         /// Required. Gets &amp; inits a collection of information about the base types
@@ -46,7 +46,7 @@ public static partial class Reflector
         /// If the type this object represents has no base types, the value is an empty collection.
         /// </remarks>
         /// <seealso cref="Implements"/>
-        public required IEnumerable<ITypeInfo> BaseTypes { get; init; } = [];
+        public required IEnumerable<ITypeInfo> BaseTypes { get; init; } = []; // #TODO
 
         /// <summary>
         /// Required. Gets &amp; inits a collection of information about the interfaces
@@ -56,7 +56,7 @@ public static partial class Reflector
         /// If the type this object represents implements no interfaces, the value is an empty collection.
         /// </value>
         /// <seealso cref="BaseTypes"/>
-        public required IEnumerable<ITypeInfo> Implements { get; init; } = [];
+        public required IEnumerable<ITypeInfo> Implements { get; init; } = []; // #TODO
 
         /// <summary>
         /// Gets whether or not the type this object represents is a class.
@@ -83,7 +83,7 @@ public static partial class Reflector
         /// A value of <see langword="true"/> if the type this object represents is a struct;
         /// otherwise, <see langword="false"/>.
         /// </value>
-        public bool IsStruct => Type.IsValueType && !Type.IsEnum && !Type.IsPrimitive;
+        public bool IsStruct => Type.IsValueType && !Type.IsEnum;
 
         /// <summary>
         /// Gets whether or not the type this object represents is abstract.

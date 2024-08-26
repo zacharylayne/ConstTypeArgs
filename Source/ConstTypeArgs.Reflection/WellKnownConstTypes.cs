@@ -8,6 +8,12 @@ namespace ConstTypeArgs.Reflection;
 /// The <see cref="WellKnownConstTypes"/> enumeration provides flags to identify what
 /// kind of well-known const type a type may be.
 /// </summary>
+/// <remarks>
+/// To determine if a type is a well-known const type, use the <see cref="Reflector.IsWellKnown(Type)"/>
+/// method or the cached <see cref="Reflector.Type{T}.IsWellKnown"/> property.
+/// </remarks>
+/// <seealso cref="Reflector.IsWellKnown(Type)"/>
+/// <seealso cref="Reflector.Type{T}.IsWellKnown"/>
 [Flags]
 public enum WellKnownConstTypes
     : long
@@ -210,7 +216,7 @@ public enum WellKnownConstTypes
     K_Unmanaged         = 1L << 42,
 
     /// <summary>
-    /// The type is a <c>K</c> type.
+    /// The type is a <c>K</c> type <em>(i.e. const type argument holder)</em>.
     /// </summary>
     /// <seealso cref="K{TArg}"/>
     /// <seealso cref="K{T, TArg}"/>
@@ -218,7 +224,7 @@ public enum WellKnownConstTypes
     K                   = 1L << 43,
 
     /// <summary>
-    /// The type is a <c>__</c> type.
+    /// The type is a <c>__</c> type <em>(i.e. discard type)</em>.
     /// </summary>
     /// <seealso cref="ConstTypeArgs.Core.__"/>
     __                  = 1L << 44,

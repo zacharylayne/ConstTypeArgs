@@ -62,7 +62,7 @@ Const type arguments can be used in a variety of scenarios to provide enhanced t
 For more information on use cases, go to [Use Cases](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/use-cases/use-cases-overview.md) in the framework documentation.
 
 <br/>
-f
+
 ## Defining & Using Const Type Arguments
 
 **NOTE:** The term *const type argument* is used for simplicity, to tie together related terminology, & to imply intent. Const type arguments are not true constants, but rather types that provide a constant-like, immutable value to generics and are not available at compile-time.

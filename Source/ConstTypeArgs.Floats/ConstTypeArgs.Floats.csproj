@@ -57,7 +57,7 @@ Console.WriteLine($"Foo's non-default value: {Foo&lt;_6_789&gt;.Value}.");</Desc
     <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <IncrementVersionOnBuild>1.yyyy.Mdd.Hmm</IncrementVersionOnBuild>
-    <Version>1.2024.826.2319</Version>
+    <Version>1.2024.826.2326</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -83,7 +83,7 @@ Console.WriteLine($"Foo's non-default value: {Foo&lt;_6_789&gt;.Value}.");</Desc
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0-beta1" />
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>

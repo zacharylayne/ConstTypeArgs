@@ -97,7 +97,7 @@ Foo&lt;DefaultSeparator&gt;.Output(helloWorld); // Output: Hello;World!
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0-beta1" />
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -81,7 +81,7 @@ Console.WriteLine($"Foo's non-default value: {Foo&lt;_6_789&gt;.Value}.");</Desc
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0-beta1" />
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>

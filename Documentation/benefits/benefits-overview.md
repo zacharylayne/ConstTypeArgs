@@ -1,4 +1,5 @@
-# Benefits
+Benefits
+========
 
 * **Type Safety:** Constraints on values can be enforced at compile-time, preventing invalid configurations and reducing runtime errors. For example, a generic `Positive<K>` type, where `K` is a const type parameter, could constrain numeric values of `K` are positive. This is particularly useful when defining  buffer sizes, timeouts, maximum numbers of retries, etc. that require values of a signed numeric type , such as `short`, `int`, `long`, etc.
 

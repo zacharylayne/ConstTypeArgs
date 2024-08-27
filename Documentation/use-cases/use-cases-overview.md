@@ -1,4 +1,5 @@
-# Use Cases
+Use Cases
+=========
 
 * **Buffer Sizes:** Use const type arguments to statically define buffer sizes for collections, queues, stacks, and other data structures. This can provide type safety and ensure buffer sizes are not negative and are within specified ranges to prevent buffer overflows.
 

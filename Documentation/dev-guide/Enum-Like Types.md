@@ -1,3 +1,0 @@
-# Enum-Like Types
-
-#TBD

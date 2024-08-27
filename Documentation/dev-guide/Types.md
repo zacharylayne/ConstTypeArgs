@@ -1,3 +1,0 @@
-# Framework Types
-
-#TBD

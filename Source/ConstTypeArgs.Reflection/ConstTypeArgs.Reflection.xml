@@ -4,6 +4,316 @@
         <name>ConstTypeArgs.Reflection</name>
     </assembly>
     <members>
+        <member name="T:ConstTypeArgs.Reflection.Core.IElementInfo">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Core.IElementInfo"/> interface provides a base interface containing
+            reflection information about a framework-related code element.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IElementInfo.Name">
+            <summary>
+            Gets the code element's name.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IElementInfo.Kind">
+            <summary>
+            Gets the code element's kinds of relations to the framework.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Core.IWellKnownConstTypes">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Core.IWellKnownConstTypes"/> interface is used to indicate that a type is or implements
+            a well-known const type, such as <c>K_Bool</c>, <c>K_Byte</c>, <c>K_Char</c>, <c>K_Decimal</c>,
+            <c>K_Double</c>, <c>K_Float</c>, <c>K_Half</c>, <c>K_Int</c>, <c>K_Int128</c>, <c>K_Long</c>,
+            <c>K_SByte</c>, <c>K_Short</c>, <c>K_UInt</c>, <c>K_ULong</c>, <c>K_UShort</c>, <c>K_String</c>,
+            <c>K_Type</c>, and so on.
+            </summary>
+            <remarks>
+            The <see cref="P:ConstTypeArgs.Reflection.Core.IWellKnownConstTypes.WellKnownConstTypes"/> enumeration provides flags to identify what kind of well-known
+            const type a type may be. It also contains combinations of these flags to represent multiple well-known
+            const types grouped by function, such as <see cref="F:ConstTypeArgs.Reflection.WellKnownConstTypes.Text"/>,
+            <see cref="F:ConstTypeArgs.Reflection.WellKnownConstTypes.Number"/>, and <see cref="F:ConstTypeArgs.Reflection.WellKnownConstTypes.Delegate"/>. Furthermore,
+            it can be used to help differentiate higher-level types, such as <see cref="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Array"/>,
+            from lower-level types that const type arguments directly implement,
+            such as <see cref="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K_Bool"/>.
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWellKnownConstTypes.WellKnownConstTypes">
+            <summary>
+            Gets the well-known const types that this type is or implements.
+            </summary>
+            <value>
+            A combination of flags that identify what kind of well-known const type a type may be.
+            If the type is not a well-known const type, the value is <see cref="F:ConstTypeArgs.Reflection.WellKnownConstTypes.None"/>.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWellKnownConstTypes.IsWellKnownConstType">
+            <summary>
+            Gets whether or not the type is a well-known const type.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type is a well-known const type; otherwise,
+            <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWellKnownConstTypes.ImplementsWellKnownConstType">
+            <summary>
+            Gets whether or not the type implements a well-known const type.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type implements a well-known const type;
+            otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Core.IWithAttributesInfo">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Core.IWithAttributesInfo"/> interface provides information about the attributes
+            marking a code element.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithAttributesInfo.Attributes">
+            <summary>
+            Gets a collection of attributes on the element.
+            </summary>
+            <value>
+            A collection of <see cref="T:ConstTypeArgs.Reflection.IAttributeInfo"/> objects representing the attribute
+            types that are applied to the element. If there are no attributes, an empty collection
+            is returned instead.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Core.IWithBaseTypesInfo">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Core.IWithBaseTypesInfo"/> interface provides information about a framework-related
+            code element that has base types.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithBaseTypesInfo.BaseTypes">
+            <summary>
+            Gets a collection of the base types that the code element inherits from, from most derived to least derived.
+            </summary>
+            <value>
+            If the code element does not inherit from any base types, an empty collection is returned instead.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Core.IWithConstraintsInfo">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Core.IWithConstraintsInfo"/> interface provides information about a framework-related
+            generic parameter or argument that has constraints.
+            </summary>
+            <remarks>
+            This type does not validate whether or not the constraints are valid for the generic parameter or argument,
+            or the constraints conflict with each other, or are redundant, or are not allowed.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.Reflection.Core.IWithGenericParametersInfo"/>
+            <seealso cref="T:ConstTypeArgs.Reflection.Core.IWithGenericArgumentsInfo"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithConstraintsInfo.TypedConstraints">
+            <summary>
+            Gets a collection of the type constraints that the generic parameter or argument has.
+            </summary>
+            <value>
+            Constraints can include one class and zero or more interfaces.
+            If the generic parameter or argument does not have any type constraints, an empty collection is returned instead.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Core.IWithGenericArgumentsInfo">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Core.IWithGenericArgumentsInfo"/> interface is used to provide information about
+            a framework-related code element that has generic arguments.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Reflection.Core.IWithGenericParametersInfo"/>
+            <seealso cref="T:ConstTypeArgs.Reflection.Core.IWithConstraintsInfo"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithGenericArgumentsInfo.HasGenericArguments">
+            <summary>
+            Gets whether or not the generic type or method this is has generic arguments.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the generic type or method has generic arguments;
+            otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            This property simply checks if the <see cref="P:ConstTypeArgs.Reflection.Core.IWithGenericArgumentsInfo.GenericArguments"/> collection is not empty.
+            It is only intended to be used in limited situations, particularly when collecting information
+            about an attribute which can be generic or non-generic.
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithGenericArgumentsInfo.IsClosed">
+            <summary>
+            Gets whether or not the generic type or method this is providing information about is
+            a closed generic type or method.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the generic type or method is closed; otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithGenericArgumentsInfo.GenericArguments">
+            <summary>
+            Gets a collection of the generic type or method's generic arguments.
+            </summary>
+            <value>
+            If the generic type or method is closed and has no generic arguments, an empty collection is returned instead.
+            </value>
+            <remarks>
+            To get a collection of const type arguments only, use <see cref="P:ConstTypeArgs.Reflection.Core.IWithGenericArgumentsInfo.ConstTypeArguments"/>.
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.Core.IWithGenericParametersInfo.GenericParameters"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithGenericArgumentsInfo.ConstTypeArguments">
+            <summary>
+            Gets an ordered subset of const type arguments from the generic arguments
+            for a generic type or method.
+            </summary>
+            <value>
+            If the generic arguments for a generic type or method does not contain any const type arguments,
+            an empty collection is returned instead.
+            </value>
+            <remarks>
+            To get a collection of all generic arguments, use <see cref="P:ConstTypeArgs.Reflection.Core.IWithGenericArgumentsInfo.GenericArguments"/>.
+            </remarks>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Core.IWithGenericParametersInfo">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Core.IWithGenericParametersInfo"/> interface is used to provide information about
+            a framework-related code element that has generic arguments.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Reflection.Core.IWithGenericArgumentsInfo"/>
+            <seealso cref="T:ConstTypeArgs.Reflection.Core.IWithConstraintsInfo"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithGenericParametersInfo.HasGenericParameters">
+            <summary>
+            Gets whether or not the generic type or method this is has generic parameters.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the generic type or method has generic parameters;
+            otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            This property simply checks if the <see cref="P:ConstTypeArgs.Reflection.Core.IWithGenericParametersInfo.GenericParameters"/> collection is not empty.
+            It is only intended to be used in limited situations, particularly when collecting information
+            about an attribute which can be generic or non-generic.
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithGenericParametersInfo.IsClosed">
+            <summary>
+            Gets whether or not the generic type or method this is providing information about is
+            a closed generic type or method.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the generic type or method is closed; otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithGenericParametersInfo.GenericParameters">
+            <summary>
+            Gets a collection of the generic type or method's generic parameters.
+            </summary>
+            <value>
+            If the generic type or method is not an open generic type or method, an empty collection is returned instead.
+            </value>
+            <seealso cref="P:ConstTypeArgs.Reflection.Core.IWithGenericArgumentsInfo.GenericArguments"/>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Core.IWithInterfacesInfo">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Core.IWithInterfacesInfo"/> interface is used to provide information about
+            a framework-related code element that has interfaces implemented.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithInterfacesInfo.Implements">
+            <summary>
+            Gets a collection of the interfaces that the code element implements.
+            </summary>
+            <value>
+            If the code element does not implement any interfaces, an empty collection is returned instead.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Core.IWithPositionInfo">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Core.IWithPositionInfo"/> interface provides the position of an ordered code element.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithPositionInfo.Position">
+            <summary>
+            Gets the position of the code element, starting from 1.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Core.IWithType">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Core.IWithType"/> interface is used to provide information about a type.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithType.Type">
+            <summary>
+            Gets the type this represents.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Core.IWithValue">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Core.IWithValue"/> interface provides the means to retrieve a value from
+            a framework-related code element that has a value.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.Reflection.Core.IWithValue`1"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithValue.Value">
+            <summary>
+            Gets the value of the code element.
+            </summary>
+            <remarks>
+            If <see cref="P:ConstTypeArgs.Reflection.Core.IWithValue.IsValueDefined"/> is <see langword="false"/>, then this property should be
+            considered undefined, regardless of the actual value returned, but no exception should be thrown.
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithValue.TypeOfValue">
+            <summary>
+            Gets the type of the code element's value.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithValue.IsValueDefined">
+            <summary>
+            Gets whether or not the value of the code element is undefined.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the value is undefined; otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            If this property is <see langword="true"/>, then any value, including <see langword="null"/>,
+            is considered valid for <see cref="P:ConstTypeArgs.Reflection.Core.IWithValue.Value"/>. If this property is <see langword="false"/>,
+            then <see cref="P:ConstTypeArgs.Reflection.Core.IWithValue.Value"/> should be treated as undefined, regardless of the actual value returned.
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.Core.IWithValue.Value"/>
+            <seealso cref="P:ConstTypeArgs.Reflection.Core.IWithValue.TypeOfValue"/>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Core.IWithValue`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Core.IWithValue`1"/> interface provides the means to retrieve a value from
+            a framework-related code element that has a value.
+            </summary>
+            <typeparam name="T">
+            The type of the code element's value.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.Reflection.Core.IWithValue"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithValue`1.Value">
+            <summary>
+            Gets the value of the code element.
+            </summary>
+            <remarks>
+            If <see cref="P:ConstTypeArgs.Reflection.Core.IWithValue`1.IsValueDefined"/> is <see langword="false"/>, then this property should be
+            considered undefined, regardless of the actual value returned, but no exception should be thrown.
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Core.IWithValue`1.IsValueDefined">
+            <summary>
+            Gets whether or not the value of the code element is undefined.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the value is undefined; otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            If this property is <see langword="true"/>, then any value, including <see langword="null"/>,
+            is considered valid for <see cref="P:ConstTypeArgs.Reflection.Core.IWithValue`1.Value"/>. If this property is <see langword="false"/>,
+            then <see cref="P:ConstTypeArgs.Reflection.Core.IWithValue`1.Value"/> should be treated as undefined, regardless of the actual value returned.
+            </remarks>
+        </member>
         <member name="T:ConstTypeArgs.Reflection.FrameworkKinds">
             <summary>
             The <see cref="T:ConstTypeArgs.Reflection.FrameworkKinds"/> enumeration provides flags for specifying a framework kind,
@@ -15,6 +325,11 @@
             <summary>
             The kind is not a defined kind of type, such as a const type argument, holder, interface,
             argument consumer, const type parameter, or other defined kinds.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.None">
+            <summary>
+            The code element is not relevant to framework mechanics and has no identifiable kind.
             </summary>
         </member>
         <member name="F:ConstTypeArgs.Reflection.FrameworkKinds.CoreType">
@@ -137,6 +452,1232 @@
             <summary>
             Identifies all kinds of types that are integral concepts within the ConstTypeArgs framework.
             </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.IAttributeInfo">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.IAttributeInfo"/> interface provides information about an attribute.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.IAttributeInfo.Target">
+            <summary>
+            Gets the target of the attribute this represents.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.IConstTypeArgInfo">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.IConstTypeArgInfo"/> interface provides information about a const type argument.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.IGenericParameterInfo">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.IGenericParameterInfo"/> interface provides information about a generic parameter
+            for a generic type or method.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Reflector">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Reflector"/> class provides methods for reflecting on types for
+            Const Type Args framework mechanics.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Reflector.AttributeInfo">
+            <summary>
+            Provides a private concrete implementation of the <see cref="T:ConstTypeArgs.Reflection.IAttributeInfo"/> interface.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.AttributeInfo.Target">
+            <summary>
+            Required. Gets &amp; inits the element this object represents.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.AttributeInfo.Name">
+            <summary>
+            Required. Gets &amp; inits the name of the attribute this object represents.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.AttributeInfo.Kind">
+            <summary>
+            Required. Gets &amp; inits the framework kinds the attribute this object represents is.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.AttributeInfo.Type">
+            <summary>
+            Required. Gets &amp; inits a collection of information about the constructor arguments
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.AttributeInfo.BaseTypes">
+            <summary>
+            Required. Gets &amp; inits a collection of information about the constructor arguments
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.AttributeInfo.HasGenericParameters">
+            <summary>
+            Required. Gets &amp; inits a collection of information about the constructor arguments
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.AttributeInfo.IsClosed">
+            <summary>
+            Required. Gets &amp; inits a collection of information about the constructor arguments
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.AttributeInfo.GenericParameters">
+            <summary>
+            Required. Gets &amp; inits a collection of information about the constructor arguments
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.AttributeInfo.HasGenericArguments">
+            <summary>
+            Required. Gets &amp; inits a collection of information about the constructor arguments
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.AttributeInfo.GenericArguments">
+            <summary>
+            Required. Gets &amp; inits a collection of information about the constructor arguments
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.AttributeInfo.ConstTypeArguments">
+            <summary>
+            Required. Gets &amp; inits a collection of information about the constructor arguments
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl">
+            <summary>
+            Provides a private concrete implementation of the <see cref="T:ConstTypeArgs.Reflection.IConstTypeArgInfo"/> interface.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.Value">
+            <summary>
+            Required. Gets &amp; inits the const type argument's value as an object.
+            </summary>
+            <remarks>
+            If <see cref="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.IsValueDefined"/> is <see langword="false"/>,
+            the const type argument this object represents should be <see langword="null"/>
+            or <see langword="default"/>. In this case, the value of this property is undefined
+            regardless of what this property returns.
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.TypeOfValue">
+            <summary>
+            Required. Gets &amp; inits the type of the const type argument's value.
+            If the type of the value is not known, the value is <see langword="null"/>.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.IsValueDefined">
+            <summary>
+            Required. Gets &amp; inits a value indicating whether or not the value
+            of the const type argument this object represents is defined.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the value of the const type argument;
+            otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.WellKnownConstTypes">
+            <summary>
+            Required. Gets &amp; inits flags specifying what well-known const type
+            the const type argument this object represents is.
+            </summary>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.IsWellKnownConstType"/>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.ImplementsWellKnownConstType"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.IsWellKnownConstType">
+            <summary>
+            Required. Gets &amp; inits a value indicating whether or not the const type
+            is a well-known const type <em>(i.e. a type listed as a member in <see cref="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.WellKnownConstTypes"/>)</em>.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the const type argument is a well-known const type;
+            otherwise, <see langword="false"/>.
+            </value>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.WellKnownConstTypes"/>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.ImplementsWellKnownConstType"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.ImplementsWellKnownConstType">
+            <summary>
+            Gets whether or not the const type argument this object represents implements
+            implements one or more well-known const types.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the const type argument implements one or more;
+            otherwise, <see langword="false"/>.
+            </value>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.WellKnownConstTypes"/>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.ConstTypeArgInfoImpl.IsWellKnownConstType"/>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Reflector.GenericParameterInfo">
+            <summary>
+            Provides a private concrete implementation of the <see cref="T:ConstTypeArgs.Reflection.IGenericParameterInfo"/> interface.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.GenericParameterInfo.Name">
+            <summary>
+            Required. Gets &amp; inits the name of the generic parameter this object represents.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.GenericParameterInfo.Kind">
+            <summary>
+            Required. Gets &amp; inits the framework kinds the generic parameter this object represents is.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.GenericParameterInfo.Position">
+            <summary>
+            Required. Gets &amp; inits the generic parameter list position of
+            the generic parameter this object represents.
+            </summary>
+            <value>
+            Position is 0-based.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.GenericParameterInfo.TypedConstraints">
+            <summary>
+            Required. Gets &amp; inits a collection of information about the constraints placed
+            on the generic parameter this object represents.
+            </summary>
+            <value>
+            If the generic parameter this object represents has no constraints, the value is an empty collection.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.GenericParameterInfo.Attributes">
+            <summary>
+            Required. Gets &amp; inits a collection of information about the attributes
+            marking the generic parameter this object represents.
+            </summary>
+            <value>
+            If the generic parameter this object represents has no attributes, the value is an empty collection.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Reflector.TypeInfo">
+            <summary>
+            Provides a private concrete implementation of the <see cref="T:ConstTypeArgs.Reflection.ITypeInfo"/> interface.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.TypeInfo.Type">
+            <summary>
+            Required. Gets &amp; inits the type this object represents.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.TypeInfo.Name">
+            <summary>
+            Gets the name of the type this object represents.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.TypeInfo.Kind">
+            <summary>
+            Required. Gets &amp; inits the framework-related kind of the type this object represents.
+            </summary>
+            <value>
+            If the type this object represents is not framework-related, the value is
+            <see cref="F:ConstTypeArgs.Reflection.FrameworkKinds.None"/>. Otherwise, the value is a bitwise combination of
+            one or more <see cref="T:ConstTypeArgs.Reflection.FrameworkKinds"/> flags.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.TypeInfo.Attributes">
+            <summary>
+            Required. Gets &amp; inits a collection of information about the attributes
+            marking the type this object represents.
+            </summary>
+            <value>
+            If the type this object represents has no attributes, the value is an empty collection.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.TypeInfo.BaseTypes">
+            <summary>
+            Required. Gets &amp; inits a collection of information about the base types
+            of the type this object represents.
+            </summary>
+            <remarks>
+            The collection is ordered from most derived to least derived.
+            If the type this object represents has no base types, the value is an empty collection.
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.TypeInfo.Implements"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.TypeInfo.Implements">
+            <summary>
+            Required. Gets &amp; inits a collection of information about the interfaces
+            implemented by the type this object represents.
+            </summary>
+            <value>
+            If the type this object represents implements no interfaces, the value is an empty collection.
+            </value>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.TypeInfo.BaseTypes"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.TypeInfo.IsClass">
+            <summary>
+            Gets whether or not the type this object represents is a class.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type this object represents is a class;
+            otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.TypeInfo.IsInterface">
+            <summary>
+            Gets whether or not the type this object represents is an instance.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type this object represents is an instance;
+            otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.TypeInfo.IsStruct">
+            <summary>
+            Gets whether or not the type this object represents is a struct.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type this object represents is a struct;
+            otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.TypeInfo.IsAbstract">
+            <summary>
+            Gets whether or not the type this object represents is abstract.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type this object represents is abstract;
+            otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.TypeInfo.IsSealed">
+            <summary>
+            Gets whether or not the type this object represents is sealed.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type this object represents is sealed;
+            otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.Reflector.Type`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.Reflector.Type`1"/> class provides <see cref="T:ConstTypeArgs.Reflection.Reflector"/> a caching mechanism
+            for <typeparamref name="T"/> reflection information.
+            </summary>
+            <typeparam name="T">
+            The type to cache reflection information for.
+            </typeparam>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.Type`1._IsConstTypeArg">
+            <summary>
+            The cached <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeArg"/> value.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeArg">
+            <summary>
+            Gets whether or not type <typeparamref name="T"/> is a type of const type argument.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type <typeparamref name="T"/> is a type of const type argument;
+            otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            A type is considered a type of const type argument if it implements <see cref="T:ConstTypeArgs.IConstTypeArg`1"/>,
+            is not an interface, and is not an open generic type.
+              <para>
+              This property dynamically accesses the interfaces of type <typeparamref name="T"/>.
+              </para>
+            </remarks>
+            <seealso cref="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeArg(System.Type)"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.Type`1._IsArgConsumer">
+            <summary>
+            The cached <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsArgConsumer"/> value.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsArgConsumer">
+            <summary>
+            Gets whether or not type <typeparamref name="T"/> if the type <typeparamref name="T"/> is a generic type with type parameters
+            constrained to be constant type arguments;
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type <typeparamref name="T"/> is a generic type with type parameters
+            constrained to be constant type arguments;
+            otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+              This property dynamically accesses the interfaces of type <typeparamref name="T"/>.
+              </para>
+            </remarks>
+            <seealso cref="M:ConstTypeArgs.Reflection.Reflector.IsArgConsumer(System.Type)"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.Type`1._ConstTypeParams">
+            <summary>
+            The cached <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.ConstTypeParams"/> value.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.Type`1.ConstTypeParams">
+            <summary>
+            Gets the constant type parameters for the type <typeparamref name="T"/>.
+            </summary>
+            <value>
+            An array of constant type parameters for the type <typeparamref name="T"/>
+            or an empty array if the type <typeparamref name="T"/> is not a type of argument consumer.
+            </value>
+            <remarks>
+            This property dynamically accesses the interfaces of type <typeparamref name="T"/>.
+            </remarks>
+            <seealso cref="M:ConstTypeArgs.Reflection.Reflector.GetConstTypeParams(System.Type)"/>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.Type`1.#cctor">
+            <summary>
+            The static constructor for the <see cref="T:ConstTypeArgs.Reflection.Reflector.Type`1"/> class.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.Type`1.Reflect">
+            <summary>
+            The singleton instance of the <see cref="T:ConstTypeArgs.Reflection.Reflector.Type`1"/> class.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.Type`1._IsConstTypeDiscard">
+            <summary>
+            The cached <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeDiscard"/> value.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeDiscard">
+            <summary>
+            Gets whether or not type <typeparamref name="T"/> is a type of const type discard.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type <typeparamref name="T"/> is a type of const type discard;
+            otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            A type is considered a type of const type discard if it derives from <see cref="T:ConstTypeArgs.__"/>
+            and is not an open generic type.
+              <para>
+              This property dynamically accesses the interfaces of type <typeparamref name="T"/>.
+              </para>
+            </remarks>
+            <seealso cref="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeDiscard(System.Type)"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.Type`1._IsConstTypeHolder">
+            <summary>
+            The cached <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeHolder"/> value.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeHolder">
+            <summary>
+            Gets whether or not the type <typeparamref name="T"/> is a type of const type holder.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type <typeparamref name="T"/> is a type of const type holder;
+            otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            A type is considered a type of const type holder if it implements <see cref="T:ConstTypeArgs.K`1"/>,
+            is not an open generic type, and is not an interface.
+              <para>
+              This property dynamically accesses the interfaces of type <typeparamref name="T"/>.
+              </para>
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.ConstTypeArgHeld"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.Type`1._ConstTypeArgHeld">
+            <summary>
+            The cached <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.ConstTypeArgHeld"/> value.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.Type`1.ConstTypeArgHeld">
+            <summary>
+            Gets the const type argument held by the type <typeparamref name="T"/>.
+            </summary>
+            <value>
+            The const type argument held by the type <typeparamref name="T"/> or <see langword="null"/>
+            if the type <typeparamref name="T"/> is not a type of const type holder.
+            </value>
+            <remarks>
+            This property dynamically accesses the interfaces of type <typeparamref name="T"/>.
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeHolder"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.Type`1._IsConstTypeParam">
+            <summary>
+            The cached <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeParam"/> value.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeParam">
+            <summary>
+            Gets whether or not type <typeparamref name="T"/> is a type of const type generic parameter.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type <typeparamref name="T"/> is a type of const type generic parameter;
+            otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            A type is considered a type of const type parameter if it is a generic parameter that is
+            constrained to a type of const type argument <em>(i.e. any type that implements <see cref="T:ConstTypeArgs.IConstTypeArg`1"/>)</em>.
+            </remarks>
+            <seealso cref="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeParam(System.Type)"/>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.ConstTypeConstraints"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.Type`1._ConstTypeConstraints">
+            <summary>
+            The cached <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.ConstTypeConstraints"/> value.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.Type`1.ConstTypeConstraints">
+            <summary>
+            Gets the const type constraints for the type <typeparamref name="T"/>.
+            </summary>
+            <value>
+            An array of const type constraints for the type <typeparamref name="T"/> or an empty array if the type <typeparamref name="T"/>
+            is not a type of const type parameter or has no const type constraints.
+            </value>
+            <remarks>
+            A const type constraint is a generic parameter constraint that is a const type
+            <em>(i.e. a type that implements <see cref="T:ConstTypeArgs.IConstTypeArg`1"/></em>.
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeParam"/>
+            <seealso cref="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeParam(System.Type)"/>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.Type`1._ValueProperty">
+            <summary>
+            The cached <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.ValueProperty"/> value.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.Type`1.ValueProperty">
+            <summary>
+            Gets the <see cref="P:ConstTypeArgs.IConstTypeArg`1.Value"/> property of the type <typeparamref name="T"/>.
+            </summary>
+            <value>
+            The <see cref="P:ConstTypeArgs.IConstTypeArg`1.Value"/> property of the type <typeparamref name="T"/>,
+            if it exists; otherwise, <see langword="null"/>.
+            </value>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.Type`1._TypeOfValue">
+            <summary>
+            The cached <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.TypeOfValue"/> value.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.Type`1.TypeOfValue">
+            <summary>
+            Gets the type of the value for the type <typeparamref name="T"/>.
+            </summary>
+            <value>
+            The type of the value for the type <typeparamref name="T"/>
+            or <see langword="null"/> if the type <typeparamref name="T"/> is not a const type argument
+            or if the value is not accessible.
+            </value>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.Type`1._Value">
+            <summary>
+            The cached <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.Value"/> value.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.Reflector.Type`1.Value">
+            <summary>
+            Gets the value of the type <typeparamref name="T"/> as an object.
+            </summary>
+            <value>
+            The value of type <typeparamref name="T"/> as an object or <see langword="null"/> if type <typeparamref name="T"/>
+            is not a const type argument or if the value is not accessible.
+            </value>
+            <seealso cref="P:ConstTypeArgs.IConstTypeArg`1.Value"/>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeArg(System.Type)">
+            <summary>
+            Returns whether or not the specified type is a type of const type argument.
+            </summary>
+            <param name="type">
+            The type to check.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if the specified type is a type of const type argument;
+            otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            A type is considered a type of const type argument if it implements <see cref="T:ConstTypeArgs.IConstTypeArg`1"/>,
+            is not an interface, and is not an open generic type.
+              <para>
+              Use <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeArg"/> instead to cache the results of this method.
+              </para>
+              <para>
+              This method dynamically accesses the interfaces of the specified type.
+              </para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeArg"/>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeArgImpl(System.Type)">
+            <summary>
+            The implementation for the <see cref="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeArg(System.Type)"/> method.
+            </summary>
+            <param name="type">
+            The type to check.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if the specified type is a type of const type argument;
+            otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            A type is considered a type of const type argument if it implements <see cref="T:ConstTypeArgs.IConstTypeArg`1"/>,
+            is not an interface, and is not an open generic type.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.IsArgConsumer(System.Type)">
+            <summary>
+            Returns whether or not the specified type is a generic type with type parameters
+            constrained to be constant type arguments.
+            </summary>
+            <param name="type">
+            The type to check.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if the specified type is a generic type with type parameters
+            constrained to be constant type arguments;
+            otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+              <para>
+              Use <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsArgConsumer"/> instead to cache the results of this method.
+              </para>
+              <para>
+              This method dynamically accesses the interfaces of the specified type.
+              </para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsArgConsumer"/>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.IsArgConsumerImpl(System.Type)">
+            <summary>
+            The implementation for the <see cref="M:ConstTypeArgs.Reflection.Reflector.IsArgConsumer(System.Type)"/> method.
+            </summary>
+            <param name="type">
+            The type to check.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if the specified type is a generic type with type parameters
+            constrained to be constant type arguments;
+            otherwise, <see langword="false"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.GetConstTypeParams(System.Type)">
+            <summary>
+            Returns the constant type parameters for the specified type.
+            </summary>
+            <param name="type">
+            The type to get the const type parameters for.
+            </param>
+            <returns>
+            An array of constant type parameters for the specified type or an empty array if the specified type
+            is not a type of argument consumer.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <remarks>
+            A const generic parameter is a generic parameter that is constrained to be a const type argument
+            <em>(i.e. implements <see cref="T:ConstTypeArgs.IConstTypeArg`1"/>)</em>.
+            <para>
+            Use <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.ConstTypeParams"/> instead to cache the results of this method.
+            </para>
+              <para>
+              This method dynamically accesses the interfaces of the specified type.
+              </para>
+            </remarks>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.GetConstTypeParamsImpl(System.Type)">
+            <summary>
+            The implementation for the <see cref="M:ConstTypeArgs.Reflection.Reflector.GetConstTypeParams(System.Type)"/> method.
+            </summary>
+            <param name="type">
+            The type to get the const type parameters for.
+            </param>
+            <returns>
+            An array of constant type parameters for the specified type or an empty array if the specified type
+            is not a type of argument consumer.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.ImplementsMultipleHoldersWarningMsg">
+            <summary>
+            A message that warns the user that a type implements multiple holders.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.ConstTypeArgValueMember">
+            <summary>
+            The name of the <see cref="P:ConstTypeArgs.IConstTypeArg`1.Value"/> member.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.#cctor">
+            <summary>
+            The static constructor for the <see cref="T:ConstTypeArgs.Reflection.Reflector"/> class.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.Reflection.Reflector.Reflect">
+            <summary>
+            The singleton instance of the <see cref="T:ConstTypeArgs.Reflection.Reflector"/> class.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeDiscard(System.Type)">
+            <summary>
+            Returns whether or not the specified type is a type of const type discard.
+            </summary>
+            <param name="type">
+            The type to check.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if the specified type is a type of const type discard;
+            otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            A type is considered a type of const type discard if it derives from <see cref="T:ConstTypeArgs.__"/>
+            and is not an open generic type.
+              <para>
+              Use <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeDiscard"/> instead to cache the results of this method.
+              </para>
+              <para>
+              This method dynamically accesses the interfaces of the specified type.
+              </para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeDiscard"/>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeDiscardImpl(System.Type)">
+            <summary>
+            The implementation for the <see cref="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeDiscard(System.Type)"/> method.
+            </summary>
+            <param name="type">
+            The type to check.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if the specified type is a type of const type discard;
+            otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            A type is considered a type of const type discard if it derives from <see cref="T:ConstTypeArgs.__"/>
+            and is not an open generic type.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeHolder(System.Type)">
+            <summary>
+            Returns whether or not the specified type is a type of const type holder.
+            </summary>
+            <param name="type">
+            The type to check.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if the specified type is a type of const type holder;
+            otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            A type is considered a type of const type holder if it implements <see cref="T:ConstTypeArgs.K`1"/>,
+            is not an open generic type, and is not an interface.
+              <para>
+              Use <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeHolder"/> instead to cache the results of this method.
+              </para>
+              <para>
+              This method dynamically accesses the interfaces of the specified type.
+              </para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeHolder"/>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeHolderImpl(System.Type)">
+            <summary>
+            The implementation for the <see cref="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeHolder(System.Type)"/> method.
+            </summary>
+            <param name="type">
+            The type to check.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if the specified type is a type of const type discard;
+            otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            A type is considered a type of const type holder if it implements <see cref="T:ConstTypeArgs.K`1"/>,
+            is not an open generic type, and is not an interface.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.GetConstTypeArgHeld(System.Type)">
+            <summary>
+            Returns the const type argument held by the specified const type holder.
+            </summary>
+            <param name="type">
+            The const type holder to get the const type argument from.
+            </param>
+            <returns>
+            The const type argument held by the specified const type holder or <see langword="null"/>
+            if the specified type is not a const type holder.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.ConstTypeArgHeldImpl(System.Type)">
+            <summary>
+            The implementation for the <see cref="M:ConstTypeArgs.Reflection.Reflector.GetConstTypeArgHeld(System.Type)"/> method.
+            </summary>
+            <param name="type">
+            The const type holder to get the const type argument from.
+            </param>
+            <returns>
+            The const type argument held by the specified const type holder or <see langword="null"/>
+            if the specified type is not a const type holder.
+            </returns>
+            <remarks>
+            To get the const type argument held by a const type holder, the specified type must implement
+            <see cref="T:ConstTypeArgs.K`1"/>. If the specified type implements multiple const type holders, this method
+            will return the first const type argument held by the specified type.
+              <para>
+              This method dynamically accesses the interfaces of the specified type.
+              </para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.ImplementsMultipleHolders(System.Type)">
+            <summary>
+            Returns whether or not the specified type implements multiple const type holders.
+            </summary>
+            <param name="type">
+            The type to check.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if the specified type implements multiple const type holders;
+            otherwise, <see langword="false"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeParam(System.Type)">
+            <summary>
+            Returns whether or not the specified type is a type of const type parameter.
+            </summary>
+            <param name="type">
+            The type to check.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if the specified type is a type of const type parameter;
+            otherwise, <see langword="false"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <remarks>
+            A type is considered a type of const type parameter if it is a generic parameter that is
+            constrained to a type of const type argument <em>(i.e. any type that implements <see cref="T:ConstTypeArgs.IConstTypeArg`1"/>)</em>.
+              <para>
+              Use <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeParam"/> instead to cache the results of this method.
+              </para>
+              <para>
+              This method dynamically accesses the interfaces of the specified type.
+              </para>
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.IsConstTypeParam"/>
+            <seealso cref="M:ConstTypeArgs.Reflection.Reflector.GetConstTypeConstraints(System.Type)"/>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeParamImpl(System.Type)">
+            <summary>
+            The implementation for <see cref="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeParam(System.Type)"/>.
+            </summary>
+            <param name="type">
+            The type to check.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if the specified type is a type of const type parameter;
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.GetConstTypeConstraints(System.Type)">
+            <summary>
+            Returns the const type constraints for the specified const type parameter.
+            </summary>
+            <param name="type">
+            The type to get the const type constraints for.
+            </param>
+            <returns>
+            An array of const type constraints for the specified const type parameter or an empty array if the specified type
+            is not a type of const type parameter or has no const type constraints.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <remarks>
+            A const type constraint is a generic parameter constraint that is a const type
+            <em>(i.e. a type that implements <see cref="T:ConstTypeArgs.IConstTypeArg`1"/></em>.
+              <para>
+              This method dynamically accesses the interfaces of the specified type.
+              </para>
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.ConstTypeConstraints"/>
+            <seealso cref="M:ConstTypeArgs.Reflection.Reflector.IsConstTypeParam(System.Type)"/>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.GetConstTypeConstraintsImpl(System.Type)">
+            <summary>
+            The implementation for <see cref="M:ConstTypeArgs.Reflection.Reflector.GetConstTypeConstraints(System.Type)"/>.
+            </summary>
+            <param name="type">
+            The type to get the const type constraints for.
+            </param>
+            <returns>
+            An array of const type constraints for the specified const type parameter or an empty array if the specified type
+            is not a type of const type parameter or has no const type constraints.
+            </returns>
+            <remarks>
+            A const type constraint is a generic parameter constraint that is a const type
+            <em>(i.e. a type that implements <see cref="T:ConstTypeArgs.IConstTypeArg`1"/></em>.
+              <para>
+              This method dynamically accesses the interfaces of the specified type.
+              </para>
+            </remarks>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.GetValueProperty(System.Type)">
+            <summary>
+            Returns the <see cref="P:ConstTypeArgs.IConstTypeArg`1.Value"/> property of the specified type.
+            </summary>
+            <param name="type">
+            The type to get the property of.
+            </param>
+            <returns>
+            The <see cref="P:ConstTypeArgs.IConstTypeArg`1.Value"/> property of the specified type, if it exists;
+            otherwise, <see langword="null"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <exception cref="T:System.Reflection.AmbiguousMatchException">
+            Thrown when binding to a member results in more than one member matching the binding criteria.
+            </exception>
+            <remarks>
+            Use <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.ValueProperty"/> instead to cache the results of this method.
+              <para>
+              This method dynamically accesses the interfaces and public properties of the specified type.
+              </para>
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.IConstTypeArg`1.Value"/>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.ValueProperty"/>
+            <seealso cref="M:ConstTypeArgs.Reflection.Reflector.GetValue(System.Type)"/>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.GetValuePropertyImpl(System.Type)">
+            <summary>
+            The implementation for <see cref="M:ConstTypeArgs.Reflection.Reflector.GetValueProperty(System.Type)"/>.
+            </summary>
+            <param name="type">
+            The type to get the property of.
+            </param>
+            <returns>
+            The <see cref="P:ConstTypeArgs.IConstTypeArg`1.Value"/> property of the specified type, if it exists;
+            otherwise, <see langword="null"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <exception cref="T:System.Reflection.AmbiguousMatchException">
+            Thrown when binding to a member results in more than one member matching the binding criteria.
+            </exception>
+            <remarks>
+            This method dynamically accesses the interfaces and public properties of the specified type.
+            </remarks>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.GetTypeOfValue(System.Type)">
+            <summary>
+            Returns the type of the value for the specified type.
+            </summary>
+            <param name="type">
+            The type to get the type of the value of.
+            </param>
+            <returns>
+            The type of the value for the specified type or <see langword="null"/> if the specified type is not a const type argument
+            or if the value is not accessible.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <exception cref="T:System.Reflection.AmbiguousMatchException">
+            Thrown when binding to a member results in more than one member matching the binding criteria.
+            </exception>
+            <remarks>
+            A const type argument's value is the value of the <see cref="P:ConstTypeArgs.IConstTypeArg`1.Value"/> property.
+              <para>
+              Use <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.TypeOfValue"/> instead to cache the results of this method.
+              </para>
+              <para>
+              This method dynamically accesses the interfaces and public properties of the specified type.
+              </para>
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.TypeOfValue"/>
+            <seealso cref="M:ConstTypeArgs.Reflection.Reflector.GetValue(System.Type)"/>
+            <seealso cref="P:ConstTypeArgs.IConstTypeArg`1.Value"/>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.GetTypeOfValueImpl(System.Type)">
+            <summary>
+            The implementation for <see cref="M:ConstTypeArgs.Reflection.Reflector.GetTypeOfValue(System.Type)"/>.
+            </summary>
+            <param name="type">
+            The type to get the type of the value of.
+            </param>
+            <returns>
+            The type of the value for the specified type or <see langword="null"/> if the specified type is not a const type argument
+            or if the value is not accessible.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <exception cref="T:System.Reflection.AmbiguousMatchException">
+            Thrown when binding to a member results in more than one member matching the binding criteria.
+            </exception>
+            <remarks>
+            This method dynamically accesses the interfaces and public properties of the specified type.
+            </remarks>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.GetValue(System.Type)">
+            <summary>
+            Returns the value of the specified type as an object.
+            </summary>
+            <param name="type">
+            The type to get the value of.
+            </param>
+            <returns>
+            The value of the specified type as an object or <see langword="null"/> if the specified type is not a const type argument
+            or if the value is not accessible.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <exception cref="T:System.Reflection.AmbiguousMatchException">
+            Thrown when binding to a member results in more than one member matching the binding criteria.
+            </exception>
+            <remarks>
+             Use <see cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.Value"/> instead to cache the results of this method.
+              <para>
+              This method dynamically accesses the interfaces and public properties of the specified type.
+              </para>
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.IConstTypeArg`1.Value"/>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.Value"/>
+            <seealso cref="M:ConstTypeArgs.Reflection.Reflector.GetValueProperty(System.Type)"/>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.GetValueImpl(System.Type)">
+            <summary>
+            The implementation for <see cref="M:ConstTypeArgs.Reflection.Reflector.GetValue(System.Type)"/>.
+            </summary>
+            <param name="type">
+            The type to get the value of.
+            </param>
+            <returns>
+            The value of the specified type as an object or <see langword="null"/> if the specified type is not a const type argument
+            or if the value is not accessible.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <exception cref="T:System.Reflection.AmbiguousMatchException">
+            Thrown when binding to a member results in more than one member matching the binding criteria.
+            </exception>
+            <remarks>
+            This method dynamically accesses the interfaces and public properties of the specified type.
+            </remarks>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.GetValueAs``1(System.Type)">
+            <summary>
+            Returns the value of the specified type as type <typeparamref name="T"/>.
+            </summary>
+            <typeparam name="T">
+            The type to convert the value to.
+            </typeparam>
+            <param name="type">
+            The type to get the value of.
+            </param>
+            <returns>
+            The value of the specified type as type <typeparamref name="T"/> or <see langword="null"/>
+            if the value can't be converted to <typeparamref name="T"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+            <remarks>
+              <para>
+              This method dynamically accesses interfaces and public properties of the specified type.   
+              </para>
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.Reflector.Type`1.Value"/>
+            <seealso cref="P:ConstTypeArgs.IConstTypeArg`1.Value"/>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.Reflector.GetValueAsImpl``1(System.Type)">
+            <summary>
+            The implementation for <see cref="M:ConstTypeArgs.Reflection.Reflector.GetValueAs``1(System.Type)"/>.
+            </summary>
+            <typeparam name="T">
+            The type to convert the value to.
+            </typeparam>
+            <param name="type">
+            The type to get the value of.
+            </param>
+            <returns>
+            The value of the specified type as type <typeparamref name="T"/> or <see langword="null"/>
+            if the value can't be converted to <typeparamref name="T"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="type"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.ITypeInfo">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.ITypeInfo"/> interface provides information about a framework-related type.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.ITypeInfo.IsClass">
+            <summary>
+            Gets whether or not the type is a class.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type is a class; otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            If <see langword="true"/>, then <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsInterface"/> &amp; <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsStruct"/>
+            are both <see langword="false"/>.
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsAbstract"/>
+            <seealso cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsSealed"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.ITypeInfo.IsInterface">
+            <summary>
+            Gets whether or not the type is an interface.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type is an interface; otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            If <see langword="true"/>, then <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsStruct"/>, <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsClass"/>,
+            <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsAbstract"/>, and <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsSealed"/>
+            are all <see langword="false"/>.
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsClass"/>
+            <seealso cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsStruct"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.ITypeInfo.IsStruct">
+            <summary>
+            Gets whether or not the type is a struct <em>(i.e. a value type)</em>.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type is a struct; otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            If <see langword="true"/>, then <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsInterface"/>, <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsClass"/>, <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsAbstract"/>,
+            and <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsSealed"/> are all <see langword="false"/>.
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsClass"/>
+            <seealso cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsInterface"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.ITypeInfo.IsAbstract">
+            <summary>
+            Gets whether or not the type is abstract.
+            </summary>
+            <value>
+            A <see langword="true"/> if the type is abstract; otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            If <see langword="true"/>, then <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsInterface"/>, <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsStruct"/>, and <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsSealed"/>
+            are all <see langword="false"/>.
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsClass"/>
+        </member>
+        <member name="P:ConstTypeArgs.Reflection.ITypeInfo.IsSealed">
+            <summary>
+            Gets whether or not the type is sealed.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the type is sealed; otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            If <see langword="true"/>, then <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsInterface"/>, <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsStruct"/>, and <see cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsAbstract"/>
+            are all <see langword="false"/>.
+            </remarks>
+            <seealso cref="P:ConstTypeArgs.Reflection.ITypeInfo.IsClass"/>
+        </member>
+        <member name="T:ConstTypeArgs.Reflection.TypeExtensions">
+            <summary>
+            The <see cref="T:ConstTypeArgs.Reflection.TypeExtensions"/> static class contains extension methods for reflecting on types.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.TypeExtensions.IsAttribute(System.Type)">
+            <summary>
+            Returns whether or not this type is an attribute.
+            </summary>
+            <param name="type">
+            This type.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if this type is an attribute;
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.TypeExtensions.IsException(System.Type)">
+            <summary>
+            Returns whether or not this type is an exception.
+            </summary>
+            <param name="type">
+            This type.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if this type is an exception;
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.TypeExtensions.IsOpenGenericType(System.Type)">
+            <summary>
+            Returns whether or not this type is an open generic type.
+            </summary>
+            <param name="type">
+            This type.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if this type is an open generic type;
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.TypeExtensions.IsClosedGenericType(System.Type)">
+            <summary>
+            Returns whether or not this type is a closed generic type.
+            </summary>
+            <param name="type">
+            This type.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if this type is a closed generic type;
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ConstTypeArgs.Reflection.TypeExtensions.IsMarkerInterface(System.Type)">
+            <summary>
+            Returns whether or not this type is a marker interface.
+            </summary>
+            <param name="type">
+            This type.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if this type is a marker interface;
+            otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            A marker interface is an interface that has no public properties, methods, &amp; events.
+            </remarks>
         </member>
         <member name="T:ConstTypeArgs.Reflection.WellKnownConstTypes">
             <summary>
@@ -343,7 +1884,7 @@
         </member>
         <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.K">
             <summary>
-            The type is a <c>K</c> type.
+            The type is a <c>K</c> type <em>(i.e. const type argument holder)</em>.
             </summary>
             <seealso cref="T:ConstTypeArgs.K`1"/>
             <seealso cref="T:ConstTypeArgs.K`2"/>
@@ -351,7 +1892,7 @@
         </member>
         <member name="F:ConstTypeArgs.Reflection.WellKnownConstTypes.__">
             <summary>
-            The type is a <c>__</c> type.
+            The type is a <c>__</c> type <em>(i.e. discard type)</em>.
             </summary>
             <seealso cref="T:ConstTypeArgs.Core.__"/>
         </member>

@@ -11,7 +11,8 @@ public sealed partial class Reflector
         /// <summary>
         /// The cached <see cref="IsConstTypeDiscard"/> value.
         /// </summary>
-        private bool? _IsConstTypeDiscard;
+        private readonly Lazy<bool> _IsConstTypeDiscard = new(
+            () => Reflector.IsConstTypeDiscard(typeof(T)));
 
         /// <summary>
         /// Gets whether or not type <typeparamref name="T"/> is a type of const type discard.
@@ -29,17 +30,7 @@ public sealed partial class Reflector
         /// </remarks>
         /// <seealso cref="Reflector.IsConstTypeDiscard(Type)"/>
         public static bool IsConstTypeDiscard
-            => Reflect.IsConstTypeDiscardImpl();
-
-        /// <summary>
-        /// The implementation of the <see cref="IsConstTypeDiscard"/> property.
-        /// </summary>
-        /// <returns>
-        /// A value of <see langword="true"/> if the type <typeparamref name="T"/> is a type of const type discard;
-        /// otherwise, <see langword="false"/>.
-        /// </returns>
-        private bool IsConstTypeDiscardImpl()
-            => _IsConstTypeDiscard ??= Reflector.IsConstTypeDiscard(typeof(T));
+            => Reflect._IsConstTypeDiscard.Value;
     }
 
     /// <summary>

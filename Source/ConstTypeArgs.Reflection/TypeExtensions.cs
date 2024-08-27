@@ -1,4 +1,6 @@
-﻿namespace ConstTypeArgs.Reflection;
+﻿using static System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes;
+
+namespace ConstTypeArgs.Reflection;
 
 /// <summary>
 /// The <see cref="TypeExtensions"/> static class contains extension methods for reflecting on types.
@@ -42,7 +44,7 @@ public static class TypeExtensions
     /// otherwise, <see langword="false"/>.
     /// </returns>
     public static bool IsOpenGenericType(this Type type)
-        => type.IsGenericType && !type.IsGenericTypeDefinition;
+        => type.IsGenericType && type.IsGenericTypeDefinition;
 
     /// <summary>
     /// Returns whether or not this type is a closed generic type.
@@ -55,5 +57,22 @@ public static class TypeExtensions
     /// otherwise, <see langword="false"/>.
     /// </returns>
     public static bool IsClosedGenericType(this Type type)
-        => type.IsGenericType && type.IsGenericTypeDefinition;
+        => type.IsGenericType && !type.IsGenericTypeDefinition;
+
+    /// <summary>
+    /// Returns whether or not this type is a marker interface.
+    /// </summary>
+    /// <param name="type">
+    /// This type.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this type is a marker interface;
+    /// otherwise, <see langword="false"/>.
+    /// </returns>
+    /// <remarks>
+    /// A marker interface is an interface that has no public properties, methods, &amp; events.
+    /// </remarks>
+    public static bool IsMarkerInterface([DynamicallyAccessedMembers( PublicProperties | PublicMethods | PublicEvents)]
+        this Type type)
+        => type.IsInterface && type.GetProperties().Length == 0 && type.GetMethods().Length == 0 && type.GetEvents().Length == 0;
 }

@@ -8,12 +8,6 @@ namespace ConstTypeArgs.Reflection;
 /// The <see cref="WellKnownConstTypes"/> enumeration provides flags to identify what
 /// kind of well-known const type a type may be.
 /// </summary>
-/// <remarks>
-/// To determine if a type is a well-known const type, use the <see cref="Reflector.IsWellKnown(Type)"/>
-/// method or the cached <see cref="Reflector.Type{T}.IsWellKnown"/> property.
-/// </remarks>
-/// <seealso cref="Reflector.IsWellKnown(Type)"/>
-/// <seealso cref="Reflector.Type{T}.IsWellKnown"/>
 [Flags]
 public enum WellKnownConstTypes
     : long

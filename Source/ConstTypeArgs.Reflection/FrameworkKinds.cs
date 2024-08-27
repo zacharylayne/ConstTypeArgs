@@ -135,7 +135,7 @@ public enum FrameworkKinds
     /// The type is a kind of type that is integral to the ConstTypeArgs framework,
     /// but is not a const type itself.
     /// </summary>
-    NotConstType         = Consumer | GenericParameter | Exception| Attribute ,
+    NotConstType         = Consumer | GenericParameter | Exception| Attribute,
 
     /// <summary>
     /// Identifies all kinds of types that are integral concepts within the ConstTypeArgs framework.

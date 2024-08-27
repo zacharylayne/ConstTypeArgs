@@ -14,6 +14,19 @@ namespace ConstTypeArgs.Reflection;
 public sealed partial class Reflector
 {
     /// <summary>
+    /// A message that warns the user that a type implements multiple holders.
+    /// </summary>
+    private const string ImplementsMultipleHoldersWarningMsg = """
+                                    The type {0} implements multiple holders.
+                                    This will cause ambiguity in many reflection operations & should be avoided.
+                                    """;
+
+    /// <summary>
+    /// The name of the <see cref="IConstTypeArg{T}.Value"/> member.
+    /// </summary>
+    private const string ConstTypeArgValueMember= "Value";
+
+    /// <summary>
     /// The <see cref="Type{T}"/> class provides <see cref="Reflector"/> a caching mechanism
     /// for <typeparamref name="T"/> reflection information.
     /// </summary>

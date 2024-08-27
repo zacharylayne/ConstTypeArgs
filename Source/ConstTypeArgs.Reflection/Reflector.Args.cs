@@ -11,7 +11,8 @@ public sealed partial class Reflector
         /// <summary>
         /// The cached <see cref="IsConstTypeArg"/> value.
         /// </summary>
-        private bool? _IsConstTypeArg;
+        private readonly Lazy<bool> _IsConstTypeArg= new(
+            () => Reflector.IsConstTypeArg(typeof(T)));
 
         /// <summary>
         /// Gets whether or not type <typeparamref name="T"/> is a type of const type argument.
@@ -29,17 +30,7 @@ public sealed partial class Reflector
         /// </remarks>
         /// <seealso cref="Reflector.IsConstTypeArg(Type)"/>
         public static bool IsConstTypeArg
-            => Reflect.IsConstTypeArgImpl();
-
-        /// <summary>
-        /// The implementation of the <see cref="IsConstTypeArg"/> property.
-        /// </summary>
-        /// <returns>
-        /// A value of <see langword="true"/> if the type <typeparamref name="T"/> is a type of const type argument;
-        /// otherwise, <see langword="false"/>.
-        /// </returns>
-        private bool IsConstTypeArgImpl()
-            => _IsConstTypeArg ??= Reflector.IsConstTypeArg(typeof(T));
+            => Reflect._IsConstTypeArg.Value;
     }
 
     /// <summary>
@@ -90,8 +81,11 @@ public sealed partial class Reflector
     {
         ArgumentNullException.ThrowIfNull(type, nameof(type));
 
-        return !(type.IsInterface || type.IsGenericTypeDefinition)
-             && type.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition()
-                                      == typeof(IConstTypeArg<>));
+        if (type.IsInterface || type.IsGenericTypeDefinition)
+            return false;
+
+        // #QUESTION: Why not use type.GetInterfaces().FirstOrDefault()?
+        return type.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition()
+                                          == typeof(IConstTypeArg<>));
     }
 }

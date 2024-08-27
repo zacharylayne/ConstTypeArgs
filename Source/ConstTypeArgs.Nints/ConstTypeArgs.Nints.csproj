@@ -68,8 +68,12 @@ public sealed class DefaultInitialCollectionSize : K_Nint&lt;_32&gt;;</Descripti
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Deterministic>true</Deterministic>
     <IsTrimmable>True</IsTrimmable>
     <DebugType>portable</DebugType>
+    <IncludeSource>true</IncludeSource>
+    <EnableSourceLink>true</EnableSourceLink>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

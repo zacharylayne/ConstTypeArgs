@@ -72,9 +72,12 @@ foo = new Foo&lt;DefaultSize&gt;(); // Outputs "Array size is 32"</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Deterministic>true</Deterministic>
     <IsTrimmable>True</IsTrimmable>
-    <IsAotCompatible>False</IsAotCompatible>
     <DebugType>portable</DebugType>
+    <IncludeSource>true</IncludeSource>
+    <EnableSourceLink>true</EnableSourceLink>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

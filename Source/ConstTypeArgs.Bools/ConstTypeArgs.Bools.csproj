@@ -58,8 +58,12 @@ foo       = new Foo&lt;False&gt;(); // No output.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Deterministic>true</Deterministic>
     <IsTrimmable>True</IsTrimmable>
     <DebugType>portable</DebugType>
+    <IncludeSource>true</IncludeSource>
+    <EnableSourceLink>true</EnableSourceLink>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

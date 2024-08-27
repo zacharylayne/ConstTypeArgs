@@ -58,8 +58,12 @@ public readonly struct _hola : K_String&lt;_hola&gt;
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Deterministic>true</Deterministic>
     <IsTrimmable>True</IsTrimmable>
     <DebugType>portable</DebugType>
+    <IncludeSource>true</IncludeSource>
+    <EnableSourceLink>true</EnableSourceLink>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

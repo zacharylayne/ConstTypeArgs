@@ -36,16 +36,16 @@ var smallBuffer = new FixedSizeBuffer&lt;Pos_32&gt;();</Description>
     <PackageTags>constants; const-type-args; generics; static-abstract-interface-members</PackageTags>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
-    <Version>1.2-beta1</Version>
-    <FileVersion>1.2.0.0</FileVersion>
+    <Version>1.2.0</Version>
+    <FileVersion>1.2.0</FileVersion>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <Authors>Zachary Layne</Authors>
     <Company>Entry Point Software</Company>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
-    <PackageReleaseNotes>Added types of exceptions: ConstTypeException, ConstTypeArgException, UndefinedConstTypeArgException, and MisleadingConstTypeException.
-    Fixed K_ReadOnlyMemoryT_Array&lt;T&gt; to implement K_ReadOnlyMemory&lt;T[]&gt; instead of K_Array&lt;T&gt;.
-    Miscellaneous minor changes.</PackageReleaseNotes>
+    <PackageReleaseNotes>   • Added exceptions:  ConstTypeArgException ,  ConstTypeException ,  MisleadingConstTypeException ,  UnderfinedConstTypeArgException  
+    • Added  K_ReadOnlyMemory  types:  K_ReadOnlyMemory ,  K_ReadOnlyMemory&lt;T&gt; ,  K_ReadOnlyMemoryArray&lt;T&gt; ,  K_ReadOnlyMemoryT_Array{T}  
+    • Documentation updates.</PackageReleaseNotes>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageReadmeFile>README.MD</PackageReadmeFile>
@@ -55,19 +55,25 @@ var smallBuffer = new FixedSizeBuffer&lt;Pos_32&gt;();</Description>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
     <DocumentationFile>ConstTypeArgs.Core.xml</DocumentationFile>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <IsTrimmable>True</IsTrimmable>
     <DebugType>portable</DebugType>
+    <Optimize>False</Optimize>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Deterministic>true</Deterministic>
     <IsTrimmable>True</IsTrimmable>
     <DebugType>portable</DebugType>
+    <IncludeSource>true</IncludeSource>
+    <EnableSourceLink>true</EnableSourceLink>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup>    
     <None Include="..\..\Icons\Core.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

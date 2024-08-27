@@ -67,7 +67,7 @@ foo       = new Foo&lt;False&gt;(); // No output.</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0-beta1" />
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -88,7 +88,7 @@ foo = new Foo&lt;DefaultSize&gt;(); // Outputs "Array size is 32"</Description>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0-beta1" />
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -96,7 +96,7 @@ public readonly struct StringType : K_Type&lt;StringType&gt;
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0-beta1" />
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>

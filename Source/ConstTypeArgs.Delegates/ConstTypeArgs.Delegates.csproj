@@ -55,7 +55,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0-beta1" />
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0" />
     <PackageReference Include="ConstTypeArgs.Floats" Version="1.0.0" />
     <PackageReference Include="ConstTypeArgs.Ints" Version="1.0.0" />
     <PackageReference Include="ConstTypeArgs.Longs" Version="1.0.0" />

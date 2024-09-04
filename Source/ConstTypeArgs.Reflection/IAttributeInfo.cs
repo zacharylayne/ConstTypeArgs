@@ -6,8 +6,7 @@ namespace ConstTypeArgs.Reflection;
 /// The <see cref="IAttributeInfo"/> interface provides information about an attribute.
 /// </summary>
 public interface IAttributeInfo
-    : IElementInfo, IWithType, IWithBaseTypesInfo,
-      IWithGenericParametersInfo, IWithGenericArgumentsInfo
+    : IElementInfo, ITyped, IBaseTypes//, IWithGenericParametersInfo, IWithGenericArgumentsInfo
 {
     /// <summary>
     /// Gets the target of the attribute this represents.

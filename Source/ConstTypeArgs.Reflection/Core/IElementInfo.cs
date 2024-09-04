@@ -15,5 +15,5 @@ public interface IElementInfo
     /// <summary>
     /// Gets the code element's kinds of relations to the framework.
     /// </summary>
-    FrameworkKinds Kind { get; }
+    FrameworkKinds Kinds { get; }
 }

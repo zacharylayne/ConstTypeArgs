@@ -1,10 +1,10 @@
 ﻿namespace ConstTypeArgs.Reflection.Core;
 
 /// <summary>
-/// The <see cref="IWithPositionInfo"/> interface provides the position of an ordered code element.
+/// The <see cref="IPositioned"/> interface provides the position of an ordered code element.
 /// </summary>
 [EditorBrowsable(Never)]
-public interface IWithPositionInfo
+public interface IPositioned
 {
     /// <summary>
     /// Gets the position of the code element, starting from 1.

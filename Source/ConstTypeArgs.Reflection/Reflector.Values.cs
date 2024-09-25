@@ -250,7 +250,7 @@ public sealed partial class Reflector
     /// </exception>
     /// <remarks>
     ///   <para>
-    ///   This method dynamically accesses interfaces and public properties of the specified type.   
+    ///   This method dynamically accesses interfaces and public properties of the specified type.
     ///   </para>
     /// </remarks>
     /// <seealso cref="Type{T}.Value"/>

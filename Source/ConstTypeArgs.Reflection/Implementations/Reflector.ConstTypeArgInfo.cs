@@ -3,9 +3,9 @@
 public partial class Reflector
 {
     /// <summary>
-    /// Provides a private concrete implementation of the <see cref="IConstTypeArgInfo"/> interface.
+    /// Provides a private implementation of the <see cref="IConstTypeArgInfo"/> interface.
     /// </summary>
-    private sealed class ConstTypeArgInfoImpl
+    private sealed class ConstTypeArgInfo
         : TypeInfo, IConstTypeArgInfo
     {
         /// <summary>

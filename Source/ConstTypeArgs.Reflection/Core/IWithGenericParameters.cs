@@ -1,6 +1,4 @@
-﻿using ConstTypeArgs.Reflection;
-
-namespace ConstTypeArgs.Reflection.Core;
+﻿namespace ConstTypeArgs.Reflection.Core;
 
 /// <summary>
 /// The <see cref="IWithGenericParametersInfo"/> interface is used to provide information about

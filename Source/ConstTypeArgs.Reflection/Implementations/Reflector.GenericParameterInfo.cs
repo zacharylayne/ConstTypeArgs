@@ -3,7 +3,7 @@
 public partial class Reflector
 {
     /// <summary>
-    /// Provides a private concrete implementation of the <see cref="IGenericParameterInfo"/> interface.
+    /// Provides a private implementation of the <see cref="IGenericParameterInfo"/> interface.
     /// </summary>
     private sealed class GenericParameterInfo
         : IGenericParameterInfo

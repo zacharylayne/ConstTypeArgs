@@ -1,4 +1,6 @@
-﻿namespace ConstTypeArgs;
+﻿#pragma warning disable IDE0130 // Namespace does not match folder structure
+
+namespace ConstTypeArgs;
 
 /// <summary>
 /// The <see cref="__"/> interface is a special type of marker interface

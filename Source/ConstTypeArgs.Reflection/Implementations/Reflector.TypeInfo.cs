@@ -3,7 +3,7 @@
 public partial class Reflector
 {
     /// <summary>
-    /// Provides a private concrete implementation of the <see cref="ITypeInfo"/> interface.
+    /// Provides a concrete implementation of the <see cref="ITypeInfo"/> interface.
     /// </summary>
     private class TypeInfo
         : ITypeInfo

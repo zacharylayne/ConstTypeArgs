@@ -1,5 +1,3 @@
-using FluentAssertions;
-
 namespace ConstTypeArgs.Core.Tests;
 
 public partial class ConstTypeArgInterfaceTests

@@ -157,7 +157,8 @@ public sealed partial class Reflector
                 Debug.WriteLine(string.Format(ImplementsMultipleHoldersWarningMsg, type));
 
 #endif
-            var k = type.GetInterfaces().FirstOrDefault(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(K<>));
+            var k = type.GetInterfaces().FirstOrDefault(
+                i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(K<>));
 
             return k?.GetGenericArguments().FirstOrDefault();
         }

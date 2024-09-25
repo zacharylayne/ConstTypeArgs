@@ -1,6 +1,6 @@
-﻿namespace ConstTypeArgs.Reflection;
+﻿#pragma warning disable RCS1154 // Sort enum members
 
-#pragma warning disable RCS1154 // Sort enum members
+namespace ConstTypeArgs.Reflection;
 
 /// <summary>
 /// The <see cref="FrameworkKinds"/> enumeration provides flags for specifying a framework kind,

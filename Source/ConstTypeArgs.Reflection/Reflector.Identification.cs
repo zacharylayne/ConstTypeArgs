@@ -4,8 +4,8 @@ using static WellKnownConstTypes;
 
 public sealed partial class Reflector
 {
-    // #TODO?: Should there be entries for Func, Action, Predicate, Converter, RefFunc, RefAction,
-    //         arrays, ReadOnlyMemory, etc.?
+    // #QUESTION?: Should there be entries for Func, Action, Predicate, Converter, RefFunc, RefAction,
+    //             arrays, ReadOnlyMemory, etc.?
 
     // This isn't ideal but we aren't going to reference every package that has well-known types in it
     // just to get names.

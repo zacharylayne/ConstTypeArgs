@@ -98,7 +98,7 @@ public sealed class UndefinedConstTypeArgException
     public static new void Throw<K>(string? message = default, Exception? innerException = default)
         where K : IConstTypeArg
     {
-        var type = typeof(K);
+        Type type = typeof(K);
 
         message ??= FormatDefaultMessage(DefaultDescriptionFormat, type.Name);
 
@@ -134,7 +134,7 @@ public sealed class UndefinedConstTypeArgException
 
         try
         {
-            var _ = K.Value;
+            T? _ = K.Value;
         }
         catch (UndefinedConstTypeArgException e)
         {

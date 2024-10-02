@@ -1,12 +1,13 @@
-﻿namespace ConstTypeArgs.Reflection;
+﻿#pragma warning disable RCS1154 // Sort enum members
 
-#pragma warning disable RCS1154 // Sort enum members
+namespace ConstTypeArgs.Reflection;
 
 /// <summary>
 /// The <see cref="FrameworkKinds"/> enumeration provides flags for specifying a framework kind,
 /// such as const type argument, holder, or interface, const type parameter, argument consumer,
-/// and other kinds.
+/// or other kind.
 /// </summary>
+/// <seealso cref="WellKnownConstTypes"/>
 [Flags]
 public enum FrameworkKinds
 {
@@ -141,4 +142,158 @@ public enum FrameworkKinds
     /// Identifies all kinds of types that are integral concepts within the ConstTypeArgs framework.
     /// </summary>
     All                  = ConstType | NotConstType,
+}
+
+// #TODO: Add <seealso> to extension methods.
+
+/// <summary>
+/// The <see cref="FrameworkKindsExtensions"/> class provides extension methods for <see cref="FrameworkKinds"/>.
+/// </summary>
+/// <seealso cref="FrameworkKinds"/>
+public static class FrameworkKindsExtensions
+{
+    /// <summary>
+    /// Returns whether or not this is a const type (i.e. const type argument, holder, discard).
+    /// </summary>
+    /// <param name="kind">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if the kind is a const type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsConstType(this FrameworkKinds kind)
+        => (kind & FrameworkKinds.ConstType) != FrameworkKinds.Undefined;
+
+    /// <summary>
+    /// Returns whether or not this is not a const type but integral to the framework (i.e. consumer, attribute).
+    /// </summary>
+    /// <param name="kind">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if the kind is not a const type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsNotConstType(this FrameworkKinds kind)
+        => (kind & FrameworkKinds.NotConstType) != FrameworkKinds.Undefined;
+
+    /// <summary>
+    /// Returns whether or not this is a consumer of const type arguments, either a generic type or generic method.
+    /// </summary>
+    /// <param name="kind">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if the kind is a consumer of const type arguments;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsConsumer(this FrameworkKinds kind)
+        => (kind & FrameworkKinds.Consumer) != FrameworkKinds.Undefined;
+
+    /// <summary>
+    /// Returns whether or not this is a generic type that is a consumer of const type arguments.
+    /// </summary>
+    /// <param name="kind">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if the kind is a generic type that is a consumer of const type arguments;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsConsumerType(this FrameworkKinds kind)
+        => (kind & FrameworkKinds.ConsumerType) != FrameworkKinds.Undefined;
+
+    /// <summary>
+    /// Returns whether or not this is a generic method that is a consumer of const type arguments.
+    /// </summary>
+    /// <param name="kind">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if the kind is a generic method that is a consumer of const type arguments;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsConsumerMethod(this FrameworkKinds kind)
+        => (kind & FrameworkKinds.ConsumerMethod) != FrameworkKinds.Undefined;
+
+    /// <summary>
+    /// Returns whether or not this is an open generic type or method that is an argument consumer
+    /// <em>(i.e. const type parameters are not all supplied)</em>.
+    /// </summary>
+    /// <param name="kind">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if the kind is an open generic type or method that is an argument consumer
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsOpenConsumer(this FrameworkKinds kind)
+        => (kind & FrameworkKinds.OpenConsumer) != FrameworkKinds.Undefined;
+
+    /// <summary>
+    /// Returns whether or not this is a closed generic type or method that is an argument consumer
+    /// <em>(i.e. all const type parameters are supplied)</em>.
+    /// </summary>
+    /// <param name="kind">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if the kind is a closed generic type or method that is an argument consumer;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsClosedConsumer(this FrameworkKinds kind)
+        => (kind & FrameworkKinds.ClosedConsumer) != FrameworkKinds.Undefined;
+
+    /// <summary>
+    /// Returns whether or not this is an open generic type that is an argument consumer.
+    /// </summary>
+    /// <param name="kind">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if the kind is an open generic type that is an argument consumer;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsOpenConsumerType(this FrameworkKinds kind)
+        => (kind & FrameworkKinds.OpenConsumerType) != FrameworkKinds.Undefined;
+
+    /// <summary>
+    /// Returns whether or not this is a closed generic type that is an argument consumer.
+    /// </summary>
+    /// <param name="kind">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if the kind is a closed generic type that is an argument consumer.
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsClosedConsumerType(this FrameworkKinds kind)
+        => (kind & FrameworkKinds.ClosedConsumerType) != FrameworkKinds.Undefined;
+
+    /// <summary>
+    /// Returns whether or not this is an open generic method that is an argument consumer.
+    /// </summary>
+    /// <param name="kind">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if the kind is an open generic method that is an argument consumer.
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsOpenConsumerMethod(this FrameworkKinds kind)
+        => (kind & FrameworkKinds.OpenConsumerMethod) != FrameworkKinds.Undefined;
+
+    /// <summary>
+    /// Returns whether or not this is a closed generic method that is an argument consumer.
+    /// </summary>
+    /// <param name="kind">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if the kind is a closed generic method that is an argument consumer;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsClosedConsumerMethod(this FrameworkKinds kind)
+        => (kind & FrameworkKinds.ClosedConsumerMethod) != FrameworkKinds.Undefined;
 }

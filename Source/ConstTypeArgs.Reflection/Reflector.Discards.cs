@@ -58,26 +58,6 @@ public sealed partial class Reflector
     /// </exception>
     /// <seealso cref="Type{T}.IsConstTypeDiscard"/>
     public static bool IsConstTypeDiscard([DynamicallyAccessedMembers(Interfaces)] Type type)
-        => Reflect.IsConstTypeDiscardImpl(type);
-
-    /// <summary>
-    /// The implementation for the <see cref="IsConstTypeDiscard"/> method.
-    /// </summary>
-    /// <param name="type">
-    /// The type to check.
-    /// </param>
-    /// <returns>
-    /// A value of <see langword="true"/> if the specified type is a type of const type discard;
-    /// otherwise, <see langword="false"/>.
-    /// </returns>
-    /// <remarks>
-    /// A type is considered a type of const type discard if it derives from <see cref="__"/>
-    /// and is not an open generic type.
-    /// </remarks>
-    /// <exception cref="ArgumentNullException">
-    /// Thrown when <paramref name="type"/> is <see langword="null"/>.
-    /// </exception>
-    private bool IsConstTypeDiscardImpl([DynamicallyAccessedMembers(Interfaces)] Type type)
     {
         ArgumentNullException.ThrowIfNull(type, nameof(type));
 

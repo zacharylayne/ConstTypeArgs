@@ -54,6 +54,8 @@ public sealed partial class Reflector
             => Reflect._ConstTypeArgHeld.Value;
     }
 
+    // #QUESTION: Are there use cases where the const type holder is an open generic type?
+
     /// <summary>
     /// Returns whether or not the specified type is a type of const type holder.
     /// </summary>
@@ -79,28 +81,6 @@ public sealed partial class Reflector
     /// </exception>
     /// <seealso cref="Type{T}.IsConstTypeHolder"/>
     public static bool IsConstTypeHolder([DynamicallyAccessedMembers(Interfaces)] Type type)
-        => Reflect.IsConstTypeHolderImpl(type);
-
-    // #QUESTION: Are there use cases where the const type holder is an open generic type?
-
-    /// <summary>
-    /// The implementation for the <see cref="IsConstTypeHolder"/> method.
-    /// </summary>
-    /// <param name="type">
-    /// The type to check.
-    /// </param>
-    /// <returns>
-    /// A value of <see langword="true"/> if the specified type is a type of const type discard;
-    /// otherwise, <see langword="false"/>.
-    /// </returns>
-    /// <remarks>
-    /// A type is considered a type of const type holder if it implements <see cref="K{TArg}"/>,
-    /// is not an open generic type, and is not an interface.
-    /// </remarks>
-    /// <exception cref="ArgumentNullException">
-    /// Thrown when <paramref name="type"/> is <see langword="null"/>.
-    /// </exception>
-    private bool IsConstTypeHolderImpl([DynamicallyAccessedMembers(Interfaces)] Type type)
     {
         ArgumentNullException.ThrowIfNull(type, nameof(type));
 
@@ -123,41 +103,18 @@ public sealed partial class Reflector
     /// Thrown when <paramref name="type"/> is <see langword="null"/>.
     /// </exception>
     public static Type? GetConstTypeArgHeld([DynamicallyAccessedMembers(Interfaces)] Type type)
-        => Reflect.ConstTypeArgHeldImpl(type);
-
-    /// <summary>
-    /// The implementation for the <see cref="GetConstTypeArgHeld"/> method.
-    /// </summary>
-    /// <param name="type">
-    /// The const type holder to get the const type argument from.
-    /// </param>
-    /// <returns>
-    /// The const type argument held by the specified const type holder or <see langword="null"/>
-    /// if the specified type is not a const type holder.
-    /// </returns>
-    /// <remarks>
-    /// To get the const type argument held by a const type holder, the specified type must implement
-    /// <see cref="K{TArg}"/>. If the specified type implements multiple const type holders, this method
-    /// will return the first const type argument held by the specified type.
-    ///   <para>
-    ///   This method dynamically accesses the interfaces of the specified type.
-    ///   </para>
-    /// </remarks>
-    /// <exception cref="ArgumentNullException">
-    /// Thrown when <paramref name="type"/> is <see langword="null"/>.
-    /// </exception>
-    private Type? ConstTypeArgHeldImpl([DynamicallyAccessedMembers(Interfaces)] Type type)
     {
         ArgumentNullException.ThrowIfNull(type, nameof(type));
 
-        if (IsConstTypeHolderImpl(type))
+        if (IsConstTypeHolder(type))
         {
 #if DEBUG
             if (ImplementsMultipleHolders(type))
                 Debug.WriteLine(string.Format(ImplementsMultipleHoldersWarningMsg, type));
 
 #endif
-            var k = type.GetInterfaces().FirstOrDefault(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(K<>));
+            var k = type.GetInterfaces().FirstOrDefault(
+                i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(K<>));
 
             return k?.GetGenericArguments().FirstOrDefault();
         }
@@ -178,7 +135,7 @@ public sealed partial class Reflector
     /// <exception cref="ArgumentNullException">
     /// Thrown when <paramref name="type"/> is <see langword="null"/>.
     /// </exception>
-    private bool ImplementsMultipleHolders([DynamicallyAccessedMembers(Interfaces)] Type type)
+    private static bool ImplementsMultipleHolders([DynamicallyAccessedMembers(Interfaces)] Type type)
     {
         ArgumentNullException.ThrowIfNull(type, nameof(type));
 

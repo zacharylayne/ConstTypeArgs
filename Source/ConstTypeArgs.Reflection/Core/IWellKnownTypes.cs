@@ -1,8 +1,8 @@
 ﻿namespace ConstTypeArgs.Reflection.Core;
 
 /// <summary>
-/// The <see cref="IWellKnownConstTypes"/> interface is used to indicate that a framework-related type is or
-/// implements a well-known const type, such as <c>K_Bool</c>, <c>K_Byte</c>, <c>K_Char</c>, <c>K_Decimal</c>,
+/// The <see cref="IWellKnownConstTypes"/> interface is used to indicate that a type is or implements
+/// a well-known const type, such as <c>K_Bool</c>, <c>K_Byte</c>, <c>K_Char</c>, <c>K_Decimal</c>,
 /// <c>K_Double</c>, <c>K_Float</c>, <c>K_Half</c>, <c>K_Int</c>, <c>K_Int128</c>, <c>K_Long</c>,
 /// <c>K_SByte</c>, <c>K_Short</c>, <c>K_UInt</c>, <c>K_ULong</c>, <c>K_UShort</c>, <c>K_String</c>,
 /// <c>K_Type</c>, and so on.
@@ -20,6 +20,15 @@
 public interface IWellKnownConstTypes
 {
     /// <summary>
+    /// Gets the well-known const types that this type is or implements.
+    /// </summary>
+    /// <value>
+    /// A combination of flags that identify what kind of well-known const type a type may be.
+    /// If the type is not a well-known const type, the value is <see cref="WellKnownConstTypes.None"/>.
+    /// </value>
+    WellKnownConstTypes WellKnownConstTypes { get; }
+
+    /// <summary>
     /// Gets whether or not the type is a well-known const type.
     /// </summary>
     /// <value>
@@ -36,13 +45,4 @@ public interface IWellKnownConstTypes
     /// otherwise, <see langword="false"/>.
     /// </value>
     bool ImplementsWellKnownConstType { get; }
-
-    /// <summary>
-    /// Gets the well-known const types that this type is or implements.
-    /// </summary>
-    /// <value>
-    /// A combination of flags that identify what kind of well-known const type a type may be.
-    /// If the type is not a well-known const type, the value is <see cref="WellKnownConstTypes.None"/>.
-    /// </value>
-    WellKnownConstTypes WellKnownConstTypes { get; }
 }

@@ -1,5 +1,4 @@
-﻿#pragma warning disable IDE1006 // Naming Styles
-namespace ConstTypeArgs;
+﻿namespace ConstTypeArgs;
 
 // #IMPLEMENTATION NOTES: Why types prefixed with "K_"?
 // ----------------------------------------------------

@@ -5,7 +5,7 @@ namespace ConstTypeArgs.Reflection;
 public partial class Reflector
 {
     /// <summary>
-    /// Provides a private concrete implementation of the <see cref="IAttributeInfo"/> interface.
+    /// Provides a private implementation of the <see cref="IAttributeInfo"/> interface.
     /// </summary>
     private sealed class AttributeInfo
         : IAttributeInfo

@@ -3,7 +3,7 @@
 public partial class Reflector
 {
     /// <summary>
-    /// Provides a private concrete implementation of the <see cref="ITypeInfo"/> interface.
+    /// Provides a concrete implementation of the <see cref="ITypeInfo"/> interface.
     /// </summary>
     private class TypeInfo
         : ITypeInfo
@@ -26,7 +26,7 @@ public partial class Reflector
         /// <see cref="FrameworkKinds.None"/>. Otherwise, the value is a bitwise combination of
         /// one or more <see cref="FrameworkKinds"/> flags.
         /// </value>
-        public required FrameworkKinds Kind { get; init; } // #TODO
+        public required FrameworkKinds Kind { get; init; }
 
         /// <summary>
         /// Required. Gets &amp; inits a collection of information about the attributes
@@ -35,7 +35,7 @@ public partial class Reflector
         /// <value>
         /// If the type this object represents has no attributes, the value is an empty collection.
         /// </value>
-        public required IEnumerable<IAttributeInfo> Attributes { get; init; } = []; // #TODO
+        public required IEnumerable<IAttributeInfo> Attributes { get; init; } = [];
 
         /// <summary>
         /// Required. Gets &amp; inits a collection of information about the base types
@@ -46,7 +46,7 @@ public partial class Reflector
         /// If the type this object represents has no base types, the value is an empty collection.
         /// </remarks>
         /// <seealso cref="Implements"/>
-        public required IEnumerable<ITypeInfo> BaseTypes { get; init; } = []; // #TODO
+        public required IEnumerable<ITypeInfo> BaseTypes { get; init; } = [];
 
         /// <summary>
         /// Required. Gets &amp; inits a collection of information about the interfaces
@@ -56,7 +56,7 @@ public partial class Reflector
         /// If the type this object represents implements no interfaces, the value is an empty collection.
         /// </value>
         /// <seealso cref="BaseTypes"/>
-        public required IEnumerable<ITypeInfo> Implements { get; init; } = []; // #TODO
+        public required IEnumerable<ITypeInfo> Implements { get; init; } = [];
 
         /// <summary>
         /// Gets whether or not the type this object represents is a class.

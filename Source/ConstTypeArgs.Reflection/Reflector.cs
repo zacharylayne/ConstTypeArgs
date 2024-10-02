@@ -2,10 +2,8 @@
 
 namespace ConstTypeArgs.Reflection;
 
-// #IMPLEMENTATION NOTES:
-//
-// The original design was for the Reflector class to be a static class, but this was changed
-// to allow for extension methods to be added to it.
+// #TODO: Determine if there are use cases for converting Reflector into a singleton
+//        to allow extension methods to be added in other libraries.
 
 /// <summary>
 /// The <see cref="Reflector"/> class provides methods for reflecting on types for
@@ -43,16 +41,6 @@ public sealed partial class Reflector
         /// <summary>
         /// The singleton instance of the <see cref="Type{T}"/> class.
         /// </summary>
-        public static readonly Type<T> Reflect;
+        internal static readonly Type<T> Reflect;
     }
-
-    /// <summary>
-    /// The static constructor for the <see cref="Reflector"/> class.
-    /// </summary>
-    static Reflector() { Reflect = new Reflector(); }
-
-    /// <summary>
-    /// The singleton instance of the <see cref="Reflector"/> class.
-    /// </summary>
-    public static readonly Reflector Reflect;
 }

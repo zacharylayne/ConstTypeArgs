@@ -1,5 +1,6 @@
 ﻿using System.Text;
 
+#pragma warning disable IDE0130 // Namespace does not match folder structure
 namespace ConstTypeArgs;
 
 /// <summary>
@@ -100,7 +101,7 @@ public class ConstTypeException
     [DoesNotReturn]
     public static void Throw<T>(string? message = default, Exception? innerException = default)
     {
-        var type = typeof(T);
+        Type type = typeof(T);
 
         message ??= FormatDefaultMessage(DefaultDescriptionFormat, type.Name);
 

@@ -6,8 +6,9 @@ namespace ConstTypeArgs.Reflection;
 
 /// <summary>
 /// The <see cref="WellKnownConstTypes"/> enumeration provides flags to identify what
-/// kind of well-known const type a type may be.
+/// kind of well-known const type a type may be, derive from, or implement.
 /// </summary>
+/// <seealso cref="FrameworkKinds"/>
 [Flags]
 public enum WellKnownConstTypes
     : long
@@ -285,7 +286,251 @@ public enum WellKnownConstTypes
     UnsignedNumber      = K_Byte | K_Uint | K_UInt128 | K_Ulong | K_Ushort,
 
     /// <summary>
+    /// Identifies all types that provide values of built-in C# data types.
+    /// </summary>
+    BuiltIn             = K_Bool | K_Byte | K_Char | K_Decimal | K_Double | K_Float | K_Int | K_Uint
+                        | K_Nint | K_Nuint | K_Long | K_Ulong | K_Short | K_Ushort | K_String,
+
+    /// <summary>
+    /// Identifies all types that provide values that are primitives.
+    /// </summary>
+    Primitive          = K_Bool | K_Byte | K_Char | K_Decimal | K_Double | K_Float | K_Int | K_Uint
+                       | K_Nint | K_Nuint | K_Long | K_Ulong | K_Short | K_Ushort,
+
+    /// <summary>
+    /// Identifies all types that provide values that are CLS-compliant.
+    /// </summary>
+    /// <remarks>
+    ///     <para>
+    ///     <strong>NOTE:</strong> Other types, such as arrays, may be CLS-compliant if they do not target any
+    ///     types that are not CLS-compliant.
+    ///     </para>
+    /// </remarks>
+    ClsCompliant        = K_Bool | K_Byte | K_Char | K_Decimal | K_Double | K_Float | K_Half | K_Int | K_Nint
+                        | K_Long | K_Short | K_String,
+
+    /// <summary>
     /// Identifies all well-known types.
     /// </summary>
     All                 = MostDerived | Core,
+}
+
+/// <summary>
+/// The <see cref="WellKnownConstTypesExtensions"/> class provides <see cref="WellKnownConstTypes"/>
+/// extension methods.
+/// </summary>
+/// <seealso cref="WellKnownConstTypes"/>
+public static class WellKnownConstTypesExtensions
+{
+    /// <summary>
+    /// Returns whether or not this is a well-known type is a core const type
+    /// <em>(i.e. a type contained in the ConstTypeArgs.Core library)</em>.
+    /// </summary>
+    /// <param name="type">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this is a core const type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsWellKnownCoreType(this WellKnownConstTypes type)
+        => (type & WellKnownConstTypes.Core) != WellKnownConstTypes.None;
+
+    /// <summary>
+    /// Returns whether or not this is a well-known most-derived const type, such as <c>K_Bool</c>, <c>K_Int</c>,
+    /// or <c>K_String</c>.
+    /// </summary>
+    /// <param name="type">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this is a well-known most-derived const type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsWellKnownMostDerivedType(this WellKnownConstTypes type)
+        => (type & WellKnownConstTypes.MostDerived) != WellKnownConstTypes.None;
+
+    /// <summary>
+    /// Returns whether or not this is a well-known text-like const type, such as <c>K_Char</c> or <c>K_String</c>.
+    /// </summary>
+    /// <param name="type">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this is a well-known text-like const type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    /// <seealso cref="IsWellKnownNumericType(WellKnownConstTypes)"/>
+    public static bool IsWellKnownTextType(this WellKnownConstTypes type)
+        => (type & WellKnownConstTypes.Text) != WellKnownConstTypes.None;
+
+    /// <summary>
+    /// Returns whether or not this is a well-known delegate const type, such as <c>K_Delegate</c>
+    /// or <c>K_MultiCastDelegate</c>.
+    /// </summary>
+    /// <param name="type">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this is well-known delegate const type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsWellKnownDelegateType(this WellKnownConstTypes type)
+        => (type & WellKnownConstTypes.Delegate) != WellKnownConstTypes.None;
+
+    /// <summary>
+    /// Returns whether or not this is a well-known collection const type, such as <c>K_Array</c>.
+    /// </summary>
+    /// <param name="type">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this is well-known collection const type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    public static bool IsWellKnownCollectionType(this WellKnownConstTypes type)
+        => (type & WellKnownConstTypes.Collection) != WellKnownConstTypes.None;
+
+    /// <summary>
+    /// Returns whether or not this is a well-known numeric const type, such as <c>K_Byte</c>,
+    /// <c>K_Int</c>, or <c>K_Ulong</c>.
+    /// </summary>
+    /// <param name="type">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this is well-known numeric const type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    /// <seealso cref="IsWellKnownTextType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownIntegerType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownFloatingPointType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownSignedType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownUnsignedType(WellKnownConstTypes)"/>
+    public static bool IsWellKnownNumericType(this WellKnownConstTypes type)
+        => (type & WellKnownConstTypes.Number) != WellKnownConstTypes.None;
+
+    /// <summary>
+    /// Returns whether or not this is a well-known integer numeric const type, such as <c>K_Int</c>
+    /// or <c>K_Nuint</c>.
+    /// </summary>
+    /// <param name="type">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this is a well-known integer numeric const type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    /// <seealso cref="IsWellKnownTextType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownNumericType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownFloatingPointType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownSignedType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownUnsignedType(WellKnownConstTypes)"/>
+    public static bool IsWellKnownIntegerType(this WellKnownConstTypes type)
+        => (type & WellKnownConstTypes.IntegerNumber) != WellKnownConstTypes.None;
+
+    /// <summary>
+    /// Returns whether or not this is a well-known floating point numeric const type,
+    /// such as <c>K_Double</c> or <c>K_Decimal</c>.
+    /// </summary>
+    /// <param name="type">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this is well-known floating point numeric const type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    /// <seealso cref="IsWellKnownTextType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownNumericType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownIntegerType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownSignedType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownUnsignedType(WellKnownConstTypes)"/>
+    public static bool IsWellKnownFloatingPointType(this WellKnownConstTypes type)
+        => (type & WellKnownConstTypes.FloatingPointNumber) != WellKnownConstTypes.None;
+
+    /// <summary>
+    /// Returns whether or not this is a well-known signed numeric const type,
+    /// such as <c>K_Sbyte</c>, <c>K_Short</c>, or <c>K_Int128</c>.
+    /// </summary>
+    /// <param name="type">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this is well-known signed numeric const type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    /// <seealso cref="IsWellKnownTextType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownNumericType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownIntegerType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownFloatingPointType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownUnsignedType(WellKnownConstTypes)"/>
+    public static bool IsWellKnownSignedType(this WellKnownConstTypes type)
+        => (type & WellKnownConstTypes.SignedNumber) != WellKnownConstTypes.None;
+
+    /// <summary>
+    /// Returns whether or not this is a well-known unsigned numeric const type,
+    /// such as <c>K_Byte</c> or <c>K_Ushort</c>.
+    /// </summary>
+    /// <param name="type">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this is well-known unsigned numeric const type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    /// <seealso cref="IsWellKnownTextType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownNumericType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownFloatingPointType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownIntegerType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownSignedType(WellKnownConstTypes)"/>
+    public static bool IsWellKnownUnsignedType(this WellKnownConstTypes type)
+        => (type & WellKnownConstTypes.UnsignedNumber) != WellKnownConstTypes.None;
+
+    /// <summary>
+    /// Returns whether or not this is a well-known const type representing a built-in native type,
+    /// such as <c>K_Char</c> or <c>K_String</c>.
+    /// </summary>
+    /// <param name="type">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this is a well-known type representing a built-in native type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    /// <seealso cref="IsWellKnownPrimitiveType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownClsCompliantType(WellKnownConstTypes)"/>
+    public static bool IsWellKnownBuiltInType(this WellKnownConstTypes type)
+        => (type & WellKnownConstTypes.BuiltIn) != WellKnownConstTypes.None;
+
+    /// <summary>
+    /// Returns whether or not this is a well-known primitive const type, such as
+    /// <c>K_Bool</c> or <c>K_Nint</c>.
+    /// </summary>
+    /// <param name="type">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this is a well-known primitive const type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    /// <seealso cref="IsWellKnownBuiltInType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownClsCompliantType(WellKnownConstTypes)"/>
+    public static bool IsWellKnownPrimitiveType(this WellKnownConstTypes type)
+        => (type & WellKnownConstTypes.Primitive) != WellKnownConstTypes.None;
+
+    /// <summary>
+    /// Returns whether or not this is a well-known const type representing a CLS-compliant type,
+    /// such as <c>K_Short</c> or <c>K_String</c>.
+    /// </summary>
+    /// <param name="type">
+    /// This object.
+    /// </param>
+    /// <returns>
+    /// A value of <see langword="true"/> if this is well-known const type representing a CLS-compliant type;
+    /// a value of <see langword="false"/> if otherwise.
+    /// </returns>
+    /// <seealso cref="IsWellKnownBuiltInType(WellKnownConstTypes)"/>
+    /// <seealso cref="IsWellKnownPrimitiveType(WellKnownConstTypes)"/>
+    public static bool IsWellKnownClsCompliantType(this WellKnownConstTypes type)
+        => (type & WellKnownConstTypes.ClsCompliant) != WellKnownConstTypes.None;
 }

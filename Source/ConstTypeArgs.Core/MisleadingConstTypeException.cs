@@ -98,9 +98,9 @@ public sealed class MisleadingConstTypeException
         where K_Marked : IConstTypeArg
         where K_Not : K_Marked
     {
-        var type = typeof(K);
-        var marker = typeof(K_Marked);
-        var notImplemented = typeof(K_Not);
+        Type type = typeof(K);
+        Type marker = typeof(K_Marked);
+        Type notImplemented = typeof(K_Not);
 
         message ??= FormatDefaultMessage(DefaultDescriptionFormat, type.Name, marker.Name, notImplemented.Name);
 

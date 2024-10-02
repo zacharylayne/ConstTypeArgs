@@ -24,8 +24,6 @@ public sealed partial class Reflector
         /// The <see cref="IConstTypeArg{T}.Value"/> property of the type <typeparamref name="T"/>,
         /// if it exists; otherwise, <see langword="null"/>.
         /// </value>
-        /// <remarks>
-        /// </remarks>
         public static PropertyInfo? ValueProperty
             => Reflect._ValueProperty.Value;
 
@@ -90,32 +88,10 @@ public sealed partial class Reflector
     /// <seealso cref="Type{T}.ValueProperty"/>
     /// <seealso cref="GetValue(Type)"/>
     public static PropertyInfo? GetValueProperty([DynamicallyAccessedMembers(Interfaces | PublicProperties)] Type type)
-        => Reflect.GetValuePropertyImpl(type);
-
-    /// <summary>
-    /// The implementation for <see cref="GetValueProperty(Type)"/>.
-    /// </summary>
-    /// <param name="type">
-    /// The type to get the property of.
-    /// </param>
-    /// <returns>
-    /// The <see cref="IConstTypeArg{T}.Value"/> property of the specified type, if it exists;
-    /// otherwise, <see langword="null"/>.
-    /// </returns>
-    /// <exception cref="ArgumentNullException">
-    /// Thrown when <paramref name="type"/> is <see langword="null"/>.
-    /// </exception>
-    /// <exception cref="AmbiguousMatchException">
-    /// Thrown when binding to a member results in more than one member matching the binding criteria.
-    /// </exception>
-    /// <remarks>
-    /// This method dynamically accesses the interfaces and public properties of the specified type.
-    /// </remarks>
-    private PropertyInfo? GetValuePropertyImpl([DynamicallyAccessedMembers(Interfaces | PublicProperties)] Type type)
     {
         ArgumentNullException.ThrowIfNull(type, nameof(type));
 
-        if (Reflect.IsConstTypeArgImpl(type))
+        if (IsConstTypeArg(type))
             return type.GetProperty(ConstTypeArgValueMember, Static | Public);
 
         return default;
@@ -150,28 +126,6 @@ public sealed partial class Reflector
     /// <seealso cref="GetValue(Type)"/>
     /// <seealso cref="IConstTypeArg{T}.Value"/>
     public static Type? GetTypeOfValue([DynamicallyAccessedMembers(Interfaces | PublicProperties)] Type type)
-        => Reflect.GetTypeOfValueImpl(type);
-
-    /// <summary>
-    /// The implementation for <see cref="GetTypeOfValue(Type)"/>.
-    /// </summary>
-    /// <param name="type">
-    /// The type to get the type of the value of.
-    /// </param>
-    /// <returns>
-    /// The type of the value for the specified type or <see langword="null"/> if the specified type is not a const type argument
-    /// or if the value is not accessible.
-    /// </returns>
-    /// <exception cref="ArgumentNullException">
-    /// Thrown when <paramref name="type"/> is <see langword="null"/>.
-    /// </exception>
-    /// <exception cref="AmbiguousMatchException">
-    /// Thrown when binding to a member results in more than one member matching the binding criteria.
-    /// </exception>
-    /// <remarks>
-    /// This method dynamically accesses the interfaces and public properties of the specified type.
-    /// </remarks>
-    private Type? GetTypeOfValueImpl([DynamicallyAccessedMembers(Interfaces | PublicProperties)] Type type)
     {
         ArgumentNullException.ThrowIfNull(type, nameof(type));
 
@@ -204,33 +158,13 @@ public sealed partial class Reflector
     /// <seealso cref="Type{T}.Value"/>
     /// <seealso cref="GetValueProperty(Type)"/>
     public static object? GetValue([DynamicallyAccessedMembers(Interfaces | PublicProperties)] Type type)
-        => Reflect.GetValueImpl(type);
-
-    /// <summary>
-    /// The implementation for <see cref="GetValue(Type)"/>.
-    /// </summary>
-    /// <param name="type">
-    /// The type to get the value of.
-    /// </param>
-    /// <returns>
-    /// The value of the specified type as an object or <see langword="null"/> if the specified type is not a const type argument
-    /// or if the value is not accessible.
-    /// </returns>
-    /// <exception cref="ArgumentNullException">
-    /// Thrown when <paramref name="type"/> is <see langword="null"/>.
-    /// </exception>
-    /// <exception cref="AmbiguousMatchException">
-    /// Thrown when binding to a member results in more than one member matching the binding criteria.
-    /// </exception>
-    /// <remarks>
-    /// This method dynamically accesses the interfaces and public properties of the specified type.
-    /// </remarks>
-    private object? GetValueImpl([DynamicallyAccessedMembers(Interfaces | PublicProperties)] Type type)
     {
         ArgumentNullException.ThrowIfNull(type, nameof(type));
 
         return GetValueProperty(type)?.GetValue(default);
     }
+
+    // #TODO: Figure out how to appropriately handle Value being null and what to do if it can't be cast to T.
 
     /// <summary>
     /// Returns the value of the specified type as type <typeparamref name="T"/>.
@@ -256,31 +190,10 @@ public sealed partial class Reflector
     /// <seealso cref="Type{T}.Value"/>
     /// <seealso cref="IConstTypeArg{T}.Value"/>
     public static T? GetValueAs<T>([DynamicallyAccessedMembers(Interfaces | PublicProperties)] Type type)
-        => Reflect.GetValueAsImpl<T>(type);
-
-    // #TODO: Figure out how to appropriately handle Value being null and what to do if it can't be cast to T.
-
-    /// <summary>
-    /// The implementation for <see cref="GetValueAs{T}(Type)"/>.
-    /// </summary>
-    /// <typeparam name="T">
-    /// The type to convert the value to.
-    /// </typeparam>
-    /// <param name="type">
-    /// The type to get the value of.
-    /// </param>
-    /// <returns>
-    /// The value of the specified type as type <typeparamref name="T"/> or <see langword="null"/>
-    /// if the value can't be converted to <typeparamref name="T"/>.
-    /// </returns>
-    /// <exception cref="ArgumentNullException">
-    /// Thrown when <paramref name="type"/> is <see langword="null"/>.
-    /// </exception>
-    private T? GetValueAsImpl<T>([DynamicallyAccessedMembers(Interfaces | PublicProperties)] Type type)
     {
         ArgumentNullException.ThrowIfNull(type, nameof(type));
 
-        var value = GetValueImpl(type);
+        var value = GetValue(type);
 
         if (value is T result)
             return result;

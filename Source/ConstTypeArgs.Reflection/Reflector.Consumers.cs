@@ -78,23 +78,6 @@ public sealed partial class Reflector
     /// </exception>
     /// <seealso cref="Type{T}.IsArgConsumer"/>
     public static bool IsArgConsumer([DynamicallyAccessedMembers(Interfaces)] Type type)
-        => Reflect.IsArgConsumerImpl(type);
-
-    /// <summary>
-    /// The implementation for the <see cref="IsArgConsumer"/> method.
-    /// </summary>
-    /// <param name="type">
-    /// The type to check.
-    /// </param>
-    /// <returns>
-    /// A value of <see langword="true"/> if the specified type is a generic type with type parameters
-    /// constrained to be constant type arguments;
-    /// otherwise, <see langword="false"/>.
-    /// </returns>
-    /// <exception cref="ArgumentNullException">
-    /// Thrown when <paramref name="type"/> is <see langword="null"/>.
-    /// </exception>
-    private bool IsArgConsumerImpl([DynamicallyAccessedMembers(Interfaces)] Type type)
     {
         ArgumentNullException.ThrowIfNull(type, nameof(type));
 
@@ -137,26 +120,10 @@ public sealed partial class Reflector
     ///   </para>
     /// </remarks>
     public static Type[] GetConstTypeParams([DynamicallyAccessedMembers(Interfaces)] Type type)
-        => Reflect.GetConstTypeParamsImpl(type);
-
-    /// <summary>
-    /// The implementation for the <see cref="GetConstTypeParams"/> method.
-    /// </summary>
-    /// <param name="type">
-    /// The type to get the const type parameters for.
-    /// </param>
-    /// <returns>
-    /// An array of constant type parameters for the specified type or an empty array if the specified type
-    /// is not a type of argument consumer.
-    /// </returns>
-    /// <exception cref="ArgumentNullException">
-    /// Thrown when <paramref name="type"/> is <see langword="null"/>.
-    /// </exception>
-    private Type[] GetConstTypeParamsImpl([DynamicallyAccessedMembers(Interfaces)] Type type)
     {
         ArgumentNullException.ThrowIfNull(type, nameof(type));
 
-        if (IsArgConsumerImpl(type))
+        if (IsArgConsumer(type))
         {
             return type.GetGenericArguments().Where(genericArgument =>
             {

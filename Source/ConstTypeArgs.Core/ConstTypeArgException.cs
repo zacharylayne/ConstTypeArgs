@@ -79,11 +79,17 @@ public class ConstTypeArgException
         Exception? innerException = default)
     {
         if (value is not null)
+        {
             message ??= FormatDefaultMessage(DefaultDescriptionFormat, type.Name, value);
+        }
         else if (isUndefined)
+        {
             message ??= FormatDefaultMessage(DefaultDescriptionFormat, type.Name, "UNDEFINED");
+        }
         else
+        {
             message ??= FormatDefaultMessage(DefaultDescriptionFormat, type.Name, "null");
+        }
 
         if (innerException is not null)
         {
@@ -125,14 +131,11 @@ public class ConstTypeArgException
     public static void Throw<T, K>(string? message = default, Exception? innerException = default)
         where K : IConstTypeArg<T>
     {
-        string? value = "";
+        var value = "";
 
         try
         {
-            if (K.Value is null)
-                value = "null";
-            else
-                value = K.Value.ToString();
+            value = K.Value is null ? "null" : K.Value.ToString();
         }
         catch (UndefinedConstTypeArgException)
         {

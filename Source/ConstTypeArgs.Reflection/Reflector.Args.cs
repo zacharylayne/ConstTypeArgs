@@ -58,26 +58,6 @@ public sealed partial class Reflector
     /// </exception>
     /// <seealso cref="Type{T}.IsConstTypeArg"/>
     public static bool IsConstTypeArg([DynamicallyAccessedMembers(Interfaces)] Type type)
-        => Reflect.IsConstTypeArgImpl(type);
-
-    /// <summary>
-    /// The implementation for the <see cref="IsConstTypeArg"/> method.
-    /// </summary>
-    /// <param name="type">
-    /// The type to check.
-    /// </param>
-    /// <returns>
-    /// A value of <see langword="true"/> if the specified type is a type of const type argument;
-    /// otherwise, <see langword="false"/>.
-    /// </returns>
-    /// <remarks>
-    /// A type is considered a type of const type argument if it implements <see cref="IConstTypeArg{T}"/>,
-    /// is not an interface, and is not an open generic type.
-    /// </remarks>
-    /// <exception cref="ArgumentNullException">
-    /// Thrown when <paramref name="type"/> is <see langword="null"/>.
-    /// </exception>
-    private bool IsConstTypeArgImpl([DynamicallyAccessedMembers(Interfaces)] Type type)
     {
         ArgumentNullException.ThrowIfNull(type, nameof(type));
 

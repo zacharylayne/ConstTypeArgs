@@ -5,8 +5,8 @@ VisualStudioVersion = 17.9.34414.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B126AD85-980C-4790-A213-D0790AE9BA8A}"
 	ProjectSection(SolutionItems) = preProject
-		CONTRIBUTING.md = CONTRIBUTING.md
 		CHANGELOGmd.md = CHANGELOGmd.md
+		CONTRIBUTING.md = CONTRIBUTING.md
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -72,8 +72,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Console", "So
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Delegates.Interlocked", "Source\ConstTypeArgs.Delegates.Interlocked\ConstTypeArgs.Delegates.Interlocked.csproj", "{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Reflection", "Source\ConstTypeArgs.Reflection\ConstTypeArgs.Reflection.csproj", "{78280BE3-2A20-4C42-90CA-99CF3206FA37}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Validation", "Source\ConstTypeArgs.Validation\ConstTypeArgs.Validation.csproj", "{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev-guide", "dev-guide", "{BFB8804A-463E-4E0D-BF6F-D5A0755C731D}"
@@ -128,9 +126,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{5E95
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "types", "types", "{2B44F70D-8EBE-46BC-827E-2F70688FFDFD}"
 	ProjectSection(SolutionItems) = preProject
-		Documentation\dev-guide\types\enum-like-types.md = Documentation\dev-guide\types\enum-like-types.md
 		Documentation\dev-guide\types\arg-holder-types.md = Documentation\dev-guide\types\arg-holder-types.md
 		Documentation\dev-guide\types\discard-types.md = Documentation\dev-guide\types\discard-types.md
+		Documentation\dev-guide\types\enum-like-types.md = Documentation\dev-guide\types\enum-like-types.md
 		Documentation\dev-guide\types\types-overview.md = Documentation\dev-guide\types\types-overview.md
 		Documentation\dev-guide\types\union-like-types.md = Documentation\dev-guide\types\union-like-types.md
 	EndProjectSection
@@ -239,10 +237,6 @@ Global
 		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78280BE3-2A20-4C42-90CA-99CF3206FA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78280BE3-2A20-4C42-90CA-99CF3206FA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78280BE3-2A20-4C42-90CA-99CF3206FA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78280BE3-2A20-4C42-90CA-99CF3206FA37}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}.Release|Any CPU.ActiveCfg = Release|Any CPU

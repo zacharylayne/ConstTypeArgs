@@ -7,7 +7,7 @@
     <Company>Entry Point Software</Company>
     <Authors>Zachary Layne</Authors>
     <Title>Const Type Arguments - Delegates: Interlocked</Title>
-    <Description>Builds on types of the ConstTypeArgs.Delegates library to provide const type arguments that allow you to use type parameters to pass System.Runtime.CompilerServices.Interocked delegates to generics at compile-time.</Description>
+    <Description>Builds on types of the ConstTypeArgs.Delegates library to provide const type arguments that allow you to use generic parameters to "pass" System.Runtime.CompilerServices.Interocked delegates to generics.</Description>
     <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
     <PackageReadmeFile>README.MD</PackageReadmeFile>
     <PackageIcon>Interlocked.png</PackageIcon>
@@ -24,6 +24,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -48,18 +49,8 @@
 
   <ItemGroup>
     <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ConstTypeArgs.Delegates\ConstTypeArgs.Delegates.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Doubles\ConstTypeArgs.Doubles.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Floats\ConstTypeArgs.Floats.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Ints\ConstTypeArgs.Ints.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Longs\ConstTypeArgs.Longs.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Nints\ConstTypeArgs.Nints.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Nuints\ConstTypeArgs.Nuints.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Uints\ConstTypeArgs.Uints.csproj" />
-    <ProjectReference Include="..\ConstTypeArgs.Ulongs\ConstTypeArgs.Ulongs.csproj" />
+    <PackageReference Include="ConstTypeArgs.Delegates" Version="1.0.0" />
+    <PackageReference Include="ConstTypeArgs.Doubles" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -7,14 +7,13 @@
     <Company>Entry Point Software</Company>
     <Authors>Zachary Layne</Authors>
     <Title>Const Type Arguments - Delegates</Title>
-    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass delegates to generics at compile-time. This provides an analog to type specialization in C++, and can be used for scenarios such as:
-
-* Static configuration,
-* Compile-time polymorphism,
-* Eliminating unnecessary instance constructors,
+    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use generic parameters to "pass" delegates to generics. This provides an analog to type specialization in C++, and can be used for scenarios such as:
+* Static polymorphism,
+* Algorithm configuration,
+* Validation,
 * "Passing" values to type initializers,
 * And more.</Description>
-    <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
+    <Copyright>Copyright (c) 2025 Zachary Layne</Copyright>
     <PackageReadmeFile>README.MD</PackageReadmeFile>
     <PackageIcon>Delegate.png</PackageIcon>
     <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
@@ -36,6 +35,7 @@
     <Optimize>False</Optimize>
     <IsTrimmable>True</IsTrimmable>
     <DebugType>portable</DebugType>
+    <WarningLevel>8</WarningLevel>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -45,6 +45,7 @@
     <IncludeSource>true</IncludeSource>
     <EnableSourceLink>true</EnableSourceLink>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <WarningLevel>8</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>

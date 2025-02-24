@@ -1,9 +1,15 @@
 Release Notes
 ===
 
+## 08/27/24
+
+[ConstTypeArgs.Core](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Core) **1.2.0** <sup>[NuGet](https://www.nuget.org/packages/ConstTypeArgs.Core/1.2.0)</sup>
+</br>
+&nbsp;&nbsp; - Minor changes.
+
 ## 08/20/24
 
-[ConstTypeArgs.Bytes](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Core) **1.2.0-beta1** <sup>[NuGet](https://www.nuget.org/packages/ConstTypeArgs.Core/1.2.0-beta1)</sup>
+[ConstTypeArgs.Core](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Core) **1.2.0-beta1** <sup>[NuGet](https://www.nuget.org/packages/ConstTypeArgs.Core/1.2.0-beta1)</sup>
 </br>
 &nbsp;&nbsp; - Added exceptions: [`ConstTypeArgException`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/ConstTypeArgException.cs),
 [`ConstTypeException`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/ConstTypeException.cs),

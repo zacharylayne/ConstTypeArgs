@@ -17,7 +17,7 @@
 
 1. **Improved Readability & Expressiveness**  
    - Replace hardcoded primitives (like plain `int size`) with descriptive const type arguments (e.g., `KInitialSize`).
-   - Enhance maintenance by making code intent more obvious—no more "What is this number for?" puzzles.
+   - Enhance maintenance by making code intent more obvious - no more "What is this number for?" puzzles.
    - Facilitate code reviews and debugging by surfacing important values in the type system.
 
 1. **Reusable & Configurable Components**  
@@ -41,4 +41,4 @@
 
 ---
 
-With the **ConstTypeArgs** framework, you gain a powerful toolset for building **highly expressive, strongly typed** solutions that reduce ambiguity, encourage reuse, and help **prevent common runtime errors**—all while letting you explore advanced patterns and domain-specific designs.
+With the **ConstTypeArgs** framework, you gain a powerful toolset for building **highly expressive, strongly typed** solutions that reduce ambiguity, encourage reuse, and help **prevent common runtime errors** - all while letting you explore advanced patterns and domain-specific designs.

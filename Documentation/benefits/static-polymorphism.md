@@ -2,9 +2,9 @@
 
 ## **Overview**
 
-In traditional OOP polymorphism, behavior changes at *runtime*—you have a base class, multiple derived classes, and virtual methods that dispatch to the correct implementation. By contrast, **static polymorphism** is about specializing behavior *before or during compilation* based on the generic type arguments. 
+In traditional OOP polymorphism, behavior changes at *runtime* - you have a base class, multiple derived classes, and virtual methods that dispatch to the correct implementation. By contrast, **static polymorphism** is about specializing behavior *before or during compilation* based on the generic type arguments. 
 
-With the **ConstTypeArgs** framework, each “const type argument” is a distinct type, and the compiler treats each closed generic (e.g., `MyClass<_16>`, `MyClass<_512>`) as a *separate* specialized type. This often yields a **performance** benefit because the JIT (Just-In-Time compiler) can optimize each specialization differently. It also means your code can pick different *compile-time paths* based on the “constant” embedded in the type.
+With the **ConstTypeArgs** framework, each "const type argument" is a distinct type, and the compiler treats each closed generic (e.g., `MyClass<_16>`, `MyClass<_512>`) as a *separate* specialized type. This often yields a **performance** benefit because the JIT (Just-In-Time compiler) can optimize each specialization differently. It also means your code can pick different *compile-time paths* based on the "constant" embedded in the type.
 
 ---
 
@@ -15,7 +15,7 @@ With the **ConstTypeArgs** framework, each “const type argument” is a distinct t
 
 1. **Optional Code Specialization**
    - You can write methods that choose different code paths based on the *type* of your const type argument.  
-   - The “switch” can be literal (e.g., `switch` statements on `TArg.Value`) or structural (e.g., `if (typeof(TArg) == typeof(_16))`).
+   - The "switch" can be literal (e.g., `switch` statements on `TArg.Value`) or structural (e.g., `if (typeof(TArg) == typeof(_16))`).
    - Since each closed generic is distinct, the compiler can inline or prune unused branches if it can determine the outcome at compile time or JIT time.
 
 1. **No Traditional Inheritance Needed**
@@ -26,7 +26,7 @@ With the **ConstTypeArgs** framework, each “const type argument” is a distinct t
 
 ## **Example: Specializing Behavior via Const Type Args**
 
-Let’s illustrate with a simplified example: a generic “resizer” class that picks different resizing strategies based on the numeric value of `TSize`—like `_16`, `_512`, or `_1024`. We’ll show two ways to “switch” on the const type argument.
+Let’s illustrate with a simplified example: a generic "resizer" class that picks different resizing strategies based on the numeric value of `TSize` - like `_16`, `_512`, or `_1024`. We’ll show two ways to "switch" on the const type argument.
 
 ### **1. Switch on `Value` at JIT Time**
 
@@ -98,7 +98,7 @@ The advantage is that the code can be very explicit about unique branches. The d
    Each specialized instantiation can be **inlined** or optimized. For numeric-based constants, the JIT can optimize away code paths that it deems irrelevant for that specific constant.
 
 1. **Clarity**
-   Instead of weaving through inheritance hierarchies, your specialization is driven by the “constant type.” So, code becomes more direct: “I want the version that’s `_512` for my buffer. That’s it.”
+   Instead of weaving through inheritance hierarchies, your specialization is driven by the "constant type". So, code becomes more direct: "I want the version that’s `_512` for my buffer. That’s it."
 
 1. **Flexibility**
    - You can switch on either *the static value* (`TSize.Value`) or *the static type* (`typeof(TSize)`), or even both.
@@ -126,5 +126,5 @@ The advantage is that the code can be very explicit about unique branches. The d
 Static polymorphism in the **ConstTypeArgs** framework leverages the fact that each const type argument (like `_16`, `_512`, `_1024`) is **its own type**. Consequently:
 
 1. **You get distinct compiled specializations** for each usage, boosting both performance and clarity.
-1. **You can “switch”** on the constant-like value or the type, shaping different behaviors for different “constants.”
+1. **You can “switch”** on the constant-like value or the type, shaping different behaviors for different "constants".
 1. **You avoid typical runtime polymorphism overhead**, while still achieving specialized functionality for each scenario.

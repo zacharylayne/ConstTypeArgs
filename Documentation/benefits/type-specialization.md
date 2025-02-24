@@ -1,4 +1,4 @@
-﻿# **Type Specialization with Const Type Args**
+# **Type Specialization with Const Type Args**
 
 ## **Overview**
 

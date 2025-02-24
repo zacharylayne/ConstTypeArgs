@@ -28,7 +28,7 @@ If you encounter a bug in the framework, please:
 
 1. **Check Existing Issues:** Search the [issues](https://github.com/zacharylayne/ConstTypeArgs/issues) to see if the bug has already been reported.
 
-1. **Submit a New Issue:** If the bug hasn’t been reported, submit a new issue. Include as much detail as possible, including:
+1. **Submit a New Issue:** If the bug hasnâ€™t been reported, submit a new issue. Include as much detail as possible, including:
   * Steps to reproduce the bug
   * Expected behavior
   * Actual behavior
@@ -37,13 +37,13 @@ If you encounter a bug in the framework, please:
 ## Requesting Features
 We welcome feature requests! If you have an idea for a feature, please:
 
-1. **Search Existing Discussions:** Search the [discussions](https://github.com/zacharylayne/ConstTypeArgs/discussions) to make sure your feature hasn’t already been requested.
+1. **Search Existing Discussions:** Search the [discussions](https://github.com/zacharylayne/ConstTypeArgs/discussions) to make sure your feature hasnâ€™t already been requested.
 
-1. **Submit a New Feature Request:** If your feature doesn’t exist, open a new discussion. Describe the feature, its use case, and why you think it would benefit the project.
+1. **Submit a New Feature Request:** If your feature doesnâ€™t exist, open a new discussion. Describe the feature, its use case, and why you think it would benefit the project.
 
 ## Documentation Improvements
 
-We highly value documentation contributions. Here’s how you can help:
+We highly value documentation contributions. Hereâ€™s how you can help:
 
 * Update DocFX documentation site.
 * Improve READMEs. If you find the README lacking in any way, please submit a pull request with your improvements.

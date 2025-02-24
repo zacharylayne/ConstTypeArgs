@@ -5,8 +5,8 @@ VisualStudioVersion = 17.9.34414.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B126AD85-980C-4790-A213-D0790AE9BA8A}"
 	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
 		CONTRIBUTING.md = CONTRIBUTING.md
-		CHANGELOGmd.md = CHANGELOGmd.md
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -59,83 +59,52 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		Documentation\glossary.md = Documentation\glossary.md
 		Documentation\index.md = Documentation\index.md
 		Documentation\naming-conventions.md = Documentation\naming-conventions.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Site", "Site", "{ABCABE07-0140-432A-A7EC-BEF0CA0AE884}"
-	ProjectSection(SolutionItems) = preProject
-		Documentation\docfx.json = Documentation\docfx.json
-		Documentation\Index.md = Documentation\Index.md
-		Documentation\toc.yml = Documentation\toc.yml
+		Documentation\use-cases\use-cases-overview.md = Documentation\use-cases\use-cases-overview.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Console", "Source\ConstTypeArgs.Console\ConstTypeArgs.Console.csproj", "{9A5B0C1A-EB5E-47A7-8679-B84DFBFEAEFA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Delegates.Interlocked", "Source\ConstTypeArgs.Delegates.Interlocked\ConstTypeArgs.Delegates.Interlocked.csproj", "{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Reflection", "Source\ConstTypeArgs.Reflection\ConstTypeArgs.Reflection.csproj", "{78280BE3-2A20-4C42-90CA-99CF3206FA37}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Validation", "Source\ConstTypeArgs.Validation\ConstTypeArgs.Validation.csproj", "{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev-guide", "dev-guide", "{BFB8804A-463E-4E0D-BF6F-D5A0755C731D}"
-	ProjectSection(SolutionItems) = preProject
-		Documentation\dev-guide\argument-providers.md = Documentation\dev-guide\argument-providers.md
-		Documentation\dev-guide\defining-const-type-args.md = Documentation\dev-guide\defining-const-type-args.md
-		Documentation\dev-guide\dev-guide-intro.md = Documentation\dev-guide\dev-guide-intro.md
-		Documentation\dev-guide\reflection.md = Documentation\dev-guide\reflection.md
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benefits", "benefits", "{A2A19E19-F747-4221-9060-0DFED26CCD61}"
 	ProjectSection(SolutionItems) = preProject
 		Documentation\benefits\benefits-overview.md = Documentation\benefits\benefits-overview.md
-		Documentation\benefits\design-patterns.md = Documentation\benefits\design-patterns.md
 		Documentation\benefits\static-polymorphism.md = Documentation\benefits\static-polymorphism.md
 		Documentation\benefits\type-specialization.md = Documentation\benefits\type-specialization.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "code-snippets", "code-snippets", "{9B11BA07-D5D1-4D27-A685-32F690A83FE7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Console", "Samples\Samples.Console\Samples.Console.csproj", "{E539506A-A277-4121-9B2A-434335948722}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{9DB9F97A-76F3-4268-9A09-B1659316AD6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Buffer", "Samples\Samples.Buffer\Samples.Buffer.csproj", "{7326DCFD-3FFC-417A-B878-DC57DB07D7D2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{0634AE1A-1411-4D7B-88CE-8CFD6FDA1B34}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "use-cases", "use-cases", "{98763C8C-AB0B-43D0-9F9F-AA14FF487FC3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
-		Documentation\use-cases\buffer-initialization.md = Documentation\use-cases\buffer-initialization.md
-		Documentation\use-cases\callbacks.md = Documentation\use-cases\callbacks.md
-		Documentation\use-cases\event-handlers.md = Documentation\use-cases\event-handlers.md
-		Documentation\use-cases\implementation-selection.md = Documentation\use-cases\implementation-selection.md
-		Documentation\use-cases\regex.md = Documentation\use-cases\regex.md
-		Documentation\use-cases\state-machines.md = Documentation\use-cases\state-machines.md
-		Documentation\use-cases\type-safe-configuration.md = Documentation\use-cases\type-safe-configuration.md
-		Documentation\use-cases\union-like-type.md = Documentation\use-cases\union-like-type.md
-		Documentation\use-cases\units-of-measure.md = Documentation\use-cases\units-of-measure.md
-		Documentation\use-cases\use-cases-overview.md = Documentation\use-cases\use-cases-overview.md
+		Samples.md = Samples.md
+		_NOTES\Union-Like Type.md = _NOTES\Union-Like Type.md
+		_NOTES\Units of Measure Notes.md = _NOTES\Units of Measure Notes.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "validation", "validation", "{281C11DB-1183-4D1B-B94D-B3B98706A9FB}"
-	ProjectSection(SolutionItems) = preProject
-		Documentation\dev-guide\validation\validation-overview.md = Documentation\dev-guide\validation\validation-overview.md
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Delegates", "Samples\Samples.Delegates\Samples.Delegates.csproj", "{179072E4-5D6B-4E8D-A28E-80C11B81B6A7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{5E95E26E-7B78-4DD3-B111-C41B61CF9E04}"
-	ProjectSection(SolutionItems) = preProject
-		Documentation\samples\console-sample.md = Documentation\samples\console-sample.md
-		Documentation\samples\samples-overview.md = Documentation\samples\samples-overview.md
-		Documentation\samples\state-machine-sample.md = Documentation\samples\state-machine-sample.md
-		Documentation\samples\units-of-measure-sample.md = Documentation\samples\units-of-measure-sample.md
-		Documentation\samples\validation-sample.md = Documentation\samples\validation-sample.md
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.UnionLikes", "Samples\Samples.UnionLikes\Samples.UnionLikes.csproj", "{CB1824A5-DD3C-4605-AE40-FFF04F697325}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "types", "types", "{2B44F70D-8EBE-46BC-827E-2F70688FFDFD}"
-	ProjectSection(SolutionItems) = preProject
-		Documentation\dev-guide\types\enum-like-types.md = Documentation\dev-guide\types\enum-like-types.md
-		Documentation\dev-guide\types\arg-holder-types.md = Documentation\dev-guide\types\arg-holder-types.md
-		Documentation\dev-guide\types\discard-types.md = Documentation\dev-guide\types\discard-types.md
-		Documentation\dev-guide\types\types-overview.md = Documentation\dev-guide\types\types-overview.md
-		Documentation\dev-guide\types\union-like-types.md = Documentation\dev-guide\types\union-like-types.md
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.StateMachine", "Samples\Samples.StateMachine\Samples.StateMachine.csproj", "{C46803F0-B5FA-4A89-BDD8-477EFB5B6EB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstTypeArgs.Core.Tests", "Tests\ConstTypeArgs.Core.Tests\ConstTypeArgs.Core.Tests.csproj", "{001592E3-F4C0-485E-81AD-69CECAFCCD38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.ECS", "Samples\Samples.ECS\Samples.ECS.csproj", "{ABF85FD1-92CE-4CD3-88A6-30206348CE0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Calculator", "Samples\Samples.Calculator\Samples.Calculator.csproj", "{801150F3-4BC1-4954-B873-2A22B28C602B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.UnitsOfMeasure", "Samples\Samples.UnitsOfMeasure\Samples.UnitsOfMeasure.csproj", "{D0EC5EB0-6720-439C-8474-AC359F3036D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Validation", "Samples\Samples.Validation\Samples.Validation.csproj", "{36419530-6339-4AB0-85DA-F7D5BBDCA593}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.ColorsAndAsciiGraphics", "Samples\Samples.ColorsAndAsciiGraphics\Samples.ColorsAndAsciiGraphics.csproj", "{421816F1-3566-42A0-94DC-928695D4F29F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples", "Samples\Samples\Samples.csproj", "{462A6911-1EF8-47AF-8EAB-2B6E130355A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiveIndexPool", "..\DiveIndexPool\Source\DiveIndexPool\DiveIndexPool.csproj", "{F53FBF11-A524-2B5D-31B1-2F24305E4F33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -239,34 +208,66 @@ Global
 		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78280BE3-2A20-4C42-90CA-99CF3206FA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78280BE3-2A20-4C42-90CA-99CF3206FA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78280BE3-2A20-4C42-90CA-99CF3206FA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78280BE3-2A20-4C42-90CA-99CF3206FA37}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7DA6F3A-F71F-46CA-BAC1-5497A9CE740C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{001592E3-F4C0-485E-81AD-69CECAFCCD38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{001592E3-F4C0-485E-81AD-69CECAFCCD38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{001592E3-F4C0-485E-81AD-69CECAFCCD38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{001592E3-F4C0-485E-81AD-69CECAFCCD38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E539506A-A277-4121-9B2A-434335948722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E539506A-A277-4121-9B2A-434335948722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E539506A-A277-4121-9B2A-434335948722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E539506A-A277-4121-9B2A-434335948722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7326DCFD-3FFC-417A-B878-DC57DB07D7D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7326DCFD-3FFC-417A-B878-DC57DB07D7D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7326DCFD-3FFC-417A-B878-DC57DB07D7D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7326DCFD-3FFC-417A-B878-DC57DB07D7D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{179072E4-5D6B-4E8D-A28E-80C11B81B6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{179072E4-5D6B-4E8D-A28E-80C11B81B6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{179072E4-5D6B-4E8D-A28E-80C11B81B6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{179072E4-5D6B-4E8D-A28E-80C11B81B6A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB1824A5-DD3C-4605-AE40-FFF04F697325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB1824A5-DD3C-4605-AE40-FFF04F697325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB1824A5-DD3C-4605-AE40-FFF04F697325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB1824A5-DD3C-4605-AE40-FFF04F697325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C46803F0-B5FA-4A89-BDD8-477EFB5B6EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C46803F0-B5FA-4A89-BDD8-477EFB5B6EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C46803F0-B5FA-4A89-BDD8-477EFB5B6EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C46803F0-B5FA-4A89-BDD8-477EFB5B6EB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF85FD1-92CE-4CD3-88A6-30206348CE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF85FD1-92CE-4CD3-88A6-30206348CE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF85FD1-92CE-4CD3-88A6-30206348CE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF85FD1-92CE-4CD3-88A6-30206348CE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{801150F3-4BC1-4954-B873-2A22B28C602B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{801150F3-4BC1-4954-B873-2A22B28C602B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{801150F3-4BC1-4954-B873-2A22B28C602B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{801150F3-4BC1-4954-B873-2A22B28C602B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0EC5EB0-6720-439C-8474-AC359F3036D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EC5EB0-6720-439C-8474-AC359F3036D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0EC5EB0-6720-439C-8474-AC359F3036D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EC5EB0-6720-439C-8474-AC359F3036D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36419530-6339-4AB0-85DA-F7D5BBDCA593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36419530-6339-4AB0-85DA-F7D5BBDCA593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36419530-6339-4AB0-85DA-F7D5BBDCA593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36419530-6339-4AB0-85DA-F7D5BBDCA593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{421816F1-3566-42A0-94DC-928695D4F29F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{421816F1-3566-42A0-94DC-928695D4F29F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{421816F1-3566-42A0-94DC-928695D4F29F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{421816F1-3566-42A0-94DC-928695D4F29F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{462A6911-1EF8-47AF-8EAB-2B6E130355A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{462A6911-1EF8-47AF-8EAB-2B6E130355A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{462A6911-1EF8-47AF-8EAB-2B6E130355A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{462A6911-1EF8-47AF-8EAB-2B6E130355A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F53FBF11-A524-2B5D-31B1-2F24305E4F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F53FBF11-A524-2B5D-31B1-2F24305E4F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F53FBF11-A524-2B5D-31B1-2F24305E4F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F53FBF11-A524-2B5D-31B1-2F24305E4F33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C} = {B126AD85-980C-4790-A213-D0790AE9BA8A}
-		{ABCABE07-0140-432A-A7EC-BEF0CA0AE884} = {B126AD85-980C-4790-A213-D0790AE9BA8A}
-		{BFB8804A-463E-4E0D-BF6F-D5A0755C731D} = {D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C}
 		{A2A19E19-F747-4221-9060-0DFED26CCD61} = {D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C}
-		{9B11BA07-D5D1-4D27-A685-32F690A83FE7} = {ABCABE07-0140-432A-A7EC-BEF0CA0AE884}
-		{9DB9F97A-76F3-4268-9A09-B1659316AD6A} = {ABCABE07-0140-432A-A7EC-BEF0CA0AE884}
-		{0634AE1A-1411-4D7B-88CE-8CFD6FDA1B34} = {ABCABE07-0140-432A-A7EC-BEF0CA0AE884}
-		{98763C8C-AB0B-43D0-9F9F-AA14FF487FC3} = {D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C}
-		{281C11DB-1183-4D1B-B94D-B3B98706A9FB} = {BFB8804A-463E-4E0D-BF6F-D5A0755C731D}
-		{5E95E26E-7B78-4DD3-B111-C41B61CF9E04} = {D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C}
-		{2B44F70D-8EBE-46BC-827E-2F70688FFDFD} = {BFB8804A-463E-4E0D-BF6F-D5A0755C731D}
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {B126AD85-980C-4790-A213-D0790AE9BA8A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {266F50E7-B8BB-4CFD-BC01-66FC3E001666}

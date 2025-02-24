@@ -1,4 +1,0 @@
-Union-Like Types
-================
-
-#TBD

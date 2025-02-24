@@ -1,4 +1,0 @@
-Design Patterns
-===============
-
-#TBD

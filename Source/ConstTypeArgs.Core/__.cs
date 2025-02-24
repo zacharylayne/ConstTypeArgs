@@ -1,7 +1,7 @@
 ﻿namespace ConstTypeArgs;
 
 /// <summary>
-/// The <see cref="__"/> interface is a special type of marker interface
+/// The <see cref="__"/> abstract class is a special type of const type argument
 /// meant to identify const type args that are used as discards in type parameter
 /// list with union-like behavior.
 /// </summary>

@@ -361,3 +361,16 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Source/ConstTypeArg.Documentation/Content
+/Source/ConstTypeArg.Documentation/Help/css
+/Source/ConstTypeArg.Documentation/Help/fti
+/Source/ConstTypeArg.Documentation/Help/html
+/Source/ConstTypeArg.Documentation/Help/html/bbdeb545-e004-458b-a32c-10dfc3418f59.htm
+/Source/ConstTypeArg.Documentation/Help/toc
+/Source/ConstTypeArg.Documentation/Help/icons
+/Source/ConstTypeArg.Documentation/Help/scripts
+/Source/ConstTypeArg.Documentation/Help/webfonts
+/Source/ConstTypeArg.Documentation/Help
+/_NOTES
+*.xml
+/Source/ConstTypeArg.Documentation

@@ -2,7 +2,7 @@
 
 The **Const Type Args** framework provides libraries, samples, and documentation to support working with *const type arguments*. Const type arguments, or **const type args**, are used to effectively "pass" compile-time-like values to generic types & methods via generic parameters and accessible in static contexts such as type initialization, and static methods, fields, &amp; properties.
 
-## Benefits {# benefits }
+## Benefits
 
 Const type args provide a number of inherent and derived benefits, including:
 
@@ -18,7 +18,7 @@ Const type args provide a number of inherent and derived benefits, including:
 
 * **Design pattern enhancements** - Patterns like *State Machines* and *Entity Component Systems (ECS)* can benefit from strongly typed, predefined values that make transitions and components type-safe.
 
-## Use case scenarios {# use-cases }
+## Use case scenarios
 
 Const type args can be used in a variety of different scenarios, soem of which include:
 
@@ -33,7 +33,7 @@ Const type args can be used in a variety of different scenarios, soem of which i
 
 * **Units of measure** - Encode measurement units (length, time, temperature) directly into the type system, reducing runtime conversion errors.
 
-* **State Machines & RegEx Patterns** - Model valid state transitions or store regex patterns in const type arguments, ensuring theyíre validated and discoverable throughout the application.
+* **State Machines & RegEx Patterns** - Model valid state transitions or store regex patterns in const type arguments, ensuring they‚Äôre validated and discoverable throughout the application.
 
 * **Union-Like Types** - Emulate union behaviors by allowing a generic type to accept multiple const type arguments, making your code both flexible and safe.
 
@@ -41,11 +41,11 @@ Const type args can be used in a variety of different scenarios, soem of which i
 
 Check out the available [samples](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Samples) for in-depth examples of const type args in action.
 
-## How to use const type args {# how-to-use }
+## How to use const type args
 
 Using const type args is simple. First, define a type implementing `IConstTypeArg<T>` and have the `Value` property return the value you want to "pass" with a generic argument. Then, for any generic type or method, use the const type arg you defined as a generic argument constrained to a type of `IConstTypeArg<T>` *(i.e., a const type parameter)*.
 
-### A simple example {# simple-example }
+### A simple example
 
 **Defining const type args**
 
@@ -93,8 +93,8 @@ For more definitions, see the [Glossary](https://github.com/zacharylayne/ConstTy
 
 | Convention          | Description                                                                                                                                                |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **`K_` Prefix**     | Used for **interfaces** deriving from `IConstTypeArg<T>`, indicating they represent a ìconstantî in mathematical form.                                     |
-| **`_` Prefix**      | Used for **concrete types** (e.g., `_32`, `_A`, `_Blue`) that implement `IConstTypeArg<T>`. This groups similar constants and clarifies each valueís role. |
+| **`K_` Prefix**     | Used for **interfaces** deriving from `IConstTypeArg<T>`, indicating they represent a ‚Äúconstant‚Äù in mathematical form.                                     |
+| **`_` Prefix**      | Used for **concrete types** (e.g., `_32`, `_A`, `_Blue`) that implement `IConstTypeArg<T>`. This groups similar constants and clarifies each value‚Äôs role. |
 | **`__`** Types      | These are **discards** (e.g., `__`) that may implement multiple const type arg interfaces, effectively providing union-like behavior with default/`null` values.        |
 
 ---

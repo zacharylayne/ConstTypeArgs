@@ -10,7 +10,7 @@
     <Title>Const Type Arguments Core</Title>
     <Description>Provides a simple framework for defining types that can be used to pass constant &amp; static values as generic type arguments. These can be used in static contexts (such as static constructors &amp; static methods), reduce the need to pass arguments through instance constructors, bypass restrictions on types of arguments that can be passed to a generic attribute, and more.
 
-Uses include scenarios such as fixed size buffers, static polymorphism, compile-time configuration,compile-time validation via Roslyn analyzers, testing,implementation of design patterns such as ECS, command, &amp; state, and more.
+Uses include scenarios such as array initialization, fixed-size buffers, compile-time configuration, type-safe enum-like values, compile-time validation, algorithm configuration, implementation of design patterns such as ECS, command, &amp; strategy, and more.
 
 Creating new const type arguments is as simple as:
 
@@ -20,9 +20,10 @@ public readonly struct Pos_32: IConstTypeArg&lt;int&gt;
 public readonly struct Pos_1024: IConstTypeArg&lt;int&gt;
 { public static int Value =&gt; 1024;  }
 
-Here's a very simple example of how this could be used to define a fixed-size buffer:
+Here's a very simple example of how this could be used:
 
-public class FixedSizeBuffer&lt;TSize&gt; where TSize : IConstTypeArg&lt;int&gt;
+public class FixedSizeBuffer&lt;TSize&gt;
+    where TSize : IConstTypeArg&lt;int&gt;
 {
     private byte[] buffer = new byte[TSize.Value];
 

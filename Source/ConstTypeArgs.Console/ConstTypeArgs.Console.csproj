@@ -9,7 +9,7 @@
     <Title>Const Type Arguments - System Console</Title>
     <Authors>Zachary Layne</Authors>
     <Company>Entry Point Software</Company>
-    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass values to generics including console colors, keys, and more.</Description>
+    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass values to generics at compile-time for console colors, keys, and more.</Description>
     <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
     <PackageIcon>Console.png</PackageIcon>
     <PackageReadmeFile>README.MD</PackageReadmeFile>

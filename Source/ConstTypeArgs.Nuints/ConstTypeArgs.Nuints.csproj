@@ -23,7 +23,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Nuints.xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass nuint (UIntPtr) values to generics. This provides an analog to type specialization in C++, and can be used for scenarios such as:
+    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass nuint (UIntPtr) values to generics at compile-time. This provides an analog to type specialization in C++, and can be used for scenarios such as:
 
 * Static configuration,
 * Eliminating unnecessary instance constructors,

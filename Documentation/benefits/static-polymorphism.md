@@ -8,7 +8,7 @@ With the **ConstTypeArgs** framework, each "const type argument" is a distinct t
 
 ---
 
-## **What Does ìSwitching on Const Type Arguments at Compile Timeî Mean?**
+## **What Does ‚ÄúSwitching on Const Type Arguments at Compile Time‚Äù Mean?**
 
 1. **Distinct Generic Types**
    When you create something like `Buffer<_16>` vs. `Buffer<_512>`, the compiler effectively creates **two separate** instantiations of `Buffer<TArg>`. Even though the base code is the same, each specialization can be optimized differently because `_16` and `_512` are **different** types.
@@ -19,14 +19,14 @@ With the **ConstTypeArgs** framework, each "const type argument" is a distinct t
    - Since each closed generic is distinct, the compiler can inline or prune unused branches if it can determine the outcome at compile time or JIT time.
 
 1. **No Traditional Inheritance Needed**
-   - You donít rely on an inheritance hierarchy and virtual overrides. Instead, you rely on the *generic type argument* (and its `Value`) to drive behavior.
-   - This leads to simpler code in cases where you just need different ìflavorsî of logic keyed off a single constant.
+   - You don‚Äôt rely on an inheritance hierarchy and virtual overrides. Instead, you rely on the *generic type argument* (and its `Value`) to drive behavior.
+   - This leads to simpler code in cases where you just need different ‚Äúflavors‚Äù of logic keyed off a single constant.
 
 ---
 
 ## **Example: Specializing Behavior via Const Type Args**
 
-Letís illustrate with a simplified example: a generic "resizer" class that picks different resizing strategies based on the numeric value of `TSize` - like `_16`, `_512`, or `_1024`. Weíll show two ways to "switch" on the const type argument.
+Let‚Äôs illustrate with a simplified example: a generic "resizer" class that picks different resizing strategies based on the numeric value of `TSize` - like `_16`, `_512`, or `_1024`. We‚Äôll show two ways to "switch" on the const type argument.
 
 ### **1. Switch on `Value` at JIT Time**
 
@@ -56,9 +56,9 @@ var larger  = Resizer<_1024>.Resize(512);
 
 Here, **each** call site like `Resizer<_16>.Resize(8)` or `Resizer<_512>.Resize(256)` is a *distinct compiled form*. Although the switch runs at runtime, in practice, once JITted, the cost might be negligible for each specialized type.
 
-### **2. ìType Switchingî for Hardcoded Specializations**
+### **2. ‚ÄúType Switching‚Äù for Hardcoded Specializations**
 
-You can also switch on *the type itself* to choose entirely separate code paths. This can be done with `typeof(TSize)` checks or pattern matching, though itís less common. Hereís a minimal snippet:
+You can also switch on *the type itself* to choose entirely separate code paths. This can be done with `typeof(TSize)` checks or pattern matching, though it‚Äôs less common. Here‚Äôs a minimal snippet:
 
 ```csharp
 public class SpecializedLogic<TSize>
@@ -88,7 +88,7 @@ SpecializedLogic<_512>.DoWork();  // "Specialization for size 512!"
 SpecializedLogic<_1024>.DoWork(); // "Generic handling for size: 1024"
 ```
 
-The advantage is that the code can be very explicit about unique branches. The downside is the extra steps you take to handle new specializationsóimagine adding a check for `_2048` in the future.
+The advantage is that the code can be very explicit about unique branches. The downside is the extra steps you take to handle new specializations‚Äîimagine adding a check for `_2048` in the future.
 
 ---
 
@@ -98,7 +98,7 @@ The advantage is that the code can be very explicit about unique branches. The d
    Each specialized instantiation can be **inlined** or optimized. For numeric-based constants, the JIT can optimize away code paths that it deems irrelevant for that specific constant.
 
 1. **Clarity**
-   Instead of weaving through inheritance hierarchies, your specialization is driven by the "constant type". So, code becomes more direct: "I want the version thatís `_512` for my buffer. Thatís it."
+   Instead of weaving through inheritance hierarchies, your specialization is driven by the "constant type". So, code becomes more direct: "I want the version that‚Äôs `_512` for my buffer. That‚Äôs it."
 
 1. **Flexibility**
    - You can switch on either *the static value* (`TSize.Value`) or *the static type* (`typeof(TSize)`), or even both.
@@ -115,7 +115,7 @@ The advantage is that the code can be very explicit about unique branches. The d
 - **Perf-Critical Code Paths**
   Where you want to avoid virtual dispatch overhead or rely on inlining for tight loops.
 - **Compile-Time Guarantees**
-  If you want the code to forcibly compile to distinct types for each ìconstant scenarioî (like `_16` vs `_512`).  
+  If you want the code to forcibly compile to distinct types for each ‚Äúconstant scenario‚Äù (like `_16` vs `_512`).  
 - **Complex Domain-Driven Logic**
   Where each scenario is so different that you want clear separation of code paths yet prefer them all in a single generic or partial methods.
 
@@ -126,5 +126,5 @@ The advantage is that the code can be very explicit about unique branches. The d
 Static polymorphism in the **ConstTypeArgs** framework leverages the fact that each const type argument (like `_16`, `_512`, `_1024`) is **its own type**. Consequently:
 
 1. **You get distinct compiled specializations** for each usage, boosting both performance and clarity.
-1. **You can ìswitchî** on the constant-like value or the type, shaping different behaviors for different "constants".
+1. **You can ‚Äúswitch‚Äù** on the constant-like value or the type, shaping different behaviors for different "constants".
 1. **You avoid typical runtime polymorphism overhead**, while still achieving specialized functionality for each scenario.

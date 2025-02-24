@@ -1,0 +1,4 @@
+Enum-Like Types
+===============
+
+#TBD

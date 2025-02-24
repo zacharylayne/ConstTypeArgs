@@ -4,7 +4,7 @@ The ConstTypeArgs.Core library provides the basic types needed to create *const 
 
 # Framework Overview
 
-The ConstTypeArgs framework allows you to work with **const type arguments** (also called *const type args*), which use generic parameters to "pass" constant-like values to generics. These values can be used in static contexts, such as static constructors, static fields, and static methods. This can mimic C++ [template specialization](https://en.cppreference.com/w/cpp/language/template_specialization), provide enhanced type safety, static polymorphism, increased expressiveness, and more.
+The ConstTypeArgs framework allows you to work with **const type arguments** (also called *const type args*), which use generic parameters to "pass" constant-like values to generics. These values are can be used in static contexts, such as static constructors, static fields, and static methods. This can mimic C++ [template specialization](https://en.cppreference.com/w/cpp/language/template_specialization), provide enhanced type safety, static polymorphism, increased expressiveness, and more.
 
 ## Benefits
 

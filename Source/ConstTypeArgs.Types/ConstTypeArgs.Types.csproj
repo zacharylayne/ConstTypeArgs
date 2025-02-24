@@ -22,7 +22,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Types.xml</DocumentationFile>
-    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass Type values to generics. This provides an analog to type specialization in C++.
+    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass Type values to generics at compile-time. This provides an analog to type specialization in C++.
 
 Here's a simple demonstration:
 

@@ -103,7 +103,7 @@ For more definitions, see the [Glossary](https://github.com/zacharylayne/ConstTy
 
 Explore more in the [Documentation folder](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Documentation), including:
 
-- [**Benefits**](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/benefits/benefits-overview.md]
+- [**Benefits**](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/benefits/benefits-overview.md)
 - [**Use Cases**](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/use-cases/use-cases-overview.md)
 - [**Glossary**](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/glossary.md)
 

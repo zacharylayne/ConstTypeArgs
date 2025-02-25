@@ -14,7 +14,7 @@ The terms in this section are used throughout the ConstTypeArgs documentation an
 
 * **Const Type Parameter:** A generic parameter that const type arguments "pass" values through. Every const type parameter is constrained to a *const type* *(i.e. any type that implements `IConstTypeArg<T>`)*. Also called *const type param*.
 
-* **Const Type Holder:** A const type argument that wraps other const type arguments. All argument holders directly or indirectly implement [`K<T, TArg>`]() Sometimes referred to as *arg holder*. Argument holders can be used to create domain-specific const type arguments for minimums, maximums, defaults, and more. Also called *holder*. In specific use cases, this is referred to as *domain-specific type arguments* or *domain-specific type args*.
+* **Const Type Holder:** A const type argument that wraps other const type arguments. All argument holders directly or indirectly implement [`K<T, TArg>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/K.cs) Sometimes referred to as *arg holder*. Argument holders can be used to create domain-specific const type arguments for minimums, maximums, defaults, and more. Also called *holder*. In specific use cases, this is referred to as *domain-specific type arguments* or *domain-specific type args*.
 
 * **Argument Consumer:** A generic that with one or more const type parameters.
 

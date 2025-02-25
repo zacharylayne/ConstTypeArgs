@@ -6,7 +6,7 @@ The **Const Type Args** framework provides libraries, samples, and documentation
 
 Const type args provide a number of inherent and derived benefits, including:
 
-* **Static polymorphism** - Similar to [template specialization](https://en.cppreference.com/w/cpp/language/template_specialization) in C++, const type arguments can provide implementations to <abbr title="Generic types with one or more generic parameters constrained to const type args.">arg consumer types</abbr>, enabling compile-time specialization and avoiding virtual dispatch and other runtime overhead polymorphism typically incurs. 
+* [**Static polymorphism**](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/benefits/static-polymorphism.md) - Similar to [template specialization](https://en.cppreference.com/w/cpp/language/template_specialization) in C++, const type arguments can provide implementations to <abbr title="Generic types with one or more generic parameters constrained to const type args.">arg consumer types</abbr>, enabling compile-time specialization and avoiding virtual dispatch and other runtime overhead polymorphism typically incurs. 
 
 * **Increased type safety** - Various techniques can ensure const type args only supply <abbr title="Generic types and methods with one or more generic parameters constrained to const type args.">arg consumers</abbr> with valid values. This reduces the risks of invalid configurations, mismatched types, and other runtime issues. Some techniques include validation during type initialization, using highly specific generic constratins, and even static analysis tools.
 
@@ -103,8 +103,8 @@ For more definitions, see the [Glossary](https://github.com/zacharylayne/ConstTy
 
 Explore more in the [Documentation folder](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Documentation), including:
 
-- **Benefits**
-- **Use Cases**
-- **Glossary**
+- [**Benefits**](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/benefits/benefits-overview.md]
+- [**Use Cases**](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/use-cases/use-cases-overview.md)
+- [**Glossary**](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/glossary.md)
 
 ---

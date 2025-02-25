@@ -45,7 +45,6 @@ We welcome feature requests! If you have an idea for a feature, please:
 
 We highly value documentation contributions. Here’s how you can help:
 
-* Update DocFX documentation site.
 * Improve READMEs. If you find the README lacking in any way, please submit a pull request with your improvements.
 * Fix typos or grammar issues.
 * Contribute to API documentation using XML comments in the code.

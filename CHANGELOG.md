@@ -1,14 +1,32 @@
 Release Notes
 ===
 
+## 02/24/25
+
+[ConstTypeArgs.Delegates](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Delegates) **1.0.0** <sup>[NuGet](https://www.nuget.org/packages/ConstTypeArgs.Delegates/1.0.0)</sup>
+</br>
+&nbsp;&nbsp; - Initial release.
+
+[ConstTypeArgs.Delegates.Interlocked](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Delegates.Interlocked) **1.0.0** <sup>[NuGet](https://www.nuget.org/packages/ConstTypeArgs.Delegates.Interlocked/1.0.0)</sup>
+</br>
+&nbsp;&nbsp; - Initial release.
+
+[Samples.Buffer](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Samples/Samples.Buffer) **1.0.0**
+</br>
+&nbsp;&nbsp; - Initial release.
+
+[Samples.UnitsOfMeasure](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Samples/Samples.UnitsOfMeasure) **1.0.0**
+</br>
+&nbsp;&nbsp; - Initial release.
+
 ## 08/20/24
 
-[ConstTypeArgs.Bytes](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Core) **1.2.0-beta1** <sup>[NuGet](https://www.nuget.org/packages/ConstTypeArgs.Core/1.2.0-beta1)</sup>
+[ConstTypeArgs.Core](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Core) **1.2.0-beta1** <sup>[NuGet](https://www.nuget.org/packages/ConstTypeArgs.Core/1.2.0-beta1)</sup>
 </br>
 &nbsp;&nbsp; - Added exceptions: [`ConstTypeArgException`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/ConstTypeArgException.cs),
 [`ConstTypeException`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/ConstTypeException.cs),
 [`MisleadingConstTypeException`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/MisleadingConstTypeException.cs),
-[`UnderfinedConstTypeArgException`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/UndefinedConstTypeArgException.cs)
+[`UndefinedConstTypeArgException`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/UndefinedConstTypeArgException.cs)
 </br>
 &nbsp;&nbsp; - Added [`K_ReadOnlyMemory`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_ReadOnlyMemory.cs) types: `K_ReadOnlyMemory`, `K_ReadOnlyMemory<T>`, `K_ReadOnlyMemoryArray<T>`, `K_ReadOnlyMemoryT_Array{T}`
 </br>

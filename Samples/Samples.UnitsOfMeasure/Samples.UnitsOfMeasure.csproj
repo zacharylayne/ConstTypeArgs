@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Validation\Samples.Validation.csproj" />
     <ProjectReference Include="..\Samples\Samples.csproj" />
   </ItemGroup>
 

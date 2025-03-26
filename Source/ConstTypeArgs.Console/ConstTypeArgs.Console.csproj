@@ -9,7 +9,17 @@
     <Title>Const Type Arguments - System Console</Title>
     <Authors>Zachary Layne</Authors>
     <Company>Entry Point Software</Company>
-    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass values to generics including console colors, keys, and more.</Description>
+    <Description>ConstTypeArgs.Console extends the ConstTypeArgs.Core library by enabling you to “pass” System.Console-related values as generic type parameters, accessible from within static contexts. This lets you customize types in a compile-time–like fashion, effectively mimicking C++ template specialization.
+
+This lightweight solution provides type-level ConsoleColor, ConsoleKey, ConsoleModifiers, and ConsoleSpecialKey values for cleaner, more efficient, and more expressive code, making it ideal for:
+
+- Static Configuration: Define behavior without relying on runtime parameters.
+- Type Initializer Injection: Pass values directly to static constructors.
+- Flexible Validation: Validate const type arguments in static constructors, field initializers, module initializers, via static analysis, etc.
+- Constructors: Eliminate unnecessary instance-level initialization.
+- And more.
+
+The package provides const type arguments for all ConsoleColor, ConsoleKey, ConsoleModifiers, and ConsoleSpecialKey values, as well as support for arrays of those types and domain-specific types.</Description>
     <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
     <PackageIcon>Console.png</PackageIcon>
     <PackageReadmeFile>README.MD</PackageReadmeFile>

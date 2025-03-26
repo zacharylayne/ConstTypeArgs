@@ -8,9 +8,9 @@
     <SignAssembly>False</SignAssembly>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Const Type Arguments Core</Title>
-    <Description>Provides a simple framework for defining types that can be used to pass constant &amp; static values as generic type arguments. These can be used in static contexts (such as static constructors &amp; static methods), reduce the need to pass arguments through instance constructors, bypass restrictions on types of arguments that can be passed to a generic attribute, and more.
+    <Description>ConstTypeArgs.Core provides a simple framework for defining types that can be used to "pass" static values through generic type arguments. These can be used in static contexts (such as static constructors &amp; static methods), effictively mimicking C++ template specialization.
 
-Uses include scenarios such as fixed size buffers, static polymorphism, compile-time configuration,compile-time validation via Roslyn analyzers, testing,implementation of design patterns such as ECS, command, &amp; state, and more.
+Uses include scenarios such as fixed size buffers, static polymorphism, compile-time configuration, compile-time validation via Roslyn analyzers, testing,implementation of design patterns such as ECS, command, &amp; state, and more.
 
 Creating new const type arguments is as simple as:
 

@@ -7,20 +7,24 @@
     <Company>Entry Point Software</Company>
     <Authors>Zachary Layne</Authors>
     <Title>Const Type Arguments - Booleans</Title>
-    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass boolean values to generics. This provides an analog to type specialization in C++, and can be used for scenarios such as:
+    <Description>ConstTypeArgs.Bools extends the ConstTypeArgs.Core library by enabling you to “pass” boolean values as generic type parameters, accessible from within static contexts. This lets you customize types in a compile-time–like fashion, effectively mimicking C++ template specialization.
 
-* Static configuration,
-* Eliminating unnecessary instance constructors,
-* "Passing" values to type initializers,
+This lightweight solution provides type-level boolean values for cleaner, more efficient, and more expressive code, making it ideal for:
 
-Const type arguments are provided for true, false, &amp; default values of bool, as well as types for defining bool array const type arguments and domain-specific const type arguments.
+- Static Configuration: Define behavior without relying on runtime parameters.
+- Type Initializer Injection: Pass values directly to static constructors.
+- Flexible Validation: Validate const type arguments in static constructors, field initializers, module initializers, via static analysis, etc.
+- Constructors: Eliminate unnecessary instance-level initialization.
+- And more.
 
-Here's a Hello World example:
+The package provides const type arguments for true, false, and the default boolean value (false), plus support for boolean arrays and domain-specific boolean types.
+
+Example:
 
 using ConstTypeArgs.Bools;
 
 public class Foo&lt;TToConsole&gt;
-    where TToConsole: K_Bool
+    where TToConsole : K_Bool
 {
     static Foo()
     {        
@@ -29,9 +33,10 @@ public class Foo&lt;TToConsole&gt;
     }
 }
 
-// Elsewhere
-var foo = new Foo&lt;True&gt;();  // Console outputs: Hello, world!
-foo       = new Foo&lt;False&gt;(); // No output.</Description>
+// Usage:
+var foo = new Foo&lt;True&gt;();   // Outputs: Hello, world!
+foo = new Foo&lt;False&gt;();       // No output.
+</Description>
     <Copyright>Copyright (c) 2024 Zachary Layne</Copyright>
     <PackageReadmeFile>README.MD</PackageReadmeFile>
     <PackageIcon>Bool.png</PackageIcon>

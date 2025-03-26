@@ -22,26 +22,32 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Chars.xml</DocumentationFile>
-    <Description>Builds on type of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass char values to generics. This provides an analog to type specialization in C++, and can be used for scenarios such as:
+    <Description>ConstTypeArgs.Chars extends the ConstTypeArgs.Core library by enabling you to “pass” char values as generic type parameters, accessible from within static contexts. This lets you customize types in a compile-time–like fashion, effectively mimicking C++ template specialization.
 
-* Static configuration,
-* Eliminating unnecessary instance constructors,
-* "Passing" values to type initializers,
-* And more.
+This lightweight solution provides type-level char values for cleaner, more efficient, and more expressive code, making it ideal for:
 
-Built-in const type arguments cover all ASCII &amp; extended ASCII characters.
+- Static Configuration: Define behavior without relying on runtime parameters.
+- Type Initializer Injection: Pass values directly to static constructors.
+- Flexible Validation: Validate const type arguments in static constructors, field initializers, module initializers, via static analysis, etc.
+- Constructors: Eliminate unnecessary instance-level initialization.
+- And more.
 
-Here's a simple demonstration showing how to define and use const type arguments and domain-specific type arguments:
+The package provides const type arguments for all ASCII &amp; extended ASCII characters, as well as support for char arrays and domain-specific types.
+
+Example:
 
 using ConstTypeArgs.Chars;
 
 // Const type arguments:
 public readonly struct Comma : K_Byte&lt;Comma&gt;
 { public static char Value =&gt; ','; }
+
 public readonly struct Semicolon : K_Byte&lt;Semicolon&gt;
 { public static char Value =&gt; ';'; }
+
 public readonly struct Slash : K_Byte&lt;Slash&gt;
 { public static char Value =&gt;  (char)47; }
+
 public readonly struct VerticalBar : K_Byte&lt;VerticalBar&gt;
 { public static char Value =&gt; '|'; }
 
@@ -63,10 +69,9 @@ public static class Foo&lt;TChar&gt;
 // Elsewhere:
 var helloWorld = new string[] { "Hello", "World!" };
 
-Foo&lt;Comma&gt;.Output(helloWorld); // Output: Hello,World!
-Foo&lt;Slash&gt;.Output(helloWorld); // Output: Hello/World!
-Foo&lt;VerticalBar&gt;.Output(helloWorld); // Output: Hello|World!
-
+Foo&lt;Comma&gt;.Output(helloWorld);                // Output: Hello,World!
+Foo&lt;Slash&gt;.Output(helloWorld);                    // Output: Hello/World!
+Foo&lt;VerticalBar&gt;.Output(helloWorld);            // Output: Hello|World!
 Foo&lt;DefaultSeparator&gt;.Output(helloWorld); // Output: Hello;World!
 </Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>

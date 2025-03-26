@@ -22,22 +22,26 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>ConstTypeArgs.Decimals.xml</DocumentationFile>
-    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use type parameters to pass decimal values to generics. This provides an analog to type specialization in C++, and can be used for scenarios such as:
+    <Description>ConstTypeArgs.Decimals extends the ConstTypeArgs.Core library by enabling you to “pass” decimal values as generic type parameters, accessible from within static contexts. This lets you customize types in a compile-time–like fashion, effectively mimicking C++ template specialization.
 
-* Static configuration,
-* Eliminating unnecessary instance constructors,
-* "Passing" values to type initializers,
-* And more.
+This lightweight solution provides type-level decimal values for cleaner, more efficient, and more expressive code, making it ideal for:
 
-Built-in const type arguments include Default, MinValue, MaxValue, E, Pi, Phi, Tau, _0, _1, and Neg_1.
+- Static Configuration: Define behavior without relying on runtime parameters.
+- Type Initializer Injection: Pass values directly to static constructors.
+Flexible Validation: Validate const type arguments in static constructors, field initializers, module initializers, via static analysis, etc.
+- Constructors: Eliminate unnecessary instance-level initialization.
+- And more.
 
-Here's a simple demonstration showing how to define and use const type arguments and domain-specific type arguments.
+The package provides const type arguments for  Default, MinValue, MaxValue, E, Pi, Phi, Tau, _0, _1, and Neg_1, and provides support for decimal arrays and domain-specific types.
+
+Example:
 
 using ConstTypeArgs.Decimals;
 
 // Const type arguments:
 public readonly struct _1_2345 : K_Decimal&lt;_1_2345&gt;
 { public static decimal Value = 1.2345; }
+
 public readonly struct _6_789 : K_Decimal&lt;_6_789&gt;
 { public static decimal Value = 6.789; }
 

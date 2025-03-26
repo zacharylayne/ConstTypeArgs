@@ -7,12 +7,29 @@
     <Company>Entry Point Software</Company>
     <Authors>Zachary Layne</Authors>
     <Title>Const Type Arguments - Delegates</Title>
-    <Description>Builds on types of the ConstTypeArgs.Core library to provide const type arguments that allow you to use generic parameters to "pass" delegates to generics. This provides an analog to type specialization in C++, and can be used for scenarios such as:
-* Static polymorphism,
-* Algorithm configuration,
-* Validation,
-* "Passing" values to type initializers,
-* And more.</Description>
+    <Description>ConstTypeArgs.Delegates extends the ConstTypeArgs.Core library by enabling you to “pass” delegates as generic type parameters and accessible within static contexts. This lets you customize types in a compile-time–like fashion, effectively mimicking C++ template specialization.
+
+This lightweight solution provides type-level delegates for cleaner, more efficient, and more expressive code, making it ideal for:
+
+- Static Configuration: Define behavior without relying on runtime parameters.
+- Type Initializer Injection: Pass values directly to static constructors.
+Flexible Validation: Validate const type arguments in static constructors, field initializers, module initializers, via static analysis, etc.
+- Constructors: Eliminate unnecessary instance-level initialization.
+- And more.
+
+The package provides const type arguments for basic predicates and logical operators (AND, NAND, OR, XOR, NOR, NIMPLY, IMPLY). Support is provided for Func, Action, Comparison, Converter, and Predicaate delegates, as well as new delegates:
+
+- TResult RefFunction&lt;T, out TResult&gt;(ref T reference);
+- TResult RefFunction&lt;T, in TArg, out TResult&gt;(ref T reference,
+    TArg arg);
+- TResult RefFunction&lt;T, in TArg1, in TArg2, out TResult&gt;(ref T reference,
+    TArg1 arg1, TArg2 arg2);
+- void SpanProcedure&lt;T, in TArg&gt;(Span&lt;T&gt; span, TArg arg);
+- void RefProcedure&lt;T&gt;(ref T reference);
+- void RefProcedure&lt;T, in TArgs&gt;(ref T reference, TArgs arguments);
+- void ReadOnlySpanProcedure&lt;T, in TArg&gt;(ReadOnlySpan&lt;T&gt; span, TArg arg);
+
+Support is also provided for arrays of all of these types as well as domain-specific types.</Description>
     <Copyright>Copyright (c) 2025 Zachary Layne</Copyright>
     <PackageReadmeFile>README.MD</PackageReadmeFile>
     <PackageIcon>Delegate.png</PackageIcon>
@@ -58,13 +75,6 @@
 
   <ItemGroup>
     <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0" />
-    <PackageReference Include="ConstTypeArgs.Floats" Version="1.0.0" />
-    <PackageReference Include="ConstTypeArgs.Ints" Version="1.0.0" />
-    <PackageReference Include="ConstTypeArgs.Longs" Version="1.0.0" />
-    <PackageReference Include="ConstTypeArgs.Nints" Version="1.0.0" />
-    <PackageReference Include="ConstTypeArgs.Nuints" Version="1.0.0" />
-    <PackageReference Include="ConstTypeArgs.Uints" Version="1.0.0" />
-    <PackageReference Include="ConstTypeArgs.Ulongs" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

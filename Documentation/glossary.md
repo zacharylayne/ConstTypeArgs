@@ -6,35 +6,21 @@ This page provides a glossary of terms used throughout the ConstTypeArgs documen
 
 The terms in this section are used throughout the ConstTypeArgs documentation and are essential to understanding the framework.
 
-* **Const Type Argument:**  A type that uses generic parameters to "pass" static values to generics. Every const type argument directly or indirectly implements [`IConstTypeArg<T>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/IConstTypeArg.cs). The term const type argument can be interchangeable with the value they hold. If more clarity is needed, the terms *argument provider/arg provider* and *const type value* are used. ***VALUES SHOULD ALWAYS BE IMMUTABLE***. Sometimes referred to as *const type arg*.
+* **Const Type Argument:**  A type that uses generic parameters to "pass" static values to generics. Every const type argument directly or indirectly implements [`IConstTypeArg<T>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/IConstTypeArg.cs). The term const type argument can be interchangeable with the value they hold. If more clarity is needed, the terms *argument provider/arg provider* and *const type value* are used. ***VALUES SHOULD ALWAYS BE IMMUTABLE***. Also referred to as *const type arg*.
 
-* **Argument Provider:** A more specific term for *const type argument* that refers to concrete implementations of `IConstTypeArg<T>`. Also called *arg provider* or *provider*. 
+* **Const Type Value:**  A more specific term for *const type arguments* which refers to a cons type argument's value. ***VALUES SHOULD ALWAYS BE IMMUTABLE***.
+ 
+* **Argument Provider:** Concrete const types that provide a *const type value*. Also called *arg provider*.
 
-* **Argument Value:**  A more specific term for *const type arguments* that refers to the value an argument provider defines. ***VALUES SHOULD ALWAYS BE IMMUTABLE***. Also called *arg value*.
+* **Const Type:** Any type that implements `IConstTypeArg<T>`, including concrete implementations, interfaces, and abstract classes.
 
 * **Const Type Parameter:** A generic parameter that const type arguments "pass" values through. Every const type parameter is constrained to a *const type* *(i.e. any type that implements `IConstTypeArg<T>`)*. Also called *const type param*.
 
-* **Const Type Holder:** A const type argument that wraps other const type arguments. All argument holders directly or indirectly implement [`K<T, TArg>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/K.cs) Sometimes referred to as *arg holder*. Argument holders can be used to create domain-specific const type arguments for minimums, maximums, defaults, and more. Also called *holder*. In specific use cases, this is referred to as *domain-specific type arguments* or *domain-specific type args*.
+* **Argument Consumer:** A generic type or method with one or more const type parameters. Also called *arg consumer*.
 
-* **Argument Consumer:** A generic that with one or more const type parameters.
+* **Argument Holder:** A const type argument that wraps other const type arguments. Also referred to as *arg holder*. All argument holders directly or indirectly implement [`K<T, TArg>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/K.cs). Argument holders can be used to create domain-specific const type arguments for minimums, maximums, defaults, and more.
 
-* **Const Type Discard:** A type that is used to signify the absence of a const type argument. These types can be used to provide union-like functionality and may implement many interfaces in order to increase their versatility.
-
-## Other Terms
-
-The terms in this section are used infrequently in ConstTypeArgs documentation.
-
-* **Const Type:** Any type that inherit from the base interface `IConstTypeArg<T>`.
-
-* **Const Type Interface:** An interface that const type arguments implement.
-
-* **Const Type Enum:** An enum-like const type argument defining a set of const type arguments.
-
-* **Open Argument Consumer:** A const type consumer that is an open generic. Also called *open arg consumer* or *open consumer*.
-
-* **Closed Argument Consumer:** A const type consumer that is a closed generic. Also called *closed arg consumer* or *closed consumer*.
-
-* **Const Type Union** - A const type argument that can represent multiple types.
+* **Argument Discard:** A const type argument that is used to signify the absence. Also called *arg discard*. These can be used in a very similar manner to C# 7.0's discard feature. In ConstTypeArgs, these types are usually named `__` and can implement multiple const type interfaces providing either `default` or `null` values to increase flexibility.
 
 ## See Also
 

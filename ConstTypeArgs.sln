@@ -10,61 +10,62 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Core", "Source\ConstTypeArgs.Core\ConstTypeArgs.Core.csproj", "{3F1F8AD0-32D5-4CB7-BF95-FEF4CDCFA9AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Core", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Core\ConstTypeArgs.Core.csproj", "{3F1F8AD0-32D5-4CB7-BF95-FEF4CDCFA9AE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Bools", "Source\ConstTypeArgs.Bools\ConstTypeArgs.Bools.csproj", "{F9F672E2-9F35-40B8-9133-2AE28851A761}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Bools", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Bools\ConstTypeArgs.Bools.csproj", "{F9F672E2-9F35-40B8-9133-2AE28851A761}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Bytes", "Source\ConstTypeArgs.Bytes\ConstTypeArgs.Bytes.csproj", "{C9B7AA5D-06DE-4C0D-AE0A-F1BAE17168F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Bytes", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Bytes\ConstTypeArgs.Bytes.csproj", "{C9B7AA5D-06DE-4C0D-AE0A-F1BAE17168F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Chars", "Source\ConstTypeArgs.Chars\ConstTypeArgs.Chars.csproj", "{3F041387-FFB2-4DF7-9CDC-33C6F37460B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Chars", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Chars\ConstTypeArgs.Chars.csproj", "{3F041387-FFB2-4DF7-9CDC-33C6F37460B6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Decimals", "Source\ConstTypeArgs.Decimals\ConstTypeArgs.Decimals.csproj", "{21DCB6D0-EF8F-4AE2-BAD0-EFDD74E7C044}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Decimals", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Decimals\ConstTypeArgs.Decimals.csproj", "{21DCB6D0-EF8F-4AE2-BAD0-EFDD74E7C044}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Delegates", "Source\ConstTypeArgs.Delegates\ConstTypeArgs.Delegates.csproj", "{D08700CA-0324-4A84-9635-010DFEBB0402}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Delegates", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Delegates\ConstTypeArgs.Delegates.csproj", "{D08700CA-0324-4A84-9635-010DFEBB0402}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Doubles", "Source\ConstTypeArgs.Doubles\ConstTypeArgs.Doubles.csproj", "{0ADCB4B3-FE59-4CF4-A6C1-8794F4974D27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Doubles", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Doubles\ConstTypeArgs.Doubles.csproj", "{0ADCB4B3-FE59-4CF4-A6C1-8794F4974D27}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Floats", "Source\ConstTypeArgs.Floats\ConstTypeArgs.Floats.csproj", "{C2F37C2C-50B2-4635-BE1F-F458E5EF1342}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Floats", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Floats\ConstTypeArgs.Floats.csproj", "{C2F37C2C-50B2-4635-BE1F-F458E5EF1342}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Halfs", "Source\ConstTypeArgs.Halfs\ConstTypeArgs.Halfs.csproj", "{C1B71FDB-BA26-4FEB-BAF2-8F3C7DD6F5DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Halfs", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Halfs\ConstTypeArgs.Halfs.csproj", "{C1B71FDB-BA26-4FEB-BAF2-8F3C7DD6F5DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Int128s", "Source\ConstTypeArgs.Int128s\ConstTypeArgs.Int128s.csproj", "{ABA16E3B-4DA4-4C0D-BC97-F40577FDA007}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Int128s", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Int128s\ConstTypeArgs.Int128s.csproj", "{ABA16E3B-4DA4-4C0D-BC97-F40577FDA007}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Ints", "Source\ConstTypeArgs.Ints\ConstTypeArgs.Ints.csproj", "{E4EAB481-AEAF-4528-8B9D-0CC1BBC55A38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Ints", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Ints\ConstTypeArgs.Ints.csproj", "{E4EAB481-AEAF-4528-8B9D-0CC1BBC55A38}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Longs", "Source\ConstTypeArgs.Longs\ConstTypeArgs.Longs.csproj", "{EF8D8315-4A47-426A-8A69-59B7E859B1A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Longs", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Longs\ConstTypeArgs.Longs.csproj", "{EF8D8315-4A47-426A-8A69-59B7E859B1A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Nints", "Source\ConstTypeArgs.Nints\ConstTypeArgs.Nints.csproj", "{9C6821CB-15F0-4360-8A86-A973AB68956F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Nints", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Nints\ConstTypeArgs.Nints.csproj", "{9C6821CB-15F0-4360-8A86-A973AB68956F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Nuints", "Source\ConstTypeArgs.Nuints\ConstTypeArgs.Nuints.csproj", "{B92288F7-FBFA-4B87-953C-38E61F307CD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Nuints", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Nuints\ConstTypeArgs.Nuints.csproj", "{B92288F7-FBFA-4B87-953C-38E61F307CD9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Sbytes", "Source\ConstTypeArgs.Sbytes\ConstTypeArgs.Sbytes.csproj", "{55FE605B-F688-481D-A228-3514DCA80F53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Sbytes", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Sbytes\ConstTypeArgs.Sbytes.csproj", "{55FE605B-F688-481D-A228-3514DCA80F53}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Shorts", "Source\ConstTypeArgs.Shorts\ConstTypeArgs.Shorts.csproj", "{DB751744-B466-46CE-BD84-89E462C53F47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Shorts", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Shorts\ConstTypeArgs.Shorts.csproj", "{DB751744-B466-46CE-BD84-89E462C53F47}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Strings", "Source\ConstTypeArgs.Strings\ConstTypeArgs.Strings.csproj", "{A1AE00A2-076B-4C4C-BD7B-8C5CF57AAA17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Strings", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Strings\ConstTypeArgs.Strings.csproj", "{A1AE00A2-076B-4C4C-BD7B-8C5CF57AAA17}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.UInt128s", "Source\ConstTypeArgs.UInt128s\ConstTypeArgs.UInt128s.csproj", "{B7FB5802-BE55-48AD-B00D-4BF4F83B2FC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.UInt128s", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.UInt128s\ConstTypeArgs.UInt128s.csproj", "{B7FB5802-BE55-48AD-B00D-4BF4F83B2FC1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Ulongs", "Source\ConstTypeArgs.Ulongs\ConstTypeArgs.Ulongs.csproj", "{EDEDE649-1899-4FAC-AE3A-163C85F26A84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Ulongs", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Ulongs\ConstTypeArgs.Ulongs.csproj", "{EDEDE649-1899-4FAC-AE3A-163C85F26A84}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Ushorts", "Source\ConstTypeArgs.Ushorts\ConstTypeArgs.Ushorts.csproj", "{B2ED1F48-FFFA-49CD-ABBE-F9C3967DE01F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Ushorts", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Ushorts\ConstTypeArgs.Ushorts.csproj", "{B2ED1F48-FFFA-49CD-ABBE-F9C3967DE01F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Uints", "Source\ConstTypeArgs.Uints\ConstTypeArgs.Uints.csproj", "{F464BD23-F61F-475D-8378-D99AE4CCADF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Uints", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Uints\ConstTypeArgs.Uints.csproj", "{F464BD23-F61F-475D-8378-D99AE4CCADF3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Types", "Source\ConstTypeArgs.Types\ConstTypeArgs.Types.csproj", "{D66A22B2-77A6-4533-A70F-80E78AE180A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Types", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Types\ConstTypeArgs.Types.csproj", "{D66A22B2-77A6-4533-A70F-80E78AE180A4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{D898A5A1-B007-4C9B-ABA5-9DD7D3149F5C}"
 	ProjectSection(SolutionItems) = preProject
+		Abbrv.md = Abbrv.md
 		Documentation\glossary.md = Documentation\glossary.md
 		Documentation\index.md = Documentation\index.md
 		Documentation\naming-conventions.md = Documentation\naming-conventions.md
 		Documentation\use-cases\use-cases-overview.md = Documentation\use-cases\use-cases-overview.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Console", "Source\ConstTypeArgs.Console\ConstTypeArgs.Console.csproj", "{9A5B0C1A-EB5E-47A7-8679-B84DFBFEAEFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Console", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Console\ConstTypeArgs.Console.csproj", "{9A5B0C1A-EB5E-47A7-8679-B84DFBFEAEFA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Delegates.Interlocked", "Source\ConstTypeArgs.Delegates.Interlocked\ConstTypeArgs.Delegates.Interlocked.csproj", "{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstTypeArgs.Delegates.Interlocked", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Source\ConstTypeArgs.Delegates.Interlocked\ConstTypeArgs.Delegates.Interlocked.csproj", "{9F8BC970-6A57-4A6A-B4EA-3322BD993A2C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benefits", "benefits", "{A2A19E19-F747-4221-9060-0DFED26CCD61}"
 	ProjectSection(SolutionItems) = preProject
@@ -73,19 +74,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benefits", "benefits", "{A2
 		Documentation\benefits\type-specialization.md = Documentation\benefits\type-specialization.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Buffer", "Samples\Samples.Buffer\Samples.Buffer.csproj", "{7326DCFD-3FFC-417A-B878-DC57DB07D7D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Buffer", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Samples\Samples.Buffer\Samples.Buffer.csproj", "{7326DCFD-3FFC-417A-B878-DC57DB07D7D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
+		Old README.md = Old README.md
+		Potential Samples.md = Potential Samples.md
+		Process Runners.md = Process Runners.md
 		_NOTES\Union-Like Type.md = _NOTES\Union-Like Type.md
 		_NOTES\Units of Measure Notes.md = _NOTES\Units of Measure Notes.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.UnitsOfMeasure", "Samples\Samples.UnitsOfMeasure\Samples.UnitsOfMeasure.csproj", "{D0EC5EB0-6720-439C-8474-AC359F3036D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.UnitsOfMeasure", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Samples\Samples.UnitsOfMeasure\Samples.UnitsOfMeasure.csproj", "{D0EC5EB0-6720-439C-8474-AC359F3036D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples", "Samples\Samples\Samples.csproj", "{462A6911-1EF8-47AF-8EAB-2B6E130355A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples", "D:\Programming\_PROJECTS\C#\ConstTypeArgs\Samples\Samples\Samples.csproj", "{462A6911-1EF8-47AF-8EAB-2B6E130355A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiveIndexPool", "..\DiveIndexPool\Source\DiveIndexPool\DiveIndexPool.csproj", "{F53FBF11-A524-2B5D-31B1-2F24305E4F33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiveIndexPool", "D:\Programming\_PROJECTS\C#\DiveIndexPool\Source\DiveIndexPool\DiveIndexPool.csproj", "{F53FBF11-A524-2B5D-31B1-2F24305E4F33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstTypeArgs.ProcessRunners", "Source\ConstTypeArgs.ProcessRunners\ConstTypeArgs.ProcessRunners.csproj", "{8221D545-CEAE-405E-9B5A-36A2BDFF5B71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustMyTypeMap", "..\JustMyTypeMap\Source\JustMyTypeMap\JustMyTypeMap.csproj", "{C391A088-5149-4278-8558-C1FF24E857C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MostlyExceptional", "..\MostlyExceptional\Source\MostlyExceptional\MostlyExceptional.csproj", "{C11519C0-9A36-8341-595B-8BDD3AD02D6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -205,6 +215,18 @@ Global
 		{F53FBF11-A524-2B5D-31B1-2F24305E4F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F53FBF11-A524-2B5D-31B1-2F24305E4F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F53FBF11-A524-2B5D-31B1-2F24305E4F33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8221D545-CEAE-405E-9B5A-36A2BDFF5B71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8221D545-CEAE-405E-9B5A-36A2BDFF5B71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8221D545-CEAE-405E-9B5A-36A2BDFF5B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8221D545-CEAE-405E-9B5A-36A2BDFF5B71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C391A088-5149-4278-8558-C1FF24E857C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C391A088-5149-4278-8558-C1FF24E857C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C391A088-5149-4278-8558-C1FF24E857C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C391A088-5149-4278-8558-C1FF24E857C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C11519C0-9A36-8341-595B-8BDD3AD02D6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C11519C0-9A36-8341-595B-8BDD3AD02D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C11519C0-9A36-8341-595B-8BDD3AD02D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C11519C0-9A36-8341-595B-8BDD3AD02D6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

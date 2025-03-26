@@ -4,7 +4,7 @@ The **Const Type Args** framework provides libraries, samples, and documentation
 
 Const type arguments, or const type args, are used to *"pass"* values to as generic type parameters, accessed from within static contexts such as static constructors, methods, fields, properties, local functions, lambdas (without closure), and more. This lets you customize types in a compile-time–like fashion, effectively mimicking [C++ template specialization](https://en.cppreference.com/w/cpp/language/template_specialization).
 
-> ![NOTE]
+> [!NOTE]
 > Please be aware that the Const Type Args framework is in active development. New features and improvements are being added, so stay tuned for updates!
 
 #### Table of Contents

@@ -42,7 +42,7 @@ Const type args provide a number of inherent and derived benefits, including:
 
 * **Improved reusablitity** - Define const type args once and reuse them across multiple scenarios, significantly minimizing code duplication. Expand existing generic functionality by simply introducing new const type arguments, rather than creating additional classes.
 
-* **Design pattern enhancements** - Patterns like *State machines*, *command*, and *Entity Component Systems (ECS)* gain increased clarity and type safety through predefined, strongly-typed const type args, making code safer and easier to maintain.
+* **Design pattern enhancements** - Design patterns like *state machines*, *command*, and *entity component systems (ECS)* gain increased clarity and type safety through predefined, strongly-typed const type args, making code safer and easier to maintain.
 
 <br>
 

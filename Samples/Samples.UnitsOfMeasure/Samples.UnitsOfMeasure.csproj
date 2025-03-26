@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="ConstTypeArgs.Bools" Version="1.0.0" />
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0" />
     <PackageReference Include="ConstTypeArgs.Doubles" Version="1.0.0" />
     <PackageReference Include="ConstTypeArgs.Strings" Version="1.0.0" />
   </ItemGroup>

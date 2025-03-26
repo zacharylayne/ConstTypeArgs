@@ -41,6 +41,29 @@ Console.WriteLine($"{shortDistance} = {shortDistance.ToMeters()} meters");
 WaitForKeyPress()
 ```
 
+Output:
+
+```
+Units of Measure Sample
+=======================
+
+Distance: 5 kilometers (km) = 5000 meters
+
+--------------------------------
+
+5 kilometers (km) = 3.1068559611866697 miles (mi) (approx)
+
+--------------------------------
+
+5 kilometers (km) = 16404.199475065616 feet (ft) (approx)
+
+--------------------------------
+
+30 feet (ft) = 9.144 meters
+
+Press any key to continue...
+```
+
 This sample illustrates how you can leverage const type arguments to create a flexible and expressive units-of-measure system. By encoding unit conversion factors and metadata at the type level, you achieve a robust solution that minimizes errors and enhances both readability and maintainability.
 
 <br>

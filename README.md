@@ -13,6 +13,7 @@ Const type arguments, or const type args, are used to *"pass"* values to as gene
 * [**Use case scenarios**](https://github.com/zacharylayne/ConstTypeArgs/tree/master#use-case-scenarios)
 * [**How to use const type args**](https://github.com/zacharylayne/ConstTypeArgs/tree/master#how-to-use-const-type-args)
   * [**A simple example**](https://github.com/zacharylayne/ConstTypeArgs/tree/master#a-simple-example)
+* [**Framework components**](https://github.com/zacharylayne/ConstTypeArgs/tree/master#framework-components)
 * [**Terminology**](https://github.com/zacharylayne/ConstTypeArgs/tree/master#terminology)
 * [**Naming conventions**](https://github.com/zacharylayne/ConstTypeArgs/tree/master#naming-conventions)
 * [**Documentation**](https://github.com/zacharylayne/ConstTypeArgs/tree/master#documentation)

@@ -72,7 +72,7 @@ Check out the available [samples](https://github.com/zacharylayne/ConstTypeArgs/
 
 To use const type args is simple:
 
-* Define a concrete implementation (typically a readonly struct) for [`IConstTypeArg<T>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/IConstTypeArg.cs) or derived interface (such as [K_Int](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Ints/Base.cs)) with a `Value` property that returns the value you want to "pass" to generics.
+* Define a concrete implementation (typically a readonly struct) for [`IConstTypeArg<T>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/IConstTypeArg.cs) or derived interface (such as [`K_Int`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Ints/Base.cs)) with a `Value` property that returns the value you want to "pass" to generics.
 
 * Create a generic type or method with a generic parameter constrained to `IConstTypeArg<T>` or a derived type that matches the const type argument you defined.
 

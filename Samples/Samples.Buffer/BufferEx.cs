@@ -3,34 +3,27 @@ using ConstTypeArgs.Ints;
 
 namespace Samples.Buffer;
 
-/// <summary>
-/// The <see cref="BufferEx{SIZE, RESIZEABLE, MAX_SIZE}"/> class extends the functionality of the
-/// <see cref="SimpleBuffer{SIZE}"/>, adding additional configuration options that can be set through
-/// const type arguments.
-/// </summary>
-public class BufferEx<SIZE, IS_RESIZEABLE, MAX_SIZE>
-    : SimpleBuffer<SIZE>
-    where SIZE : K_Int
-    where IS_RESIZEABLE : K_Bool
-    where MAX_SIZE : K_Int
+public class BufferEx<SIZE, RESIZABLE, MAX>
+    : SimpleBuffer <SIZE>
+    where SIZE        : K_Int
+    where RESIZABLE   : K_Bool
+    where MAX         : K_Int
 {
     static BufferEx()
     {
-        Console.WriteLine($"BufferEx<{SIZE.Value}, {IS_RESIZEABLE.Value}, {MAX_SIZE.Value}> created.");
+        Console.WriteLine($"BufferEx<{SIZE.Value}, {RESIZABLE.Value}, {MAX.Value}> created.");
         Console.WriteLine($"Initial Size: {SIZE.Value}, Resizable: {_IsResizable}, Max Size: {_MaxSize}");
     }
 
-    protected readonly static bool _IsResizable = IS_RESIZEABLE.Value;
-    protected readonly static int _MaxSize = MAX_SIZE.Value;
-
-    /// <summary>
-    /// Initializes a new <see cref="BufferEx"/> instance.
-    /// </summary>
-    public BufferEx() { }
+    // We don't have to assign these to their own properties, but we're demonstrating how to access
+    // the const type argument values in a static context.
+    protected readonly static bool _IsResizable = RESIZABLE.Value;
+    protected readonly static int _MaxSize = MAX.Value;
 
     public override void WriteConfiguration()
     {
-        // We can write the configuration to console in the type initializer instead of here,
+        // To demonstrate, we can simply write the configuration to console
+        // in the type initializer instead of in an instance method,
         // since the configuration values are available in static contexts.
     }
 

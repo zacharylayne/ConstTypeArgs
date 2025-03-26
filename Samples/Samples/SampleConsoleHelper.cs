@@ -9,6 +9,11 @@ namespace Samples;
 /// </summary>
 public static class SampleConsoleHelper
 {
+    static SampleConsoleHelper()
+    {
+        OutputEncoding = System.Text.Encoding.UTF8;
+    }
+
     /// <summary>
     /// Writes a specified number of empty lines to the console.
     /// </summary>

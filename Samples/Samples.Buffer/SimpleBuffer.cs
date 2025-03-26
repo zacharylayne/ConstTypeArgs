@@ -2,13 +2,6 @@
 
 namespace Samples.Buffer;
 
-/// <summary>
-/// The <see cref="SimpleBuffer{SIZE}"/> class demonstrates how to use a const type argument
-/// to configure a buffer's size.
-/// </summary>
-/// <typeparam name="SIZE">
-/// The buffer's size.
-/// </typeparam>
 public class SimpleBuffer<SIZE>
     where SIZE : K_Int
 {

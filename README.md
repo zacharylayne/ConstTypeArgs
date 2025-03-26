@@ -134,6 +134,8 @@ The Const Type Args framework is composed of a number of libraries such as:
 
 * [ConstTypeArgs.Console](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Console) that covers .NET console-related types, such as for [`ConsoleColor`](https://learn.microsoft.com/dotnet/api/system.consolecolor), [`ConsoleKey`](https://learn.microsoft.com/dotnet/api/system.consolekey), [`ConsoleModifiers`](https://learn.microsoft.com/dotnet/api/system.consolemodifiers), etc.
 
+<br>
+
 ## Terminology
 
 * **Const type argument** - A type that is used to "pass" values to generics via generic parameters. All const type arguments implement [`IConstTypeArg<T>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/IConstTypeArg.cs).

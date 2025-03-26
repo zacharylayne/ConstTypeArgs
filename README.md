@@ -2,10 +2,7 @@
 
 The **Const Type Args** framework provides libraries, samples, and documentation to support working with *const type arguments*.
 
-Const type arguments, or const type args, are used to *"pass"* values to as generic type parameters, accessed from within static contexts such as static constructors, methods, fields, properties, local functions, lambdas (without closure), and more. This lets you customize types in a compile-time–like fashion, effectively mimicking [C++ template specialization](https://en.cppreference.com/w/cpp/language/template_specialization) and offering a variety of benefits across a wide number of use cases.
-
-> [!NOTE]
-> Please be aware that the Const Type Args framework is in active development. New features and improvements are being added, so stay tuned for updates!
+Const type arguments, or const type args, allow you to effectively "pass" values to generic types using type parameters. These values can then be accessed from within static contexts, such as static constructors, methods, fields, properties, local functions, and lambdas (without closures). This provides a powerful way to customize types in a compile-time-like manner, closely mimicking the behavior of [C++ template specialization](https://en.cppreference.com/w/cpp/language/template_specialization) - but with runtime retrieval of values. This approach offers unique benefits and flexibility across a wide variety of use cases.
 
 #### Table of Contents
 
@@ -25,6 +22,11 @@ Const type arguments, or const type args, are used to *"pass"* values to as gene
 [**License**](https://github.com/zacharylayne/ConstTypeArgs/blob/master/LICENSE.txt)
 
 <br>
+
+> [!NOTE]
+> Please be aware that the Const Type Args framework is in active development. New features and improvements are being added, so stay tuned for updates!
+
+</br>
 
 ## Benefits
 
@@ -48,19 +50,19 @@ Const type args provide a number of inherent and derived benefits, including:
 
 Const type args are versatile and powerful, enabling a wide variety of use cases:
 
-* **Type-Safe Configuration** – Enforce constraints on values such as buffer sizes, timeouts, or thread limits by ensuring only valid const type arguments can be used, preventing runtime misconfigurations.
+* **Type-Safe Configuration** - Enforce constraints on values such as buffer sizes, timeouts, or thread limits by ensuring only valid const type arguments can be used, preventing runtime misconfigurations.
 
-* **Implementation Selection** – Configure specialized implementations of generic types optimized for different performance profiles, algorithms, and data structures.
+* **Implementation Selection** - Configure specialized implementations of generic types optimized for different performance profiles, algorithms, and data structures.
 
-* **Domain-Specific Constants** – Embed domain-specific values (e.g., currency symbols, units of measure, tax rates) directly into the type system to guarantee consistency and clarity throughout your codebase.
+* **Domain-Specific Constants** - Embed domain-specific values (e.g., currency symbols, units of measure, tax rates) directly into the type system to guarantee consistency and clarity throughout your codebase.
 
-* **Parameterized Callbacks and Events** – Provide strongly typed, predefined values and delegates for event handlers or callbacks, minimizing runtime errors and unexpected inputs.
+* **Parameterized Callbacks and Events** - Provide strongly typed, predefined values and delegates for event handlers or callbacks, minimizing runtime errors and unexpected inputs.
 
-* **Units of Measure** – Encode units such as length, time, temperature, velocity, or mass directly into your type definitions, significantly reducing runtime conversion mistakes and improving readability. Take a look at the [**Units of Measure**](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Samples/Samples.UnitsOfMeasure) for a simple units of measure implementation using const type args.
+* **Units of Measure** - Encode units such as length, time, temperature, velocity, or mass directly into your type definitions, significantly reducing runtime conversion mistakes and improving readability. Take a look at the [**Units of Measure**](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Samples/Samples.UnitsOfMeasure) for a simple units of measure implementation using const type args.
 
-* **State Machines and Regex Patterns** – Represent valid state transitions, events, or regex patterns as const type arguments, ensuring patterns and states are both validated at initialization and easily discoverable.
+* **State Machines and Regex Patterns** - Represent valid state transitions, events, or regex patterns as const type arguments, ensuring patterns and states are both validated at initialization and easily discoverable.
 
-* **Union-Like Types** – Mimic union type behavior by allowing generic types to accept multiple const type arguments, enhancing flexibility and type safety simultaneously.
+* **Union-Like Types** - Mimic union type behavior by allowing generic types to accept multiple const type arguments, enhancing flexibility and type safety simultaneously.
 
 * and more!
 
@@ -124,7 +126,7 @@ var bigBuffer   = new Buffer<int, _1024>();  // length == 1024
 
 The Const Type Args framework is composed of a number of libraries such as:
 
-* [ConstTypeArgs.Core](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Core) - The core library containing the `IConstTypeArg<T>` interface, [`K<T, TArg>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/K.cs) to define const type arguments that wrap other const type arguments, and [__](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/__.cs) that are used to signify the abscense of values. The core library also contains a number of derived interfaces such as [`K_Struct`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Struct.cs), [`K_Number`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Number.cs), [`K_Enum`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Enum.cs), [`K_Array`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Array.cs) and [`K_Delegate`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Delegate.cs) that can be used to constrain const type arguments.
+* [ConstTypeArgs.Core](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Core) containing fundamental types such as the `IConstTypeArg<T>` interface, [`K<T, TArg>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/K.cs) to define const type arguments that wrap other const type arguments, and [__](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/__.cs) that are used to signify the abscense of values. The core library also contains a number of derived interfaces such as [`K_Struct`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Struct.cs), [`K_Number`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Number.cs), [`K_Enum`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Enum.cs), [`K_Array`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Array.cs) and [`K_Delegate`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/Core/K_Delegate.cs) that can be used to constrain const type arguments.
 
 * Libraries covering all primitive types such as [ConstTypeArgs.Bool](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Bools), [ConstTypeArgs.Chars](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Chars), [ConstTypeArgs.Decimals](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Decimals), [ConstTypeArgs.Ints](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Ints), [ConstTypeArgs.Nints](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Nints), and [ConstTypeArgs.Ulongs](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Ulongs), as well as [ConstTypeArgs.Strings](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Strings), [ConstTypeArgs.Types](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Types), [ConstTypeArgs.Halfs](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Halfs), [ConstTypeArgs.Int128s](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Int128s), and [ConstTypeArgs.UInt128s](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.UInt128s).
 

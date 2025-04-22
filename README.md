@@ -16,7 +16,7 @@ Provided with the framework are:
 
  * Samples demonstrating const type args in action, including simple implementations for units of measure and static polymorphic buffers.
 
-#### Table of Contents
+#### Table of contents
 
 * [**Benefits**](https://github.com/zacharylayne/ConstTypeArgs/tree/master#benefits)
 * [**Use case scenarios**](https://github.com/zacharylayne/ConstTypeArgs/tree/master#use-case-scenarios)
@@ -44,7 +44,7 @@ Provided with the framework are:
 
 Const type args bring a number of inherent and derived benefits, including:
 
-* **Static polymorphism type specialization** - Const type arguments allow you to provide specialized implementations to generic consumers, enabling polymorphic behavior without incurring virtual dispatch or runtime overhead typical of inheritance-based polymorphism. This technique mimics compile-time specialization (such as [template specialization](https://en.cppreference.com/w/cpp/language/template_specialization) in C++), eliminating method-table lookups & virtual calls. This can result in significant performance improvements, especially in performance-critical scenarios, as the compiler can more effectively optimize away unnecessary indirection and method call.
+* **Static polymorphism / type specialization** - Const type arguments allow you to provide specialized implementations to generic consumers, enabling polymorphic behavior without incurring virtual dispatch or runtime overhead typical of inheritance-based polymorphism. This technique mimics compile-time specialization (such as [template specialization](https://en.cppreference.com/w/cpp/language/template_specialization) in C++), eliminating method-table lookups & virtual calls. This can result in significant performance improvements, especially in performance-critical scenarios, as the compiler can more effectively optimize away unnecessary indirection and method call.
 
 * **Increased type safety** - Const type args provide strong type guarantees and can be used to enforce highly specific constraints *(e.g. positivity, upper/lower bounds, etc.)*. This reduces risks of invalid configurations, type mismatches, and runtime errors.
 
@@ -66,19 +66,19 @@ Const type args bring a number of inherent and derived benefits, including:
 
 Const type args are versatile and powerful, enabling a wide variety of use cases:
 
-* **Type-Safe Configuration** - Enforce constraints on values such as buffer sizes, timeouts, or thread limits by ensuring only valid const type arguments can be used, preventing runtime misconfigurations.
+* **Type-Safe configuration** - Enforce constraints on values such as buffer sizes, timeouts, or thread limits by ensuring only valid const type arguments can be used, preventing runtime misconfigurations.
 
-* **Implementation Selection** - Configure specialized implementations of generic types optimized for different performance profiles, algorithms, and data structures.
+* **Implementation selection** - Configure specialized implementations of generic types optimized for different performance profiles, algorithms, and data structures.
 
-* **Domain-Specific Constants** - Embed domain-specific values (e.g., currency symbols, units of measure, tax rates) directly into the type system to guarantee consistency and clarity throughout your codebase.
+* **Domain-specific constants** - Embed domain-specific values (e.g., currency symbols, units of measure, tax rates) directly into the type system to guarantee consistency and clarity throughout your codebase.
 
-* **Parameterized Callbacks and Events** - Provide strongly typed, predefined values and delegates for event handlers or callbacks, minimizing runtime errors and unexpected inputs.
+* **Parameterized callbacks and events** - Provide strongly typed, predefined values and delegates for event handlers or callbacks, minimizing runtime errors and unexpected inputs.
 
-* **Units of Measure** - Encode units such as length, time, temperature, velocity, or mass directly into your type definitions, significantly reducing runtime conversion mistakes and improving readability. Take a look at the [**Units of Measure**](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Samples/Samples.UnitsOfMeasure) for a simple units of measure implementation using const type args.
+* **Units of measure** - Encode units such as length, time, temperature, velocity, or mass directly into your type definitions, significantly reducing runtime conversion mistakes and improving readability. Take a look at the [**Units of Measure**](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Samples/Samples.UnitsOfMeasure) for a simple units of measure implementation using const type args.
 
-* **State Machines and Regex Patterns** - Represent valid state transitions, events, or regex patterns as const type arguments, ensuring patterns and states are both validated at initialization and easily discoverable.
+* **State machines and Regex patterns** - Represent valid state transitions, events, or regex patterns as const type arguments, ensuring patterns and states are both validated at initialization and easily discoverable.
 
-* **Union-Like Types** - Mimic union type behavior by allowing generic types to accept multiple const type arguments, enhancing flexibility and type safety simultaneously.
+* **Union-like types** - Mimic union type behavior by allowing generic types to accept multiple const type arguments, enhancing flexibility and type safety simultaneously.
 
 * And more!
 

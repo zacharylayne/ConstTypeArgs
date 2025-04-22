@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Const Type Args - Process Runners</Title>
+    <DocumentationFile>..\..\Documentation\ConstTypeArgs.ProcessRunners.xml</DocumentationFile>
+    <Version>0.2.0-pre-release</Version>
+    <Authors>Zachary Layne</Authors>
+    <Company>Entry Point Software</Company>
+    <Copyright>2025</Copyright>
+    <PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
+    <PackageTags>constants; const-type-args; generics; static-abstract-interface-members; dependency-injection; static-dependency-injection</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <IncludeSymbols>True</IncludeSymbols>
+    <AnalysisLevel>preview-all</AnalysisLevel>
+    <PackageReadmeFile>README.MD</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
+    <PackageIcon>Process-Runners.png</PackageIcon>
+    <Description>...</Description>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="IContext.cs" />
+    <Compile Remove="IState.cs" />
+    <Compile Remove="Result - Copy.Exceptions.cs" />
+    <Compile Remove="Result - Copy.Failure.cs" />
+    <Compile Remove="Result - Copy.None.cs" />
+    <Compile Remove="Result - Copy.Success.cs" />
+    <Compile Remove="Steps\IStepInfo.cs" />
+    <Compile Remove="Steps\K_Step.cs" />
+    <Compile Remove="Steps\_IStep.cs" />
+    <Compile Remove="_Result.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Icons\Process-Runners.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConstTypeArgs.Core" Version="1.2.0" />
+    <PackageReference Include="ConstTypeArgs.Delegates" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MostlyExceptional\Source\MostlyExceptional\MostlyExceptional.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE.txt">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+    <None Update="README.MD">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="System.ComponentModel" />
+    <Using Include="System.ComponentModel.EditorBrowsableState">
+      <Static>True</Static>
+    </Using>
+  </ItemGroup>
+
+</Project>

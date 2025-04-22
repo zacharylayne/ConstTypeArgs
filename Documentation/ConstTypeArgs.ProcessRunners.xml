@@ -1,0 +1,1053 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConstTypeArgs.ProcessRunners</name>
+    </assembly>
+    <members>
+        <member name="T:ConstTypeArgs.ProcessRunners.Context`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Context`1"/> record struct encapsulates the immutable context for a process runner.
+            </summary>
+            <remarks>
+            Not all processes &amp; operations require a context. In these cases, they will have
+            a <see cref="T:ConstTypeArgs.ProcessRunners.Context`1"/> set to <see cref="F:ConstTypeArgs.ProcessRunners.Context`1.Empty"/>.An empty context has no data;
+            its <see cref="P:ConstTypeArgs.ProcessRunners.Context`1.Data"/>/ property will be <see langword="default"/>(<typeparamref name="T"/>).
+            When this is a possibility, use the <see cref="M:ConstTypeArgs.ProcessRunners.ContextExtensions.IsEmpty``1(ConstTypeArgs.ProcessRunners.Context{``0})">IsEmpty{T}</see>
+            extension method to check if the context is empty.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.State`1"/>
+        </member>
+        <member name="F:ConstTypeArgs.ProcessRunners.Context`1.Empty">
+            <summary>
+            An empty context.
+            </summary>
+            <remarks>
+            Use this to check if a context is empty or not.
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Context`1.DataType">
+            <summary>
+            Gets the context data's type.
+            </summary>
+            <value>
+            The context data's type.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Context`1.IsEmpty">
+            <summary>
+            Gets &amp; inits a value indicating whether or not the context data is empty.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the context data is empty;
+            otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            This is set to <see langword="true"/> if the context is <see cref="F:ConstTypeArgs.ProcessRunners.Context`1.Empty"/>
+            and in no other case.
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Context`1.Data">
+            <summary>
+            Gets &amp; inits the context data.
+            </summary>
+            <value>
+            The context data.
+            </value>
+            <remarks>
+            Use the <see cref="M:ConstTypeArgs.ProcessRunners.ContextExtensions.IsEmpty``1(ConstTypeArgs.ProcessRunners.Context{``0})">IsEmpty{T}</see> extension
+            method to check if the context is empty. If it is, the value of this property
+            will be <see langword="default"/>(<typeparamref name="T"/>).
+            </remarks>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.Context`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ConstTypeArgs.ProcessRunners.Context`1"/> struct.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.Context`1.op_Implicit(`0)~ConstTypeArgs.ProcessRunners.Context{`0}">
+            <summary>
+            Converts a value of type <typeparamref name="T"/> to a <see cref="T:ConstTypeArgs.ProcessRunners.Context`1"/>.
+            </summary>
+            <param name="data">
+            The data to convert.
+            </param>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.Context`1.op_Implicit(ConstTypeArgs.ProcessRunners.Context{`0})~`0">
+            <summary>
+            Converts a <see cref="T:ConstTypeArgs.ProcessRunners.Context`1"/> to a value of type <typeparamref name="T"/>.
+            </summary>
+            <param name="context">
+            The context to convert.
+            </param>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.ContextExtensions">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.ContextExtensions"/> class provides extension methods for the <see cref="T:ConstTypeArgs.ProcessRunners.Context`1"/> struct.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Context`1"/>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.ContextExtensions.IsEmpty``1(ConstTypeArgs.ProcessRunners.Context{``0})">
+            <summary>
+            Tests if the context is empty.
+            </summary>
+            <param name="context">
+            The context to test.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if the context is empty;
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.IProcessRunner">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.IProcessRunner"/> interface provides the means to implement
+            a process runner that can execute one or more ordered steps.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Steps.IStep`3"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Steps.IStep`4"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`2"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`3"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Context`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.State`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result`1"/>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.IProcessRunner.GetName">
+            <summary>
+            Retrieves a name for the process runner.
+            </summary>
+            <returns>
+            The process runner's name.
+            </returns>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.IProcessRunner.GetDescription">
+            <summary>
+            Retrieves a description for the process runner.
+            </summary>
+            <returns>
+            The process runner's description.
+            </returns>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation"/> interface provides a base interface for an operation
+            that can be executed in a process step.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.State`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Context`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result`1"/>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.Operations.K_Operation.GetName">
+            <summary>
+            Returns the operation's name.
+            </summary>
+            <returns>
+            The operation's name.
+            </returns>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.Operations.K_Operation.GetDescription">
+            <summary>
+            Returns the operation's description.
+            </summary>
+            <returns>
+            The operation's description.
+            </returns>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`1"/> interface provides basic information about an operation.
+            </summary>
+            <typeparam name="TSelf">
+            The type itself.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`2"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`3"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.State`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Context`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result`1"/>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Operations.K_Operation`1.Name">
+            <summary>
+            Gets the operation's name.
+            </summary>
+            <seealso cref="P:ConstTypeArgs.ProcessRunners.Operations.K_Operation`1.Description"/>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Operations.K_Operation`1.Description">
+            <summary>
+            Get's the operation's description.
+            </summary>
+            <seealso cref="P:ConstTypeArgs.ProcessRunners.Operations.K_Operation`1.Name"/>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`2"/> interface provides an operation that can be
+            executed in a process step.
+            </summary>
+            <typeparam name="TContext">
+            The type of the context data.
+            </typeparam>
+            <typeparam name="TState">
+            The type of the state data.
+            </typeparam>
+            <remarks>
+            This interface is typically used to define operations for steps in a process runner that are not
+            the entry step or steps.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`3"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.State`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Context`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`2.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`2.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and can be used as a placeholder in type parameter lists.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`3"/> interface provides an operation that can be
+            executed in a process step and returns a result.
+            </summary>
+            <typeparam name="TContext">
+            The type of the context data.
+            </typeparam>
+            <typeparam name="TState">
+            The type of the state data.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the result data.
+            </typeparam>
+            <remarks>
+            This interface is typically used to define operations for a process runner's entry step or steps.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`2"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.State`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Context`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`3.__">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Operations.K_Operation`3.__"/> interface is a <em>discard argument</em> meant to signify
+            a lack of value and can be used as a placeholder in type parameter lists.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/> record encapsulates an immutable state for a process runner.
+            </summary>
+            <typeparam name="T">
+            The type of the state data.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Context`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.State`1"/>
+            <seealso cref="M:ConstTypeArgs.ProcessRunners.State`1.AsReadOnly"/>
+        </member>
+        <member name="F:ConstTypeArgs.ProcessRunners.ReadOnlyState`1.None">
+            <summary>
+            Represents a state with no data.
+            </summary>
+            <remarks>
+            Use this to check if there is no state data.
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.ReadOnlyState`1.DataType">
+            <summary>
+            Gets the state data's type.
+            </summary>
+            <value>
+            The state data's type.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.ReadOnlyState`1.IsNone">
+            <summary>
+            Gets &amp; inits a value indicating whether there is no state data.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if there is no state data;
+            otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            This is set to <see langword="true"/> if the state is <see cref="F:ConstTypeArgs.ProcessRunners.ReadOnlyState`1.None"/>
+            and in no other case.
+            </remarks>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.ReadOnlyState`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/> record.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.ReadOnlyState`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/> record with the specified data.
+            </summary>
+            <param name="data">
+            The state data.
+            </param>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.ReadOnlyState`1.Data">
+            <summary>
+            Gets &amp; inits the state.
+            </summary>
+            <value>
+            The state data or <see langword="default"/>(<typeparamref name="T"/>) if there is none.
+            </value>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.ReadOnlyState`1.op_Explicit(`0)~ConstTypeArgs.ProcessRunners.ReadOnlyState{`0}">
+            <summary>
+            Converts a value of type <typeparamref name="T"/> to a <see cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/>.
+            </summary>
+            <param name="data">
+            The data to convert.
+            </param>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.ReadOnlyState`1.op_Implicit(ConstTypeArgs.ProcessRunners.ReadOnlyState{`0})~`0">
+            <summary>
+            Converts a <see cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/> to a value of type <typeparamref name="T"/>.
+            </summary>
+            <param name="state">
+            The state to convert.
+            </param>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.ReadOnlyStateExtensions">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.StateExtensions"/> class provides extension methods for the <see cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/> record.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.ReadOnlyStateExtensions.HasNoState``1(ConstTypeArgs.ProcessRunners.ReadOnlyState{``0})">
+            <summary>
+            Tests if there is no state data.
+            </summary>
+            <typeparam name="T">
+            The type of the state data.
+            </typeparam>
+            <param name="state">
+            The state to test.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if there is no state data;
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Result">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Result"/> record provides a common base for the results of a process runner.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Kind">
+            <inheritdoc/>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.RanToCompletion">
+            <summary>
+            Gets &amp; inits whether or not the process runner that produced the result ran to completion.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the process runner ran to completion;
+            otherwise, <see langword="false"/>. By default, this is <see langword="true"/>.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Message">
+            <summary>
+            Gets &amp; inits a message that describes the result.
+            </summary>
+            <value>
+            A message that describes the result. By default, this is an empty string.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Result.Exceptions">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Result.Exceptions"/> record provides a result for a process runner that threw exceptions.
+            </summary>
+            <remarks>
+            A process runner that throws exceptions is considered to have not run to completion
+            by default. To indicate that the process runner ran to completion, set the
+            <see cref="P:ConstTypeArgs.ProcessRunners.Result.Exceptions.RanToCompletion"/> parameter to <see langword="true"/>.
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Exceptions.Kind">
+            <summary>
+            Gets <see cref="F:ConstTypeArgs.ProcessRunners.Steps.ResultKinds.Exceptions"/>.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Exceptions.RanToCompletion">
+            <summary>
+            Gets whether or not the process runner that produced the result ran to completion.
+            By default, this is <see langword="false"/>.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Exceptions.Message">
+            <summary>
+            Gets &amp; inits a message that describes the result.
+            By default, this is <c>"The process runner threw exceptions"</c>.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Exceptions.Aggregator">
+            <summary>
+            Required. Gets &amp; inits the exception aggregator that contains the exceptions
+            thrown by the process runner.
+            </summary>
+            <value>
+            The exception aggregator that contains the exceptions thrown by the process runner.
+            </value>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.Result.Exceptions.#ctor(System.Boolean)">
+            <summary>
+            Creates a new <see cref="T:ConstTypeArgs.ProcessRunners.Result.Exceptions"/> record.
+            </summary>
+            <param name="ranToCompletion">
+            Optional. A value of <see langword="true"/> if the process runner ran to completion;
+            otherwise, <see langword="false"/>. By default, this is <see langword="false"/>.
+            </param>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Result.Exceptions`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Result.Exceptions`1"/> record provides a result for a process runner
+            that threw exceptions and includes a status code.
+            </summary>
+            <typeparam name="TStatusCode">
+            The enum type of the status code for the result.
+            </typeparam>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Exceptions`1.StatusCode">
+            <summary>
+            Required. Gets &amp; inits the status code for the result.
+            </summary>
+            <value>
+            The status code for the result.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Result.Exceptions`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Result.Exceptions`2"/> record provides a result for a process runner
+            that threw exceptions and includes data and a status code.
+            </summary>
+            <typeparam name="T">
+            The type of the result data.
+            </typeparam>
+            <typeparam name="TStatusCode">
+            The enum type of the status code for the result.
+            </typeparam>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Exceptions`2.Data">
+            <summary>
+            Required. Gets &amp; inits the data for the result.
+            </summary>
+            <value>
+            The data for the result.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Result.Failure">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Result.Failure"/> record provides a failed result for a process runner.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Failure.Kind">
+            <summary>
+            Gets <see cref="F:ConstTypeArgs.ProcessRunners.Steps.ResultKinds.Failure"/>.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Failure.RanToCompletion">
+            <summary>
+            Gets <see langword="false"/>, indicating that the process runner did not run to completion.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Failure.Message">
+            <summary>
+            Gets &amp; inits a message that describes the result.
+            </summary>
+            <value>
+            A message that describes the result.
+            By default, this is <c>"The process runner failed"</c>.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Result.Failure`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Result.Failure`1"/> record provides a failed result for a process runner
+            that includes a status code.
+            </summary>
+            <typeparam name="TStatusCode">
+            The enum type of the status code for the result.
+            </typeparam>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Failure`1.StatusCode">
+            <summary>
+            Required. Gets &amp; inits the status code for the result.
+            </summary>
+            <value>
+            The status code for the result.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Result.Failure`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Result.Failure`2"/> record provides a failed result for a process runner
+            that includes data and a status code.
+            </summary>
+            <typeparam name="T">
+            The type of the result data.
+            </typeparam>
+            <typeparam name="TStatusCode">
+            The enum type of the status code for the result.
+            </typeparam>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Failure`2.Data">
+            <summary>
+            Required. Gets &amp; inits the result data.
+            </summary>
+            <value>
+            The result data.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Result.None">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Result.None"/> record provides a result for a process runner that did not run.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.None.Kind">
+            <summary>
+            Gets <see cref="F:ConstTypeArgs.ProcessRunners.Steps.ResultKinds.None"/>.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.None.StatusCode">
+            <summary>
+            Gets <see cref="F:ConstTypeArgs.ProcessRunners.Steps.NoResultStatusCode.None"/>.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.None.RanToCompletion">
+            <summary>
+            Gets <see langword="false"/>, indicating that the process runner did not run to completion.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.None.Message">
+            <summary>
+            Gets &amp; inits a message that describes the result.
+            </summary>
+            <value>
+            A message that describes the result.
+            By default, this is <c>"The process runner did not run"</c>.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Result.Success">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Result.Success"/> record provides a successful result for a process runner.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Success.Kind">
+            <summary>
+            Gets <see cref="F:ConstTypeArgs.ProcessRunners.Steps.ResultKinds.Success"/>.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Success.RanToCompletion">
+            <summary>
+            Gets <see langword="true"/>, indicating that the process runner ran to completion.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Success.Message">
+            <summary>
+            Gets &amp; inits a message that describes the result.
+            </summary>
+            <value>
+            A message that describes the result.
+            By default, this is <c>"The process runner completed successfully"</c>.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Result.Success`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Result.Success`1"/> record provides a successful result for a process runner
+            that includes data.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Success`1.Data">
+            <summary>
+            Required. Gets &amp; inits the result data.
+            </summary>
+            <value>
+            The result data.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result.Success`1.StatusCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Result`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Result`1"/> record provides the results of a process runner
+            that provides a status code.
+            </summary>
+            <typeparam name="TStatusCode">
+            The enum type of the status codes the result provides.
+            </typeparam>
+            <remarks>
+            If a status code is required but not available, use <see cref="T:ConstTypeArgs.ProcessRunners.Steps.NoResultStatusCode"/>.
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result`1.StatusCode">
+            <summary>
+            Gets &amp; inits the status code.
+            </summary>
+            <value>
+            The status code for the result. By default, this is the default value of the status code (0).
+            Since this is set to the default value of the status code if not provided,
+            any <typeparamref name="TStatusCode"/> enum should have a field with a value of 0.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Result`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Result`2"/> record provides the results of a process runner
+            that provides a status code and data.
+            </summary>
+            <typeparam name="T">
+            The type of the result data.
+            </typeparam>
+            <typeparam name="TStatusCode">
+            The enum type of the status codes the result provides.
+            If a status code is required but not available, use <see cref="T:ConstTypeArgs.ProcessRunners.Steps.NoResultStatusCode"/>.
+            </typeparam>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Result`2.Data">
+            <inheritdoc/>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.State`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.State`1"/> record encapsulates the mutable state of a process runner.
+            </summary>
+            <remarks>
+            To test if there is no state, use the  extension method
+            <see cref="M:ConstTypeArgs.ProcessRunners.StateExtensions.HasNoState``1(ConstTypeArgs.ProcessRunners.State{``0})">HasNoState{T}</see>.
+              <para>
+              To convert to a <see cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/>, use the method <see cref="M:ConstTypeArgs.ProcessRunners.State`1.AsReadOnly"/>.
+              </para>
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Context`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/>
+            <seealso cref="M:ConstTypeArgs.ProcessRunners.State`1.AsReadOnly"/>
+        </member>
+        <member name="F:ConstTypeArgs.ProcessRunners.State`1.None">
+            <summary>
+            Represents a state with no data.
+            </summary>
+            <remarks>
+            Use this to check if there is no state data.
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.State`1.DataType">
+            <summary>
+            Gets the state data's type.
+            </summary>
+            <value>
+            The state data's type.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.State`1.IsNone">
+            <summary>
+            Gets &amp; inits a value indicating whether there is no state data.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if there is no state data;
+            otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            This is set to <see langword="true"/> if the state is <see cref="F:ConstTypeArgs.ProcessRunners.State`1.None"/>
+            and in no other case.
+            </remarks>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.State`1.Data">
+            <summary>
+            Gets &amp; sets the state.
+            </summary>
+            <value>
+            The state data or <see langword="default"/>(<typeparamref name="T"/>) if there is none.
+            </value>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.State`1.#ctor">
+            <summary>
+            Creates a new <see cref="T:ConstTypeArgs.ProcessRunners.State`1"/> record.
+            </summary>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.State`1.AsReadOnly">
+            <summary>
+            Converts a <see cref="T:ConstTypeArgs.ProcessRunners.State`1"/> to a <see cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/>. This is useful
+            when a process runner needs to expose its state as read-only.
+            </summary>
+            <returns>
+            An immutable <see cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/> that contains the same data as this state.
+            </returns>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.State`1.op_Implicit(`0)~ConstTypeArgs.ProcessRunners.State{`0}">
+            <summary>
+            Converts a value of type <typeparamref name="T"/> to a <see cref="T:ConstTypeArgs.ProcessRunners.State`1"/>.
+            </summary>
+            <param name="data">
+            The data to convert.
+            </param>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.State`1.op_Implicit(ConstTypeArgs.ProcessRunners.State{`0})~`0">
+            <summary>
+            Converts a <see cref="T:ConstTypeArgs.ProcessRunners.State`1"/> to a value of type <typeparamref name="T"/>.
+            </summary>
+            <param name="state">
+            The state to convert.
+            </param>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.StateExtensions">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.StateExtensions"/> class provides extension methods for the <see cref="T:ConstTypeArgs.ProcessRunners.State`1"/> record.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.State`1"/>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.StateExtensions.HasNoState``1(ConstTypeArgs.ProcessRunners.State{``0})">
+            <summary>
+            Tests if there is no state data.
+            </summary>
+            <typeparam name="T">
+            The type of the state data.
+            </typeparam>
+            <param name="state">
+            The state to test.
+            </param>
+            <returns>
+            A value of <see langword="true"/> if there is no state data;
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Step`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Step`2"/> record defines a single
+            ordered step in a process runner.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Step`2.Context">
+            <summary>
+            Gets &amp; inits the step's context.
+            </summary>
+            <seealso cref="P:ConstTypeArgs.ProcessRunners.Step`2.State"/>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Step`2.State">
+            <summary>
+            Gets &amp; sets the step's state.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Context`1"/>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.Step`2.#ctor(ConstTypeArgs.ProcessRunners.Context{`0},ConstTypeArgs.ProcessRunners.State{`1})">
+            <summary>
+            Creates a  new <see cref="T:ConstTypeArgs.ProcessRunners.Step`2"/> instance.
+            </summary>
+            <param name="context">
+            The context for the step.
+            </param>
+            <param name="state">
+            The state for the step.
+            </param>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Steps.IResult">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Steps.IResult"/> interface provides the means to implement a result
+            for a process runner.
+            </summary>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Steps.IResult.Kind">
+            <summary>
+            Gets the kind of the result.
+            </summary>
+            <value>
+            The kind of the result, such as <see cref="F:ConstTypeArgs.ProcessRunners.Steps.ResultKinds.Success"/>,
+            <see cref="F:ConstTypeArgs.ProcessRunners.Steps.ResultKinds.Failure"/>, or <see cref="F:ConstTypeArgs.ProcessRunners.Steps.ResultKinds.Exceptions"/>.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Steps.IResult.RanToCompletion">
+            <summary>
+            Gets whether or not the process runner that produced the result ran to completion.
+            </summary>
+            <value>
+            A value of <see langword="true"/> if the process runner ran to completion;
+            otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Steps.IResult.Message">
+            <summary>
+            Gets a message that describes the result.
+            </summary>
+            <value>
+            A message that describes the result.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Steps.IResultData`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Steps.IResultData`1"/> interface provides the means to implement
+            a result for a process runner that contains data.
+            </summary>
+            <typeparam name="T">
+            The type of the result data.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Steps.IResultStatusCode`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Steps.IResult`2"/>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Steps.IResultData`1.Data">
+            <summary>
+            Gets the result data.
+            </summary>
+            <value>
+            The result data.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Steps.IResultStatusCode`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Steps.IResultStatusCode`1"/> interface provides the means to implement
+            a result for a process runner that contains a status code.
+            </summary>
+            <typeparam name="TStatusCode">
+            The type of the status code.
+            </typeparam>
+            <remarks>
+            If a status code is required but not available, use <see cref="T:ConstTypeArgs.ProcessRunners.Steps.NoResultStatusCode"/>.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Steps.IResultData`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Steps.IResult`2"/>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Steps.IResultStatusCode`1.StatusCode">
+            <summary>
+            Gets the status code.
+            </summary>
+            <value>
+            The status code.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Steps.IResult`2">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Steps.IResult`2"/> interface provides the means to implement
+            a result for a process runner that contains a status code and data.
+            </summary>
+            <typeparam name="T">
+            The type of the result data.
+            </typeparam>
+            <typeparam name="TStatusCode">
+            The type of the status code.
+            </typeparam>
+            <remarks>
+            If a status code is required but not available, use <see cref="T:ConstTypeArgs.ProcessRunners.Steps.NoResultStatusCode"/>.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Steps.IResultData`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Steps.IResultStatusCode`1"/>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Steps.IStep`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Steps.IStep`1"/> interface provides the means to define a step in a process runner.
+            </summary>
+            <typeparam name="TContext">
+            The type of the context data. It is recommended to specify <see cref="T:ConstTypeArgs.ProcessRunners.Context`1"/>
+            or <see cref="F:ConstTypeArgs.ProcessRunners.Context`1.Empty"/> if the context is not required.
+            </typeparam>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.Steps.IStep`1.GetName">
+            <summary>
+            Returns the step's name.
+            </summary>
+            <returns>
+            The step's name.
+            </returns>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.Steps.IStep`1.GetDescription">
+            <summary>
+            Returns the step's description.
+            </summary>
+            <returns>
+            The step's description.
+            </returns>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Steps.IStep`1.Context">
+            <summary>
+            Gets &amp; inits the context for the step.
+            </summary>
+            <value>
+            The context for the step.
+            </value>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Steps.IStep`3">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Steps.IStep`3"/> interface provides the means
+            to define a step in a process runner.
+            </summary>
+            <typeparam name="TContext">
+            The type of the context data. It is recommended to specify <see cref="T:ConstTypeArgs.ProcessRunners.Context`1"/>
+            or <see cref="F:ConstTypeArgs.ProcessRunners.Context`1.Empty"/> if the context is not required.
+            </typeparam>
+            <typeparam name="TState">
+            The type of the state data. It is recommended to specify:
+              <list type="bullet">
+                <item>
+                <see cref="F:ConstTypeArgs.ProcessRunners.State`1.None"/> or <see cref="F:ConstTypeArgs.ProcessRunners.ReadOnlyState`1.None"/>
+                if the state is not required
+                </item>
+                <item>
+                <see cref="T:ConstTypeArgs.ProcessRunners.State`1"/> if the state is required and can be modified
+                </item>
+                <item>
+                <see cref="T:ConstTypeArgs.ProcessRunners.ReadOnlyState`1"/> if the state is required and should not be modified
+                </item>
+              </list>
+            </typeparam>
+            <typeparam name="TOperation">
+            The const type arg providing the operation the step will execute.
+            </typeparam>
+            <remarks>
+            This interface is typically directly implemented to define steps for
+            a process runner that are not entry points. If the step is an entry point,
+            implement <see cref="T:ConstTypeArgs.ProcessRunners.Steps.IStep`4"/> instead.
+            </remarks>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.Steps.IStep`3.Execute(`1@)">
+            <summary>
+            Executes the step.
+            </summary>
+            <param name="state">
+            The state data for the step.
+            </param>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Steps.IStep`4">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Steps.IStep`4"/> interface provides the means
+            to define a step in a process runner that returns a result.
+            </summary>
+            <typeparam name="TContext">
+            The type of the context data.
+            </typeparam>
+            <typeparam name="TState">
+            The type of the state data.
+            </typeparam>
+            <typeparam name="TResult">
+            The type of the status code the step will return.
+            </typeparam>
+            <typeparam name="TOperation">
+            The type of the operation the step will execute.
+            </typeparam>
+            <remarks>
+            This interface is typically directly implemented to define the step or steps for
+            a process runner's entry point or points. If the step is not an entry point,
+            implement <see cref="T:ConstTypeArgs.ProcessRunners.Steps.IStep`3"/> instead.
+            </remarks>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.Steps.IStep`4.Execute(`1@)">
+            <summary>
+            Executes the step.
+            </summary>
+            <param name="state">
+            The state data for the step.
+            </param>
+            <returns>
+            The result of the step.
+            </returns>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Steps.IStepInfo`1">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Steps.IStepInfo`1"/> interface provides the means to define information
+            about a step in a process runner.
+            </summary>
+            <typeparam name="TSelf">
+            This type.
+            </typeparam>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Steps.IStep`3"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Steps.IStep`4"/>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Steps.IStepInfo`1.Name">
+            <summary>
+            Gets the step's name.
+            </summary>
+            <value>
+            The step's name. By default, this is an empty string.
+            </value>
+            <seealso cref="P:ConstTypeArgs.ProcessRunners.Steps.IStepInfo`1.Description"/>
+        </member>
+        <member name="P:ConstTypeArgs.ProcessRunners.Steps.IStepInfo`1.Description">
+            <summary>
+            Gets the step's description.
+            </summary>
+            <value>
+            The step's description. By default, this is an empty string.
+            </value>
+            <seealso cref="P:ConstTypeArgs.ProcessRunners.Steps.IStepInfo`1.Name"/>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.Steps.IStepInfo`1.GetName">
+            <summary>
+            Returns the step's name.
+            </summary>
+            <returns>
+            The step's name.
+            </returns>
+        </member>
+        <member name="M:ConstTypeArgs.ProcessRunners.Steps.IStepInfo`1.GetDescription">
+            <summary>
+            Returns the step's description.
+            </summary>
+            <returns>
+            The step's description.
+            </returns>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Steps.NoResultStatusCode">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Steps.NoResultStatusCode"/> enumeration indicates a process runner
+            step, operation, or task that does not provide a status code.
+            </summary>
+            <remarks>
+            Use this enumeration when defining a process runner step, operation, or task
+            that does not provide a status code but still needs to be represented as a result
+            or when generic type constraints require a status code.
+            </remarks>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result`1"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result"/>
+        </member>
+        <member name="F:ConstTypeArgs.ProcessRunners.Steps.NoResultStatusCode.None">
+            <summary>
+            No status code is provided.
+            </summary>
+        </member>
+        <member name="T:ConstTypeArgs.ProcessRunners.Steps.ResultKinds">
+            <summary>
+            The <see cref="T:ConstTypeArgs.ProcessRunners.Steps.ResultKinds"/> enumeration provides flags for identifying the kind of result
+            returned by a process runner, step, operation, or task.
+            </summary>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result"/>
+            <seealso cref="T:ConstTypeArgs.ProcessRunners.Result`1"/>
+        </member>
+        <member name="F:ConstTypeArgs.ProcessRunners.Steps.ResultKinds.None">
+            <summary>
+            There is no result kind.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.ProcessRunners.Steps.ResultKinds.Success">
+            <summary>
+            The result is a success.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.ProcessRunners.Steps.ResultKinds.Failure">
+            <summary>
+            The result is a failure.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.ProcessRunners.Steps.ResultKinds.Exceptions">
+            <summary>
+            The result is a failure with exceptions.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.ProcessRunners.Steps.ResultKinds.AllFailures">
+            <summary>
+            The result is any kind of failure.
+            </summary>
+        </member>
+        <member name="F:ConstTypeArgs.ProcessRunners.Steps.ResultKinds.All">
+            <summary>
+            The result is a success, failure, or failed with exceptions.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -14,4 +14,3 @@ The following table outlines the naming conventions used in the ConstTypeArgs fr
 
 * [Glossary](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/glossary.md)
 * [Overview](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/index.md)
-* [Developer Guide](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/dev-guide/dev-guide-intro.md)

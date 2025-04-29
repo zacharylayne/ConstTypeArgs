@@ -8,7 +8,7 @@ The terms in this section are used throughout the ConstTypeArgs documentation an
 
 * **Const Type Argument:**  A type that uses generic parameters to "pass" static values to generics. Every const type argument directly or indirectly implements [`IConstTypeArg<T>`](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Source/ConstTypeArgs.Core/IConstTypeArg.cs). The term const type argument can be interchangeable with the value they hold. If more clarity is needed, the terms *argument provider/arg provider* and *const type value* are used. ***VALUES SHOULD ALWAYS BE IMMUTABLE***. Also referred to as *const type arg*.
 
-* **Const Type Value:**  A more specific term for *const type arguments* which refers to a cons type argument's value. ***VALUES SHOULD ALWAYS BE IMMUTABLE***.
+* **Const Type Value:**  A more specific term for *const type arguments* which refers to a const type argument's value. ***VALUES SHOULD ALWAYS BE IMMUTABLE***.
  
 * **Argument Provider:** Concrete const types that provide a *const type value*. Also called *arg provider*.
 
@@ -24,4 +24,4 @@ The terms in this section are used throughout the ConstTypeArgs documentation an
 
 ## See Also
 
-* [Overview](https://github.com/zacharylayne/ConstTypeArgs/blob/master/Documentation/README.md)
+* [README](https://github.com/zacharylayne/ConstTypeArgs/blob/master/README.md)

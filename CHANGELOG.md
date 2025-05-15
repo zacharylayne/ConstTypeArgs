@@ -1,6 +1,14 @@
 Release Notes
 ===
 
+## 05/15/25
+
+[ConstTypeArgs.UnitsOfMeasure](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.UnitsOfMeasure) **0.2.0**
+
+&nbsp;&nbsp; - Initial release.
+
+</br>
+
 ## 02/24/25
 
 [ConstTypeArgs.Delegates](https://github.com/zacharylayne/ConstTypeArgs/tree/master/Source/ConstTypeArgs.Delegates) **1.0.0** <sup>[NuGet](https://www.nuget.org/packages/ConstTypeArgs.Delegates/1.0.0)</sup>

@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<DocumentationFile>..\..\Documentation\ConstTypeArgs.UnitsOfMeasure.xml</DocumentationFile>
+	<Title>Const Type Args - Units of Measure</Title>
+	<Version>0.2.0-pre-release</Version>
+	<Authors>Zachary Layne</Authors>
+	<Company>Entry Point Software</Company>
+	<Copyright>2025</Copyright>
+	<PackageProjectUrl>https://github.com/zacharylayne/ConstTypeArgs</PackageProjectUrl>
+	<PackageReadmeFile>README.MD</PackageReadmeFile>
+	<PackageTags>constants; const-type-args; generics; static-abstract-interface-members; type-specialization; units-of-measure</PackageTags>
+	<PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+	<IncludeSymbols>True</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	<AnalysisLevel>preview-all</AnalysisLevel>
+	<RepositoryUrl>https://github.com/zacharylayne/ConstTypeArgs</RepositoryUrl>
+	<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>    
+	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="_old\**" />
+    <EmbeddedResource Remove="_old\**" />
+    <None Remove="_old\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConstTypeArgs.Decimals" Version="1.0.0" />
+    <PackageReference Include="ConstTypeArgs.Delegates" Version="1.0.0" />
+    <PackageReference Include="ConstTypeArgs.Delegates.Interlocked" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE.txt">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+    <None Update="README.MD">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Quantities\Mass\" />
+    <Folder Include="Quantities\Length\" />
+    <Folder Include="Quantities\Acceleration\" />
+    <Folder Include="Quantities\Area\" />
+    <Folder Include="Quantities\Duration\" />
+    <Folder Include="Quantities\DataStorage\" />
+    <Folder Include="Quantities\Force\" />
+    <Folder Include="Quantities\Density\" />
+    <Folder Include="Quantities\Frequency\" />
+    <Folder Include="Quantities\Pressure\" />
+    <Folder Include="Quantities\Temperature\" />
+    <Folder Include="Quantities\Volume\" />
+    <Folder Include="Quantities\Speed\" />
+    <Folder Include="UOM\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="ConstTypeArgs" />
+    <Using Include="ConstTypeArgs.Core" />
+    <Using Include="System.Numerics" />
+  </ItemGroup>
+
+</Project>
